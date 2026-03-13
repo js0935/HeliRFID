@@ -80,7 +80,7 @@
 #### 編譯步驟
 
 ```bash
-# 克隆專案
+# 複製專案
 git clone https://github.com/js0935/HeliRFID.git
 
 # 進入專案目錄
