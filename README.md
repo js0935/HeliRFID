@@ -8,7 +8,7 @@
 
 一款 Android NFC 門禁卡讀取與轉換應用程式
 
-[![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](releases/HeliRFID-v1.0-debug.apk)
+[![Version](https://img.shields.io/badge/version-v1.1.0-blue.svg)](releases/HeliRFID-v1.1-debug.apk)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-7.0%2B-green.svg)](https://developer.android.com/)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/js0935/HeliRFID)
@@ -21,15 +21,18 @@
 
 ### 核心功能
 - ✅ **NFC 卡片讀取** - 自動讀取 NFC 卡片 UID
-- ✅ **UID 轉換** - 將 UID 轉換為門禁卡號（後10碼）
+- ✅ **UID 轉換** - 將 UID 轉換為門禁卡號（固定10碼，不足補零）
 - ✅ **手動輸入** - 支援手動輸入 UID 進行轉換
 - ✅ **歷史記錄** - 自動儲存最近 100 筆卡號記錄
+- ✅ **清除記錄** - 一鍵清除所有歷史記錄
 
 ### 使用者介面
 - ✅ **美觀圖示** - HR 品牌藍色圖示
 - ✅ **啟動動畫** - 2 秒 Splash 畫面
+- ✅ **Material Design** - 現代化設計風格
 - ✅ **簡潔設計** - 清晰的操作介面
 - ✅ **品牌標示** - 禾秝軟體開發團隊品牌形象
+- ✅ **美化介面** - 陰影效果、圓角設計
 
 ---
 
@@ -46,18 +49,27 @@
 
 ## 📱 下載 APK
 
-### 最新版本 (v1.0.0)
+### 最新版本 (v1.1.0)
 
-**[📥 下載 HeliRFID-v1.0-debug.apk](releases/HeliRFID-v1.0-debug.apk)** (2.9 MB)
+**[📥 下載 HeliRFID-v1.1-debug.apk](releases/HeliRFID-v1.1-debug.apk)** (2.9 MB)
 
 **版本日期**: 2025-03-14
 
 ### 版本資訊
-- 版本號: 1.0.0 (1)
+- 版本號: 1.1.0 (2)
 - 類型: Debug
 - 構建: Gradle 8.0
 - 最低 SDK: API 24
 - 目標 SDK: API 33
+
+### v1.1.0 新增功能
+- ✨ 卡號自動補滿 10 碼
+- ✨ 清除歷史紀錄功能
+- ✨ Material Design 風格優化
+- ✨ 美化使用者介面
+
+**舊版本:**
+- [v1.0.0](releases/HeliRFID-v1.0-debug.apk) (2025-03-14)
 
 ---
 
