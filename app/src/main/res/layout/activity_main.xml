@@ -2,19 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="#F5F5F5"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:text="HeliRFID"
-        android:textSize="26sp"
+        android:textSize="28sp"
         android:textStyle="bold"
+        android:textColor="#1565C0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:text="禾秝軟體開發團隊"
         android:textSize="14sp"
+        android:textColor="#666"
         android:layout_marginBottom="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -23,23 +26,37 @@
         android:id="@+id/result"
         android:text="請將 NFC 卡靠近手機"
         android:textSize="18sp"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/inputUid"
         android:hint="手動輸入 UID"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btnConvert"
-        android:text="轉換"
-        android:layout_width="wrap_content"
+        android:text="轉換卡號"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:text="清除歷史紀錄"
+        android:layout_marginTop="10dp"
+        android:background="#E53935"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:text="卡號歷史"
+        android:text="歷史紀錄"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"

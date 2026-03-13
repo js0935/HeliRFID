@@ -32,8 +32,9 @@ public class Converter {
 
         String num=dec.toString();
 
-        if(num.length()>10)
-            num=num.substring(num.length()-10);
+        // 補滿10碼
+        while(num.length()<10)
+            num="0"+num;
 
         return num;
     }

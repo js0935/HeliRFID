@@ -40,4 +40,9 @@ public class HistoryManager {
 
         return list;
     }
+
+    public void clear(){
+
+        prefs.edit().clear().apply();
+    }
 }

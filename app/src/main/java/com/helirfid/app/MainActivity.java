@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TextView result;
     EditText inputUid;
     Button btnConvert;
+    Button btnClear;
     ListView historyList;
 
     NfcAdapter nfcAdapter;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         result=findViewById(R.id.result);
         inputUid=findViewById(R.id.inputUid);
         btnConvert=findViewById(R.id.btnConvert);
+        btnClear=findViewById(R.id.btnClear);
         historyList=findViewById(R.id.historyList);
 
         historyManager=new HistoryManager(this);
@@ -53,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
             historyManager.add(card);
 
             refreshHistory();
+        });
+
+        btnClear.setOnClickListener(v->{
+
+            historyManager.clear();
+
+            refreshHistory();
+
+            Toast.makeText(this,"紀錄已清除",
+                    Toast.LENGTH_SHORT).show();
         });
 
         refreshHistory();
