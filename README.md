@@ -32,9 +32,9 @@
 
 ## 📱 下載 APK
 
-**最新版本 APK:**
+**最新版本 (v1.0):**
 
-- [app-debug.apk](app/build/outputs/apk/debug/app-debug.apk) (2.9 MB)
+- [HeliRFID-v1.0-debug.apk](releases/HeliRFID-v1.0-debug.apk) (2.9 MB)
 
 ---
 
