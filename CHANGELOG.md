@@ -7,6 +7,115 @@
 
 ---
 
+## [3.0.0] - 2025-03-14
+
+### 新增 (Added)
+
+#### 核心功能
+- ✅ Memory Dump 功能 - 讀取 Mifare Classic 卡片的記憶體區塊
+- ✅ 增強型金鑰測試 - 測試 5 個常見金鑰集（工廠預設、Madroid、NXP、Uncommon、Public）
+- ✅ 金鑰測試結果顯示 - 即時顯示測試成功的金鑰資訊
+- ✅ 匯出 CSV 按鈕功能 - 將歷史記錄匯出為 CSV 檔案
+
+#### 程式碼模組
+- ✅ DumpReader.java - Mifare Classic 記憶體傾印功能
+- ✅ KeyTester.java (增強版) - 5 個金鑰集測試功能
+
+### 變更 (Changed)
+
+#### 技術改進
+- 將 MainActivity 和 SplashActivity 從 AppCompatActivity 改為 Activity
+- 版本號更新：versionCode 3，versionName "3.0"
+- 應用程式標籤更新為 "HeliRFID Ultimate v3"
+- 整合 DumpReader 和 KeyTester 到 MainActivity
+- 新增 Memory Dump 按鈕功能
+- 新增 txtKey 視圖用於顯示測試結果
+- 更新啟動畫面為 v3.0 版本品牌識別
+
+#### 使用者介面
+- 新增金鑰測試結果顯示欄位
+- 新增 Memory Dump 和匯出按鈕佈局
+- 更新 splash.xml 顯示 "HeliRFID Ultimate v3.0"
+- 按鈕群組優化（Dump、Clear、Export）
+
+#### 金鑰測試功能
+- 測試工廠預設金鑰：FF FF FF FF FF FF
+- 測試 Madroid 金鑰：A0 A1 A2 A3 A4 A5
+- 測試 NXP 金鑰：D3 F7 D3 F7 D3 F7
+- 測試 Uncommon 金鑰：4D 3A 99 CB 34 0B
+- 測試 Public 金鑰：1A 98 2C 7E 45 9A
+
+### 修復 (Fixed)
+- 修正 MainActivity 中 TextView ID 對應問題
+- 修正呼叫 Converter 和 CardAnalyzer 的方法名稱
+
+### 依賴庫
+- targetSdk 更新至 34 (Android 14)
+- compileSdk 更新至 34
+
+---
+
+## [2.0.0] - 2025-03-14
+
+### 新增 (Added)
+
+#### 核心功能
+- ✅ NFC 卡片自動讀取
+- ✅ UID 雙重轉換格式（HEX / 10碼 / 8碼）
+- ✅ Wiegand 通訊協定轉換（Wiegand26）
+- ✅ 卡片類型識別（MIFARE Classic / Ultralight / ISO 14443-4）
+- ✅ 複製風險分析（Clone Analyzer）
+- ✅ 記憶體傾印功能（Mifare Classic 可讀取區塊）
+- ✅ CSV 歷史記錄匯出功能
+- ✅ 50+ 種門禁設備演算法框架
+
+#### 使用者介面
+- ✅ Material3 設計風格
+- ✅ MaterialCardView 卡片佈局
+- ✅ Scrollable 介面支援長內容
+- ✅ 深藍色主題配色 (#1A237E)
+- ✅ 升級版 HR Logo（Vector Drawable）
+- ✅ 深色模式支援（自動）
+
+#### 技術實作
+- ✅ 完整包名重構：com.helirfid.ultimate
+- ✅ Android X 相容性完整支援
+- ✅ Min SDK 23 (Android 6.0)
+- ✅ Target SDK 34 (Android 14)
+- ✅ Theme.Material3.DayNight.NoActionBar
+
+#### 程式碼模組
+- ✅ NFCReader.java - NFC UID 讀取
+- ✅ Wiegand.java - Wiegand26/34 通訊協定轉換
+- ✅ CloneAnalyzer.java - 複製風險偵測
+- ✅ CardAnalyzer.java - 卡片類型識別
+- ✅ CsvExporter.java - CSV 匯出功能
+
+#### 專案結構
+- ✅ 完整的 README 說明文檔
+- ✅ 貢獻指南 (CONTRIBUTING.md)
+- ✅ 變更日誌 (CHANGELOG.md)
+- ✅ 開發指南 (DEVELOPMENT.md)
+- ✅ MIT 授權檔案
+
+### 變更 (Changed)
+
+#### 套件重構
+- 從 com.helirfid.app 重構為 com.helirfid.ultimate
+- 所有 Java 檔案套件名更新
+
+#### 依賴更新
+- Material Design：更新至 1.11.0
+- compileSdk：更新至 34
+- targetSdk：更新至 34
+
+### 技術改進
+- 改進 UI 回應速度
+- 優化 NFC 讀取穩定性
+- 改進錯誤處理
+
+---
+
 ## [1.1.0] - 2025-03-14
 
 ### 新增 (Added)
