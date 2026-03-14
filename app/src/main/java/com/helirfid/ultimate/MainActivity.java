@@ -74,6 +74,53 @@ public class MainActivity extends Activity {
         });
 
         updateHistory();
+
+        Intent startupIntent = getIntent();
+        handleNfcIntent(startupIntent);
+    }
+
+    private void handleNfcIntent(Intent intent) {
+        if (intent != null && NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
+            currentTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            processTag(currentTag);
+        }
+    }
+
+    private void processTag(Tag tag) {
+        if (tag == null) {
+            return;
+        }
+
+        try {
+            byte[] uid = tag.getId();
+
+            String uidStr = Converter.hex(uid);
+            uidText.setText(uidStr);
+
+            String hex = Converter.hex(uid);
+            hexText.setText(hex);
+
+            String dec10 = Converter.decimal10(uid);
+            dec10Text.setText(dec10);
+
+            String dec8 = Converter.decimal8(uid);
+            dec8Text.setText(dec8);
+
+            w26Text.setText(Wiegand.wiegand26(dec10));
+
+            typeText.setText(CardAnalyzer.analyze(tag));
+
+            cloneText.setText(CloneAnalyzer.analyze(tag));
+
+            keyText.setText(KeyTester.testAllKeys(tag));
+
+            history.add(dec10);
+            updateHistory();
+
+            Toast.makeText(this, "卡片讀取成功", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(this, "讀取卡片錯誤: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -97,31 +144,7 @@ public class MainActivity extends Activity {
     protected void onNewIntent(android.content.Intent intent){
         super.onNewIntent(intent);
 
-        currentTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-        byte[] uid = currentTag.getId();
-
-        String uidStr = Converter.hex(uid);
-        uidText.setText(uidStr);
-
-        String hex = Converter.hex(uid);
-        hexText.setText(hex);
-
-        String dec10 = Converter.decimal10(uid);
-        dec10Text.setText(dec10);
-
-        String dec8 = Converter.decimal8(uid);
-        dec8Text.setText(dec8);
-
-        w26Text.setText(Wiegand.wiegand26(dec10));
-
-        typeText.setText(CardAnalyzer.analyze(currentTag));
-
-        cloneText.setText(CloneAnalyzer.analyze(currentTag));
-
-        keyText.setText(KeyTester.testAllKeys(currentTag));
-
-        history.add(dec10);
-        updateHistory();
+        handleNfcIntent(intent);
     }
 
     private void updateHistory(){
