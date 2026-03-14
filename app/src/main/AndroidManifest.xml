@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.helirfid.ultimate">
+    package="com.helirfid">
 
     <uses-permission android:name="android.permission.NFC"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -12,7 +12,7 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
-        android:label="HeliRFID Ultimate v3.0.3"
+        android:label="HeliRFID 專業版"
         android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.Material3.DayNight.NoActionBar">
 
@@ -52,6 +52,10 @@
                 android:resource="@xml/nfc_tech_filter"/>
 
         </activity>
+
+        <activity android:name=".MemoryDumpActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
 
     </application>
 
