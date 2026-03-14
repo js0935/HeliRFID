@@ -115,12 +115,17 @@ public class MainActivity extends AppCompatActivity {
                 String card10 = Converter.decimal10(uidBytes);
                 String card8 = Converter.decimal8(uidBytes);
                 String w26 = Wiegand.wiegand26(card10);
-                String hex = Converter.bytesToHex(uidBytes);
                 String w34 = Wiegand.wiegand34(card10);
+
+                String formattedUid = uid.substring(0, 2) + ":" + uid.substring(2, 4) + ":" + uid.substring(4, 6) + ":" + uid.substring(6, 8);
+
+                txtUID.setText("UID: " + formattedUid);
+                txtCard10.setText("10碼: " + card10);
+                txtCard8.setText("8碼: " + card8);
                 txtW26.setText("Wiegand26: " + w26);
                 txtType.setText("Card Type:\n手動輸入");
 
-                String analysis = CloneAnalyzer.analyze(hex, card10);
+                String analysis = CloneAnalyzer.analyze(formattedUid, card10);
                 txtAnalysis.setText(analysis);
 
                 historyManager.add(card10);
