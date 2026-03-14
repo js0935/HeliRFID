@@ -60,9 +60,15 @@
 
 ### 🚀 最新版本 (v3.0.0 Ultimate Edition)
 
-**[📥 下載 HeliRFIDUltimate-v3.0-debug.apk](https://github.com/js0935/HeliRFID/releases/tag/v3.0.0)** (5.3 MB)
+**[📥 下載 HeliRFIDUltimate-v3.0-debug.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.0/releases/HeliRFIDUltimate-v3.0-debug.apk)** (5.3 MB)
 
 **版本日期**: 2025-03-14
+
+#### 快速下載連結
+- v3.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.0/releases/HeliRFIDUltimate-v3.0-debug.apk
+- v2.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v2.0.0/releases/HeliRFIDUltimate-v2.0-debug.apk
+- v1.1.0: https://github.com/js0935/HeliRFID/raw/refs/heads/master/releases/HeliRFID-v1.1-debug.apk
+- v1.0.0: https://github.com/js0935/HeliRFID/raw/refs/heads/master/releases/HeliRFID-v1.0-debug.apk
 
 ### 版本資訊
 - 版本號: 3.0.0 (3)
@@ -81,7 +87,7 @@
 ### 🔥 重大版本
 
 **HeliRFID Ultimate v2.0.0**
-- [📥 下載 v2.0.0](https://github.com/js0935/HeliRFID/releases/tag/v2.0.0) (5.3 MB)
+- [📥 下載 v2.0.0](https://github.com/js0935/HeliRFID/raw/refs/tags/v2.0.0/releases/HeliRFIDUltimate-v2.0-debug.apk) (5.3 MB)
 - ✨ 50+ 種門禁設備演算法框架
 - ✨ 完整的 Wiegand26/34 支援
 - ✨ 卡片類型識別與複製風險分析
