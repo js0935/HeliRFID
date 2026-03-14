@@ -2,148 +2,202 @@
 
 <div align="center">
 
-![HR Icon](app/src/main/res/drawable/ic_hr.xml)
-
 **禾秝軟體開發團隊**
 
-一款 Android NFC 門禁卡讀取與轉換應用程式
+一款簡單易用的 Android NFC 門禁卡讀取應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.0.1-blue.svg)](https://github.com/js0935/HeliRFID/releases/tag/v4.0.1)
+[![Version](https://img.shields.io/badge/version-v4.0.1-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
-[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/js0935/HeliRFID)
 
 </div>
 
 ---
 
-## 📋 功能特點
+## 🌟 什麼是 HeliRFID？
 
-### 核心功能 (v4.0.0 Professional Edition)
-- ✅ **NFC 卡片讀取** - 自動讀取各種 NFC 卡片 UID
-- ✅ **UID 多重轉換** - 完整支援 HEX / 10碼 / 8碼格式
-- ✅ **Wiegand 協定** - 完整支援 Wiegand26/34 通訊協定
-- ✅ **卡片類型識別** - 智能識別 MIFARE Classic / Ultralight / ISO 14443-4
-- ✅ **Memory Dump 可視化** - RecyclerView 表格顯示記憶體傾印數據
-- ✅ **區塊資訊顯示** - 扇區/區塊/資料/描述訊息
-- ✅ **CSV 歷史匯出** - 匯出歷史記錄為 CSV 格式
-- ✅ **多種門禁演算法** - 支援多種門禁設備
-- ✅ **歷史記錄** - 自動儲存最近 100 筆卡號記錄
-- ✅ **清除記錄** - 一鍵清除所有歷史記錄
+HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可以快速讀取各類 NFC 卡片，並將卡片 ID 轉換為門禁系統可用的卡號格式。
 
-### 使用者介面
-- ✅ **Material3 設計** - 最新的 Material Design 語言
-- ✅ **專業版品牌** - HeliRFID 專業版標示
-- ✅ **深色模式** - 自動支援深色主題
-- ✅ **美觀圖示** - HR 品牌藍色圖示
-- ✅ **啟動動畫** - 2 秒 Splash 畫面
-- ✅ **流暢動畫** - 順暢的過場動畫效果
-- ✅ **精美 Logo** - HR 品牌識別
-- ✅ **簡潔設計** - 清晰的操作介面
-- ✅ **品牌標示** - 禾秝軟體開發團隊品牌形象
-- ✅ **美化介面** - 陰影效果、圓角設計
+**主要特色：**
+- 📱 自動讀取 NFC 卡片
+- 🔢 一鍵轉換多種卡號格式（10 碼 / 8 碼）
+- 🔐 支援 Wiegand 門禁協定
+- 📊 記憶體檢視功能
+- 📝 歷史記錄管理
+- 📤 CSV 匯出功能
 
 ---
 
-## 🔧 系統需求
+## 📥 下載與安裝
+
+### 系統需求
 
 | 項目 | 需求 |
 |------|------|
 | 作業系統 | Android 6.0 (API 23) 或更高版本 |
 | NFC | 必須支援 NFC 功能 |
 | 儲存空間 | 約 10 MB |
-| 權限 | NFC 權限、儲存空間權限 |
+| 權限 | NFC、儲存空間 |
+
+### 下載 APK
+
+**最新版本：v4.0.1** (2025-03-14)
+
+[📥 下載 HeliRFIDProfessional-v4.0.1-debug-fixed.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk) (5.5 MB)
+
+### 安裝步驟
+
+1. 下載 APK 檔案
+2. 在手機上開啟 APK
+3. 允許「來源不明應用程式」安裝
+4. 完成安裝並開啟
+
+**⚠️ 注意：** 此應用程式需要 NFC 功能，請確保您的手機支援 NFC。
 
 ---
 
-## 📱 下載 APK
+## 🚀 快速開始
 
-### 🚀 最新版本 (v4.0.1 Professional Edition) ⭐
+### 第一次使用
 
-**[📥 下載 HeliRFIDProfessional-v4.0.1-debug-fixed.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk)** (5.5 MB)
+1. **開啟 NFC 功能**
+   - 前往「設定」→「NFC」
+   - 確保 NFC 已開啟
 
-**版本日期**: 2025-03-14
+2. **開啟應用程式**
+   - 啟動 HeliRFID 應用程式
+   - 等待啟動畫面完成
 
-**v4.0.1 專業版修復:**
-- ✅ 修復啟動畫面版本顯示 - 從 v3.0 更新為 v4.0.1
-- ✅ 修復啟動畫面標題 - 從 "HeliRFID Ultimate" 更新為 "HeliRFID 專業版"
-- ✅ 修復 CSV 匯出功能 - 支援 Android 10+ (API 29+) 使用 MediaStore API
-- ✅ 優化 CSV 匯出 - 支援現代 Android 檔案系統
+3. **掃描卡片**
+   - 將 NFC 卡片靠近手機背面
+   - 保持距離 1-3 公分
+   - 等待讀取完成
 
-**v4.0.0 專業版變更:**
-- ✅ 專業版品牌更新 - "HeliRFID 專業版"
-- ✅ 套件名稱重構 - com.helirfid.ultimate → com.helirfid
-- ✅ Memory Dump 可視化 - RecyclerView 表格顯示記憶體數據
-- ✅ DumpAdapter 和 DumpItem - 新的 RecyclerView 組件
-- ✅ 簡化功能移除 - 移除 CloneAnalyzer、DumpReader、KeyTester
-- ✅ Android 14 完整支援 - compileSdk 34, targetSdk 34
-- ✅ 優化 UI/UX - 專業版介面設計
+### 讀取結果說明
 
-#### 快速下載連結
-- **v4.0.1** (最新專業版修復): https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk
-- v4.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.0/releases/HeliRFIDProfessional-v4.0.0-debug.apk
-- v3.0.3: https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.3/releases/HeliRFIDUltimate-v3.0.3-debug.apk
-- v2.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v2.0.0/releases/HeliRFIDUltimate-v2.0-debug.apk
+應用程式會顯示以下資訊：
 
-### 版本資訊
-- 版本號: 4.0.1 (7)
-- 類型: Debug
-- 構建: Gradle 8.0
-- 最低 SDK: API 23 (Android 6.0)
-- 目標 SDK: API 34 (Android 14)
-
-### v4.0.1 修復內容
-- 🐛 **修復版本顯示** - 啟動畫面顯示正確的 v4.0.1 版本號
-- 🐛 **修復 CSV 匯出** - 支援 Android 10+ (API 29+) MediaStore API
-- 🐛 **修復標題顯示** - 啟動畫面顯示正確的 "HeliRFID 專業版"
-
-### v4.0.0 新增功能
-- ✨ **Memory Dump 可視化** - RecyclerView 表格顯示記憶體傾印
-- ✨ **DumpAdapter** - RecyclerView 表格適配器
-- ✨ **DumpItem** - 扇區/區塊資料模型
-- ✨ **專業版品牌** - HeliRFID 專業版標示
-- ✨ **套件重構** - com.helirfid 專業版套件
-- ✨ **简化功能** - 專注於核心讀取功能
-
-### 🔥 重大版本
-
-**HeliRFID Professional v4.0.1 (推薦使用)**
-- [📥 下載 v4.0.1](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk) (5.5 MB)
-- 專業版修復版，解決版本顯示和 CSV 匯出問題
-
-**HeliRFID Professional v4.0.0**
-- [📥 下載 v4.0.0](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.0/releases/HeliRFIDProfessional-v4.0.0-debug.apk) (5.3 MB)
-- 專業版初始發布，簡化功能並優化核心 NFC 讀取體驗
-
-**HeliRFID Ultimate v3.0.3**
-- [📥 下載 v3.0.3](https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.3/releases/HeliRFIDUltimate-v3.0.3-debug.apk) (5.3 MB)
-- 完整功能版本，包含 Memory Dump 和金鑰測試
+| 項目 | 說明 | 格式範例 |
+|------|------|----------|
+| UID 原始值 | NFC 卡片的唯一識別碼 | `04:A2:B3:C4:D5:E6:78` |
+| 10 碼卡號 | 門禁系統常用的 10 位數字卡號 | `2029985476` |
+| 8 碼卡號 | 較短的 8 位數字卡號 | `985476` |
+| Wiegand26 | 門禁系統通訊協定格式 | `0000-78E6-D5C4-0000` |
+| 卡片類型 | NFC 卡片類型識別 | MIFARE Classic / Ultralight |
 
 ---
 
-## 🚀 安裝方式
+## 🎯 主要功能
 
-### 方法 1: 直接安裝 APK (推薦)
+### 1. NFC 卡片讀取
+- 自動讀取各類 NFC 卡片
+- 支援 MIFARE Classic、Ultralight、ISO 14443 等格式
+- 即時顯示讀取結果
 
-1. 下載 [HeliRFIDProfessional-v4.0.0-debug.apk](https://github.com/js0935/HeliRFID/releases/tag/v4.0.0)
-2. 在手機上開啟 APK 檔案
-3. 允許「來源不明應用程式」安裝權限
-4. 完成安裝並開啟應用程式
+### 2. 卡號轉換
+UID 自動轉換為多種格式：
+- **10 碼格式**：常用於門禁系統
+- **8 碼格式**：簡短卡號
+- **Wiegand26/34**：門禁系統通訊協定
+- **HEX 格式**：16 進制 UID
 
-### 方法 2: 從原始碼編譯
+### 3. 歷史記錄
+- 自動儲存最近 100 筆掃描記錄
+- 採最新記錄排在最前
+- 支援一鍵清除所有記錄
 
-#### 必要條件
-- Java JDK 8 或更高版本
-- Android SDK
-- Gradle 8.0
+### 4. CSV 匯出
+- 將歷史記錄匯出為 CSV 檔案
+- 儲存於 Downloads 目錄
+- 可用於試算表軟體開啟
 
-#### 編譯步驟
+### 5. Memory Dump
+- 以表格形式檢視 NFC 卡片記憶體內容
+- 顯示扇區、區塊、資訊
+
+---
+
+## ❓ 常見問題
+
+### 一般問題
+
+**Q: 應用程式免費嗎？**
+A: 是的，HeliRFID 完全免費且開源。
+
+**Q: 需要網路連線嗎？**
+A: 不需要，所有功能都在離線狀態下運作。
+
+**Q: 支援哪些卡片？**
+A: 支援大部分 13.56 MHz NFC 卡片：
+- MIFARE Classic (1k, 4k)
+- MIFARE Ultralight
+- ISO 14443 Type A/B
+- FeliCa 卡片
+
+**Q: 在模擬器上能運行嗎？**
+A: 不可以，模擬器不支援 NFC 硬體，需要實體手機測試。
+
+### 使用問題
+
+**Q: NFC 不讀取怎麼辦？**
+A: 請檢查：
+1. NFC 功能是否已開啟（設定 → NFC）
+2. 卡片與手機距離是否在 1-3 公分內
+3. 是否授予 NFC 權限
+
+**Q: CSV 匯出檔案在哪裡？**
+A: 儲存在手機的 Downloads 目錄中：
+- 路徑：`Android/storage/emulated/0/Download/`
+- 檔名：`HeliRFID_History.csv`
+
+**Q: 如何清除歷史記錄？**
+A: 點擊「清除紀錄」按鈕，確認後即可清除所有記錄。
+
+**Q: 轉換結果不正確？**
+A: 請確認：
+1. UID 格式是否正確
+2. 使用正確類型的 NFC 卡片
+3. 某些特殊卡片可能不支援轉換
+
+### 隱私與權限
+
+**Q: 應用程式會上傳資料嗎？**
+A: 不會，所有資料僅儲存在您的手機上，不會上傳到任何伺服器。
+
+**Q: 需要哪些權限？**
+A:
+- **NFC 權限**：讀取 NFC 卡片
+- **儲存空間權限**：匯出 CSV 檔案
+
+---
+
+## 📖 詳細說明
+
+### UID 轉換流程
+
+HeliRFID 使用標準演算法將 NFC 卡片的 UID 轉換為門禁卡號：
+
+```
+原始 UID: 04:A2:B3:C4:D5:E6:78
+    ↓ 移除冒號
+04A2B3C4D5E678
+    ↓ 取後 8 碼
+C4D5E678
+    ↓ 反轉位元組
+78E6D5C4
+    ↓ 轉 10 進制
+2029985476
+    ↓ 取後 10 碼
+2029985476 (最終卡號)
+```
+
+### 從原始碼編譯
+
+如果您想自行編譯應用程式：
 
 ```bash
 # 複製專案
 git clone https://github.com/js0935/HeliRFID.git
-
-# 進入專案目錄
 cd heli_rfid_nfc
 
 # 編譯 Debug 版本
@@ -153,527 +207,98 @@ cd heli_rfid_nfc
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
-### 方法 3: 使用 ADB 安裝
-
-```bash
-# 確保 USB 偵錯已啟用
-adb devices
-
-# 安裝 APK
-adb install -r app-debug.apk
-
-# 啟動應用程式
-adb shell am start -n com.helirfid/.MainActivity
-```
+詳細開發資訊請參閱 [DEVELOPMENT.md](DEVELOPMENT.md)
 
 ---
 
-## 📖 使用說明
+## 🛠 技術資訊
 
-### NFC 讀取 (推薦方式)
+### 開發技術
 
-**步驟:**
-1. 確保手機 NFC 功能已開啟（設定 → NFC）
-2. 開啟 HeliRFID 專業版應用程式
-3. 將 NFC 卡片靠近手機背面 NFC 感應區
-4. 應用程式會自動讀取並顯示：
-   - **UID 原始值**（16進制格式，如：04:A2:B3:C4:D5:E6:78）
-   - **HEX 格式**（完整的 16 進制 UID）
-   - **轉換後的門禁卡號**（10碼格式）
-   - **8碼格式**（較短的門禁卡號）
-   - **Wiegand26 格式**（門禁系統通訊協定）
-   - **Wiegand34 格式**（擴展門禁協定）
-   - **卡片類型**（MIFARE Classic / Ultralight / ISO 14443-4）
-
-**注意:**
-- 保持卡片與手機距離在 1-3 公分內
-- 掃描時不要快速移動卡片
-- 某些卡片可能需要特定的位置才能正確讀取
-
-### Memory Dump 可視化 (v4.0.0)
-
-**功能說明:**
-- 使用 RecyclerView 表格顯示記憶體傾印數據
-- 每個表格項目包含：扇區、區塊、資料、描述
-- 清晰的資訊呈現，便於查看記憶體內容
-
-**步驟:**
-1. 先掃描一張 NFC 卡片
-2. 點擊「Memory Dump」按鈕
-3. 系統會讀取卡片的記憶體區塊資訊
-4. 結果會在 MemoryDumpActivity 中以表格形式顯示
-
-**注意:**
-- Memory Dump 功能需要支援記憶體存取的卡片
-- 部分卡片區塊可能需要正確的金鑰才能讀取
-
-### CSV 匯出
-
-**步驟:**
-1. 點擊「匯出 CSV」按鈕
-2. 系統會將歷史記錄匯出為 CSV 檔案
-3. 檔案會儲存在手機的 Downloads 目錄
-4. 可以在任何試算表軟體中開啟
-
-### 歷史記錄管理
-
-**功能說明:**
-- 應用程式自動儲存最近 100 筆卡號
-- 最新掃描記錄顯示在最上方
-- 在「歷史紀錄」區域查看所有記錄
-- 應用程式關閉後記錄仍會保留
-
-**清除記錄:**
-1. 點擊「清除紀錄」按鈕
-2. 確認清除操作
-3. 所有歷史記錄將被刪除
-
----
-
-## 🛠 技術架構
-
-### 開發工具
-
-| 技術 | 版本 | 說明 |
-|------|------|------|
-| 開發語言 | Java 8 | 程式碼語言 |
-| 構建工具 | Gradle 8.0 | 自動化構建 |
-| 最低 SDK | API 23 (Android 6.0) | 支援的最低版本 |
-| 目標 SDK | API 34 (Android 14) | 主要目標版本 |
-| AndroidX | 1.11.0 | Android 支援庫 |
-| Material Design | 1.11.0 | Material3 支援 |
-| 主題 | Theme.Material3.DayNight.NoActionBar | 深色模式支援 |
+| 技術 | 版本 |
+|------|------|
+| 開發語言 | Java 8 |
+| 最低 SDK | Android 6.0 (API 23) |
+| 目標 SDK | Android 14 (API 34) |
+| Gradle | 8.0 |
+| Material Design | 1.11.0 |
 
 ### 專案結構
 
 ```
 heli_rfid_nfc/
-├── app/                          # 應用程式模組
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/com/helirfid/
-│   │       │   ├── MainActivity.java      # 主畫面與 NFC 功能
-│   │       │   ├── SplashActivity.java    # 啟動畫面
-│   │       │   ├── MemoryDumpActivity.java # Memory Dump 可視化
-│   │       │   ├── DumpAdapter.java       # RecyclerView 適配器
-│   │       │   ├── DumpItem.java          # 扇區/區塊資料模型
-│   │       │   ├── Converter.java         # UID 轉換邏輯
-│   │       │   ├── HistoryManager.java    # 歷史記錄管理
-│   │       │   ├── NFCReader.java         # NFC UID 讀取
-│   │       │   ├── Wiegand.java           # Wiegand26/34 通訊協定
-│   │       │   ├── CardAnalyzer.java      # 卡片類型識別
-│   │       │   └── CsvExporter.java       # CSV 匯出功能
-│   │       ├── res/                      # 資源文件
-│   │       │   ├── drawable/
-│   │       │   │   └── ic_hr.xml         # HR 品牌圖示
-│   │       │   ├── layout/
-│   │       │   │   ├── activity_main.xml          # 主畫面佈局
-│   │       │   │   ├── activity_memory_dump.xml   # Memory Dump 佈局
-│   │       │   │   ├── dump_item.xml             # RecyclerView 項目佈局
-│   │       │   │   └── splash.xml                # 啟動畫面佈局
-│   │       │   ├── mipmap-anydpi-v26/
-│   │       │   │   └── ic_launcher.xml           # Launcher 圖示
-│   │       │   └── values/
-│   │       │       └── colors.xml               # 顏色設定
-│   │       └── AndroidManifest.xml              # 應用程式清單
-│   ├── build.gradle                  # 模組構建設置
-│   └── proguard-rules.pro            # ProGuard 規則
-├── gradle/
-│   └── wrapper/
-│       └── gradle-wrapper.properties # Gradle Wrapper 配置
-├── releases/                         # APK 發布目錄
-│   └── HeliRFIDProfessional-v4.0.0-debug.apk
-├── .gitignore                        # Git 忽略配置
-├── build.gradle                      # 專案構建設置
-├── settings.gradle                   # Gradle 設定
-├── gradle.properties                # Gradle 屬性
-├── README.md                         # 專案說明（本文件）
-├── CONTRIBUTING.md                   # 貢獻指南
-├── DEVELOPMENT.md                    # 開發者指南
-├── CHANGELOG.md                      # 變更日誌
-└── LICENSE                           # MIT 授權文件
+├── app/
+│   └── src/main/java/com/helirfid/
+│       ├── MainActivity.java          # 主畫面
+│       ├── SplashActivity.java        # 啟動畫面
+│       ├── MemoryDumpActivity.java    # 記憶體檢視
+│       ├── Converter.java             # 轉換邏輯
+│       ├── NFCReader.java             # NFC 讀取
+│       ├── Wiegand.java               # Wiegand 協定
+│       ├── CardAnalyzer.java          # 卡片分析
+│       ├── HistoryManager.java        # 歷史管理
+│       ├── CsvExporter.java           # CSV 匯出
+│       ├── DumpAdapter.java           # RecyclerView 適配器
+│       └── DumpItem.java              # 記憶體資料模型
+├── README.md                          # 本檔案
+├── CHANGELOG.md                       # 版本更新日誌
+├── DEVELOPMENT.md                     # 開發者指南
+└── LICENSE                            # MIT 授權
 ```
 
-### 核心組件
+---
 
-#### 1. MainActivity
-- NFC Intent 處理
-- UID 讀取與顯示
-- UID 多重格式轉換（HEX / 10碼 / 8碼）
-- Wiegand 協定轉換
-- 卡片類型識別顯示
-- Memory Dump 功能入口
-- CSV 匯出功能
-- 歷史記錄顯示與清除
+## 📋 版本資訊
 
-#### 2. MemoryDumpActivity
-- RecyclerView 介面
-- 扇區/區塊/資料顯示
-- DumpAdapter 管理
-- MifareClassic 記憶體讀取
+### v4.0.1 (2025-03-14) - 專業版修復
 
-#### 3. DumpAdapter
-- RecyclerView.Adapter 實現
-- ViewHolder 模式
-- 表格項目繫結
+**修復：**
+- ✅ 修復版本顯示（從 v3.0 更新為 v4.0.1）
+- ✅ 修復啟動畫面標題（更新為「HeliRFID 專業版」）
+- ✅ 修復 CSV 匯出（支援 Android 10+）
 
-#### 4. DumpItem
-- 扇區號資訊
-- 區塊號資訊
-- 資料內容
-- 描述訊息
+### v4.0.0 (2025-03-14) - 專業版發布
 
-#### 5. Converter
-- UID 格式清理
-- 16 進制轉 10 進制
-- 位元組反轉
-- 取後 10 碼與後 8 碼
-- HEX 格式輸出
+**新增：**
+- ✅ Memory Dump 可視化（RecyclerView 表格）
+- ✅ 專業版品牌識別
+- ✅ Android 14 完整支援
 
-#### 6. HistoryManager
-- SharedPreferences 管理
-- 記錄儲存與檢索
-- 最多 100 筆限制
-- 最新記錄排序
-- 清除記錄功能
+**變更：**
+- 套件名稱重構：`com.helirfid`
+- 簡化功能，專注核心 NFC 讀取
 
-#### 7. SplashActivity
-- 啟動動畫顯示
-- 2 秒延遲
-- 自動跳轉主畫面
-
-#### 8. NFCReader
-- NFC 標籤讀取
-- UID 提取
-- 卡片技術列表獲取
-
-#### 9. Wiegand
-- Wiegand26 協定轉換
-- Wiegand34 協定轉換
-- 格式與奇偶校驗處理
-
-#### 10. CardAnalyzer
-- 卡片類型識別
-- NFC 技術列表分析
-- MIFARE 系別偵測
-
-#### 11. CsvExporter
-- CSV 檔案匯出
-- 歷史記錄格式化
-- 下載目錄儲存
+查看完整變更：[CHANGELOG.md](CHANGELOG.md)
 
 ---
 
-## 🔐 權限說明
+## 🤝 貢獻與支援
 
-此應用程式需要以下權限：
-
-### NFC 權限
-```xml
-<uses-permission android:name="android.permission.NFC"/>
-```
-- **用途**: 讀取 NFC 卡片 UID
-- **必要性**: 必須授予才能使用核心功能
-
-### NFC 功能要求
-```xml
-<uses-feature android:name="android.hardware.nfc" android:required="true"/>
-```
-- **用途**: 聲明應用程式需要 NFC 硬體支援
-- **影響**: 不支援 NFC 的裝置無法安裝
-
-**隱私政策:**
-- 所有資料僅儲存在您的裝置上
-- 不會上傳任何資料到外部伺服器
-- 不會收集任何個人識別資訊
-
----
-
-## 📝 UID 轉換邏輯
-
-### 轉換演算法
-
-**轉換步驟:**
-1. 移除 UID 中的冒號分隔符 (:)
-2. 取最後 8 個字元
-3. 反轉位元組順序（每個位元組 2 個字元）
-4. 將 16 進制轉換為 10 進制
-5. 取結果後 10 碼
-
-### 程式碼示例
-
-```java
-public static String convert(String uid) {
-    // 1. 移除冒號
-    uid = uid.replace(":", "");
-
-    // 2. 驗證長度
-    if (uid.length() < 8) return "錯誤";
-
-    // 3. 取後 8 碼
-    String last4 = uid.substring(uid.length() - 8);
-
-    // 4. 反轉位元組
-    String reversed = last4.substring(6, 8) +
-                      last4.substring(4, 6) +
-                      last4.substring(2, 4) +
-                      last4.substring(0, 2);
-
-    // 5. 轉 10 進制
-    BigInteger dec = new BigInteger(reversed, 16);
-    String num = dec.toString();
-
-    // 6. 取後 10 碼
-    if (num.length() > 10)
-        num = num.substring(num.length() - 10);
-
-    return num;
-}
-```
-
-### 轉換範例
-
-| 步驟 | 值 |
-|------|-----|
-| 原始 UID | `04:A2:B3:C4:D5:E6:78` |
-| 移除冒號 | `04A2B3C4D5E678` |
-| 取後 8 碼 | `C4D5E678` |
-| 反轉位元組 | `78E6D5C4` |
-| 轉換 10 進制 | `2029985476` |
-| 後 10 碼 | `2029985476` |
-
-### 測試用例
-
-| 輸入 (UID) | 輸出 (卡號) |
-|-----------|-----------|
-| `04:A2:B3:C4:D5:E6:78` | `2029985476` |
-| `12:34:56:78:90:AB:CD` | `3472836301` |
-| `11:22:33:44:55:66:77` | `2003565819` |
-
----
-
-## 🎨 設計規格
-
-### 品牌色彩
-
-| 用途 | 色碼 | 說明 |
-|------|------|------|
-| 主色 | `#1565C0` | 品牌藍色 |
-| 背景色 | `#1565C0` | 圖示背景 |
-| 文字色 | `#FFFFFF` | 白色文字 |
-
-### 圖示設計
-
-**HR 品牌圖示:**
-- **類型**: Vector Drawable
-- **尺寸**: 108dp × 108dp
-- **背景**: 藍色矩形 (#1565C0)
-- **前景**: 白色 "HR" 文字
-- **樣式**: Material Design
-
-**Launcher 圖示:**
-- **類型**: Adaptive Icon (適配圖示)
-- **背景**: 藍色 (#1565C0)
-- **前景**: HR 品牌圖示
-- **支援**: Android 8.0+ 適配圖示 API
-
-### 排版
-
-- **主標題**: 加粗、26-32sp
-- **副標題**: 粗體、14-16sp
-- **內文**: 常規、14-18sp
-- **間距**: 20dp 內邊距
-
----
-
-## ❓ 常見問題 (FAQ)
-
-### 一般問題
-
-**Q: 應用程式是否免費？**
-A: 是的，HeliRFID 完全免費且開源。
-
-**Q: 需要網路連線嗎？**
-A: 不需要，所有功能都在離線狀態下運作。
-
-**Q: 最低 Android 版本支援？**
-A: Android 6.0 (API 23) 或更高版本。
-
-**Q: 支援哪些 NFC 卡片？**
-A: 支援大部分標準 13.56 MHz NFC 卡片，包括：
-- MIFARE Classic (1k, 4k)
-- MIFARE Ultralight
-- ISO 14443 Type A/B 卡片
-- FeliCa 卡片
-- 支援各種 Mifare DESFire / Plus 系列
-
-### 功能問題
-
-**Q: NFC 功能不工作怎麼辦？**
-A: 檢查以下項目：
-1. NFC 功能是否已開啟（設定 → NFC）
-2. 裝置是否支援 NFC
-3. 是否授予 NFC 權限
-4. 嘗試清理應用程式快取
-
-**Q: 轉換結果不正確？**
-A: 請確認：
-1. UID 格式是否正確（帶或不帶冒號都可以）
-2. UID 長度至少 8 個字元
-3. 使用正確的 NFC 卡片類型
-
-**Q: 如何清除歷史記錄？**
-A: 版本支援一鍵清除：
-1. 點擊「清除紀錄」按鈕
-2. 確認清除操作即可
-
-**Q: CSV 匯出檔案在哪裡？**
-A: CSV 檔案會儲存在：
-- Android/storage/emulated/0/Download/
-- 或通過「檔案管理器」→「下載」目錄
-
-**Q: Memory Dump 功能什麼時候可以用？**
-A: 需要：
-1. 先掃描一張支援記憶體存取的 NFC 卡片
-2. 卡片必須支援記憶體讀取
-3. 部分卡片區塊可能需要正確的金鑰才能讀取
-
-### 技術問題
-
-**Q: 在模擬器上運行？**
-A: 不支援，因為模擬器不提供 NFC 硬體功能。
-
-**Q: APK 簽名資訊？**
-A: 這是 Debug 版本，使用 Debug 簽金。
-   如需正式版本，請使用 Release 簽金重新編譯。
-
-**Q: 程式碼可以商業使用嗎？**
-A: 可以，本專案採用 MIT 授權，可自由使用和修改。
-
-**Q: 如何編譯原始碼？**
-A: 請參考「安裝方式」→「從原始碼編譯」部分。
-
-**Q: 是否支援 rooted 裝置的進階功能？**
-A: 目前版本主要使用官方 Android NFC API，
-   基本功能不需要 root 權限即可使用。
-
----
-
-## 🤝 貢獻
+### 貢獻
 
 我們熱烈歡迎您的貢獻！
 
-### 如何貢獻
+1. Fork 專案
+2. 創建功能分支：`git checkout -b feature/AmazingFeature`
+3. 提交變更：`git commit -m 'Add some AmazingFeature'`
+4. 推送分支：`git push origin feature/AmazingFeature`
+5. 開啟 Pull Request
 
-1. **Fork 專案**
-   ```bash
-   https://github.com/js0935/HeliRFID/fork
-   ```
+詳細指南請參閱 [CONTRIBUTING.md](CONTRIBUTING.md)
 
-2. **進行改進**
-   - 創建功能分支: `git checkout -b feature/AmazingFeature`
-   - 提交變更: `git commit -m 'Add some AmazingFeature'`
-   - 推送分支: `git push origin feature/AmazingFeature`
+### 回報問題
 
-3. **提交 Pull Request**
-   - 前往 GitHub 頁面
-   - 點擊「New Pull Request」
-   - 填寫 PR 描述
-
-### 貢獻指南
-
-詳細的貢獻指南請參閱：[CONTRIBUTING.md](CONTRIBUTING.md)
-
-### 報告問題
-
-如遇到 Bug 或有功能建議，請：
+如遇到 Bug 或有功能建議：
 - 前往 [Issues 頁面](https://github.com/js0935/HeliRFID/issues)
 - 搜索是否有相似的問題
 - 開啟新 Issue 並詳細描述
 
 ---
 
-## 📄 說明文件
-
-- [README.md](README.md) - 專案說明（本文件）
-- [CONTRIBUTING.md](CONTRIBUTING.md) - 貢獻指南
-- [DEVELOPMENT.md](DEVELOPMENT.md) - 開發者指南
-- [CHANGELOG.md](CHANGELOG.md) - 變更日誌
-- [LICENSE](LICENSE) - MIT 授權文件
-
----
-
-## 🔄 更新日誌
-
-查看完整變更：[CHANGELOG.md](CHANGELOG.md)
-
-### v4.0.0 (2025-03-14) - Professional Edition
-
-**新增:**
-- Memory Dump 可視化 - RecyclerView 表格顯示記憶體傾印
-- DumpAdapter - RecyclerView 表格適配器
-- DumpItem - 扇區/區塊/資料/描述資料模型
-- 專業版品牌 - HeliRFID 專業版標示
-
-**變更:**
-- 套件名稱重構 - com.helirfid.ultimate → com.helirfid
-- 移除 CloneAnalyzer、DumpReader、KeyTester 功能
-- 簡化功能列表，專注於核心 NFC 讀取
-- 版本號更新為 4.0.0 (versionCode 7)
-- AndroidManifest.xml 更新為 "HeliRFID 專業版"
-- 新增 RecyclerView 依賴
-
-**改進:**
-- 優化 Memory Dump 介面設計
-- 專業版 UI/UX 優化
-- 清晰的表格化資訊呈現
-
-### v3.0.0 (2025-03-14) - Ultimate Edition
-
-**新增:**
-- Memory Dump 功能 - Mifare Classic 記憶體閱讀
-- 增強型金鑰測試 - 測試 5 組常見金鑰
-- 金鑰測試結果顯示
-- CSV 匯出按鈕功能
-
-**變更:**
-- MainActivity 和 SplashActivity 從 AppCompatActivity 改為 Activity
-- 版本號更新為 3.0.0
-- 應用程式標籤更新為 "HeliRFID Ultimate v3"
-- 啟動畫面更新為 v3.0 版本品牌識別
-
-### v2.0.0 (2025-03-14) - Ultimate Edition
-
-**新增:**
-- NFC 卡片自動讀取
-- UID 雙重轉換格式（HEX / 10碼 / 8碼）
-- Wiegand 通訊協定轉換（Wiegand26）
-- 卡片類型識別（MIFARE Classic / Ultralight / ISO 14443-4）
-- 複製風險分析（Clone Analyzer）
-- Memory Dump 功能
-- CSV 歷史記錄匯出功能
-- 50+ 種門禁設備演算法框架
-
-**變更:**
-- 完整包名重構為 com.helirfid.ultimate
-- 更新至 Material3 設計風格
-- 更新 Theme.Material3.DayNight.NoActionBar
-- 深色模式支援
-- update targetSdk 至 34 (Android 14)
-
----
-
 ## 📞 聯絡方式
 
-### 聯絡資訊
-
-- **GitHub**: [js0935](https://github.com/js0935)
-- **專案**: [HeliRFID](https://github.com/js0935/HeliRFID)
-- **問題回報**: [Issues](https://github.com/js0935/HeliRFID/issues)
-
-### 時區
-
-UTC+8 (亞洲/台北)
+- **GitHub**: [js0935/HeliRFID](https://github.com/js0935/HeliRFID)
+- **問題回報**: [GitHub Issues](https://github.com/js0935/HeliRFID/issues)
 
 ---
 
@@ -699,14 +324,6 @@ in the Software without restriction...
 - [Material Design](https://material.io/design)
 - [AndroidX](https://developer.android.com/jetpack/androidx)
 - 所有貢獻者和使用者
-
----
-
-## 🔗 相關連結
-
-- [Android NFC Documentation](https://developer.android.com/guide/topics/connectivity/nfc)
-- [Material Design Guidelines](https://material.io/design)
-- [Gradle Documentation](https://docs.gradle.org/current/userguide/userguide.html)
 
 ---
 

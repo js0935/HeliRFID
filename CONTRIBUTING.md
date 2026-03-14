@@ -8,23 +8,31 @@
 
 ### 報告問題 (Bug Report)
 
-如果您發現 bug 或有功能建議，請：
+如果您發現 bug 或有功能建議，請按以下步驟操作：
 
-1.前往 [Issues 頁面](https://github.com/js0935/HeliRFID/issues)
+1. 前往 [Issues 頁面](https://github.com/js0935/HeliRFID/issues)
 2. 點擊「New Issue」
 3. 選擇適當的模板：
    - **Bug Report** - 報告 bug
    - **Feature Request** - 新功能建議
-4. 填寫詳細資訊：
-   - **標題**: 簡潔描述問題
-   - **描述**: 詳細說明問題或建議
-   - **重現步驟**: Bug 的重現步驟（如果是 bug）
-   - **預期行為**: 期望發生什麼
-   - **實際行為**: 實際發生什麼
-   - **環境資訊**:
-     - 裝置型號
-     - Android 版本
-     - 應用程式版本
+4. 填寫詳細資訊
+
+**Bug Report 應包含：**
+- 標題：簡潔描述問題
+- 描述：詳細說明問題
+- 重現步驟：如何重現此 bug
+- 預期行為：期望發生什麼
+- 實際行為：實際發生什麼
+- 環境資訊：
+  - 裝置型號
+  - Android 版本
+  - 應用程式版本
+
+**Feature Request 應包含：**
+- 標題：簡潔描述建議
+- 描述：詳細說明需求
+- 使用情境：為什麼需要這個功能
+- 範例：可能的實作方式
 
 ### 提交程式碼 (Pull Request)
 
@@ -33,28 +41,24 @@
 #### 開發流程
 
 1. **Fork 專案**
-   ```bash
-   # 在 GitHub 上點擊 Fork 按鈕
-   ```
+   - 在 GitHub 上點擊 Fork 按鈕
 
 2. **克隆您的 Fork**
    ```bash
    git clone https://github.com/YOUR_USERNAME/HeliRFID.git
-   cd HeliRFID
+   cd heli_rfid_nfc
    ```
 
 3. **創建分支**
    ```bash
    git checkout -b feature/your-feature-name
-   # 或
+   # 或修復 bug
    git checkout -b fix/your-bug-fix
    ```
 
 4. **進行改進**
-
-   遵循以下變更：
    - 遵守 Google Java 樣式規範
-   - 添加適當的註釋
+   - 添加必要的註釋
    - 確保程式碼可編譯並通過測試
    - 更新相關的說明文件
 
@@ -63,8 +67,8 @@
    # 編譯 debug 版本
    ./gradle-8.0/bin/gradle assembleDebug
 
-   # 編譯 release 版本
-   ./gradle-8.0/bin/gradle assembleRelease
+   # 在實體裝置上測試
+   adb install -r app/build/outputs/apk/debug/app-debug.apk
    ```
 
 6. **提交變更**
@@ -73,7 +77,7 @@
    git commit -m "feat: add your feature description"
    ```
 
-   **提交訊息格式:**
+   **提交訊息格式：**
    - `feat:` - 新功能
    - `fix:` - Bug 修復
    - `docs:` - 文件更新
@@ -96,6 +100,7 @@
      - 清晰說明變更內容
      - 關聯相關的 Issue（如果有）
      - 添加截圖（如果是 UI 變更）
+     - 說明已測試的功能
 
 ---
 
@@ -111,8 +116,25 @@
 // 好的做法
 public class Converter {
 
+    private static final int MAX_UID_LENGTH = 8;
+
     public static String convert(String uid) {
+        if (uid == null || uid.isEmpty()) {
+            return "錯誤";
+        }
+
+        uid = uid.replace(":", "");
+        if (uid.length() < MAX_UID_LENGTH) {
+            return "錯誤";
+        }
+
+        String last4 = uid.substring(uid.length() - MAX_UID_LENGTH);
+        return reverseBytes(last4);
+    }
+
+    private static String reverseBytes(String hex) {
         // 實現
+        return "";
     }
 }
 
@@ -132,7 +154,7 @@ public class converter {
 | 方法 | camelCase | `convertUid()` |
 | 變數 | camelCase | `cardNumber` |
 | 常量 | UPPER_SNAKE_CASE | `MAX_HISTORY_SIZE` |
-| 套件 | lowercase | `com.helirfid.app` |
+| 套件 | lowercase | `com.helirfid` |
 
 ### XML 程式碼樣式
 
@@ -140,43 +162,17 @@ public class converter {
 <!-- 好的做法 -->
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Result" />
 
 </LinearLayout>
 ```
-
-### 註釋
-
-```java
-/**
- * 將 UID 轉換為門禁卡號
- *
- * @param uid 原始 UID 字串
- * @return 轉換後的門禁卡號（後 10 碼）
- */
-public static String convert(String uid) {
-    // 實現
-}
-```
-
----
-
-## 🎨 設計規範
-
-### 顏色
-
-- **主色**: #1565C0 (藍色)
-- **文字色**: #FFFFFF (白色)
-
-### 圖示
-
-- 使用 Vector Drawable 格式
-- 遵循 Material Design 指南
-- 保持簡潔清晰
 
 ---
 
@@ -191,6 +187,9 @@ public static String convert(String uid) {
 - [ ] UID 轉換結果正確
 - [ ] 手動輸入功能正常
 - [ ] 歷史記錄可以儲存和檢索
+- [ ] CSV 匯出功能正常
+- [ ] 清除記錄功能正常
+- [ ] Memory Dump 功能正常（如適用）
 - [ ] UI 在不同螢幕尺寸上正常顯示
 - [ ] 沒有崩潰或明顯的 bug
 
@@ -198,9 +197,9 @@ public static String convert(String uid) {
 
 儘可能在多種裝置上測試：
 
-- 不同 Android 版本（7.0, 8.0, 9.0, 10.0+, 11.0+, 12.0+, 13.0+）
-- 不同螢幕尺寸
-- 有/無 NFC 功能的裝置
+- 不同 Android 版本（6.0, 7.0, 8.0, 9.0, 10.0+, 11.0+, 12.0+, 13.0+, 14.0+）
+- 不同螢幕尺寸（手機、平板）
+- 不同廠牌（Samsung, Xiaomi, Huawei, 等）
 
 ---
 
@@ -210,37 +209,22 @@ public static String convert(String uid) {
 
 如果您修改了功能，請更新相關的文件：
 
-- README.md - 用戶文檔
-- DEVELOPMENT.md - 開發者文檔
-- CHANGELOG.md - 版本更新日誌
+- **README.md** - 用戶文檔
+  - 新功能的說明
+  - 使用方法的更新
+  - 版本資訊的更新
+
+- **CHANGELOG.md** - 版本更新日誌
+  - 在對應版本下方添加變更內容
+  - 使用標準格式（✅ 新增、🔧 變更、🐛 修復）
+
+- **DEVELOPMENT.md** - 開發者文檔
+  - 新增功能的技術說明
+  - API 變更說明
+
 - 程式碼內的註釋
-
-### Markdown 格式
-
-```markdown
-# 一級標題
-## 二級標題
-### 三級標題
-
-**粗體文字**
-*斜體文字*
-
-[連結文字](https://example.com)
-
-- 無序列表項
-- 無序列表項
-
-1. 有序列表項
-2. 有序列表項
-
-`程式碼`
-
-```java
-// 程式碼區塊
-public class Example {
-}
-```
-```
+  - 對複雜邏輯添加註釋說明
+  - 對公共方法添加 Javadoc 註釋
 
 ---
 
@@ -252,8 +236,18 @@ public class Example {
 
 ```java
 // 在程式碼中添加日誌
-Log.d("HeliRFID", "Debug information");
-Log.e("HeliRFID", "Error message", exception);
+import android.util.Log;
+
+public class Example {
+    private static final String TAG = "HeliRFID";
+
+    public void someMethod() {
+        Log.d(TAG, "Debug information");
+        Log.i(TAG, "Information");
+        Log.w(TAG, "Warning");
+        Log.e(TAG, "Error message", exception);
+    }
+}
 ```
 
 ### 常見問題
@@ -267,6 +261,11 @@ Log.e("HeliRFID", "Error message", exception);
 - 檢查轉換邏輯
 - 驗證輸入格式
 
+**問題: 構建失敗**
+- 執行 `./gradle-8.0/bin/gradle clean`
+- 檢查 Android SDK 版本
+- 查看錯誤日誌
+
 ---
 
 ## 💡 建議的功能
@@ -274,13 +273,14 @@ Log.e("HeliRFID", "Error message", exception);
 我們歡迎新功能建議！一些想法：
 
 - [ ] 支援更多 NFC 卡片類型
-- [ ] 添加卡號複製功能
+- [ ] 添加卡號複製到剪貼板功能
 - [ ] 支援匯出/匯入歷史記錄
-- [ ] 添加深色模式
-- [ ] 多語言支援
+- [ ] 添加多語言支援（簡體中文、英文）
 - [ ] 卡號備註功能
 - [ ] 卡片分類管理
 - [ ] 掃描結果分享
+- [ ] 藍芽連接支援
+- [ ] Web 儀表板整合
 
 ---
 
@@ -293,20 +293,29 @@ Log.e("HeliRFID", "Error message", exception);
 
 ---
 
-## 🌟 其他
+## 🌟 其他資訊
 
 ### 時區
 
-專案使用 UTC+8 (亞洲/台北) 時區。
+專案開發團隊使用 UTC+8 (亞洲/台北) 時區。
 
-### 程式語言
+### 溝通語言
 
 請儘量使用繁體中文進行溝通。
 
 ### 授權
 
-您的貢獻將使用與專案相同的 MIT 授權。
+您提交的貢獻將使用與專案相同的 MIT 授權。
 
 ---
 
-感謝您的貢獻！🎉
+## 🔗 參考資源
+
+- [Android Developers](https://developer.android.com/)
+- [Android NFC Documentation](https://developer.android.com/guide/topics/connectivity/nfc)
+- [Material Design Guidelines](https://material.io/design)
+- [Gradle Documentation](https://docs.gradle.org/current/userguide/userguide.html)
+
+---
+
+感謝您的貢您的貢獻！🎉
