@@ -1,8 +1,11 @@
 package com.helirfid.ultimate;
 
 import android.app.Activity;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.*;
 import android.view.View;
@@ -16,6 +19,7 @@ public class MainActivity extends Activity {
     HistoryManager history;
 
     NfcAdapter nfcAdapter;
+    PendingIntent pendingIntent;
     Tag currentTag;
 
     @Override
@@ -40,6 +44,16 @@ public class MainActivity extends Activity {
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
+        Intent intent = new Intent(this, getClass());
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+        int flags = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                ? PendingIntent.FLAG_MUTABLE
+                : PendingIntent.FLAG_UPDATE_CURRENT;
+
+        pendingIntent = PendingIntent.getActivity(
+                this, 0, intent, flags);
+
         btnClear.setOnClickListener(v -> {
             history.clear();
             updateHistory();
@@ -60,6 +74,23 @@ public class MainActivity extends Activity {
         });
 
         updateHistory();
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        if(nfcAdapter != null)
+            nfcAdapter.enableForegroundDispatch(
+                    this, pendingIntent, null, null);
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+
+        if(nfcAdapter != null)
+            nfcAdapter.disableForegroundDispatch(this);
     }
 
     @Override

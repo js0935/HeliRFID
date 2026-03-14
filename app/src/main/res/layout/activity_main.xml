@@ -20,6 +20,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <ImageView
+            android:id="@+id/hrLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_hr"/>
+
         <TextView
             android:text="禾秝軟體開發團隊"
             android:textSize="14sp"
