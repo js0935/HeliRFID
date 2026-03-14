@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:text="v4.0.0"
+        android:text="v4.0.1"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"

@@ -211,7 +211,7 @@
 
                 <EditText
                     android:id="@+id/editInput"
-                    android:hint="請輸入 UID (例如: 04:A2:B3:C4:D5:E6:78)"
+                    android:hint="請輸入 UID (限制 4 組，例如: 00:A2:B3:C4)"
                     android:inputType="text"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"

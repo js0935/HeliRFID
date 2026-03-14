@@ -92,16 +92,22 @@ public class MainActivity extends AppCompatActivity {
 
         btnConvert.setOnClickListener(v -> {
             String input = editInput.getText().toString().trim();
-            
+
             if (TextUtils.isEmpty(input)) {
                 Toast.makeText(MainActivity.this, "請輸入 UID", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             try {
-                String uid = input.replace(":", "");
-                if (uid.length() < 8) {
-                    Toast.makeText(MainActivity.this, "UID 格式錯誤", Toast.LENGTH_SHORT).show();
+                String uid = input.replace(":", "").replace(" ", "").toUpperCase();
+
+                if (!uid.matches("[0-9A-F]+")) {
+                    Toast.makeText(MainActivity.this, "請輸入有效的 16 進制字符 (0-9, A-F)", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (uid.length() != 8) {
+                    Toast.makeText(MainActivity.this, "限制輸入 4 組，格式如: 00:00:00:00", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
