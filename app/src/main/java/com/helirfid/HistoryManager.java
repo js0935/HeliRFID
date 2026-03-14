@@ -17,6 +17,10 @@ public class HistoryManager {
 
         list.add(0,card);
 
+        if(list.size()>100){
+            list.remove(list.size()-1);
+        }
+
         prefs.edit().putString("data",String.join(",",list)).apply();
     }
 

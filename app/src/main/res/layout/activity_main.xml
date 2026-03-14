@@ -96,6 +96,141 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- 複製風險分析和金鑰測試 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="複製風險分析"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtAnalysis"
+                    android:text="掃描卡片後顯示分析結果"
+                    android:textSize="12sp"
+                    android:textColor="#333"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btnAnalyze"
+                    android:text="分析複製風險"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#FF9800"
+                    style="@style/Widget.AppCompat.Button.Colored"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="金鑰測試"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtKeyTest"
+                    android:text="掃描卡片後顯示金鑰測試結果"
+                    android:textSize="12sp"
+                    android:textColor="#333"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"/>
+
+                <Button
+                    android:id="@+id/btnTestKeys"
+                    android:text="測試金鑰"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#9C27B0"
+                    style="@style/Widget.AppCompat.Button.Colored"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 手動輸入區域 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="手動輸入 UID"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editInput"
+                    android:hint="請輸入 UID (例如: 04:A2:B3:C4:D5:E6:78)"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConvert"
+                    android:text="轉換卡號"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:backgroundTint="#1565C0"
+                    app:cornerRadius="8dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
