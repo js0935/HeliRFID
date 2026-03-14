@@ -58,14 +58,21 @@
 
 ## 📱 下載 APK
 
-### 🚀 最新版本 (v3.0.0 Ultimate Edition)
+### 🚀 最新版本 (v3.0.2 Ultimate Edition) ⭐
 
-**[📥 下載 HeliRFIDUltimate-v3.0-debug.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.0/releases/HeliRFIDUltimate-v3.0-debug.apk)** (5.3 MB)
+**[📥 下載 HeliRFIDUltimate-v3.0.2-debug.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.2/releases/HeliRFIDUltimate-v3.0.2-debug.apk)** (5.3 MB)
 
 **版本日期**: 2025-03-14
 
+**v3.0.2 修復內容:**
+- ✅ 修復應用程式關閉時掃描卡片無法讀取內容的問題
+- ✅ 添加完整的 NFC intent 處理
+- ✅ 支援所有 NFC 技術類型
+- ✅ 修復 Memory Dump 功能
+- ✅ 恢復 HR Logo 顯示
+
 #### 快速下載連結
-- v3.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.0/releases/HeliRFIDUltimate-v3.0-debug.apk
+- **v3.0.2** (推薦): https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.2/releases/HeliRFIDUltimate-v3.0.2-debug.apk
 - v2.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v2.0.0/releases/HeliRFIDUltimate-v2.0-debug.apk
 - v1.1.0: https://github.com/js0935/HeliRFID/raw/refs/heads/master/releases/HeliRFID-v1.1-debug.apk
 - v1.0.0: https://github.com/js0935/HeliRFID/raw/refs/heads/master/releases/HeliRFID-v1.0-debug.apk
@@ -85,6 +92,12 @@
 - ✨ **Activity 架構** - 優化為 Activity 類別
 
 ### 🔥 重大版本
+
+**HeliRFID Ultimate v3.0.2 (推薦使用)**
+- [📥 下載 v3.0.2](https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.2/releases/HeliRFIDUltimate-v3.0.2-debug.apk) (5.3 MB)
+- 最新的修復版本，解決了所有 NFC reading 問題
+
+**⚠️ v3.0.1 和 v3.0.0 有已知問題，請勿使用**
 
 **HeliRFID Ultimate v2.0.0**
 - [📥 下載 v2.0.0](https://github.com/js0935/HeliRFID/raw/refs/tags/v2.0.0/releases/HeliRFIDUltimate-v2.0-debug.apk) (5.3 MB)
