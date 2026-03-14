@@ -22,6 +22,8 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 - 📱 自動讀取 NFC 卡片
 - 🔢 一鍵轉換多種卡號格式（10 碼 / 8 碼）
 - 🔐 支援 Wiegand 門禁協定
+- 🔑 金鑰測試功能（Mifare Classic）
+- 🛡️ 複製風險分析
 - 📊 記憶體檢視功能
 - 📝 歷史記錄管理
 - 📤 CSV 匯出功能
@@ -111,9 +113,23 @@ UID 自動轉換為多種格式：
 - 儲存於 Downloads 目錄
 - 可用於試算表軟體開啟
 
-### 5. Memory Dump
-- 以表格形式檢視 NFC 卡片記憶體內容
-- 顯示扇區、區塊、資訊
+### 5. 金鑰測試 (Key Tester)
+- 測試 Mifare Classic 卡片的常見金鑰
+- 支援 5 種金鑰集：
+  - 工廠預設：`FF FF FF FF FF FF`
+  - Madroid：`A0 A1 A2 A3 A4 A5`
+  - NXP：`D3 F7 D3 F7 D3 F7`
+  - Uncommon：`4D 3A 99 CB 34 0B`
+  - Public：`1A 98 2C 7E 45 9A`
+- 顯示測試成功的金鑰資訊
+
+### 6. 複製風險分析 (Clone Analyzer)
+- 偵測 NFC 卡片的複製風險
+- 分析 UID 模式以識別潛在的複製卡
+- 提供風險等級和防護建議
+- 適用於門禁系統的安全檢測
+
+### 7. Memory Dump
 
 ---
 
@@ -236,6 +252,8 @@ heli_rfid_nfc/
 │       ├── NFCReader.java             # NFC 讀取
 │       ├── Wiegand.java               # Wiegand 協定
 │       ├── CardAnalyzer.java          # 卡片分析
+│       ├── CloneAnalyzer.java         # 複製風險分析
+│       ├── KeyTester.java             # 金鑰測試
 │       ├── HistoryManager.java        # 歷史管理
 │       ├── CsvExporter.java           # CSV 匯出
 │       ├── DumpAdapter.java           # RecyclerView 適配器
@@ -250,12 +268,25 @@ heli_rfid_nfc/
 
 ## 📋 版本資訊
 
-### v4.0.1 (2025-03-14) - 專業版修復
+### v4.0.1 (2025-03-14) - Complete Edition (完整版)
+
+**完整功能整合：**
+- ✅ 整合歷代版本所有功能（v1.0.0 ~ v4.0.0）
+- ✅ 還原金鑰測試功能（KeyTester - v3.0.0）
+- ✅ 還原複製風險分析（CloneAnalyzer - v2.0.0）
+- ✅ 還原手動 UID 輸入功能（v1.0.0）
 
 **修復：**
 - ✅ 修復版本顯示（從 v3.0 更新為 v4.0.1）
 - ✅ 修復啟動畫面標題（更新為「HeliRFID 專業版」）
 - ✅ 修復 CSV 匯出（支援 Android 10+）
+
+**歷史功能列表：**
+- v1.0.0: 手動輸入、10 位數卡號、歷史記錄
+- v1.1.0: 100 筆限制、清除記錄 Toast、自動補零
+- v2.0.0: Wiegand26/34、CloneAnalyzer、CSV 匯出、多種卡片格式
+- v3.0.0: KeyTester 五種常見金鑰測試
+- v4.0.0: Memory Dump 可視化、Android 14 支援
 
 ### v4.0.0 (2025-03-14) - 專業版發布
 
@@ -266,7 +297,7 @@ heli_rfid_nfc/
 
 **變更：**
 - 套件名稱重構：`com.helirfid`
-- 簡化功能，專注核心 NFC 讀取
+-簡化功能，專注核心 NFC 讀取
 
 查看完整變更：[CHANGELOG.md](CHANGELOG.md)
 

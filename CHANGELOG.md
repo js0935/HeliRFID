@@ -14,7 +14,35 @@
 
 ## 📅 版本歷史
 
-### [4.0.1] - 2025-03-14
+### [4.0.1] - 2025-03-14 - Complete Edition (完整版)
+
+#### ✅ 新增 (Added)
+
+**歷史功能整合**
+- ✅ 還原並整合 CloneAnalyzer 複製風險分析功能（原 v2.0.0 功能）
+  - CloneAnalyzer.java - 複製卡風險偵測
+  - 偵測 UID 模式並評估複製風險等級
+  - 回報風險類型和防護建議
+- ✅ 還原並整合 KeyTester 金鑰測試功能（原 v3.0.0 功能）
+  - KeyTester.java - Mifare Classic 金鑰測試
+  - 測試 5 種常見金鑰：工廠預設、Madroid、NXP、Uncommon、Public
+  - 即時顯示測試成功的金鑰資訊和區塊存取權限
+- ✅ 還原手動 UID 輸入功能（原 v1.0.0 功能）
+  - EditText 手動輸入欄位和轉換按鈕
+  - 支援多種 UID 格式輸入
+- ✅ 還原清除歷史記錄 Toast 提示（原 v1.1.0 功能）
+  - 清除記錄後顯示確認訊息
+- ✅ 還原 100 筆歷史記錄限制邏輯（原 v1.0.0 功能）
+  - HistoryManager 自動維護記錄數量上限
+
+**使用者介面**
+- ✅ 複製風險分析區塊
+  - 顯示風險等級、風險類型、防護建議
+  - "分析複製風險" 按鈕
+- ✅ 金鑰測試區塊
+  - 顯示測試成功的金鑰
+  - "測試金鑰" 按鈕
+  - 自動關聯當前掃描的標籤
 
 #### 🐛 修復 (Fixed)
 
@@ -30,6 +58,17 @@
 
 #### 🔧 技術改進
 
+- MainActivity.java 完整功能整合
+  - 新增 txtAnalysis、txtKeyTest 視圖
+  - 新增 btnAnalyze、btnTestKeys 事件處理
+  - 整合 CloneAnalyzer 和 KeyTester 到主流程
+- activity_main.xml 佈局更新
+  - 新增複製風險分析 CardView 區塊
+  - 新增金鑰測試 CardView 區塊
+  - 新增手動輸入 EditText 和轉換按鈕
+
+#### 🔧 技術實作
+
 - 實現 `exportWithMediaStore()` 方法
   - 使用 ContentResolver 和 MediaStore API
   - 支援 `MediaStore.Downloads.RELATIVE_PATH` 和 `DISPLAY_NAME` 設置
@@ -38,6 +77,16 @@
   - 使用傳統的 File IO
   - 相容 Android 9 以下版本
 - 根據 `Build.VERSION.SDK_INT` 自動選擇適當的匯出方法
+
+#### 📦 版本特點
+
+**v4.0.1 Complete Edition (完整版)** 整合了所有歷代版本功能：
+- ✅ v1.0.0: 手動輸入、10 位數卡號、歷史記錄
+- ✅ v1.1.0: 100 筆限制、清除記錄 Toast、自動補零
+- ✅ v2.0.0: Wiegand26/34、CloneAnalyzer、CSV 匯出、多種卡片格式
+- ✅ v3.0.0: KeyTester 五種常見金鑰測試
+- ✅ v4.0.0: Memory Dump 可視化、Android 14 支援
+- ✅ v4.0.1: 版本顯示修復、CSV 匯出 Android 10+ 支援
 
 #### 📦 依賴
 
