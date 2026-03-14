@@ -1,153 +1,104 @@
 package com.helirfid.ultimate;
 
-import android.app.AlertDialog;
-import android.app.PendingIntent;
-import android.content.Intent;
+import android.app.Activity;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.os.Bundle;
-import android.os.Environment;
 import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
-import java.io.File;
+import android.view.View;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-    TextView txtUID,txtHEX,txt10,txt8,txtW26,txtClone,txtCard;
-    Button btnDump,btnClear,btnExport;
-    ListView history;
+    TextView uidText, hexText, dec10Text, dec8Text, w26Text, typeText, cloneText, keyText;
+    Button btnClear, btnDump, btnExport;
+    ListView historyList;
+    HistoryManager history;
 
     NfcAdapter nfcAdapter;
-    PendingIntent pendingIntent;
-
-    HistoryManager historyManager;
+    Tag currentTag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
-        txtUID=findViewById(R.id.txtUID);
-        txtHEX=findViewById(R.id.txtHEX);
-        txt10=findViewById(R.id.txt10);
-        txt8=findViewById(R.id.txt8);
-        txtW26=findViewById(R.id.txtW26);
-        txtClone=findViewById(R.id.txtClone);
-        txtCard=findViewById(R.id.txtCard);
+        uidText = findViewById(R.id.txtUID);
+        hexText = findViewById(R.id.txtHEX);
+        dec10Text = findViewById(R.id.txt10);
+        dec8Text = findViewById(R.id.txt8);
+        w26Text = findViewById(R.id.txtW26);
+        typeText = findViewById(R.id.txtCard);
+        cloneText = findViewById(R.id.txtClone);
+        keyText = findViewById(R.id.txtKey);
+        btnClear = findViewById(R.id.btnClear);
+        btnDump = findViewById(R.id.btnDump);
+        btnExport = findViewById(R.id.btnExport);
+        historyList = findViewById(R.id.history);
 
-        btnDump=findViewById(R.id.btnDump);
-        btnClear=findViewById(R.id.btnClear);
-        btnExport=findViewById(R.id.btnExport);
+        history = new HistoryManager(this);
 
-        history=findViewById(R.id.history);
+        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
-        historyManager=new HistoryManager(this);
-
-        nfcAdapter=NfcAdapter.getDefaultAdapter(this);
-
-        Intent intent=new Intent(this,getClass());
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-        pendingIntent=PendingIntent.getActivity(
-                this,0,intent,PendingIntent.FLAG_MUTABLE);
-
-        btnDump.setOnClickListener(v->{
-
-            AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setTitle("Memory Dump");
-            builder.setMessage("Full memory dump feature will be available in the paid version.\n\nIncludes: Sector analysis, Block reading, Key cracking tools.");
-            builder.setPositiveButton("OK",(dialog,which)->dialog.dismiss());
-            builder.show();
-
+        btnClear.setOnClickListener(v -> {
+            history.clear();
+            updateHistory();
         });
 
-        btnClear.setOnClickListener(v->{
-
-            historyManager.clear();
-            refreshHistory();
-            Toast.makeText(this,"紀錄已清除",Toast.LENGTH_SHORT).show();
-
-        });
-
-        btnExport.setOnClickListener(v->{
-
-            List<String> list=historyManager.get();
-
-            boolean success=CsvExporter.export(this,list);
-
-            if(success){
-                Toast.makeText(this,"CSV 已匯出到 Downloads",Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(this,"匯出失敗",Toast.LENGTH_SHORT).show();
+        btnDump.setOnClickListener(v -> {
+            if (currentTag != null) {
+                String dumpResult = DumpReader.dumpTagInfo(currentTag);
+                Toast.makeText(this, "Memory Dump:\n" + dumpResult, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "請先掃描 NFC 卡", Toast.LENGTH_SHORT).show();
             }
-
         });
 
-        refreshHistory();
+        btnExport.setOnClickListener(v -> {
+            boolean result = CsvExporter.export(this, history.get());
+            Toast.makeText(this, result ? "匯出成功" : "匯出失敗", Toast.LENGTH_SHORT).show();
+        });
+
+        updateHistory();
     }
 
     @Override
-    protected void onResume(){
-
-        super.onResume();
-
-        if(nfcAdapter!=null)
-            nfcAdapter.enableForegroundDispatch(
-                    this,pendingIntent,null,null);
-    }
-
-    @Override
-    protected void onPause(){
-
-        super.onPause();
-
-        if(nfcAdapter!=null)
-            nfcAdapter.disableForegroundDispatch(this);
-    }
-
-    @Override
-    protected void onNewIntent(Intent intent){
-
+    protected void onNewIntent(android.content.Intent intent){
         super.onNewIntent(intent);
 
-        Tag tag=intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+        currentTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+        byte[] uid = currentTag.getId();
 
-        if(tag!=null){
+        String uidStr = Converter.hex(uid);
+        uidText.setText(uidStr);
 
-            String uidStr=NFCReader.getUID(tag);
-            byte[] uid=tag.getId();
-            String hex=Converter.hex(uid);
-            String d10=Converter.decimal10(uid);
-            String d8=Converter.decimal8(uid);
-            String w26=Wiegand.wiegand26(d10.substring(d10.length()-8));
-            String clone=CloneAnalyzer.analyze(tag);
-            String cardType=CardAnalyzer.analyze(tag);
+        String hex = Converter.hex(uid);
+        hexText.setText(hex);
 
-            txtUID.setText("UID: "+uidStr);
-            txtHEX.setText("HEX: "+hex);
-            txt10.setText("10碼: "+d10);
-            txt8.setText("8碼: "+d8);
-            txtW26.setText("Wiegand26: "+w26);
-            txtClone.setText(clone);
-            txtCard.setText(cardType);
+        String dec10 = Converter.decimal10(uid);
+        dec10Text.setText(dec10);
 
-            historyManager.add(d10);
+        String dec8 = Converter.decimal8(uid);
+        dec8Text.setText(dec8);
 
-            refreshHistory();
-        }
+        w26Text.setText(Wiegand.wiegand26(dec10));
+
+        typeText.setText(CardAnalyzer.analyze(currentTag));
+
+        cloneText.setText(CloneAnalyzer.analyze(currentTag));
+
+        keyText.setText(KeyTester.testAllKeys(currentTag));
+
+        history.add(dec10);
+        updateHistory();
     }
 
-    void refreshHistory(){
+    private void updateHistory(){
+        List<String> list = history.get();
 
-        List<String> list=historyManager.get();
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1,list);
 
-        ArrayAdapter<String> adapter=
-                new ArrayAdapter<>(this,
-                        android.R.layout.simple_list_item_1,list);
-
-        history.setAdapter(adapter);
+        historyList.setAdapter(adapter);
     }
 }

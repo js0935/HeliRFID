@@ -6,10 +6,20 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="HeliRFID"
+        android:text="HeliRFID Ultimate"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="#1A237E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="v3.0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="#1565C0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
