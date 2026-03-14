@@ -111,13 +111,17 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                byte[] uidBytes = hexStringToByteArray(uid);
-                String card10 = Converter.decimal10(uidBytes);
-                String card8 = Converter.decimal8(uidBytes);
-                String w26 = Wiegand.wiegand26(card10);
-                String w34 = Wiegand.wiegand34(card10);
-
                 String formattedUid = uid.substring(0, 2) + ":" + uid.substring(2, 4) + ":" + uid.substring(4, 6) + ":" + uid.substring(6, 8);
+
+                String reversed = uid.substring(6, 8) + uid.substring(4, 6) + uid.substring(2, 4) + uid.substring(0, 2);
+                String card10 = new java.math.BigInteger(reversed, 16).toString();
+                
+                while(card10.length() < 10) {
+                    card10 = "0" + card10;
+                }
+                
+                String card8 = card10.substring(card10.length() - 8);
+                String w26 = Wiegand.wiegand26(card10);
 
                 txtUID.setText("UID: " + formattedUid);
                 txtCard10.setText("10碼: " + card10);
