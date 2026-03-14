@@ -7,6 +7,73 @@
 
 ---
 
+## [4.0.0] - 2025-03-14
+
+### 新增 (Added)
+
+#### 核心功能
+- ✅ Memory Dump 可視化 - RecyclerView 表格顯示記憶體傾印數據
+- ✅ DumpAdapter.java - RecyclerView 表格適配器，管理記憶體資料項目
+- ✅ DumpItem.java - 扇區/區塊/資料/描述資料模型
+- ✅ 專業版品牌 - "HeliRFID 專業版" 標示和品牌識別
+- ✅ activity_memory_dump.xml - Memory Dump 专用 Activity 佈局
+- ✅ dump_item.xml - RecyclerView 單一項目卡片佈局
+
+#### 技術實作
+- ✅ RecyclerView 依賴 - 添加 androidx.recyclerview:recyclerview:1.3.2
+- ✅ MemoryDumpActivity - 專業的記憶體傾印檢視介面
+- ✅ 區塊化資訊顯示 - 扇區、區塊、資料、描述四欄位
+
+#### 使用者介面
+- ✅ 專業版標題 - activity_main.xml 更新為 "HeliRFID 專業版"
+- ✅ 表格化資訊呈現 - 清晰的表格顯示記憶體內容
+- ✅ 精美卡片設計 - dump_item 優美卡片佈局
+- ✅ 專業版品牌 - AndroidManifest.xml 應用程式標籤更新
+
+### 變更 (Changed)
+
+#### 套件重構
+- 套件名稱重構：com.helirfid.ultimate → com.helirfid
+- 所有 Java 檔案套件名更新至 com.helirfid
+- 移除 Ultimate 版本專用功能模組
+
+#### 程式碼簡化
+- 移除 CloneAnalyzer.java - 複製風險分析功能
+- 移除 DumpReader.java - 舊版記憶體傾印功能
+- 移除 KeyTester.java - 金鑰測試功能
+- 專注於核心 NFC 讀取功能
+
+#### 版本資訊
+- 版本號更新：versionCode 7，versionName "4.0.0"
+- AndroidManifest.xml 更新應用程式標籤為 "HeliRFID 專業版"
+- build.gradle 更新版本和新增 RecyclerView 依賴
+
+#### 使用者介面
+- MainActivity 標題更新為專業版
+- 啟動畫面更新為專業版品牌識別
+- 統一品牌配色和設計語言
+
+### 移除 (Removed)
+
+- ❌ CloneAnalyzer.java - 複製風險分析模組
+- ❌ DumpReader.java - 舊版記憶體傾印功能（替換為 DumpAdapter/DumpItem）
+- ❌ KeyTester.java - 金鑰測試功能
+- ❌ com.helirfid.ultimate 套件 - Ultimate 版本套件結構
+
+### 優化 (Optimized)
+
+- 簡化功能列表，專注於核心 NFC 讀取體驗
+- 優化 Memory Dump 介面設計，使用 RecyclerView 提升效能
+- 專業版 UI/UX 統一設計
+- 清晰的表格化資訊呈現
+
+### 依賴庫
+- compileSdk: 34 (Android 14)
+- targetSdk: 34 (Android 14)
+- 增加：androidx.recyclerview:recyclerview:1.3.2
+
+---
+
 ## [3.0.0] - 2025-03-14
 
 ### 新增 (Added)
