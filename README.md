@@ -8,7 +8,7 @@
 
 一款 Android NFC 門禁卡讀取與轉換應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.0.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/tag/v4.0.0)
+[![Version](https://img.shields.io/badge/version-v4.0.1-blue.svg)](https://github.com/js0935/HeliRFID/releases/tag/v4.0.1)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/js0935/HeliRFID)
@@ -58,11 +58,17 @@
 
 ## 📱 下載 APK
 
-### 🚀 最新版本 (v4.0.0 Professional Edition) ⭐
+### 🚀 最新版本 (v4.0.1 Professional Edition) ⭐
 
-**[📥 下載 HeliRFIDProfessional-v4.0.0-debug.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.0/releases/HeliRFIDProfessional-v4.0.0-debug.apk)** (5.3 MB)
+**[📥 下載 HeliRFIDProfessional-v4.0.1-debug-fixed.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk)** (5.5 MB)
 
 **版本日期**: 2025-03-14
+
+**v4.0.1 專業版修復:**
+- ✅ 修復啟動畫面版本顯示 - 從 v3.0 更新為 v4.0.1
+- ✅ 修復啟動畫面標題 - 從 "HeliRFID Ultimate" 更新為 "HeliRFID 專業版"
+- ✅ 修復 CSV 匯出功能 - 支援 Android 10+ (API 29+) 使用 MediaStore API
+- ✅ 優化 CSV 匯出 - 支援現代 Android 檔案系統
 
 **v4.0.0 專業版變更:**
 - ✅ 專業版品牌更新 - "HeliRFID 專業版"
@@ -74,16 +80,22 @@
 - ✅ 優化 UI/UX - 專業版介面設計
 
 #### 快速下載連結
-- **v4.0.0** (最新專業版): https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.0/releases/HeliRFIDProfessional-v4.0.0-debug.apk
+- **v4.0.1** (最新專業版修復): https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk
+- v4.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.0/releases/HeliRFIDProfessional-v4.0.0-debug.apk
 - v3.0.3: https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.3/releases/HeliRFIDUltimate-v3.0.3-debug.apk
 - v2.0.0: https://github.com/js0935/HeliRFID/raw/refs/tags/v2.0.0/releases/HeliRFIDUltimate-v2.0-debug.apk
 
 ### 版本資訊
-- 版本號: 4.0.0 (7)
+- 版本號: 4.0.1 (7)
 - 類型: Debug
 - 構建: Gradle 8.0
 - 最低 SDK: API 23 (Android 6.0)
 - 目標 SDK: API 34 (Android 14)
+
+### v4.0.1 修復內容
+- 🐛 **修復版本顯示** - 啟動畫面顯示正確的 v4.0.1 版本號
+- 🐛 **修復 CSV 匯出** - 支援 Android 10+ (API 29+) MediaStore API
+- 🐛 **修復標題顯示** - 啟動畫面顯示正確的 "HeliRFID 專業版"
 
 ### v4.0.0 新增功能
 - ✨ **Memory Dump 可視化** - RecyclerView 表格顯示記憶體傾印
@@ -95,9 +107,13 @@
 
 ### 🔥 重大版本
 
-**HeliRFID Professional v4.0.0 (推薦使用)**
+**HeliRFID Professional v4.0.1 (推薦使用)**
+- [📥 下載 v4.0.1](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1/releases/HeliRFIDProfessional-v4.0.1-debug-fixed.apk) (5.5 MB)
+- 專業版修復版，解決版本顯示和 CSV 匯出問題
+
+**HeliRFID Professional v4.0.0**
 - [📥 下載 v4.0.0](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.0/releases/HeliRFIDProfessional-v4.0.0-debug.apk) (5.3 MB)
-- 專業版，簡化功能並優化核心 NFC 讀取體驗
+- 專業版初始發布，簡化功能並優化核心 NFC 讀取體驗
 
 **HeliRFID Ultimate v3.0.3**
 - [📥 下載 v3.0.3](https://github.com/js0935/HeliRFID/raw/refs/tags/v3.0.3/releases/HeliRFIDUltimate-v3.0.3-debug.apk) (5.3 MB)

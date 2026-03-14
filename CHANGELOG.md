@@ -7,6 +7,34 @@
 
 ---
 
+## [4.0.1] - 2025-03-14
+
+### 修復 (Fixed)
+
+#### 版本顯示
+- 🔧 修復啟動畫面版本號顯示 - 從 "v3.0" 更新為 "v4.0.1"
+- 🔧 修復啟動畫面標題顯示 - 從 "HeliRFID Ultimate" 更新為 "HeliRFID 專業版"
+
+#### CSV 匯出
+- 🔧 修復 CSV 匯出在 Android 10+ (API 29+) 上的失敗問題
+- 🔧 實現 MediaStore API 支援現代 Android 檔案系統
+- 🔧 保留舊的檔案寫入方法以支援 Android 9 以下版本
+- 🔧 改進資源管理，使用 try-with-resources 確保正確關閉資源
+- 🔧 新增異常處理和堆疊追蹤輸出
+
+#### 技術實作
+- 實現 `exportWithMediaStore()` 方法 - 使用 ContentResolver 和 MediaStore API
+- 實現 `exportLegacy()` 方法 - 使用傳統的 File IO
+- 根據 `Build.VERSION.SDK_INT` 自動選擇適當的匯出方法
+- 支援 `MediaStore.Downloads.RELATIVE_PATH` 和 `DISPLAY_NAME` 設置
+- 支援 MIME 類型設置為 `text/csv`
+
+### 依賴
+- Android 10+ (API 29): MediaStore API
+- Android 9 以下 (API 28-): 傳統 External Storage API
+
+---
+
 ## [4.0.0] - 2025-03-14
 
 ### 新增 (Added)
