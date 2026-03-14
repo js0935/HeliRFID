@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.helirfid.ultimate.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.helirfid.ultimate.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.helirfid.ultimate.app-merged_res-31:/drawable_ic_hr.xml.flat",
+        "source": "com.helirfid.ultimate.app-main-33:/drawable/ic_hr.xml"
+    },
+    {
+        "merged": "com.helirfid.ultimate.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.helirfid.ultimate.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.helirfid.ultimate.app-merged_res-31:/layout_splash.xml.flat",
+        "source": "com.helirfid.ultimate.app-main-33:/layout/splash.xml"
+    }
+]

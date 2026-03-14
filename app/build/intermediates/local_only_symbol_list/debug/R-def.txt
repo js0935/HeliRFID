@@ -1,0 +1,18 @@
+R_DEF: Internal format may change without notice
+local
+color icon_bg
+drawable ic_hr
+id btnClear
+id btnDump
+id btnExport
+id history
+id txt10
+id txt8
+id txtCard
+id txtClone
+id txtHEX
+id txtUID
+id txtW26
+layout activity_main
+layout splash
+mipmap ic_launcher

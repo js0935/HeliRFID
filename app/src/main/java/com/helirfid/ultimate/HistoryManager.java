@@ -1,0 +1,47 @@
+package com.helirfid.ultimate;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import java.util.*;
+
+public class HistoryManager {
+
+    SharedPreferences prefs;
+
+    public HistoryManager(Context c){
+
+        prefs=c.getSharedPreferences("history",Context.MODE_PRIVATE);
+
+    }
+
+    public void add(String card){
+
+        List<String> list=get();
+
+        list.add(0,card);
+
+        prefs.edit().putString("data",String.join(",",list)).apply();
+
+    }
+
+    public List<String> get(){
+
+        String s=prefs.getString("data","");
+
+        List<String> list=new ArrayList<>();
+
+        if(!s.isEmpty())
+            list.addAll(Arrays.asList(s.split(",")));
+
+        return list;
+
+    }
+
+    public void clear(){
+
+        prefs.edit().clear().apply();
+
+    }
+
+}

@@ -1,6 +1,9 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.helirfid.ultimate">
 
     <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <uses-feature
         android:name="android.hardware.nfc"
@@ -9,8 +12,9 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
-        android:label="HeliRFID"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:label="HeliRFID Ultimate"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
 
         <activity android:name=".SplashActivity"
             android:exported="true">
@@ -18,7 +22,6 @@
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
@@ -31,7 +34,6 @@
             <intent-filter>
 
                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
-
                 <category android:name="android.intent.category.DEFAULT"/>
 
             </intent-filter>
