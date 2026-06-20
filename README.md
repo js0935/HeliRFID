@@ -47,7 +47,7 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 
 **最新版本：v4.1.0 Professional Toolbox Edition** (2026-06-21)
 
-[📥 下載 app-debug.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.1.0/releases/app-debug.apk) (5.5 MB)
+[📥 下載 HeliRFID-v4.1.0-debug.apk](https://github.com/js0935/HeliRFID/releases/download/v4.1.0/HeliRFID-v4.1.0-debug.apk) (5.5 MB)
 
 **✨ v4.1.0 新增功能：**
 - 🧰 15 項工具箱功能（魔術卡/Dump編輯器/UID產生器/分享/NFC-V/資料轉換/掃描日誌/數值區塊/進階金鑰/HCE/DESFire/FeliCa/分區選取/BCC驗證/APDU控制台）
