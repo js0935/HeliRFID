@@ -6,7 +6,7 @@
 
 一款簡單易用的 Android NFC 門禁卡讀取應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.2.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
+[![Version](https://img.shields.io/badge/version-v4.3.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
 
@@ -27,7 +27,7 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 - 📊 記憶體檢視 / Dump 編輯 / 比對
 - 📝 歷史記錄管理
 - 📤 CSV 匯出 / 分享功能
-- 🧰 30 項工具箱工具
+                             - 🧰 33 項工具箱工具
 - 📡 ACR122U 外接讀卡器支援
 
 ---
@@ -45,15 +45,15 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 
 ### 下載 APK
 
-**最新版本：v4.2.0 Complete Toolkit Edition** (2026-06-21)
+**最新版本：v4.3.0 EMV & Advanced NTAG Edition** (2026-06-21)
 
-[📥 下載 HeliRFID-v4.2.0-debug.apk](https://github.com/js0935/HeliRFID/releases/download/v4.2.0/HeliRFID-v4.2.0-debug.apk) (5.5 MB)
+[📥 下載 HeliRFID-v4.3.0-debug.apk](https://github.com/js0935/HeliRFID/releases/download/v4.3.0/HeliRFID-v4.3.0-debug.apk) (5.7 MB)
 
-**✨ v4.2.0 新增功能：**
-- 🧰 8 項新工具（存取條件解碼器/Dump ASCII檢視器/Dump色彩高亮/數值區塊編解碼器/NTAG讀寫器/標籤格式化/驗證地圖/NFC輪詢模式）
-- 💾 存取條件解碼器支援完整 MIFARE 1K/4K Dump 載入解析
-- 📝 Dump ASCII 檢視器支援 HEX + ASCII 對照
-- 🎨 Dump 色彩高亮依區塊類型（製造商/資料/Trailer）著色
+**✨ v4.3.0 新增功能：**
+- 💳 EMV 信用卡讀取 — 讀取感應式信用卡 PAN/AID/到期日/持卡人
+- 🔄 NTAG 進階工具 — 計數器讀取/遞增、PWD 驗證、ECC 簽名、頁面寫入、格式化
+- 🏭 廠商區塊寫入 — 建構並寫入 MIFARE Classic Block 0 (UID+SAK+ATQA)
+- 📊 NFC 流量監聽器 — 持續監控 NFC 卡片活動與詳細技術資訊
 
 ### 安裝步驟
 
@@ -252,7 +252,7 @@ app/build/outputs/apk/debug/app-debug.apk
 ```
 heli_rfid_nfc/
 ├── app/
-│   └── src/main/java/com/helirfid/ (56 Java 檔案)
+│   └── src/main/java/com/helirfid/ (59 Java 檔案)
 │       ├── MainActivity.java            # 主畫面
 │       ├── SplashActivity.java          # 啟動畫面
 │       ├── TagInfoActivity.java         # 進階標籤資訊
@@ -314,6 +314,14 @@ heli_rfid_nfc/
 
 ## 📋 版本資訊
 
+### v4.3.0 (2026-06-21) - EMV & Advanced NTAG Edition
+
+**4 項新功能：**
+- ✅ EMV 信用卡讀取（PAN/AID/到期日/持卡人 via IsoDep + BER-TLV）
+- ✅ NTAG 進階工具（計數器 READ_CNT / INCR_CNT、PWD 驗證、ECC 簽名、頁面寫入、格式化）
+- ✅ 廠商區塊寫入（建構含 UID/BCC/SAK/ATQA 的 Block 0 並寫入特殊卡片）
+- ✅ NFC 流量監聽器（持續監控卡片技術細節，含匯出功能）
+
 ### v4.2.0 (2026-06-21) - Complete Toolkit Edition (完整工具包版)
 
 **8 項新功能：**
@@ -347,6 +355,7 @@ heli_rfid_nfc/
 - v4.0.1: 整合歷代功能、修復版本顯示/CSV匯出
 - v4.1.0: 22 項工具箱 + ACR122U + 金鑰恢復 + Trace 檢視器
 - v4.2.0: 30 項工具箱 + 存取條件解碼 + Dump ASCII/色彩 + NTAG 讀寫 + 格式化 + 驗證地圖 + 輪詢模式
+- v4.3.0: 33 項工具箱 + EMV 信用卡 + NTAG 進階 + 廠商區塊寫入 + NFC 流量監聽
 
 ### v4.0.0 (2025-03-14) - 專業版發布
 

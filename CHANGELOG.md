@@ -14,6 +14,22 @@
 
 ## 📅 版本歷史
 
+### [4.3.0] - 2026-06-21 - EMV & Advanced NTAG Edition
+
+#### ✅ 新增 4 項功能
+
+- ✅ EMV 信用卡讀取 (EmvCardActivity) - 讀取感應式信用卡公開資訊：PAN、AID、到期日、持卡人姓名，支援 Visa/Mastercard/Amex/JCB/Discover/UnionPay
+- ✅ NTAG 進階工具 (NtagActivity 重構) - 新增：計數器讀取 (READ_CNT)、計數器遞增 (INCR_CNT)、PWD 驗證 (PWD_AUTH)、ECC 簽名讀取 (READ_SIG)、Lock Bits 顯示、頁面寫入、格式化
+- ✅ 廠商區塊寫入 (WriteBlock0Activity) - 輸入 UID/SAK/ATQA 建構 Block 0，支援寫入特殊 MIFARE Classic 卡片
+- ✅ NFC 流量監聽器 (NfcMonitorActivity) - 持續監控 NFC 卡片，記錄 UID/ATQA/SAK/技術/GetVersion 等詳細資訊，支援匯出
+
+#### 🔧 變更
+
+- ToolsActivity 新增 3 個導航按鈕（EMV 信用卡、廠商區塊寫入、NFC 流量監聽）
+- 版本號：versionCode 11, versionName "4.3.0"
+- 專案規模：59 Java 檔案, 38 Activities, 33 工具箱按鈕
+- README.md / CHANGELOG.md 更新
+
 ### [4.2.0] - 2026-06-21 - Complete Toolkit Edition (完整工具包版)
 
 #### ✅ 新增 8 項功能
