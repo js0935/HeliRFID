@@ -1,6 +1,6 @@
 /*
  * HeliRFID - 智慧門禁管理系統
- * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+ * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.0
  */
 package com.helirfid;
 
@@ -20,6 +20,7 @@ public class ToolsActivity extends AppCompatActivity {
     Button btnDecodeAccess, btnDecodeValue, btnEncodeValue, btnCalcBcc, btnShowHexAscii;
     Button btnGoKeyMgmt, btnGoDiffTool, btnGoLogViewer, btnGoApduConsole, btnGoMagicCard, btnGoDumpEditor, btnGoUidGen, btnGoShare, btnGoDataConverter, btnGoScanLog, btnGoValueBlock, btnGoAdvancedKey, btnGoNfcV, btnGoHce, btnGoDesfire, btnGoFelica, btnGoSectorSelect, btnGoVerify, btnGoAcr122u, btnGoTraceViewer, btnGoKeyRecovery;
     Button btnGoAccessDecoder, btnGoDumpAscii, btnGoDumpHighlight, btnGoValueCodec, btnGoNtag, btnGoTagFormat, btnGoAuthMap, btnGoNfcPoller;
+    Button btnGoEmvCard, btnGoWriteBlock0, btnGoNfcMonitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,9 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoTagFormat = findViewById(R.id.btnGoTagFormat);
         btnGoAuthMap = findViewById(R.id.btnGoAuthMap);
         btnGoNfcPoller = findViewById(R.id.btnGoNfcPoller);
+        btnGoEmvCard = findViewById(R.id.btnGoEmvCard);
+        btnGoWriteBlock0 = findViewById(R.id.btnGoWriteBlock0);
+        btnGoNfcMonitor = findViewById(R.id.btnGoNfcMonitor);
 
         btnDecodeAccess.setOnClickListener(v -> {
             String input = editAccessBytes.getText().toString().trim().replace(" ", "");
@@ -172,6 +176,9 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoTagFormat.setOnClickListener(v -> startActivity(new Intent(this, TagFormatActivity.class)));
         btnGoAuthMap.setOnClickListener(v -> startActivity(new Intent(this, AuthMapActivity.class)));
         btnGoNfcPoller.setOnClickListener(v -> startActivity(new Intent(this, NfcPollerActivity.class)));
+        btnGoEmvCard.setOnClickListener(v -> startActivity(new Intent(this, EmvCardActivity.class)));
+        btnGoWriteBlock0.setOnClickListener(v -> startActivity(new Intent(this, WriteBlock0Activity.class)));
+        btnGoNfcMonitor.setOnClickListener(v -> startActivity(new Intent(this, NfcMonitorActivity.class)));
     }
 
     private byte[] hexToBytes(String s) {

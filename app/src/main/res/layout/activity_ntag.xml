@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="NTAG 讀寫器"
+            android:text="NTAG 進階工具"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:text="支援 NTAG 21x / MIFARE Ultralight 系列卡片"
+            android:text="支援 NTAG 21x / MIFARE Ultralight EV1/C"
             android:textSize="13sp"
             android:textColor="@color/text_secondary"
             android:layout_marginBottom="16dp"
@@ -30,30 +30,174 @@
 
         <Button
             android:id="@+id/btnNtagRead"
-            android:text="📖 等待卡片掃描..."
+            android:text="讀取標籤資訊"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:backgroundTint="@color/btn_blue"/>
 
+        <Button
+            android:id="@+id/btnNtagReadPages"
+            android:text="讀取全部頁面"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/btn_blue"/>
+
+        <TextView
+            android:text="--- 計數器操作 ---"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnNtagReadCnt"
+                android:text="讀取計數器"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/btn_green"/>
+
+            <Button
+                android:id="@+id/btnNtagIncCnt"
+                android:text="遞增計數器"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/btn_orange"/>
+        </LinearLayout>
+
         <EditText
-            android:id="@+id/editNdefPayload"
-            android:hint="NDEF 資料 (非 NDEF 指令寫入測試)"
+            android:id="@+id/editNtagCounter"
+            android:hint="計數器編號 (0/1/2) 遞增值 (hex)"
             android:inputType="text"
             android:textSize="12sp"
             android:textColor="@color/text_body"
-            android:minLines="2"
+            android:minLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"/>
 
-        <Button
-            android:id="@+id/btnNtagWriteNdef"
-            android:text="寫入 NDEF"
+        <TextView
+            android:text="--- 密碼驗證 ---"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="@color/btn_orange"/>
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editNtagPwd"
+                android:hint="PWD (8位十六進位)"
+                android:inputType="text"
+                android:textSize="12sp"
+                android:textColor="@color/text_body"
+                android:minLines="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnNtagPwdAuth"
+                android:text="PWD 驗證"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/btn_purple"/>
+        </LinearLayout>
+
+        <TextView
+            android:text="--- 頁面寫入 ---"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editNtagPageWrite"
+                android:hint="頁碼 (hex)"
+                android:inputType="text"
+                android:textSize="12sp"
+                android:textColor="@color/text_body"
+                android:minLines="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"/>
+
+            <EditText
+                android:id="@+id/editNtagPageData"
+                android:hint="資料 (8位十六進位)"
+                android:inputType="text"
+                android:textSize="12sp"
+                android:textColor="@color/text_body"
+                android:minLines="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnNtagWritePage"
+                android:text="寫入"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/btn_orange"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnNtagReadSig"
+                android:text="讀取簽名"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/btn_purple"/>
+
+            <Button
+                android:id="@+id/btnNtagFormat"
+                android:text="格式化"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/btn_red"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnNtagClear"

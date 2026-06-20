@@ -207,6 +207,18 @@
             android:exported="true"
             android:parentActivityName=".ToolsActivity"/>
 
+        <activity android:name=".EmvCardActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".WriteBlock0Activity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NfcMonitorActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
         <activity android:name=".HelpActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
