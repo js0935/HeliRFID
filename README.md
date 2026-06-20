@@ -6,7 +6,7 @@
 
 一款簡單易用的 Android NFC 門禁卡讀取應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.1.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
+[![Version](https://img.shields.io/badge/version-v4.2.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
 
@@ -27,7 +27,7 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 - 📊 記憶體檢視 / Dump 編輯 / 比對
 - 📝 歷史記錄管理
 - 📤 CSV 匯出 / 分享功能
-- 🧰 22 項工具箱工具
+- 🧰 30 項工具箱工具
 - 📡 ACR122U 外接讀卡器支援
 
 ---
@@ -45,16 +45,15 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 
 ### 下載 APK
 
-**最新版本：v4.1.0 Professional Toolbox Edition** (2026-06-21)
+**最新版本：v4.2.0 Complete Toolkit Edition** (2026-06-21)
 
-[📥 下載 HeliRFID-v4.1.0-debug.apk](https://github.com/js0935/HeliRFID/releases/download/v4.1.0/HeliRFID-v4.1.0-debug.apk) (5.5 MB)
+[📥 下載 HeliRFID-v4.2.0-debug.apk](https://github.com/js0935/HeliRFID/releases/download/v4.2.0/HeliRFID-v4.2.0-debug.apk) (5.5 MB)
 
-**✨ v4.1.0 新增功能：**
-- 🧰 15 項工具箱功能（魔術卡/Dump編輯器/UID產生器/分享/NFC-V/資料轉換/掃描日誌/數值區塊/進階金鑰/HCE/DESFire/FeliCa/分區選取/BCC驗證/APDU控制台）
-- 📡 ACR122U 外接 USB 讀卡器支援（CCID 原生協定）
-- 🔑 金鑰恢復工具（內建 30 組字典 + ?? 暴力破解）
-- 📊 Proxmark3 Trace 檢視器（顏色區分 Reader/Tag/CRC）
-- 💾 MFD 格式支援（相容 libnfc/mfcuk/mfoc）
+**✨ v4.2.0 新增功能：**
+- 🧰 8 項新工具（存取條件解碼器/Dump ASCII檢視器/Dump色彩高亮/數值區塊編解碼器/NTAG讀寫器/標籤格式化/驗證地圖/NFC輪詢模式）
+- 💾 存取條件解碼器支援完整 MIFARE 1K/4K Dump 載入解析
+- 📝 Dump ASCII 檢視器支援 HEX + ASCII 對照
+- 🎨 Dump 色彩高亮依區塊類型（製造商/資料/Trailer）著色
 
 ### 安裝步驟
 
@@ -253,14 +252,14 @@ app/build/outputs/apk/debug/app-debug.apk
 ```
 heli_rfid_nfc/
 ├── app/
-│   └── src/main/java/com/helirfid/ (48 Java 檔案)
+│   └── src/main/java/com/helirfid/ (56 Java 檔案)
 │       ├── MainActivity.java            # 主畫面
 │       ├── SplashActivity.java          # 啟動畫面
 │       ├── TagInfoActivity.java         # 進階標籤資訊
 │       ├── MemoryDumpActivity.java      # 記憶體檢視
 │       ├── WriteActivity.java           # 寫入功能
 │       ├── CloneActivity.java           # 克隆卡片
-│       ├── ToolsActivity.java           # 工具箱 (22 項工具)
+│       ├── ToolsActivity.java           # 工具箱 (30 項工具)
 │       ├── HelpActivity.java            # 使用說明
 │       ├── Converter.java               # 轉換邏輯
 │       ├── NFCReader.java               # NFC 讀取
@@ -294,6 +293,14 @@ heli_rfid_nfc/
 │       ├── TraceViewerActivity.java         # Proxmark3 Trace
 │       ├── DiffToolActivity.java            # Dump 比對
 │       ├── LogViewerActivity.java           # 日誌檢視
+│       ├── AccessDecoderActivity.java       # 存取條件解碼
+│       ├── DumpAsciiActivity.java           # Dump ASCII 檢視
+│       ├── DumpHighlightActivity.java       # Dump 色彩高亮
+│       ├── ValueCodecActivity.java          # 數值區塊編解碼
+│       ├── NtagActivity.java                # NTAG 讀寫器
+│       ├── TagFormatActivity.java           # 標籤格式化
+│       ├── AuthMapActivity.java             # 驗證地圖
+│       ├── NfcPollerActivity.java           # NFC 輪詢模式
 │       ├── LogUtil.java / HistoryEntry.java / HistoryAdapter.java
 │       ├── MifareUtils.java                 # MIFARE 工具
 │       └── NfcUltralightUtils.java          # Ultralight 工具
@@ -306,6 +313,14 @@ heli_rfid_nfc/
 ---
 
 ## 📋 版本資訊
+
+### v4.2.0 (2026-06-21) - Complete Toolkit Edition (完整工具包版)
+
+**8 項新功能：**
+- ✅ 存取條件解碼器（載入 Dump 解碼所有 Sector）、Dump ASCII 檢視器（HEX+ASCII）
+- ✅ Dump 色彩高亮檢視（製造商/資料/Trailer 著色）、數值區塊編解碼器（整數↔Value Block）
+- ✅ NTAG 讀寫器（NTAG 21x / Ultralight 讀取）、標籤格式化（恢復出廠狀態）
+- ✅ 驗證地圖（10 組金鑰測試所有 Sector）、NFC 輪詢模式（持續偵測記錄）
 
 ### v4.1.0 (2026-06-21) - Professional Toolbox Edition (工具箱專業版)
 
@@ -331,6 +346,7 @@ heli_rfid_nfc/
 - v4.0.0: Memory Dump 可視化、Android 14 支援
 - v4.0.1: 整合歷代功能、修復版本顯示/CSV匯出
 - v4.1.0: 22 項工具箱 + ACR122U + 金鑰恢復 + Trace 檢視器
+- v4.2.0: 30 項工具箱 + 存取條件解碼 + Dump ASCII/色彩 + NTAG 讀寫 + 格式化 + 驗證地圖 + 輪詢模式
 
 ### v4.0.0 (2025-03-14) - 專業版發布
 

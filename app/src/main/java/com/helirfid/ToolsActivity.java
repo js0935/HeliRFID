@@ -19,6 +19,7 @@ public class ToolsActivity extends AppCompatActivity {
     TextView txtAccessResult, txtValueResult, txtBccResult, txtHexAsciiResult;
     Button btnDecodeAccess, btnDecodeValue, btnEncodeValue, btnCalcBcc, btnShowHexAscii;
     Button btnGoKeyMgmt, btnGoDiffTool, btnGoLogViewer, btnGoApduConsole, btnGoMagicCard, btnGoDumpEditor, btnGoUidGen, btnGoShare, btnGoDataConverter, btnGoScanLog, btnGoValueBlock, btnGoAdvancedKey, btnGoNfcV, btnGoHce, btnGoDesfire, btnGoFelica, btnGoSectorSelect, btnGoVerify, btnGoAcr122u, btnGoTraceViewer, btnGoKeyRecovery;
+    Button btnGoAccessDecoder, btnGoDumpAscii, btnGoDumpHighlight, btnGoValueCodec, btnGoNtag, btnGoTagFormat, btnGoAuthMap, btnGoNfcPoller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,14 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoAcr122u = findViewById(R.id.btnGoAcr122u);
         btnGoTraceViewer = findViewById(R.id.btnGoTraceViewer);
         btnGoKeyRecovery = findViewById(R.id.btnGoKeyRecovery);
+        btnGoAccessDecoder = findViewById(R.id.btnGoAccessDecoder);
+        btnGoDumpAscii = findViewById(R.id.btnGoDumpAscii);
+        btnGoDumpHighlight = findViewById(R.id.btnGoDumpHighlight);
+        btnGoValueCodec = findViewById(R.id.btnGoValueCodec);
+        btnGoNtag = findViewById(R.id.btnGoNtag);
+        btnGoTagFormat = findViewById(R.id.btnGoTagFormat);
+        btnGoAuthMap = findViewById(R.id.btnGoAuthMap);
+        btnGoNfcPoller = findViewById(R.id.btnGoNfcPoller);
 
         btnDecodeAccess.setOnClickListener(v -> {
             String input = editAccessBytes.getText().toString().trim().replace(" ", "");
@@ -155,6 +164,14 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoAcr122u.setOnClickListener(v -> startActivity(new Intent(this, Acr122uActivity.class)));
         btnGoTraceViewer.setOnClickListener(v -> startActivity(new Intent(this, TraceViewerActivity.class)));
         btnGoKeyRecovery.setOnClickListener(v -> startActivity(new Intent(this, KeyRecoveryActivity.class)));
+        btnGoAccessDecoder.setOnClickListener(v -> startActivity(new Intent(this, AccessDecoderActivity.class)));
+        btnGoDumpAscii.setOnClickListener(v -> startActivity(new Intent(this, DumpAsciiActivity.class)));
+        btnGoDumpHighlight.setOnClickListener(v -> startActivity(new Intent(this, DumpHighlightActivity.class)));
+        btnGoValueCodec.setOnClickListener(v -> startActivity(new Intent(this, ValueCodecActivity.class)));
+        btnGoNtag.setOnClickListener(v -> startActivity(new Intent(this, NtagActivity.class)));
+        btnGoTagFormat.setOnClickListener(v -> startActivity(new Intent(this, TagFormatActivity.class)));
+        btnGoAuthMap.setOnClickListener(v -> startActivity(new Intent(this, AuthMapActivity.class)));
+        btnGoNfcPoller.setOnClickListener(v -> startActivity(new Intent(this, NfcPollerActivity.class)));
     }
 
     private byte[] hexToBytes(String s) {

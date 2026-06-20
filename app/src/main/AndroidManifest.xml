@@ -175,6 +175,38 @@
 
         </activity>
 
+        <activity android:name=".AccessDecoderActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DumpAsciiActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DumpHighlightActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ValueCodecActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NtagActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagFormatActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".AuthMapActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NfcPollerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
         <activity android:name=".HelpActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>

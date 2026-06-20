@@ -14,6 +14,27 @@
 
 ## 📅 版本歷史
 
+### [4.2.0] - 2026-06-21 - Complete Toolkit Edition (完整工具包版)
+
+#### ✅ 新增 8 項功能
+
+- ✅ 存取條件解碼器 (AccessDecoderActivity) - 載入 Dump 檔案自動解碼所有 Sector 的存取條件，顯示 C1/C2/C3 權限表格
+- ✅ Dump ASCII 檢視器 (DumpAsciiActivity) - HEX + ASCII 對照顯示，支援 .mfd/.bin 檔案
+- ✅ Dump 色彩高亮檢視 (DumpHighlightActivity) - 依區塊類型著色：製造商=金、資料=綠、Trailer=紅
+- ✅ 數值區塊編解碼器 (ValueCodecActivity) - 整數 ↔ Value Block 編解碼，含預設值按鈕
+- ✅ NTAG 讀寫器 (NtagActivity) - 讀取 NTAG 21x / Ultralight 資訊、GetVersion、頁面資料
+- ✅ 標籤格式化工具 (TagFormatActivity) - 將 MIFARE Classic 恢復出廠狀態（重置金鑰 + 存取條件）
+- ✅ 驗證地圖 (AuthMapActivity) - 以 10 組常見金鑰測試所有 Sector 的可存取性
+- ✅ NFC 輪詢模式 (NfcPollerActivity) - 持續偵測標籤，記錄時間/UID/技術類型
+
+#### 🔧 變更
+- 版本號提升至 4.2.0 (versionCode 10)
+- ToolsActivity 按鈕從 22 個擴充至 30 個
+- AndroidManifest.xml 註冊 35 個 Activity
+- 專案 Java 檔案從 48 個增加至 56 個
+
+---
+
 ### [4.1.0] - 2026-06-21 - Professional Toolbox Edition (工具箱專業版)
 
 #### ✅ 新增 (Added)

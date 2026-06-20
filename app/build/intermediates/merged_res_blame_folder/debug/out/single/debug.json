@@ -1,166 +1,194 @@
 [
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\xml_device_filter.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\xml\\device_filter.xml"
-    },
-    {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\drawable_ic_hr.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\drawable\\ic_hr.xml"
-    },
-    {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_uid_generator.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_uid_generator.xml"
-    },
-    {
         "merged": "com.helirfid.app-merged_res-32:/layout_activity_help.xml.flat",
         "source": "com.helirfid.app-main-34:/layout/activity_help.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_splash.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\splash.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_trace_viewer.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_trace_viewer.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_verify.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_verify.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_memory_dump.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_memory_dump.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_tag_info.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_tag_info.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_nfc_poller.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_nfc_poller.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_trace_viewer.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_trace_viewer.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_sector_item.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/sector_item.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_magic_card.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_magic_card.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_access_decoder.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_access_decoder.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_scan_log.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_scan_log.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_dump_editor.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_dump_editor.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_diff_tool.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_diff_tool.xml"
+        "merged": "com.helirfid.app-merged_res-32:/drawable_ic_hr.xml.flat",
+        "source": "com.helirfid.app-main-34:/drawable/ic_hr.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_sector_item.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\sector_item.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_dump_highlight.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_dump_highlight.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_dump_item.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\dump_item.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_nfcv.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_nfcv.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_clone.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_clone.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_clone.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_clone.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_acr122u.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_acr122u.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_desfire.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_desfire.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_data_converter.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_data_converter.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_uid_generator.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_uid_generator.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_apdu_console.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_apdu_console.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_write.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_write.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_dump_editor.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_dump_editor.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_key_recovery.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_key_recovery.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_memory_dump.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_memory_dump.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_log_viewer.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_log_viewer.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_desfire.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_desfire.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_auth_map.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_auth_map.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_main.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_value_block.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_value_block.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_value_block.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_value_block.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_value_codec.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_value_codec.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_felica.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_felica.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_splash.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/splash.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_write.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_write.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_share.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_share.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_advanced_key.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_advanced_key.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_ntag.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_ntag.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_sector_select.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_sector_select.xml"
+        "merged": "com.helirfid.app-merged_res-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.helirfid.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_main_ultimate.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_main_ultimate.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_felica.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_felica.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_dump_editor_item.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\dump_editor_item.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_dump_ascii.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_dump_ascii.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_history_item.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\history_item.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_magic_card.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_magic_card.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_key_management.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_key_management.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_tools.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_tools.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_tools.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_tools.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_main_ultimate.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_main_ultimate.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_log_viewer.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_log_viewer.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_tag_format.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_tag_format.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_diff_tool.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_diff_tool.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_share.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_share.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_apdu_console.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_apdu_console.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_hce.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_hce.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_history_item.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/history_item.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\xml_nfc_tech_backup.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\xml\\nfc_tech_backup.xml"
+        "merged": "com.helirfid.app-merged_res-32:/xml_nfc_tech_filter.xml.flat",
+        "source": "com.helirfid.app-main-34:/xml/nfc_tech_filter.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\xml_nfc_tech_filter.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\xml\\nfc_tech_filter.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_dump_editor_item.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/dump_editor_item.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_key_recovery.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_key_recovery.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_acr122u.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_acr122u.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_help.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_help.xml"
+        "merged": "com.helirfid.app-merged_res-32:/xml_device_filter.xml.flat",
+        "source": "com.helirfid.app-main-34:/xml/device_filter.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\xml_file_paths.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\xml\\file_paths.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_tag_info.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_tag_info.xml"
     },
     {
-        "merged": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-merged_res-32:\\layout_activity_nfcv.xml.flat",
-        "source": "C:\\Users\\JS\\.gradle\\daemon\\8.0\\com.helirfid.app-main-34:\\layout\\activity_nfcv.xml"
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_data_converter.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_data_converter.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_advanced_key.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_advanced_key.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_verify.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_verify.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_scan_log.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_scan_log.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_main.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_sector_select.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_sector_select.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/xml_nfc_tech_backup.xml.flat",
+        "source": "com.helirfid.app-main-34:/xml/nfc_tech_backup.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_key_management.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_key_management.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/xml_file_paths.xml.flat",
+        "source": "com.helirfid.app-main-34:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_activity_hce.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/activity_hce.xml"
+    },
+    {
+        "merged": "com.helirfid.app-merged_res-32:/layout_dump_item.xml.flat",
+        "source": "com.helirfid.app-main-34:/layout/dump_item.xml"
     }
 ]

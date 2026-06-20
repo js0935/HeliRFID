@@ -5,8 +5,8 @@
 5-->
 6<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 7    package="com.helirfid"
-8    android:versionCode="9"
-9    android:versionName="4.1.0" >
+8    android:versionCode="10"
+9    android:versionName="4.2.0" >
 10
 11    <uses-sdk
 12        android:minSdkVersion="23"
@@ -47,7 +47,7 @@
 30-->[androidx.core:core:1.9.0] C:\Users\JS\.gradle\caches\transforms-3\543740e42155bb89dcbd6bdda0f43b68\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-192:19
+32-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-224:19
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 33-->[androidx.core:core:1.9.0] C:\Users\JS\.gradle\caches\transforms-3\543740e42155bb89dcbd6bdda0f43b68\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 34        android:debuggable="true"
@@ -352,95 +352,159 @@
 186-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:174:17-54
 187        </activity>
 188        <activity
-188-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:178:9-180:57
-189            android:name="com.helirfid.HelpActivity"
-189-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:178:19-47
+188-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:178:9-180:58
+189            android:name="com.helirfid.AccessDecoderActivity"
+189-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:178:19-56
 190            android:exported="true"
 190-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:179:13-36
-191            android:parentActivityName="com.helirfid.MainActivity" />
-191-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:180:13-55
-192
-193        <provider
-194            android:name="androidx.core.content.FileProvider"
-194-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:183:13-62
-195            android:authorities="com.helirfid.fileprovider"
-195-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:184:13-64
-196            android:exported="false"
-196-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:185:13-37
-197            android:grantUriPermissions="true" >
-197-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:186:13-47
-198            <meta-data
-198-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:187:13-189:53
-199                android:name="android.support.FILE_PROVIDER_PATHS"
-199-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:188:17-67
-200                android:resource="@xml/file_paths" />
-200-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:189:17-51
-201        </provider>
-202        <provider
-202-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-203            android:name="androidx.startup.InitializationProvider"
-203-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-204            android:authorities="com.helirfid.androidx-startup"
-204-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-205            android:exported="false" >
-205-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-206            <meta-data
-206-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-207                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-207-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-208                android:value="androidx.startup" />
-208-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-209            <meta-data
-209-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-210                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-210-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-211                android:value="androidx.startup" />
-211-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-212            <meta-data
-212-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-213                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-213-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-214                android:value="androidx.startup" />
-214-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-215        </provider>
-216
-217        <receiver
-217-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-218            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-218-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-219            android:directBootAware="false"
-219-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-220            android:enabled="true"
-220-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-221            android:exported="true"
-221-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-222            android:permission="android.permission.DUMP" >
-222-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-223            <intent-filter>
-223-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-224                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-224-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-224-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-225            </intent-filter>
-226            <intent-filter>
-226-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-227                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-227-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-227-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-228            </intent-filter>
-229            <intent-filter>
-229-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-230                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-231            </intent-filter>
-232            <intent-filter>
-232-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-233                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-233-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-233-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-234            </intent-filter>
-235        </receiver>
-236    </application>
-237
-238</manifest>
+191            android:parentActivityName="com.helirfid.ToolsActivity" />
+191-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:180:13-56
+192        <activity
+192-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:182:9-184:58
+193            android:name="com.helirfid.DumpAsciiActivity"
+193-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:182:19-52
+194            android:exported="true"
+194-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:183:13-36
+195            android:parentActivityName="com.helirfid.ToolsActivity" />
+195-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:184:13-56
+196        <activity
+196-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:186:9-188:58
+197            android:name="com.helirfid.DumpHighlightActivity"
+197-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:186:19-56
+198            android:exported="true"
+198-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:187:13-36
+199            android:parentActivityName="com.helirfid.ToolsActivity" />
+199-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:188:13-56
+200        <activity
+200-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:190:9-192:58
+201            android:name="com.helirfid.ValueCodecActivity"
+201-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:190:19-53
+202            android:exported="true"
+202-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:191:13-36
+203            android:parentActivityName="com.helirfid.ToolsActivity" />
+203-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:192:13-56
+204        <activity
+204-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:194:9-196:58
+205            android:name="com.helirfid.NtagActivity"
+205-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:194:19-47
+206            android:exported="true"
+206-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:195:13-36
+207            android:parentActivityName="com.helirfid.ToolsActivity" />
+207-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:196:13-56
+208        <activity
+208-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:198:9-200:58
+209            android:name="com.helirfid.TagFormatActivity"
+209-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:198:19-52
+210            android:exported="true"
+210-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:199:13-36
+211            android:parentActivityName="com.helirfid.ToolsActivity" />
+211-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:200:13-56
+212        <activity
+212-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:202:9-204:58
+213            android:name="com.helirfid.AuthMapActivity"
+213-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:202:19-50
+214            android:exported="true"
+214-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:203:13-36
+215            android:parentActivityName="com.helirfid.ToolsActivity" />
+215-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:204:13-56
+216        <activity
+216-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:206:9-208:58
+217            android:name="com.helirfid.NfcPollerActivity"
+217-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:206:19-52
+218            android:exported="true"
+218-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:207:13-36
+219            android:parentActivityName="com.helirfid.ToolsActivity" />
+219-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:208:13-56
+220        <activity
+220-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:210:9-212:57
+221            android:name="com.helirfid.HelpActivity"
+221-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:210:19-47
+222            android:exported="true"
+222-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:211:13-36
+223            android:parentActivityName="com.helirfid.MainActivity" />
+223-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:212:13-55
+224
+225        <provider
+226            android:name="androidx.core.content.FileProvider"
+226-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:215:13-62
+227            android:authorities="com.helirfid.fileprovider"
+227-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:216:13-64
+228            android:exported="false"
+228-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:217:13-37
+229            android:grantUriPermissions="true" >
+229-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:218:13-47
+230            <meta-data
+230-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:219:13-221:53
+231                android:name="android.support.FILE_PROVIDER_PATHS"
+231-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:220:17-67
+232                android:resource="@xml/file_paths" />
+232-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:221:17-51
+233        </provider>
+234        <provider
+234-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+235            android:name="androidx.startup.InitializationProvider"
+235-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+236            android:authorities="com.helirfid.androidx-startup"
+236-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+237            android:exported="false" >
+237-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+238            <meta-data
+238-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+239                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+239-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+240                android:value="androidx.startup" />
+240-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+241            <meta-data
+241-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+242                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+242-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+243                android:value="androidx.startup" />
+243-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+244            <meta-data
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+245                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+246                android:value="androidx.startup" />
+246-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+247        </provider>
+248
+249        <receiver
+249-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+250            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+251            android:directBootAware="false"
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+252            android:enabled="true"
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+253            android:exported="true"
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+254            android:permission="android.permission.DUMP" >
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+255            <intent-filter>
+255-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+256                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+257            </intent-filter>
+258            <intent-filter>
+258-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+259                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+260            </intent-filter>
+261            <intent-filter>
+261-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+262                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+262-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+262-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+263            </intent-filter>
+264            <intent-filter>
+264-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+265                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+265-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+265-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+266            </intent-filter>
+267        </receiver>
+268    </application>
+269
+270</manifest>
