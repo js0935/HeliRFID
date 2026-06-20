@@ -365,7 +365,7 @@ heli_rfid_nfc/
 
 如遇到 Bug 或有功能建議：
 - 前往 [Issues 頁面](https://github.com/js0935/HeliRFID/issues)
-- 搜索是否有相似的問題
+- 搜尋是否有相似的問題
 - 開啟新 Issue 並詳細描述
 
 ---

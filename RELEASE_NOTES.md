@@ -144,7 +144,7 @@
 - **compileSdk**: 更新至 34
 - **targetSdk**: 更新至 34
 
-#### 📱 新增类別
+#### 📱 新增類別
 
 - NFCReader.java - NFC UID 讀取
 - Wiegand.java - Wiegand26/34 通訊協定轉換
@@ -277,7 +277,7 @@
 
 如遇到問題或有功能建議，請：
 - 前往 [Issues 頁面](https://github.com/js0935/HeliRFID/issues)
-- 搜索是否有相似的問題
+- 搜尋是否有相似的問題
 - 開啟新 Issue 並詳細描述：
   - 應用程式版本
   - Android 版本

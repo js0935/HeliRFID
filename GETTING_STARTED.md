@@ -4,7 +4,7 @@
 
 ---
 
-## 📱 什么是 HeliRFID？
+## 📱 什麼是 HeliRFID？
 
 HeliRFID 是一款專為 Android 設計的 NFC 門禁卡讀取工具，可以：
 - 📖 讀取各類 NFC 卡片

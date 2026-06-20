@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="APDU 命令控制台"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtApduCardInfo"
+        android:text="請將卡片靠近手機"
+        android:textSize="13sp"
+        android:textColor="@color/text_highlight"
+        android:background="@color/card_bg"
+        android:padding="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/editApduCommand"
+            android:hint="Hex APDU 指令 (如 00A4040007D2760000850101)"
+            android:inputType="text"
+            android:textSize="13sp"
+            android:textColor="@color/text_body"
+            android:fontFamily="monospace"
+            android:minLines="2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSendApdu"
+            android:text="發送"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_blue"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClearApduHistory"
+        android:text="清除歷史"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/btn_red"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/card_bg"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtApduResult"
+            android:text="尚無指令記錄"
+            android:textSize="11sp"
+            android:textColor="@color/text_body"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+    <TextView
+        android:text="常用指令: 00A40400... (選擇 AID) | FFCA000000 (獲取 UID) | 00B0000000 (讀取二進位)"
+        android:textSize="10sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

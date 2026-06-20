@@ -170,7 +170,7 @@ protected void onNewIntent(Intent intent) {
 | v3.0.0 (v3) | ❌ 有問題 | NFC 前台調度缺失，無法讀取 |
 | v3.0.1 (v4) | ❌ 仍有問題 | 修復了前台調度，但未修復啟動 Intent |
 | v3.0.2 (v5) | ❌ 仍有問題 | NFC 已修復，但 HR Logo 缺失文字 |
-| v3.0.3 (v6) | ✅ 完整修復 | 所有问题已修復，强烈推荐 |
+| v3.0.3 (v6) | ✅ 完整修復 | 所有問題已修復，強烈推薦 |
 | v2.0.0 | ✅ 正常 | Ultimate Edition 基礎版本 |
 
 ---

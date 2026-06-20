@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.helirfid.ultimate.app-mergeDebugResources-29:/values-sq/values-sq.xml",
+            "outputFile": "com.helirfid.app-mergeDebugResources-30:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "C:\\Users\\JS\\.gradle\\caches\\transforms-3\\6c6ffd2b5c140a59a107fe5eaa0e19c4\\transformed\\appcompat-1.6.1\\res\\values-sq\\values-sq.xml",

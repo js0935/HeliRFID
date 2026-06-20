@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="HeliRFID v4.1.0 使用說明"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="禾秝軟體開發團隊 / 代碼：洪俊士"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- ======== 一、基本操作 ======== -->
+        <TextView
+            android:text="一、基本操作"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="掃描 NFC 卡片"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="將 NFC 卡靠近手機背面。主畫面自動顯示 UID、卡號、Wiegand 26/34 格式。若手機 NFC 未開啟，系統會提示前往設定。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="手動輸入 UID"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="在主畫面底端輸入框手動輸入 UID（hex，可含 : 或空格），按「卡號轉換」查看 Wiegand 格式轉換結果。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="歷史記錄"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="所有掃描過的卡片會自動存入歷史記錄，可點擊歷史項目重新查看卡號資訊。長按可刪除單筆記錄。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ======== 二、主要功能 ======== -->
+        <TextView
+            android:text="二、主要功能"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- 進階標籤資訊 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="🔍 進階標籤資訊 (TagInfo)"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="掃描後顯示 ATQA、SAK、Historical Bytes、IC 製造商、卡容量等技術細節。支援 MIFARE Classic、Ultralight、NTAG、DESFire、FeliCa、NFC-V。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Memory Dump -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="💾 Memory Dump 讀取"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="讀取完整卡片記憶體內容。支援 MIFARE Classic（需金鑰驗證）、Ultralight/NTAG 直接讀取。可匯出 BIN（原始二進位）、EML（Hex 文字）、MFD（原始二進位）格式。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 寫入功能 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="✏️ 寫入功能 (Write)"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="NDEF 訊息寫入（TXT/URI 格式）、MIFARE Classic 區塊寫入（需金鑰驗證）、Ultralight/NTAG 頁面寫入、NTAG 密碼設定/移除/永久鎖卡/格式化。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 拷貝卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="📋 拷貝/克隆卡片 (Clone)"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="先掃描來源卡（讀取記憶體），再掃描目標卡（寫入）。支援 MIFARE Classic（需目標卡 Sector Trailer 已解鎖）和 UL/NTAG。使用 Dump Store 可跨工作階段作業。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 卡片分析 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="📊 卡片分析 (CardAnalyzer)"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="自動偵測卡片類型（MIFARE Classic 1K/4K、Ultralight、NTAG 不同型號、DESFire、FeliCa、NFC-V）。顯示製造商、容量、支援技術。"
+                    android:textSize="14sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ======== 三、工具箱 (22 項工具) ======== -->
+        <TextView
+            android:text="三、工具箱工具"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- 金鑰管理 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="1. 金鑰檔案管理"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="管理 MIFARE 金鑰檔案（.keys）。新增檔案、手動加入金鑰、從外部檔案匯入金鑰。金鑰儲存於 Downloads/HeliRFID/keys/。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Dump 比對 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="2. Dump 比對工具"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="載入兩個 dump 檔案進行逐 byte 差異比較。支援 BIN/MFD/EML 格式。顯示差異位置、原始值、新值。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LogViewer -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="3. 應用程式日誌"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="查看應用程式內部運作日誌（錯誤訊息、除錯資訊）。支援重新整理、清除、匯出為檔案。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- APDU Console -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="4. APDU 命令控制台"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="對 ISO-DEP（DESFire）卡片發送原始 APDU 命令。支援 hex 輸入、NFC 連接、回應顯示。進階用戶可使用 GET DATA/SELECT FILE 等標準命令。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Magic Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="5. 魔術卡偵測與配置"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="自動偵測魔術卡類型（Gen1/Gen2/Gen3/Gen4）。透過寫入 Block 0、發送 0x40 指令、0xCF 指令等方式判斷。支援 UID 寫入（Gen2 以上可改 UID）。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Dump Editor -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="6. Dump 編輯器"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="以區塊列表編輯 dump 資料。點擊區塊可編輯 hex。從 DumpStore 載入或從檔案匯入（BIN/MFD/EML）。儲存為 BIN 格式。支援 16 bytes/block 顯示。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- UID Generator -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="7. UID 隨機產生器"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="產生隨機 UID（4/7/10 bytes）。自動計算 BCC（MIFARE 4-byte UID）。一鍵複製到剪貼簿。用於測試或魔術卡配置。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Share -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="8. 分享功能"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="分享目前 DumpStore 中的 dump 資料、金鑰檔案、或應用程式日誌。透過系統分享選單發送（Email/藍牙/雲端等）。使用 FileProvider 安全共享。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Data Converter -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="9. 資料轉換器"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="三種模式切換：Hex→ASCII、ASCII→Hex、Binary→Hex。支援大段資料轉換。適合 RFID dump 資料分析。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Scan Log -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="10. UID 掃描日誌"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="記錄每次掃描的 UID、卡片技術類型、時間戳記。支援清除記錄、匯出為 TXT 檔案。記錄上限 200 筆。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Value Block -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="11. 數值區塊增減"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="對 MIFARE Classic 數值區塊進行 Increment/Decrement/Read/Write 操作。需金鑰驗證。支援 Value Block 格式（值+反向+位址）。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Advanced Key -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="12. 進階金鑰檔案"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="建立標準（16 金鑰）/ 擴展（40 金鑰）/ 飯店格式金鑰檔案模板。一鍵生成對應 MIFARE 1K/4K 的完整金鑰集。支援匯出。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- NFC-V -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="13. ISO 15693 (NFC-V)"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="讀取 ISO 15693（NFC-V）卡片。顯示系統資訊（AFI、DSFID、IC 參考）、讀取單一區塊、完整 64 區塊 Dump。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- HCE -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="14. HCE 標籤模擬"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="將手機模擬為 NFC 標籤（Host Card Emulation）。可設定 UID 和資料（僅框架 UI，實際 HCE 服務需 Android 5.0+ 且需註冊 HCE Service）。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- DESFire -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="15. DESFire NDEF 讀取"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="讀取 DESFire 卡片資訊：GetVersion（硬體/軟體版本）、GetApplications（應用程式 ID）、UID 顯示、NDEF 訊息讀取（ISO-DEP 通訊）。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- FeliCa -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="16. FeliCa 讀取"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="讀取 FeliCa (NfcF) 卡片 IDm/PMm。執行 Polling、Read Without Encryption 命令。顯示卡片製造商代碼和 IC 代碼。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Sector Select -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="17. 分區選取寫入"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="以 Sector 為單位勾選要讀取或寫入的區塊。使用 DumpStore 資料寫入。支援全選/取消全選。支援 MIFARE Classic 1K/4K。需金鑰驗證。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Verify -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="18. BCC/SAK/ATQA 驗證"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="手動輸入 hex 驗證 UID 的 BCC 正確性。掃描 NFC 卡自動顯示 ATQA/SAK 位元解碼。解讀卡片類型、UID 大小、協定資訊。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ACR122U -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="19. ACR122U 外接讀卡器"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="透過 USB OTG 連接 ACR122U 讀卡器。功能：取得韌體版本、讀取 UID、載入金鑰、驗證、讀寫區塊、完整 16 Sector Dump、格式化標籤。需 USB Host 支援。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Trace Viewer -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="20. Proxmark3 Trace 檢視器"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="載入 Proxmark3 trace 記錄檔（.txt）。顏色區分：Rdr=藍色、Tag=綠色、CRC 錯誤=紅色、註解=灰色。適合分析卡片與讀卡器間的通訊流程。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Key Recovery -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="21. 金鑰恢復工具"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="掃描卡片後自動嘗試內建字典（30 組常用金鑰）+ 金鑰檔案中的所有金鑰。驗證成功後讀取 Sector Trailer 抽取出 Key A 和 Key B。支援 ?? 暴力破解模式（最多 2 個未知 byte）。結果可儲存為 .keys 檔案。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 工具箱內建工具 -->
+        <TextView
+            android:text="工具箱內建工具"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="Access Conditions 解碼"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="輸入 Sector Trailer 的 6 bytes（12 hex 字元）或完整 16 bytes。解碼出 C1/C2/C3 權限位元，顯示 Key A、Access Bits、Key B 各區塊的讀/寫/加值/減值權限。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="Value Block 解碼/編碼"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="解碼 16 bytes MIFARE 數值區塊為整數值。或輸入整數值與位址編碼為 Value Block 格式（值 + 反向值 + 位址 + 反向位址）。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="BCC 計算器"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="輸入 4 bytes UID hex（可含 : 或空格），自動計算第 5 個 byte 的 BCC（XOR of 4 bytes）。用於驗證或魔術卡 UID 配置。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardElevation="1dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="Hex + ASCII 顯示"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="輸入 hex bytes，同時顯示 Hex 及 ASCII 對照。適合分析 dump 資料中的文字內容。不可列印字元以點號代替。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ======== 四、檔案管理 ======== -->
+        <TextView
+            android:text="四、檔案管理"
+            android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="Dump 檔案"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="匯出目錄: Android/data/com.helirfid/files/Dumps/（.bin/.mfd）\n格式: BIN（原始二進位，16 bytes/block）、EML（Hex 文字格式，相容 libnfc）、MFD（原始二進位，相容 mfcuk/mfoc）\n匯入: 支援檔案選擇器開啟 .bin/.mfd/.eml 檔案。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="金鑰檔案"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="儲存目錄: Downloads/HeliRFID/keys/（.keys）\n格式: 每行一個 6 bytes 金鑰（12 hex 字元），# 開頭為註解。可由金鑰管理或金鑰恢復工具建立。支援 UID 前綴自動查找。"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ======== 五、ACR122U 設定 ======== -->
+        <TextView
+            android:text="五、ACR122U 外接讀卡器設定"
+            android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="連接方式"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="1. 使用 USB OTG 線連接 ACR122U 讀卡器\n2. 第一次連接時系統要求授權 USB 裝置權限\n3. 點擊「連接」按鈕\n4. 成功後可讀取 UID、載入金鑰、讀寫區塊\n\n支援命令:\n- 取得韌體版本\n- 讀取 UID\n- 載入金鑰到讀卡器\n- 驗證 Sector (Key A)\n- 讀取/寫入區塊\n- 完整 16 Sector Dump\n- 格式化標籤"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ======== 六、注意事項 ======== -->
+        <TextView
+            android:text="六、注意事項與法律免責"
+            android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/text_highlight"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#1AFF4444">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="⚠️ 法律免責聲明"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="#FFFF4444"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="本軟體僅供合法安全研究、教育學習、以及您擁有的卡片測試使用。未經授權讀取、複製、或破解他人卡片可能違反當地法律。使用者須自行承擔所有法律責任。"
+                    android:textSize="12sp" android:textColor="#FFCCCCCC"
+                    android:layout_marginTop="6dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="14dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="技術備註"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="@color/text_highlight"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="• 金鑰恢復依賴於已知金鑰字典和可驗證的 Sector Trailer\n• 巢狀攻擊（mfcuk/mfoc 風格）因 Android NFC 硬體限制無法實作\n• ACR122U 使用 USB CCID 原生協定，部分舊裝置可能需要額外供電\n• MIFARE Classic 寫入需目標卡 Sector Trailer 已解鎖（Access Conditions 允許寫入）\n• HCE 功能需 Android 5.0+ 且須註冊 HostApduService（系統層級）\n• 部分功能（DESFire、FeliCa）需卡片支援對應技術"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:text="HeliRFID v4.1.0 | 禾秝軟體開發團隊"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="16dp" android:layout_marginBottom="32dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

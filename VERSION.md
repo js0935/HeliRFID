@@ -89,7 +89,7 @@
 
 ---
 
-## 聯系我們
+## 聯絡我們
 
 - GitHub: https://github.com/js0935/HeliRFID
 - Issues: https://github.com/js0935/HeliRFID/issues

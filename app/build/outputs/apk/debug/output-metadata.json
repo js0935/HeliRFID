@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.helirfid.ultimate",
+  "applicationId": "com.helirfid",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 2,
-      "versionName": "2.0",
+      "versionCode": 9,
+      "versionName": "4.1.0",
       "outputFile": "app-debug.apk"
     }
   ],
