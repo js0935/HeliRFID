@@ -14,6 +14,54 @@
 
 ## 📅 版本歷史
 
+### [4.1.0] - 2026-06-21 - Professional Toolbox Edition (工具箱專業版)
+
+#### ✅ 新增 (Added)
+
+**15 項 Batch-2 工具箱功能**
+- ✅ 魔術卡偵測與配置 (MagicCardActivity) - Gen1~4 偵測、UID 寫入
+- ✅ Dump 編輯器 (DumpEditorActivity) - Hex 編輯、BIN/MFD/EML 匯入匯出
+- ✅ UID 隨機產生器 (UidGeneratorActivity) - 4/7/10 byte UID + BCC
+- ✅ 分享功能 (ShareActivity) - Dump/金鑰/日誌分享 via FileProvider
+- ✅ ISO 15693 NFC-V (NfcVActivity) - 系統資訊、區塊讀取
+- ✅ 資料轉換器 (DataConverterActivity) - Hex ↔ ASCII ↔ Binary
+- ✅ UID 掃描日誌 (ScanLogActivity) - 持久化記錄、匯出
+- ✅ 數值區塊增減 (ValueBlockActivity) - Increment/Decrement/Read/Write
+- ✅ 進階金鑰檔案 (AdvancedKeyManagerActivity) - 16/40 金鑰模板
+- ✅ BCC/SAK/ATQA 驗證 (VerifyActivity) - 手動 + NFC 掃描驗證
+- ✅ HCE 標籤模擬 (HceActivity) - 可設定 UID/資料
+- ✅ DESFire NDEF 讀取 (DesfireActivity) - GetVersion/GetApplications/NDEF
+- ✅ FeliCa 讀取 (FelicaActivity) - IDm/PMm 顯示、Polling
+- ✅ 分區選取寫入 (SectorSelectActivity) - Sector 勾選讀寫
+- ✅ APDU 命令控制台 (ApduConsoleActivity) - 原始 APDU 發送
+
+**ACR122U 外接讀卡器支援**
+- ✅ Acr122uManager - USB CCID 原生協定實作
+- ✅ Acr122uActivity - 完整 UI（連接/UID/讀寫/Dump/格式化）
+- ✅ USB 裝置過濾器 (device_filter.xml)
+
+**M1T 工具分析整合**
+- ✅ MFD 檔案格式支援（原始二進位 dump，相容 libnfc/mfcuk/mfoc）
+- ✅ UID 前綴自動金鑰查詢 (KeyManager.findKeysByUid)
+- ✅ Proxmark3 Trace 檢視器 (TraceViewerActivity) - 顏色區分 Reader/Tag/CRC
+- ✅ 金鑰恢復工具 (KeyRecoveryActivity) - 字典+金鑰檔案+??暴力破解
+
+**增強功能**
+- ✅ DumpStore 重構（setDumpData/getDumpData/dumpToBytes）
+- ✅ 金鑰管理器新增 findKeysByUid/getUidPrefixFiles
+- ✅ 內建 30 組常用 MIFARE 金鑰字典
+- ✅ ?? 部分暴力破解模式（最多 2 未知 byte）
+- ✅ Dump 編輯器檔案選擇器支援 (BIN/MFD/EML)
+- ✅ 詳細使用說明 (HelpActivity 全面更新 21 項工具說明)
+
+#### 🔧 變更 (Changed)
+- 版本號提升至 4.1.0
+- ToolsActivity 按鈕從 3 個擴充至 22 個
+- AndroidManifest.xml 註冊 27 個 Activity
+- 專案 Java 檔案從 15 個增加至 48 個
+
+---
+
 ### [4.0.1] - 2025-03-14 - Complete Edition (完整版)
 
 #### ✅ 新增 (Added)

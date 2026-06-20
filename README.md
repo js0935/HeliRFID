@@ -6,7 +6,7 @@
 
 一款簡單易用的 Android NFC 門禁卡讀取應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.0.1-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
+[![Version](https://img.shields.io/badge/version-v4.1.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
 
@@ -22,11 +22,13 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 - 📱 自動讀取 NFC 卡片
 - 🔢 一鍵轉換多種卡號格式（10 碼 / 8 碼）
 - 🔐 支援 Wiegand 門禁協定
-- 🔑 金鑰測試功能（Mifare Classic）
+- 🔑 金鑰測試與恢復功能
 - 🛡️ 複製風險分析
-- 📊 記憶體檢視功能
+- 📊 記憶體檢視 / Dump 編輯 / 比對
 - 📝 歷史記錄管理
-- 📤 CSV 匯出功能
+- 📤 CSV 匯出 / 分享功能
+- 🧰 22 項工具箱工具
+- 📡 ACR122U 外接讀卡器支援
 
 ---
 
@@ -43,15 +45,16 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 
 ### 下載 APK
 
-**最新版本：v4.0.1 Complete Edition** (2025-03-14)
+**最新版本：v4.1.0 Professional Toolbox Edition** (2026-06-21)
 
-[📥 下載 HeliRFIDProfessional-v4.0.1-complete.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.0.1-complete/releases/HeliRFIDProfessional-v4.0.1-complete.apk) (5.3 MB)
+[📥 下載 app-debug.apk](https://github.com/js0935/HeliRFID/raw/refs/tags/v4.1.0/releases/app-debug.apk) (5.5 MB)
 
-**✨ v4.0.1 Complete Edition 新增功能：**
-- 🔑 金鑰測試（Key Tester）- 測試 Mifare Classic 5 種常見金鑰
-- 🛡️ 複製風險分析（Clone Analyzer）- 偵測並評估複製卡風險
-- 📝 手動 UID 輸入功能
-- 📦 完整歷史記錄管理（100 筆限制 + Toast 提示）
+**✨ v4.1.0 新增功能：**
+- 🧰 15 項工具箱功能（魔術卡/Dump編輯器/UID產生器/分享/NFC-V/資料轉換/掃描日誌/數值區塊/進階金鑰/HCE/DESFire/FeliCa/分區選取/BCC驗證/APDU控制台）
+- 📡 ACR122U 外接 USB 讀卡器支援（CCID 原生協定）
+- 🔑 金鑰恢復工具（內建 30 組字典 + ?? 暴力破解）
+- 📊 Proxmark3 Trace 檢視器（顏色區分 Reader/Tag/CRC）
+- 💾 MFD 格式支援（相容 libnfc/mfcuk/mfoc）
 
 ### 安裝步驟
 
@@ -250,20 +253,50 @@ app/build/outputs/apk/debug/app-debug.apk
 ```
 heli_rfid_nfc/
 ├── app/
-│   └── src/main/java/com/helirfid/
-│       ├── MainActivity.java          # 主畫面
-│       ├── SplashActivity.java        # 啟動畫面
-│       ├── MemoryDumpActivity.java    # 記憶體檢視
-│       ├── Converter.java             # 轉換邏輯
-│       ├── NFCReader.java             # NFC 讀取
-│       ├── Wiegand.java               # Wiegand 協定
-│       ├── CardAnalyzer.java          # 卡片分析
-│       ├── CloneAnalyzer.java         # 複製風險分析
-│       ├── KeyTester.java             # 金鑰測試
-│       ├── HistoryManager.java        # 歷史管理
-│       ├── CsvExporter.java           # CSV 匯出
-│       ├── DumpAdapter.java           # RecyclerView 適配器
-│       └── DumpItem.java              # 記憶體資料模型
+│   └── src/main/java/com/helirfid/ (48 Java 檔案)
+│       ├── MainActivity.java            # 主畫面
+│       ├── SplashActivity.java          # 啟動畫面
+│       ├── TagInfoActivity.java         # 進階標籤資訊
+│       ├── MemoryDumpActivity.java      # 記憶體檢視
+│       ├── WriteActivity.java           # 寫入功能
+│       ├── CloneActivity.java           # 克隆卡片
+│       ├── ToolsActivity.java           # 工具箱 (22 項工具)
+│       ├── HelpActivity.java            # 使用說明
+│       ├── Converter.java               # 轉換邏輯
+│       ├── NFCReader.java               # NFC 讀取
+│       ├── NFCWriter.java               # NFC 寫入
+│       ├── Wiegand.java                 # Wiegand 協定
+│       ├── CardAnalyzer.java            # 卡片分析
+│       ├── CloneAnalyzer.java           # 複製風險分析
+│       ├── KeyTester.java               # 金鑰測試
+│       ├── HistoryManager.java          # 歷史管理
+│       ├── CsvExporter.java             # CSV 匯出
+│       ├── DumpStore.java / DumpItem.java / DumpAdapter.java  # Dump 管理
+│       ├── KeyManager.java / KeyManagementActivity.java       # 金鑰管理
+│       ├── AdvancedKeyManagerActivity.java  # 進階金鑰模板
+│       ├── KeyRecoveryActivity.java         # 金鑰恢復
+│       ├── MagicCardActivity.java           # 魔術卡偵測
+│       ├── DumpEditorActivity.java          # Dump 編輯器
+│       ├── UidGeneratorActivity.java        # UID 產生器
+│       ├── ShareActivity.java               # 分享功能
+│       ├── NfcVActivity.java                # ISO 15693
+│       ├── DataConverterActivity.java       # 資料轉換
+│       ├── ScanLogActivity.java             # 掃描日誌
+│       ├── ValueBlockActivity.java          # 數值區塊
+│       ├── VerifyActivity.java              # BCC/SAK/ATQA
+│       ├── HceActivity.java                 # HCE 模擬
+│       ├── DesfireActivity.java             # DESFire
+│       ├── FelicaActivity.java              # FeliCa
+│       ├── SectorSelectActivity.java        # 分區選取
+│       ├── ApduConsoleActivity.java         # APDU 控制台
+│       ├── Acr122uActivity.java             # ACR122U UI
+│       ├── Acr122uManager.java              # ACR122U USB CCID
+│       ├── TraceViewerActivity.java         # Proxmark3 Trace
+│       ├── DiffToolActivity.java            # Dump 比對
+│       ├── LogViewerActivity.java           # 日誌檢視
+│       ├── LogUtil.java / HistoryEntry.java / HistoryAdapter.java
+│       ├── MifareUtils.java                 # MIFARE 工具
+│       └── NfcUltralightUtils.java          # Ultralight 工具
 ├── README.md                          # 本檔案
 ├── CHANGELOG.md                       # 版本更新日誌
 ├── DEVELOPMENT.md                     # 開發者指南
@@ -274,18 +307,21 @@ heli_rfid_nfc/
 
 ## 📋 版本資訊
 
-### v4.0.1 (2025-03-14) - Complete Edition (完整版)
+### v4.1.0 (2026-06-21) - Professional Toolbox Edition (工具箱專業版)
 
-**完整功能整合：**
-- ✅ 整合歷代版本所有功能（v1.0.0 ~ v4.0.0）
-- ✅ 還原金鑰測試功能（KeyTester - v3.0.0）
-- ✅ 還原複製風險分析（CloneAnalyzer - v2.0.0）
-- ✅ 還原手動 UID 輸入功能（v1.0.0）
+**15 項 Batch-2 工具箱功能：**
+- ✅ 魔術卡偵測 (Gen1~4)、Dump 編輯器 (BIN/MFD/EML)、UID 產生器 (4/7/10 byte)
+- ✅ 分享功能 (FileProvider)、NFC-V (ISO 15693)、資料轉換器 (Hex/ASCII/Binary)
+- ✅ 掃描日誌 (200 筆記錄)、數值區塊 (Increment/Decrement)、進階金鑰模板 (16/40)
+- ✅ BCC/SAK/ATQA 驗證、HCE 標籤模擬、DESFire NDEF 讀取
+- ✅ FeliCa 讀取、分區選取寫入、APDU 命令控制台
 
-**修復：**
-- ✅ 修復版本顯示（從 v3.0 更新為 v4.0.1）
-- ✅ 修復啟動畫面標題（更新為「HeliRFID 專業版」）
-- ✅ 修復 CSV 匯出（支援 Android 10+）
+**ACR122U 外接讀卡器：**
+- ✅ USB CCID 原生協定、完整 UI（連接/UID/讀寫/Dump/格式化）
+
+**M1T 整合：**
+- ✅ MFD 格式支援、UID 前綴自動金鑰查詢
+- ✅ Proxmark3 Trace 檢視器、金鑰恢復工具 (字典+暴力破解)
 
 **歷史功能列表：**
 - v1.0.0: 手動輸入、10 位數卡號、歷史記錄
@@ -293,6 +329,8 @@ heli_rfid_nfc/
 - v2.0.0: Wiegand26/34、CloneAnalyzer、CSV 匯出、多種卡片格式
 - v3.0.0: KeyTester 五種常見金鑰測試
 - v4.0.0: Memory Dump 可視化、Android 14 支援
+- v4.0.1: 整合歷代功能、修復版本顯示/CSV匯出
+- v4.1.0: 22 項工具箱 + ACR122U + 金鑰恢復 + Trace 檢視器
 
 ### v4.0.0 (2025-03-14) - 專業版發布
 

@@ -1,3 +1,7 @@
+/*
+ * HeliRFID - 智慧門禁管理系統
+ * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+ */
 package com.helirfid;
 
 import android.content.ContentResolver;
@@ -29,9 +33,19 @@ public class CsvExporter {
 
     private static String generateContent(List<String> history) {
         StringBuilder content = new StringBuilder();
-        content.append("Card Number\n");
-        for (String card : history) {
-            content.append(card).append("\n");
+        content.append("Card10,Card8,UID,Time\n");
+        for (String item : history) {
+            if (item.contains("|")) {
+                String[] parts = item.split("\\|", 4);
+                if (parts.length == 4) {
+                    content.append(parts[0]).append(",")
+                           .append(parts[1]).append(",")
+                           .append(parts[2]).append(",")
+                           .append(parts[3]).append("\n");
+                }
+            } else {
+                content.append(item).append(", , ,\n");
+            }
         }
         return content.toString();
     }

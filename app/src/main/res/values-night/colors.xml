@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
+<resources>
+
+    <color name="icon_bg">#1565C0</color>
+
+    <color name="primary">#64B5F6</color>
+    <color name="primary_dark">#90CAF9</color>
+    <color name="primary_light">#42A5F5</color>
+    <color name="accent">#FFB74D</color>
+
+    <color name="text_primary">#90CAF9</color>
+    <color name="text_secondary">#9E9E9E</color>
+    <color name="text_body">#E0E0E0</color>
+    <color name="text_highlight">#64B5F6</color>
+
+    <color name="card_bg">#1E1E1E</color>
+    <color name="background">#121212</color>
+    <color name="list_bg">#1E1E1E</color>
+
+    <color name="btn_blue">#64B5F6</color>
+    <color name="btn_orange">#FFB74D</color>
+    <color name="btn_purple">#CE93D8</color>
+    <color name="btn_red">#EF5350</color>
+    <color name="btn_green">#81C784</color>
+
+</resources>

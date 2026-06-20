@@ -1,20 +1,28 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.helirfid">
-
-    <uses-permission android:name="android.permission.NFC"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true"/>
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false"/>
+
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
         android:label="HeliRFID 專業版"
         android:requestLegacyExternalStorage="true"
-        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+        android:theme="@style/AppTheme">
 
         <activity android:name=".SplashActivity"
             android:exported="true">
@@ -56,6 +64,130 @@
         <activity android:name=".MemoryDumpActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".WriteActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".TagInfoActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".ToolsActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".KeyManagementActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DiffToolActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".LogViewerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".CloneActivity"
+            android:exported="true"
+            android:parentActivityName=".MemoryDumpActivity"/>
+
+        <activity android:name=".ApduConsoleActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".MagicCardActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DumpEditorActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".UidGeneratorActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ShareActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DataConverterActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ScanLogActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ValueBlockActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".AdvancedKeyManagerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NfcVActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".HceActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DesfireActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".FelicaActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".SectorSelectActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".VerifyActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TraceViewerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".KeyRecoveryActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".Acr122uActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity">
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter"/>
+
+        </activity>
+
+        <activity android:name=".HelpActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
 
     </application>
 

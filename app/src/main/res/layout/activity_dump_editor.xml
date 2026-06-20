@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Dump 編輯器"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtDumpInfo"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnImportDump"
+            android:text="匯入 Dump"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_blue"/>
+
+        <Button
+            android:id="@+id/btnSaveEditedDump"
+            android:text="儲存 Dump"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_green"/>
+
+        <Button
+            android:id="@+id/btnClearDump"
+            android:text="清除"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_red"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listDumpBlocks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

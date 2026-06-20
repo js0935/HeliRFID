@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="HCE 標籤模擬"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="模擬 UID (hex)"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editHceUid"
+        android:hint="04123456"
+        android:text="04123456"
+        android:inputType="text"
+        android:fontFamily="monospace"
+        android:textSize="12sp"
+        android:textColor="@color/text_body"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="模擬資料 (選擇性)"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editHceData"
+        android:hint="要發送的資料 (hex 或文字)"
+        android:inputType="text"
+        android:textSize="12sp"
+        android:textColor="@color/text_body"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnStartHce"
+            android:text="啟動模擬"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_green"/>
+
+        <Button
+            android:id="@+id/btnStopHce"
+            android:text="停止模擬"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_red"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/card_bg"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtHceStatus"
+            android:text="請設定 UID 並啟動模擬"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+</LinearLayout>

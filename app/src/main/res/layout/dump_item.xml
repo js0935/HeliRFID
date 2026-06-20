@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
     app:cardElevation="2dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/card_bg">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -24,7 +29,7 @@
                 android:text="S0"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                android:textColor="#1565C0"
+                android:textColor="@color/text_highlight"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -34,7 +39,7 @@
                 android:text="B0"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                android:textColor="#1565C0"
+                android:textColor="@color/text_highlight"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
                 android:layout_width="wrap_content"
@@ -52,7 +57,7 @@
                 android:id="@+id/txtDesc"
                 android:text="Data Block"
                 android:textSize="12sp"
-                android:textColor="#666"
+                android:textColor="@color/text_secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -60,9 +65,21 @@
                 android:id="@+id/txtData"
                 android:text="00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
                 android:textSize="12sp"
-                android:textColor="#000"
+                android:textColor="@color/text_body"
                 android:fontFamily="monospace"
                 android:layout_marginTop="4dp"
+                android:singleLine="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtAscii"
+                android:text="................"
+                android:textSize="12sp"
+                android:textColor="@color/text_body"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="12dp"
                 android:singleLine="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

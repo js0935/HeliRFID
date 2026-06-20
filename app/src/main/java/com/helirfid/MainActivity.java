@@ -1,3 +1,7 @@
+/*
+ * HeliRFID - 智慧門禁管理系統
+ * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+ */
 package com.helirfid;
 
 import android.app.PendingIntent;
@@ -7,8 +11,6 @@ import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -21,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtUID, txtCard10, txtCard8, txtW26, txtType, txtAnalysis, txtKeyTest;
     EditText editInput;
-    Button btnClear, btnExport, btnDump, btnConvert, btnAnalyze, btnTestKeys;
+    Button btnClear, btnExport, btnDump, btnConvert, btnAnalyze, btnTestKeys, btnTestAllSectors, btnWrite, btnTagInfo, btnTools, btnHelp;
     ListView historyList;
     HistoryManager historyManager;
+    HistoryAdapter historyAdapter;
     NfcAdapter nfcAdapter;
     private PendingIntent pendingIntent;
     private Tag currentTag;
@@ -43,14 +46,20 @@ public class MainActivity extends AppCompatActivity {
         editInput = findViewById(R.id.editInput);
 
         btnClear = findViewById(R.id.btnClear);
+        btnHelp = findViewById(R.id.btnHelp);
         btnExport = findViewById(R.id.btnExport);
         btnDump = findViewById(R.id.btnDump);
         btnConvert = findViewById(R.id.btnConvert);
         btnAnalyze = findViewById(R.id.btnAnalyze);
         btnTestKeys = findViewById(R.id.btnTestKeys);
+        btnTestAllSectors = findViewById(R.id.btnTestAllSectors);
+        btnWrite = findViewById(R.id.btnWrite);
+        btnTagInfo = findViewById(R.id.btnTagInfo);
+        btnTools = findViewById(R.id.btnTools);
 
         historyList = findViewById(R.id.historyList);
         historyManager = new HistoryManager(this);
+        historyAdapter = new HistoryAdapter(getLayoutInflater(), historyManager.getEntries());
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
@@ -63,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
         pendingIntent = PendingIntent.getActivity(
                 this, 0, intent, flags);
+
+        btnHelp.setOnClickListener(v -> {
+            startActivity(new Intent(this, HelpActivity.class));
+        });
 
         btnClear.setOnClickListener(v -> {
             historyManager.clear();
@@ -80,6 +93,18 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, result ? "匯出成功" : "匯出失敗", Toast.LENGTH_SHORT).show();
         });
 
+        btnTagInfo.setOnClickListener(v -> {
+            Intent i = new Intent(this, TagInfoActivity.class);
+            if (currentTag != null) {
+                i.putExtra("tag", currentTag);
+            }
+            startActivity(i);
+        });
+
+        btnTools.setOnClickListener(v -> {
+            startActivity(new Intent(this, ToolsActivity.class));
+        });
+
         btnDump.setOnClickListener(v -> {
             if(currentTag != null){
                 Intent i = new Intent(this, MemoryDumpActivity.class);
@@ -88,6 +113,14 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(MainActivity.this, "請先掃描 NFC 卡", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        btnWrite.setOnClickListener(v -> {
+            Intent i = new Intent(this, WriteActivity.class);
+            if (currentTag != null) {
+                i.putExtra("tag", currentTag);
+            }
+            startActivity(i);
         });
 
         btnConvert.setOnClickListener(v -> {
@@ -122,17 +155,21 @@ public class MainActivity extends AppCompatActivity {
                 
                 String card8 = card10.substring(card10.length() - 8);
                 String w26 = Wiegand.wiegand26(card10);
+                String w32 = Wiegand.wiegand32(card10);
+                String w34 = Wiegand.wiegand34(card10);
+                String w37 = Wiegand.wiegand37(card10);
+                String w40 = Wiegand.wiegand40(card10);
 
                 txtUID.setText("UID: " + formattedUid);
                 txtCard10.setText("10碼: " + card10);
                 txtCard8.setText("8碼: " + card8);
-                txtW26.setText("Wiegand26: " + w26);
+                txtW26.setText("Wiegand26: " + w26 + "\nWiegand32: " + w32 + "\nWiegand34: " + w34 + "\nWiegand37: " + w37 + "\nWiegand40: " + w40);
                 txtType.setText("Card Type:\n手動輸入");
 
                 String analysis = CloneAnalyzer.analyze(formattedUid, card10);
                 txtAnalysis.setText(analysis);
 
-                historyManager.add(card10);
+                historyManager.add(card10, card8, formattedUid);
                 updateHistory();
 
                 Toast.makeText(MainActivity.this, "轉換成功", Toast.LENGTH_SHORT).show();
@@ -171,6 +208,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnTestAllSectors.setOnClickListener(v -> {
+            if (currentTag == null) {
+                Toast.makeText(MainActivity.this, "請先掃描 NFC 卡", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            String result = KeyTester.testKeysAllSectors(currentTag);
+            txtKeyTest.setText(result);
+            Toast.makeText(MainActivity.this, "跨磁區測試完成", Toast.LENGTH_LONG).show();
+        });
+
         updateHistory();
 
         Intent startupIntent = getIntent();
@@ -188,7 +236,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleNfcIntent(Intent intent) {
-        if (intent != null && NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
+        if (intent != null && (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
+                || NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())
+                || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction()))) {
             currentTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
             processTag(currentTag);
         }
@@ -207,10 +257,13 @@ public class MainActivity extends AppCompatActivity {
             String card8 = Converter.decimal8(tag.getId());
             String w26 = Wiegand.wiegand26(card10);
             String w34 = Wiegand.wiegand34(card10);
+            String w32 = Wiegand.wiegand32(card10);
+            String w37 = Wiegand.wiegand37(card10);
+            String w40 = Wiegand.wiegand40(card10);
 
             txtCard10.setText("10碼: " + card10);
             txtCard8.setText("8碼: " + card8);
-            txtW26.setText("Wiegand26: " + w26);
+            txtW26.setText("Wiegand26: " + w26 + "\nWiegand32: " + w32 + "\nWiegand34: " + w34 + "\nWiegand37: " + w37 + "\nWiegand40: " + w40);
 
             String type = CardAnalyzer.analyze(tag);
             txtType.setText("Card Type:\n" + type);
@@ -221,7 +274,7 @@ public class MainActivity extends AppCompatActivity {
             String keyTestResult = KeyTester.testKeys(tag);
             txtKeyTest.setText(keyTestResult);
 
-            historyManager.add(card10);
+            historyManager.add(card10, card8, uid);
             updateHistory();
 
             NFCReader.setLastTag(tag);
@@ -257,10 +310,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateHistory(){
-        List<String> list = historyManager.get();
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1,list);
-
-        historyList.setAdapter(adapter);
+        historyAdapter.update(historyManager.getEntries());
+        historyList.setAdapter(historyAdapter);
     }
 }

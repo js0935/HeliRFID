@@ -1,3 +1,7 @@
+/*
+ * HeliRFID - 智慧門禁管理系統
+ * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+ */
 package com.helirfid;
 
 import android.nfc.Tag;

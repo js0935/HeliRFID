@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
+<resources>
+    <string-array name="ndef_types">
+        <item>文字 (Text)</item>
+        <item>網址 (URL)</item>
+        <item>電子郵件 (Email)</item>
+        <item>電話 (Phone)</item>
+        <item>簡訊 (SMS)</item>
+        <item>地理位置 (Geo)</item>
+        <item>WiFi 設定</item>
+        <item>聯絡人 (vCard)</item>
+        <item>藍牙 (Bluetooth)</item>
+    </string-array>
+</resources>

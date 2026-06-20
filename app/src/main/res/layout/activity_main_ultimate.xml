@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light">
+    android:background="@color/background">
 
     <LinearLayout
         android:orientation="vertical"
@@ -15,7 +19,7 @@
             android:text="HeliRFID 專業版"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="#1A237E"
+            android:textColor="@color/text_primary"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -32,7 +36,7 @@
         <TextView
             android:text="禾秝軟體開發團隊"
             android:textSize="14sp"
-            android:textColor="#666"
+            android:textColor="@color/text_secondary"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_width="wrap_content"
@@ -43,7 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardElevation="4dp"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/card_bg">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -56,7 +61,7 @@
                     android:text="請將 NFC 卡靠近手機"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#1565C0"
+                    android:textColor="@color/text_highlight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -64,6 +69,7 @@
                     android:id="@+id/txtCard10"
                     android:text=""
                     android:textSize="14sp"
+                    android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -72,6 +78,7 @@
                     android:id="@+id/txtCard8"
                     android:text=""
                     android:textSize="14sp"
+                    android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -80,6 +87,7 @@
                     android:id="@+id/txtW26"
                     android:text=""
                     android:textSize="14sp"
+                    android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -88,6 +96,7 @@
                     android:id="@+id/txtType"
                     android:text=""
                     android:textSize="14sp"
+                    android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -108,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                app:backgroundTint="#1565C0"
+                app:backgroundTint="@color/btn_blue"
                 app:cornerRadius="8dp"/>
 
             <com.google.android.material.button.MaterialButton
@@ -118,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                app:backgroundTint="#E53935"
+                app:backgroundTint="@color/btn_red"
                 app:cornerRadius="8dp"/>
 
         </LinearLayout>
@@ -129,13 +138,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:backgroundTint="#4CAF50"
+            app:backgroundTint="@color/btn_green"
             app:cornerRadius="8dp"/>
 
         <TextView
             android:text="歷史紀錄"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:textColor="@color/text_primary"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -144,7 +154,7 @@
             android:id="@+id/historyList"
             android:layout_height="300dp"
             android:layout_width="match_parent"
-            android:background="#FFFFFF"
+            android:background="@color/list_bg"
             android:layout_marginTop="8dp"
             android:elevation="2dp"/>
 
