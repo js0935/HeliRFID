@@ -96,6 +96,10 @@ id btnGoValueBlock
 id btnGoValueCodec
 id btnGoVerify
 id btnGoWriteBlock0
+id btnHceClear
+id btnHceSave
+id btnHceStart
+id btnHceStop
 id btnHelp
 id btnImportDump
 id btnImportKeyFile
@@ -144,8 +148,6 @@ id btnShareKeys
 id btnShareLog
 id btnShowHexAscii
 id btnStartClone
-id btnStartHce
-id btnStopHce
 id btnSwapConverter
 id btnTagInfo
 id btnTestAllSectors
@@ -192,8 +194,7 @@ id editEncodeAddr
 id editEncodeBlockAddr
 id editEncodeIntValue
 id editEncodeValue
-id editHceData
-id editHceUid
+id editHceCardName
 id editHexAscii
 id editInput
 id editNdefExtra
@@ -225,6 +226,7 @@ id editWb0Uid
 id historyList
 id hrLogo
 id listDumpBlocks
+id listHceCards
 id listKeyFiles
 id listSectors
 id radioInAscii
@@ -285,7 +287,8 @@ id txtEmvResult
 id txtEncodeValueResult
 id txtFelicaInfo
 id txtFelicaResult
-id txtHceStatus
+id txtHceScanStatus
+id txtHceSimStatus
 id txtHexAsciiResult
 id txtHistorical
 id txtHistoryCard
@@ -381,7 +384,10 @@ mipmap ic_launcher
 raw fp_oyster
 raw fp_ratb
 raw fp_skgt
+string app_name
+string hce_sim_desc
 style AppTheme
+xml apdu_service
 xml device_filter
 xml file_paths
 xml nfc_tech_backup

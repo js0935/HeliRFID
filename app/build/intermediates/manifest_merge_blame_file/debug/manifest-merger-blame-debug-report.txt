@@ -47,7 +47,7 @@
 30-->[androidx.core:core:1.9.0] C:\Users\JS\.gradle\caches\transforms-3\543740e42155bb89dcbd6bdda0f43b68\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-240:19
+32-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-255:19
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 33-->[androidx.core:core:1.9.0] C:\Users\JS\.gradle\caches\transforms-3\543740e42155bb89dcbd6bdda0f43b68\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 34        android:debuggable="true"
@@ -281,262 +281,286 @@
 150-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:137:13-36
 151            android:parentActivityName="com.helirfid.ToolsActivity" />
 151-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:138:13-56
-152        <activity
-152-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:140:9-142:58
-153            android:name="com.helirfid.DesfireActivity"
-153-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:140:19-50
-154            android:exported="true"
-154-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:141:13-36
-155            android:parentActivityName="com.helirfid.ToolsActivity" />
-155-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:142:13-56
-156        <activity
-156-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:144:9-146:58
-157            android:name="com.helirfid.FelicaActivity"
-157-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:144:19-49
-158            android:exported="true"
-158-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:145:13-36
-159            android:parentActivityName="com.helirfid.ToolsActivity" />
-159-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:146:13-56
-160        <activity
-160-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:148:9-150:58
-161            android:name="com.helirfid.SectorSelectActivity"
-161-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:148:19-55
-162            android:exported="true"
-162-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:149:13-36
-163            android:parentActivityName="com.helirfid.ToolsActivity" />
-163-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:150:13-56
-164        <activity
-164-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:152:9-154:58
-165            android:name="com.helirfid.VerifyActivity"
-165-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:152:19-49
-166            android:exported="true"
-166-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:153:13-36
-167            android:parentActivityName="com.helirfid.ToolsActivity" />
-167-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:154:13-56
-168        <activity
-168-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:156:9-158:58
-169            android:name="com.helirfid.TraceViewerActivity"
-169-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:156:19-54
-170            android:exported="true"
-170-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:157:13-36
-171            android:parentActivityName="com.helirfid.ToolsActivity" />
-171-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:158:13-56
-172        <activity
-172-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:160:9-162:58
-173            android:name="com.helirfid.KeyRecoveryActivity"
-173-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:160:19-54
-174            android:exported="true"
-174-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:161:13-36
-175            android:parentActivityName="com.helirfid.ToolsActivity" />
-175-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:162:13-56
-176        <activity
-176-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:164:9-176:20
-177            android:name="com.helirfid.Acr122uActivity"
-177-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:164:19-50
-178            android:exported="true"
-178-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:165:13-36
-179            android:parentActivityName="com.helirfid.ToolsActivity" >
-179-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:166:13-56
-180            <intent-filter>
-180-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:168:13-170:29
-181                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-181-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:169:17-89
-181-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:169:25-87
-182            </intent-filter>
-183
-184            <meta-data
-184-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:172:13-174:56
-185                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
-185-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:173:17-79
-186                android:resource="@xml/device_filter" />
-186-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:174:17-54
-187        </activity>
-188        <activity
-188-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:178:9-180:58
-189            android:name="com.helirfid.AccessDecoderActivity"
-189-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:178:19-56
-190            android:exported="true"
-190-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:179:13-36
-191            android:parentActivityName="com.helirfid.ToolsActivity" />
-191-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:180:13-56
-192        <activity
-192-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:182:9-184:58
-193            android:name="com.helirfid.DumpAsciiActivity"
-193-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:182:19-52
-194            android:exported="true"
-194-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:183:13-36
-195            android:parentActivityName="com.helirfid.ToolsActivity" />
-195-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:184:13-56
-196        <activity
-196-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:186:9-188:58
-197            android:name="com.helirfid.DumpHighlightActivity"
-197-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:186:19-56
-198            android:exported="true"
-198-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:187:13-36
-199            android:parentActivityName="com.helirfid.ToolsActivity" />
-199-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:188:13-56
-200        <activity
-200-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:190:9-192:58
-201            android:name="com.helirfid.ValueCodecActivity"
-201-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:190:19-53
-202            android:exported="true"
-202-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:191:13-36
-203            android:parentActivityName="com.helirfid.ToolsActivity" />
-203-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:192:13-56
-204        <activity
-204-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:194:9-196:58
-205            android:name="com.helirfid.NtagActivity"
-205-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:194:19-47
-206            android:exported="true"
-206-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:195:13-36
-207            android:parentActivityName="com.helirfid.ToolsActivity" />
-207-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:196:13-56
-208        <activity
-208-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:198:9-200:58
-209            android:name="com.helirfid.TagFormatActivity"
-209-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:198:19-52
-210            android:exported="true"
-210-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:199:13-36
-211            android:parentActivityName="com.helirfid.ToolsActivity" />
-211-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:200:13-56
-212        <activity
-212-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:202:9-204:58
-213            android:name="com.helirfid.AuthMapActivity"
-213-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:202:19-50
-214            android:exported="true"
-214-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:203:13-36
-215            android:parentActivityName="com.helirfid.ToolsActivity" />
-215-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:204:13-56
-216        <activity
-216-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:206:9-208:58
-217            android:name="com.helirfid.NfcPollerActivity"
-217-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:206:19-52
-218            android:exported="true"
-218-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:207:13-36
-219            android:parentActivityName="com.helirfid.ToolsActivity" />
-219-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:208:13-56
-220        <activity
-220-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:210:9-212:58
-221            android:name="com.helirfid.EmvCardActivity"
-221-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:210:19-50
-222            android:exported="true"
-222-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:211:13-36
-223            android:parentActivityName="com.helirfid.ToolsActivity" />
-223-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:212:13-56
-224        <activity
-224-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:214:9-216:58
-225            android:name="com.helirfid.WriteBlock0Activity"
-225-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:214:19-54
-226            android:exported="true"
-226-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:215:13-36
-227            android:parentActivityName="com.helirfid.ToolsActivity" />
-227-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:216:13-56
-228        <activity
-228-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:218:9-220:58
-229            android:name="com.helirfid.NfcMonitorActivity"
-229-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:218:19-53
-230            android:exported="true"
-230-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:219:13-36
-231            android:parentActivityName="com.helirfid.ToolsActivity" />
-231-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:220:13-56
-232        <activity
-232-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:9-224:58
-233            android:name="com.helirfid.CardFingerprintActivity"
-233-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:19-58
-234            android:exported="true"
-234-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:223:13-36
-235            android:parentActivityName="com.helirfid.ToolsActivity" />
-235-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:224:13-56
-236        <activity
-236-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:226:9-228:57
-237            android:name="com.helirfid.HelpActivity"
-237-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:226:19-47
-238            android:exported="true"
-238-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:227:13-36
-239            android:parentActivityName="com.helirfid.MainActivity" />
-239-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:228:13-55
-240
-241        <provider
-242            android:name="androidx.core.content.FileProvider"
-242-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:231:13-62
-243            android:authorities="com.helirfid.fileprovider"
-243-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:232:13-64
-244            android:exported="false"
-244-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:233:13-37
-245            android:grantUriPermissions="true" >
-245-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:234:13-47
-246            <meta-data
-246-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:235:13-237:53
-247                android:name="android.support.FILE_PROVIDER_PATHS"
-247-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:236:17-67
-248                android:resource="@xml/file_paths" />
-248-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:237:17-51
-249        </provider>
-250        <provider
-250-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-251            android:name="androidx.startup.InitializationProvider"
-251-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-252            android:authorities="com.helirfid.androidx-startup"
-252-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-253            android:exported="false" >
-253-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-254            <meta-data
-254-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-255                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-255-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-256                android:value="androidx.startup" />
-256-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-257            <meta-data
-257-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-258                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-258-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-259                android:value="androidx.startup" />
-259-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+152
+153        <service
+153-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:140:9-153:19
+154            android:name="com.helirfid.HceSimulationService"
+154-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:141:13-49
+155            android:exported="true"
+155-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:142:13-36
+156            android:permission="android.permission.BIND_NFC_SERVICE" >
+156-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:143:13-69
+157            <intent-filter>
+157-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:145:13-147:29
+158                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+158-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:146:17-92
+158-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:146:25-90
+159            </intent-filter>
+160
+161            <meta-data
+161-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:149:13-151:55
+162                android:name="android.nfc.cardemulation.host_apdu_service"
+162-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:150:17-75
+163                android:resource="@xml/apdu_service" />
+163-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:151:17-53
+164        </service>
+165
+166        <activity
+166-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:155:9-157:58
+167            android:name="com.helirfid.DesfireActivity"
+167-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:155:19-50
+168            android:exported="true"
+168-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:156:13-36
+169            android:parentActivityName="com.helirfid.ToolsActivity" />
+169-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:157:13-56
+170        <activity
+170-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:159:9-161:58
+171            android:name="com.helirfid.FelicaActivity"
+171-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:159:19-49
+172            android:exported="true"
+172-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:160:13-36
+173            android:parentActivityName="com.helirfid.ToolsActivity" />
+173-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:161:13-56
+174        <activity
+174-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:163:9-165:58
+175            android:name="com.helirfid.SectorSelectActivity"
+175-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:163:19-55
+176            android:exported="true"
+176-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:164:13-36
+177            android:parentActivityName="com.helirfid.ToolsActivity" />
+177-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:165:13-56
+178        <activity
+178-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:167:9-169:58
+179            android:name="com.helirfid.VerifyActivity"
+179-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:167:19-49
+180            android:exported="true"
+180-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:168:13-36
+181            android:parentActivityName="com.helirfid.ToolsActivity" />
+181-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:169:13-56
+182        <activity
+182-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:171:9-173:58
+183            android:name="com.helirfid.TraceViewerActivity"
+183-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:171:19-54
+184            android:exported="true"
+184-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:172:13-36
+185            android:parentActivityName="com.helirfid.ToolsActivity" />
+185-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:173:13-56
+186        <activity
+186-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:175:9-177:58
+187            android:name="com.helirfid.KeyRecoveryActivity"
+187-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:175:19-54
+188            android:exported="true"
+188-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:176:13-36
+189            android:parentActivityName="com.helirfid.ToolsActivity" />
+189-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:177:13-56
+190        <activity
+190-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:179:9-191:20
+191            android:name="com.helirfid.Acr122uActivity"
+191-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:179:19-50
+192            android:exported="true"
+192-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:180:13-36
+193            android:parentActivityName="com.helirfid.ToolsActivity" >
+193-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:181:13-56
+194            <intent-filter>
+194-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:183:13-185:29
+195                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+195-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:184:17-89
+195-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:184:25-87
+196            </intent-filter>
+197
+198            <meta-data
+198-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:187:13-189:56
+199                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+199-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:188:17-79
+200                android:resource="@xml/device_filter" />
+200-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:189:17-54
+201        </activity>
+202        <activity
+202-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:193:9-195:58
+203            android:name="com.helirfid.AccessDecoderActivity"
+203-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:193:19-56
+204            android:exported="true"
+204-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:194:13-36
+205            android:parentActivityName="com.helirfid.ToolsActivity" />
+205-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:195:13-56
+206        <activity
+206-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:197:9-199:58
+207            android:name="com.helirfid.DumpAsciiActivity"
+207-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:197:19-52
+208            android:exported="true"
+208-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:198:13-36
+209            android:parentActivityName="com.helirfid.ToolsActivity" />
+209-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:199:13-56
+210        <activity
+210-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:201:9-203:58
+211            android:name="com.helirfid.DumpHighlightActivity"
+211-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:201:19-56
+212            android:exported="true"
+212-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:202:13-36
+213            android:parentActivityName="com.helirfid.ToolsActivity" />
+213-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:203:13-56
+214        <activity
+214-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:205:9-207:58
+215            android:name="com.helirfid.ValueCodecActivity"
+215-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:205:19-53
+216            android:exported="true"
+216-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:206:13-36
+217            android:parentActivityName="com.helirfid.ToolsActivity" />
+217-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:207:13-56
+218        <activity
+218-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:209:9-211:58
+219            android:name="com.helirfid.NtagActivity"
+219-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:209:19-47
+220            android:exported="true"
+220-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:210:13-36
+221            android:parentActivityName="com.helirfid.ToolsActivity" />
+221-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:211:13-56
+222        <activity
+222-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:213:9-215:58
+223            android:name="com.helirfid.TagFormatActivity"
+223-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:213:19-52
+224            android:exported="true"
+224-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:214:13-36
+225            android:parentActivityName="com.helirfid.ToolsActivity" />
+225-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:215:13-56
+226        <activity
+226-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:217:9-219:58
+227            android:name="com.helirfid.AuthMapActivity"
+227-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:217:19-50
+228            android:exported="true"
+228-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:218:13-36
+229            android:parentActivityName="com.helirfid.ToolsActivity" />
+229-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:219:13-56
+230        <activity
+230-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:221:9-223:58
+231            android:name="com.helirfid.NfcPollerActivity"
+231-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:221:19-52
+232            android:exported="true"
+232-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:13-36
+233            android:parentActivityName="com.helirfid.ToolsActivity" />
+233-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:223:13-56
+234        <activity
+234-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:225:9-227:58
+235            android:name="com.helirfid.EmvCardActivity"
+235-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:225:19-50
+236            android:exported="true"
+236-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:226:13-36
+237            android:parentActivityName="com.helirfid.ToolsActivity" />
+237-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:227:13-56
+238        <activity
+238-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:229:9-231:58
+239            android:name="com.helirfid.WriteBlock0Activity"
+239-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:229:19-54
+240            android:exported="true"
+240-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:230:13-36
+241            android:parentActivityName="com.helirfid.ToolsActivity" />
+241-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:231:13-56
+242        <activity
+242-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:233:9-235:58
+243            android:name="com.helirfid.NfcMonitorActivity"
+243-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:233:19-53
+244            android:exported="true"
+244-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:234:13-36
+245            android:parentActivityName="com.helirfid.ToolsActivity" />
+245-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:235:13-56
+246        <activity
+246-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:237:9-239:58
+247            android:name="com.helirfid.CardFingerprintActivity"
+247-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:237:19-58
+248            android:exported="true"
+248-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:238:13-36
+249            android:parentActivityName="com.helirfid.ToolsActivity" />
+249-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:239:13-56
+250        <activity
+250-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:241:9-243:57
+251            android:name="com.helirfid.HelpActivity"
+251-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:241:19-47
+252            android:exported="true"
+252-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:242:13-36
+253            android:parentActivityName="com.helirfid.MainActivity" />
+253-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:243:13-55
+254
+255        <provider
+256            android:name="androidx.core.content.FileProvider"
+256-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:246:13-62
+257            android:authorities="com.helirfid.fileprovider"
+257-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:247:13-64
+258            android:exported="false"
+258-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:248:13-37
+259            android:grantUriPermissions="true" >
+259-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:249:13-47
 260            <meta-data
-260-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-261                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-261-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-262                android:value="androidx.startup" />
-262-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+260-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:250:13-252:53
+261                android:name="android.support.FILE_PROVIDER_PATHS"
+261-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:251:17-67
+262                android:resource="@xml/file_paths" />
+262-->C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:252:17-51
 263        </provider>
-264
-265        <receiver
-265-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-266            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-266-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-267            android:directBootAware="false"
-267-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-268            android:enabled="true"
-268-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-269            android:exported="true"
-269-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-270            android:permission="android.permission.DUMP" >
-270-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-271            <intent-filter>
-271-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-272                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-272-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-272-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-273            </intent-filter>
-274            <intent-filter>
-274-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-275                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-275-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-275-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-276            </intent-filter>
-277            <intent-filter>
-277-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-278                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-278-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-278-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-279            </intent-filter>
-280            <intent-filter>
-280-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-281                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-281-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-281-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-282            </intent-filter>
-283        </receiver>
-284    </application>
-285
-286</manifest>
+264        <provider
+264-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+265            android:name="androidx.startup.InitializationProvider"
+265-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+266            android:authorities="com.helirfid.androidx-startup"
+266-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+267            android:exported="false" >
+267-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+268            <meta-data
+268-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+269                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+269-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+270                android:value="androidx.startup" />
+270-->[androidx.emoji2:emoji2:1.2.0] C:\Users\JS\.gradle\caches\transforms-3\78e0f475248ccf690a14f03fa1cc16c2\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+271            <meta-data
+271-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+272                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+272-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+273                android:value="androidx.startup" />
+273-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\JS\.gradle\caches\transforms-3\e20e1fbd31487f46b59d06879321c31d\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+274            <meta-data
+274-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+275                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+275-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+276                android:value="androidx.startup" />
+276-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+277        </provider>
+278
+279        <receiver
+279-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+280            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+280-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+281            android:directBootAware="false"
+281-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+282            android:enabled="true"
+282-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+283            android:exported="true"
+283-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+284            android:permission="android.permission.DUMP" >
+284-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+285            <intent-filter>
+285-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+286                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+286-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+286-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+287            </intent-filter>
+288            <intent-filter>
+288-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+289                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+289-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+289-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+290            </intent-filter>
+291            <intent-filter>
+291-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+292                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+292-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+292-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+293            </intent-filter>
+294            <intent-filter>
+294-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+295                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+295-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+295-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\JS\.gradle\caches\transforms-3\7aa005dcbc43d74648b0b176c1b9ddb8\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+296            </intent-filter>
+297        </receiver>
+298    </application>
+299
+300</manifest>

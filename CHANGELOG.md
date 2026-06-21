@@ -14,6 +14,22 @@
 
 ## 📅 版本歷史
 
+### [4.4.0] - 2026-06-21 - HCE 標籤模擬版
+
+#### ✅ 新增 1 項功能
+
+- ✅ HCE 標籤模擬 (HceActivity 重構) - 掃描 NFC 卡片、儲存卡片設定檔、命名管理、透過 HostApduService 模擬 NDEF Type 4 Tag
+
+#### 🔧 變更
+
+- 建立 HceSimulationService (HostApduService)，支援 NDEF Type 4 Tag 模擬
+- HceActivity 改為三區塊介面：掃描卡片、已儲存卡片清單（長按刪除）、模擬控制
+- 新增 HceCardProfile 資料模型，以 SharedPreferences 儲存設定檔
+- 新增 res/xml/apdu_service.xml AID 路由（NDEF D2760000850101）
+- AndroidManifest 新增 HceSimulationService 服務註冊
+- 版本號：versionCode 12, versionName "4.4.0"
+- 專案規模：62 Java 檔案, 41 Activities, 1 Service, 34 工具箱按鈕
+
 ### [4.3.0] - 2026-06-21 - EMV & Advanced NTAG Edition
 
 #### ✅ 新增 5 項功能

@@ -28,6 +28,8 @@
     <color name="text_highlight">#1565C0</color>
     <color name="text_primary">#1A237E</color>
     <color name="text_secondary">#666666</color>
+    <string name="app_name">HeliRFID</string>
+    <string name="hce_sim_desc">HeliRFID 標籤模擬服務</string>
     <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/btn_blue</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>

@@ -4,6 +4,8 @@
   禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
 -->
 <resources>
+    <string name="app_name">HeliRFID</string>
+    <string name="hce_sim_desc">HeliRFID 標籤模擬服務</string>
     <string-array name="ndef_types">
         <item>文字 (Text)</item>
         <item>網址 (URL)</item>

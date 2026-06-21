@@ -145,6 +145,7 @@
 -keep class com.helirfid.EmvCardActivity { <init>(); }
 -keep class com.helirfid.FelicaActivity { <init>(); }
 -keep class com.helirfid.HceActivity { <init>(); }
+-keep class com.helirfid.HceSimulationService { <init>(); }
 -keep class com.helirfid.HelpActivity { <init>(); }
 -keep class com.helirfid.KeyManagementActivity { <init>(); }
 -keep class com.helirfid.KeyRecoveryActivity { <init>(); }

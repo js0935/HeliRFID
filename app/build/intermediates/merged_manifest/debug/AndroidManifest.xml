@@ -149,6 +149,20 @@
             android:name="com.helirfid.HceActivity"
             android:exported="true"
             android:parentActivityName="com.helirfid.ToolsActivity" />
+
+        <service
+            android:name="com.helirfid.HceSimulationService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NFC_SERVICE" >
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/apdu_service" />
+        </service>
+
         <activity
             android:name="com.helirfid.DesfireActivity"
             android:exported="true"

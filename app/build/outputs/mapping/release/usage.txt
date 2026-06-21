@@ -18219,6 +18219,25 @@ com.helirfid.DumpHighlightActivity:
 com.helirfid.DumpStore:
     public void <init>()
     public static void clear()
+com.helirfid.HceActivity:
+    private static final java.lang.String KEY_LIST
+    private static final java.lang.String PREFS_NAME
+com.helirfid.HceCardProfile:
+    public java.lang.String getAtqa()
+    public java.lang.String getSak()
+    public java.lang.String getTechTypes()
+    public long getTimestamp()
+    public void setName(java.lang.String)
+com.helirfid.HceSimulationService:
+    private static final short FILE_ID_CC
+    private static final short FILE_ID_NDEF
+    private static final java.lang.String KEY_ACTIVE
+    private static final java.lang.String PREF_NAME
+    private static final int SW_END_OF_FILE
+    private static final int SW_NOT_FOUND
+    private static final int SW_SUCCESS
+    private static final int SW_UNSUPPORTED
+    private static final int SW_WRONG_LE
 com.helirfid.HistoryEntry:
     public long getTimestamp()
 com.helirfid.HistoryManager:
@@ -18276,6 +18295,7 @@ com.helirfid.R$layout:
 com.helirfid.R$mipmap
 com.helirfid.R$raw:
     private void <init>()
+com.helirfid.R$string
 com.helirfid.R$style
 com.helirfid.R$xml
 com.helirfid.R
@@ -24830,9 +24850,9 @@ androidx.appcompat.app.AppCompatViewInflater:
     public static android.view.View createViewFromTag()
     public final void verifyNotNull(android.widget.TextView,java.lang.String)
 androidx.appcompat.app.AppLocalesStorageHelper
-androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$180$0b2164cf6a3a32a3be0b001843bf32b8f6fa070f595cc0946fb37be6bb2be390$0
-androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$180$85a88db501e486c9eae7dd60e455f155fe40bd1d0f1b9697e78a1949ff9e02fd$0
-androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$180$8f0f608d346f2e7d417a9fa9a510fa4c9ce6eb4de3e6b524b9af1ba63022528d$0
+androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$181$0b2164cf6a3a32a3be0b001843bf32b8f6fa070f595cc0946fb37be6bb2be390$0
+androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$181$85a88db501e486c9eae7dd60e455f155fe40bd1d0f1b9697e78a1949ff9e02fd$0
+androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$181$8f0f608d346f2e7d417a9fa9a510fa4c9ce6eb4de3e6b524b9af1ba63022528d$0
 androidx.appcompat.app.LayoutIncludeDetector$$InternalSyntheticThrowCCEIfNotNull$126$6a60655590ef65d84a2da838c467ba5f76e510e853d56a4244bfdd8f00a79a92$0
 androidx.appcompat.app.LayoutIncludeDetector:
     private static void $r8$constructor$androidx$appcompat$app$LayoutIncludeDetector()
@@ -24854,9 +24874,9 @@ androidx.appcompat.app.LayoutIncludeDetector:
     private static void $r8$constructor$androidx$transition$ViewOverlayApi18()
     private static synthetic void $r8$constructor$com$google$android$material$button$MaterialButtonToggleGroup$PressedStateTracker()
     public void <init>()
-    public void <init>(androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$180$0b2164cf6a3a32a3be0b001843bf32b8f6fa070f595cc0946fb37be6bb2be390$0)
-    public void <init>(androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$180$85a88db501e486c9eae7dd60e455f155fe40bd1d0f1b9697e78a1949ff9e02fd$0)
-    public void <init>(androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$180$8f0f608d346f2e7d417a9fa9a510fa4c9ce6eb4de3e6b524b9af1ba63022528d$0)
+    public void <init>(androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$181$0b2164cf6a3a32a3be0b001843bf32b8f6fa070f595cc0946fb37be6bb2be390$0)
+    public void <init>(androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$181$85a88db501e486c9eae7dd60e455f155fe40bd1d0f1b9697e78a1949ff9e02fd$0)
+    public void <init>(androidx.appcompat.app.LayoutIncludeDetector$$InternalSynthetic$IA$181$8f0f608d346f2e7d417a9fa9a510fa4c9ce6eb4de3e6b524b9af1ba63022528d$0)
     public void <init>(java.lang.Object)
     public final void add()
     public final void add$1()
@@ -30238,7 +30258,7 @@ androidx.transition.ViewUtilsBase
 androidx.transition.Visibility$DisappearListener:
     public final void hideViewWhenNotCanceled()
 androidx.transition.Visibility
-androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$183$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
+androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$184$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
 androidx.transition.WindowIdApi14
 androidx.vectordrawable.graphics.drawable.AndroidResources:
     public static final int[] STYLEABLE_PATH_INTERPOLATOR
@@ -32814,6 +32834,29 @@ com.helirfid.FelicaActivity$$InternalSyntheticLambda$3$c4c6dda4a7f26c1e8d6771131
 com.helirfid.FelicaActivity:
     public static void readFelica()
 com.helirfid.HceActivity$$InternalSyntheticLambda$1$ac8db832970647a5ffeffaa8fc04f6b5313c54ffbc32503b2f711dfa66271347$1
+com.helirfid.HceActivity$$InternalSyntheticLambda$1$ac8db832970647a5ffeffaa8fc04f6b5313c54ffbc32503b2f711dfa66271347$2
+com.helirfid.HceActivity$$InternalSyntheticLambda$1$ac8db832970647a5ffeffaa8fc04f6b5313c54ffbc32503b2f711dfa66271347$3
+com.helirfid.HceActivity:
+    public android.nfc.Tag currentTag
+    public static void loadActiveSimState()
+    public static void loadProfiles()
+    public static void saveCard()
+    public static void startSimulation()
+com.helirfid.HceCardProfile:
+    public static java.lang.String getId()
+    public static java.lang.String getName()
+    public static java.lang.String getUid()
+com.helirfid.HceSimulationService:
+    public static byte[] buildCC()
+    public static byte[] buildNDEF()
+    public static byte[] buildNdefTextRecord()
+    public static byte[] handleReadBinary()
+    public static byte[] handleSelect()
+    public static byte[] handleSelectFile()
+    public static byte[] handleUpdateBinary()
+    public static void loadActiveProfile()
+    public static boolean matchApdu(byte[],byte[])
+    public static void saveNdefMessage()
 com.helirfid.HistoryAdapter:
     public static void update()
 com.helirfid.HistoryEntry:
@@ -32829,6 +32872,7 @@ com.helirfid.HistoryManager:
     public static void onInterceptTouchEvent()
     public static void save()
 com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$1$225140289b758dc40dbfed38258afeece4b90f62949cbbb6920a5b15e2f5766d$1
+com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$1$225140289b758dc40dbfed38258afeece4b90f62949cbbb6920a5b15e2f5766d$2
 com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$2$0707899d4ebe7b16e60ccc8afaa29352a19a025553cf3188fdce078f16827d04$1
 com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$3$cebbb128c7877f9a5ec4e941cb5d02a857277936acd0d543657984f06030aa23$0
 com.helirfid.KeyManagementActivity:

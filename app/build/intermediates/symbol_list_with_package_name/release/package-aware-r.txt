@@ -3162,6 +3162,10 @@ id btnGoValueBlock
 id btnGoValueCodec
 id btnGoVerify
 id btnGoWriteBlock0
+id btnHceClear
+id btnHceSave
+id btnHceStart
+id btnHceStop
 id btnHelp
 id btnImportDump
 id btnImportKeyFile
@@ -3210,8 +3214,6 @@ id btnShareKeys
 id btnShareLog
 id btnShowHexAscii
 id btnStartClone
-id btnStartHce
-id btnStopHce
 id btnSwapConverter
 id btnTagInfo
 id btnTestAllSectors
@@ -3318,8 +3320,7 @@ id editEncodeAddr
 id editEncodeBlockAddr
 id editEncodeIntValue
 id editEncodeValue
-id editHceData
-id editHceUid
+id editHceCardName
 id editHexAscii
 id editInput
 id editNdefExtra
@@ -3412,6 +3413,7 @@ id line1
 id line3
 id linear
 id listDumpBlocks
+id listHceCards
 id listKeyFiles
 id listMode
 id listSectors
@@ -3695,7 +3697,8 @@ id txtEmvResult
 id txtEncodeValueResult
 id txtFelicaInfo
 id txtFelicaResult
-id txtHceStatus
+id txtHceScanStatus
+id txtHceSimStatus
 id txtHexAsciiResult
 id txtHistorical
 id txtHistoryCard
@@ -4028,6 +4031,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
+string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
@@ -4044,6 +4048,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hce_sim_desc
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -5422,6 +5427,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml apdu_service
 xml device_filter
 xml file_paths
 xml nfc_tech_backup

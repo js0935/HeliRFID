@@ -6,7 +6,7 @@
 
 一款簡單易用的 Android NFC 門禁卡讀取應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.3.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
+[![Version](https://img.shields.io/badge/version-v4.4.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
 
