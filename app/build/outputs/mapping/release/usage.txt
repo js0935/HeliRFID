@@ -18186,6 +18186,8 @@ com.google.errorprone.annotations.concurrent.GuardedBy
 com.google.errorprone.annotations.concurrent.LazyInit
 com.google.errorprone.annotations.concurrent.LockMethod
 com.google.errorprone.annotations.concurrent.UnlockMethod
+com.helirfid.AccessDecoderActivity:
+    private static final int PICK_DUMP
 com.helirfid.Acr122uActivity:
     private static final java.lang.String ACTION_USB_PERMISSION
 com.helirfid.Acr122uManager:
@@ -18208,8 +18210,12 @@ com.helirfid.CsvExporter:
 com.helirfid.DiffToolActivity:
     private static final int REQUEST_FILE_A
     private static final int REQUEST_FILE_B
+com.helirfid.DumpAsciiActivity:
+    private static final int PICK_FILE
 com.helirfid.DumpEditorActivity:
     private static final int REQUEST_IMPORT_DUMP
+com.helirfid.DumpHighlightActivity:
+    private static final int PICK_FILE
 com.helirfid.DumpStore:
     public void <init>()
     public static void clear()
@@ -32662,6 +32668,11 @@ com.google.android.material.transformation.FabTransformationSheetBehavior:
 com.google.android.material.transformation.TransformationChildCard
 com.google.android.material.transformation.TransformationChildLayout
 com.google.common.util.concurrent.ListenableFuture
+com.helirfid.AccessDecoderActivity$$InternalSyntheticLambda$1$81b5eefd5676a42e88012ffe83adf17bcf6d6a33806a847465e242e2273c1394$1
+com.helirfid.AccessDecoderActivity:
+    public static java.lang.String dataBlockAccess()
+    public static void loadAndDecode()
+    public static java.lang.String trailerAccess()
 com.helirfid.Acr122uActivity$$InternalSyntheticLambda$1$12598d7623b82ca9424561af00865aa73308d8fd7424cb9fd23887723b730db9$1
 com.helirfid.Acr122uActivity$$InternalSyntheticLambda$1$12598d7623b82ca9424561af00865aa73308d8fd7424cb9fd23887723b730db9$2
 com.helirfid.Acr122uActivity$$InternalSyntheticLambda$1$12598d7623b82ca9424561af00865aa73308d8fd7424cb9fd23887723b730db9$3
@@ -32701,6 +32712,10 @@ com.helirfid.ApduConsoleActivity$$InternalSyntheticLambda$3$3eef46160bf9829a85df
 com.helirfid.ApduConsoleActivity:
     public final byte[] hexStringToByteArray(java.lang.String)
     public static void sendApdu()
+com.helirfid.AuthMapActivity$$InternalSyntheticLambda$1$0c04cb71ff6fabe70776746cad79569cf2d31a8d7ea70cb546ff612d94997059$1
+com.helirfid.AuthMapActivity:
+    public android.widget.Button btnClear
+    public static void scanAuth()
 com.helirfid.CardAnalyzer
 com.helirfid.CloneActivity$$InternalSyntheticLambda$1$296f30c8029a16b0e58207e552674bba2a86378051971cf8600d2140e92122ba$0
 com.helirfid.CloneActivity$$InternalSyntheticLambda$3$b8727bd58ee0cd4cbc4c8e36ba0f1bbeea2f9f5d3ee1c33cde42ff8f47bf889b$0
@@ -32745,6 +32760,9 @@ com.helirfid.DiffToolActivity:
 com.helirfid.DumpAdapter:
     public static void onBindViewHolder$3()
     public static com.helirfid.DumpAdapter$DumpViewHolder onCreateViewHolder()
+com.helirfid.DumpAsciiActivity$$InternalSyntheticLambda$1$71080d0f3f07ed3f2212201526b91781a403450b72fbe9005d957711b7b9606d$1
+com.helirfid.DumpAsciiActivity:
+    public final void loadAndShow()
 com.helirfid.DumpEditorActivity$$InternalSyntheticLambda$1$3d5f1985b84b9b4cc57c6c4ff474c02c5d6b0fd90b73c41a15d7286cff9f18c8$1
 com.helirfid.DumpEditorActivity$$InternalSyntheticLambda$1$3d5f1985b84b9b4cc57c6c4ff474c02c5d6b0fd90b73c41a15d7286cff9f18c8$2
 com.helirfid.DumpEditorActivity$$InternalSyntheticLambda$3$3e50923e04ac2b51c43c8b03d70e675b067f9e4e8b9f84741b304527c36433e1$0
@@ -32753,6 +32771,11 @@ com.helirfid.DumpEditorActivity:
     public java.lang.String currentFilePath
     public static void importDumpFile()
     public static void showEditDialog()
+com.helirfid.DumpHighlightActivity$$InternalSyntheticLambda$1$1daec70cb480cecfece5f7bc3c18044941c9305754b37b934a0bd18c0677ed4f$1
+com.helirfid.DumpHighlightActivity:
+    public static final int COLOR_OFFSET
+    public static java.lang.String getBlockLabel()
+    public final void loadAndShow()
 com.helirfid.DumpItem:
     public static int getBlock()
     public static java.lang.String getData()
@@ -32763,6 +32786,17 @@ com.helirfid.DumpStore:
     public static java.util.List getDump()
     public static byte[] getDumpData()
     public static boolean hasDump()
+com.helirfid.EmvCardActivity$$InternalSyntheticLambda$1$f22bc57408b253941b1f8364331b305caf9669220de446fdecfc7fa646f7ad8e$1
+com.helirfid.EmvCardActivity$$InternalSyntheticLambda$3$9abd55eef293d9b1bc53b8e64890b8d9924861c519d4b9b4ff422cca55b27c1e$0
+com.helirfid.EmvCardActivity$$InternalSyntheticLambda$3$9abd55eef293d9b1bc53b8e64890b8d9924861c519d4b9b4ff422cca55b27c1e$1
+com.helirfid.EmvCardActivity$$InternalSyntheticLambda$3$9abd55eef293d9b1bc53b8e64890b8d9924861c519d4b9b4ff422cca55b27c1e$2
+com.helirfid.EmvCardActivity$$InternalSyntheticLambda$3$9abd55eef293d9b1bc53b8e64890b8d9924861c519d4b9b4ff422cca55b27c1e$3
+com.helirfid.EmvCardActivity$$InternalSyntheticLambda$3$9abd55eef293d9b1bc53b8e64890b8d9924861c519d4b9b4ff422cca55b27c1e$4
+com.helirfid.EmvCardActivity:
+    public static byte[] buildSelectAid(byte[])
+    public static void readCard()
+    public static byte[] selectAid()
+    public static byte[] selectPpse()
 com.helirfid.FelicaActivity$$InternalSyntheticLambda$1$04314c94c91c4746fdac7aba1294d22c3e14f491218f6968d03ef41847e3f8a4$0
 com.helirfid.FelicaActivity$$InternalSyntheticLambda$3$c4c6dda4a7f26c1e8d6771131e3a931a6d56e0569c0603eb4e18ef484643af9d$0
 com.helirfid.FelicaActivity$$InternalSyntheticLambda$3$c4c6dda4a7f26c1e8d6771131e3a931a6d56e0569c0603eb4e18ef484643af9d$1
@@ -32798,6 +32832,8 @@ com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$1$9ba176d05f7105661a64
 com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$0
 com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$1
 com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$2
+com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$3:
+    private static synthetic void $r8$constructor$com$helirfid$NtagActivity$$InternalSyntheticLambda$3$30d79e32f04778596d08a9aedee0341f10b7e0d2f0249fa497260e9bff1f0a2d$1()
 com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$4
 com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$5
 com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$3$203be4ed238b2310d6b6686fdfa7c4e2ce28e5b3dbc8afaf331758064b91ffb6$0
@@ -32849,6 +32885,17 @@ com.helirfid.NFCReader:
     public static void <clinit>()
     public static void setLastTag()
 com.helirfid.NFCWriter
+com.helirfid.NfcMonitorActivity$$InternalSyntheticLambda$1$46728aed1b0e68c6effc682c1b6aff78e35fed43cf3f172713ae096184336cd2$1
+com.helirfid.NfcMonitorActivity$$InternalSyntheticLambda$1$46728aed1b0e68c6effc682c1b6aff78e35fed43cf3f172713ae096184336cd2$2
+com.helirfid.NfcMonitorActivity$$InternalSyntheticLambda$1$46728aed1b0e68c6effc682c1b6aff78e35fed43cf3f172713ae096184336cd2$3
+com.helirfid.NfcMonitorActivity:
+    public android.nfc.Tag currentTag
+    public static void exportLog()
+    public static void handleTag()
+com.helirfid.NfcPollerActivity$$InternalSyntheticLambda$1$62e381620ca8f7b13b98a5fe8f6143f79fbe03bb04e44e7903240ecf221f7a5d$1
+com.helirfid.NfcPollerActivity$$InternalSyntheticLambda$1$62e381620ca8f7b13b98a5fe8f6143f79fbe03bb04e44e7903240ecf221f7a5d$2
+com.helirfid.NfcPollerActivity:
+    public final android.os.Handler handler
 com.helirfid.NfcUltralightUtils
 com.helirfid.NfcVActivity$$InternalSyntheticLambda$1$41683ae8ceb1f998bf37daea3c0776e47ad5b9240b76b8c51333f1759d37a6b0$1
 com.helirfid.NfcVActivity$$InternalSyntheticLambda$2$93288d38f27724ff8f12c4faea61c47ffd6c8e3a92ba2b911fa8f80fe18e4c96$0
@@ -32856,6 +32903,54 @@ com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf483
 com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf4837dbc271d8c69cf9008f4b81a29bdd08eea8c6$3
 com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf4837dbc271d8c69cf9008f4b81a29bdd08eea8c6$4
 com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf4837dbc271d8c69cf9008f4b81a29bdd08eea8c6$5
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$3
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$4
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$5
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$6
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$7
+com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$8
+com.helirfid.NtagActivity$$InternalSyntheticLambda$2$45739f5c2dcc1597ae4f8c0b4238292b1d56ff2f319247ca921af265346b530a$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$2$45739f5c2dcc1597ae4f8c0b4238292b1d56ff2f319247ca921af265346b530a$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$2$47b6ac936017920becc2afbd381ae5198eabd05ade7f7e91230535a1b86ec5ff$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$2$6b8c3760db5062bb35ec7b7be6b26ea505bbb5d3c517c127a93282c43661ce4b$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$2$ff4558cfde2728eb8a365350d71a45062f848439a419fa4833b9dc696acada1c$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$29d0e38b8ea49a5ac0cc0830e30d07d2626f9477be278728fc934e99248589ca$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$29d0e38b8ea49a5ac0cc0830e30d07d2626f9477be278728fc934e99248589ca$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$29d0e38b8ea49a5ac0cc0830e30d07d2626f9477be278728fc934e99248589ca$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$30d79e32f04778596d08a9aedee0341f10b7e0d2f0249fa497260e9bff1f0a2d$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$30d79e32f04778596d08a9aedee0341f10b7e0d2f0249fa497260e9bff1f0a2d$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$30d79e32f04778596d08a9aedee0341f10b7e0d2f0249fa497260e9bff1f0a2d$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$30d79e32f04778596d08a9aedee0341f10b7e0d2f0249fa497260e9bff1f0a2d$3
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$680eabdc246d8923e1a82ab796145690ca592517081b4757b3b8a9866f21369c$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$680eabdc246d8923e1a82ab796145690ca592517081b4757b3b8a9866f21369c$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$680eabdc246d8923e1a82ab796145690ca592517081b4757b3b8a9866f21369c$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$680eabdc246d8923e1a82ab796145690ca592517081b4757b3b8a9866f21369c$3
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$7826c36db20447c21384c631b42c9e8118458f1a47eb1eb904b9f32782050a9d$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$7826c36db20447c21384c631b42c9e8118458f1a47eb1eb904b9f32782050a9d$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$7826c36db20447c21384c631b42c9e8118458f1a47eb1eb904b9f32782050a9d$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$9097ebe29fbf963ee7133a2b87f902c44e7a24d0b1836df13e27b0205b799691$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$9097ebe29fbf963ee7133a2b87f902c44e7a24d0b1836df13e27b0205b799691$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$d188510f8ee28a61fdd8d480bde1ff68ffb53fa6608be85f2de8edab182beeca$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$d188510f8ee28a61fdd8d480bde1ff68ffb53fa6608be85f2de8edab182beeca$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$d188510f8ee28a61fdd8d480bde1ff68ffb53fa6608be85f2de8edab182beeca$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$e6854f2c1dc47388b0d7be8cfeea7a193a7ac8003918b3828dc8a2e2c0e87ba2$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$e6854f2c1dc47388b0d7be8cfeea7a193a7ac8003918b3828dc8a2e2c0e87ba2$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$e6854f2c1dc47388b0d7be8cfeea7a193a7ac8003918b3828dc8a2e2c0e87ba2$2
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$f7933a012053aeb865b421c0d6fd198e80fe94dc36431726fda8cabe045d0e28$0
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$f7933a012053aeb865b421c0d6fd198e80fe94dc36431726fda8cabe045d0e28$1
+com.helirfid.NtagActivity$$InternalSyntheticLambda$3$f7933a012053aeb865b421c0d6fd198e80fe94dc36431726fda8cabe045d0e28$2
+com.helirfid.NtagActivity:
+    public android.nfc.tech.MifareUltralight currentMU
+    public static void formatTag()
+    public static void incrementCounter()
+    public static void pwdAuth()
+    public static void readAllPages()
+    public static void readCounter()
+    public static void readSignature()
+    public static void readTag()
+    public static void writePage()
 com.helirfid.R$id
 com.helirfid.R$layout
 com.helirfid.ScanLogActivity$$InternalSyntheticLambda$1$1767d3874fbc6e3079d7a34003eb80dad9a9dd4bc379db87a95bdddb3061d2f1$1
@@ -32879,6 +32974,10 @@ com.helirfid.SectorSelectActivity:
 com.helirfid.ShareActivity$$InternalSyntheticLambda$1$3ab8ebc4c65ffab4fd6cb6919196dd16bb2f0fdc6b667e3e99044cbc2512803d$1
 com.helirfid.ShareActivity$$InternalSyntheticLambda$1$3ab8ebc4c65ffab4fd6cb6919196dd16bb2f0fdc6b667e3e99044cbc2512803d$2
 com.helirfid.SplashActivity$$InternalSyntheticLambda$1$4111e3a3bd2ce58d73b0123b930d645a360355e10fcd1fbe1a50df2e732e3313$0
+com.helirfid.TagFormatActivity$$InternalSyntheticLambda$1$6a6ff05fa97c2ebece92ce2c938c88d6016ad512f7084c5591fc1e123eb318ed$1
+com.helirfid.TagFormatActivity:
+    public android.widget.Button btnClear
+    public static void formatTag$1()
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$10
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$11
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$12
@@ -32896,8 +32995,18 @@ com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$23
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$24
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$25
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$26
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$27
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$28
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$29
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$2
-com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$3
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$30
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$31
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$32
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$33
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$34
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$35
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$36
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$4
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$5
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$6
@@ -32918,6 +33027,14 @@ com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$3$8152e6e35fa526a8a17f0
 com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$3$8152e6e35fa526a8a17f0c6031bd175bd7eece891db9c082e73d6802485da5ad$3
 com.helirfid.ValueBlockActivity:
     public final byte[] hexToBytes(java.lang.String)
+com.helirfid.ValueCodecActivity$$InternalSyntheticLambda$1$2252d04ead02e5eef1e0f20a493a190d549fe8c3c2ef075106e748025393adcc$1
+com.helirfid.ValueCodecActivity$$InternalSyntheticLambda$1$2252d04ead02e5eef1e0f20a493a190d549fe8c3c2ef075106e748025393adcc$2
+com.helirfid.ValueCodecActivity$$InternalSyntheticLambda$1$2252d04ead02e5eef1e0f20a493a190d549fe8c3c2ef075106e748025393adcc$3
+com.helirfid.ValueCodecActivity$$InternalSyntheticLambda$1$2252d04ead02e5eef1e0f20a493a190d549fe8c3c2ef075106e748025393adcc$4
+com.helirfid.ValueCodecActivity:
+    public static void decodeValueBlock()
+    public static void encodeValueBlock()
+    public final byte[] hexToBytes(java.lang.String)
 com.helirfid.VerifyActivity$$InternalSyntheticLambda$1$687b11ac603a07610425b81e769769a436bb1ca9185569e9d37034b6baa0f7cc$1
 com.helirfid.VerifyActivity$$InternalSyntheticLambda$3$560b35e693df68f031fd5fc44dd8697af3f9faa472984ec8bd3b797e3d03def6$0
 com.helirfid.VerifyActivity$$InternalSyntheticLambda$3$560b35e693df68f031fd5fc44dd8697af3f9faa472984ec8bd3b797e3d03def6$1
@@ -32937,6 +33054,16 @@ com.helirfid.WriteActivity$$InternalSyntheticLambda$1$a874b61671c9a08f8225404b36
 com.helirfid.WriteActivity$$InternalSyntheticLambda$1$a874b61671c9a08f8225404b36fc6f6c1a08620ddd01e5182cc59f56bd8e1282$8
 com.helirfid.WriteActivity$$InternalSyntheticLambda$1$a874b61671c9a08f8225404b36fc6f6c1a08620ddd01e5182cc59f56bd8e1282$9
 com.helirfid.WriteActivity$1
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$1$a47b9ba88da1fcdbe63e2a468c634da6647a2832243d504e2ec5ab97aafa864e$1
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$1$a47b9ba88da1fcdbe63e2a468c634da6647a2832243d504e2ec5ab97aafa864e$2
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$3$e80c2329245a302c51f5d070cdf21fd54c1f120ad35653ed381326ab9c596c0b$0
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$3$e80c2329245a302c51f5d070cdf21fd54c1f120ad35653ed381326ab9c596c0b$1
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$3$e80c2329245a302c51f5d070cdf21fd54c1f120ad35653ed381326ab9c596c0b$2
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$3$e80c2329245a302c51f5d070cdf21fd54c1f120ad35653ed381326ab9c596c0b$3
+com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$3$e80c2329245a302c51f5d070cdf21fd54c1f120ad35653ed381326ab9c596c0b$4
+com.helirfid.WriteBlock0Activity:
+    public static void buildBlock0()
+    public static void writeBlock0()
 kotlin.Function
 kotlin.Lazy
 kotlin.LazyKt

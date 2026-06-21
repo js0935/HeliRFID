@@ -129,14 +129,19 @@
 -keep class androidx.core.content.FileProvider { <init>(); }
 -keep class androidx.profileinstaller.ProfileInstallReceiver { <init>(); }
 -keep class androidx.startup.InitializationProvider { <init>(); }
+-keep class com.helirfid.AccessDecoderActivity { <init>(); }
 -keep class com.helirfid.Acr122uActivity { <init>(); }
 -keep class com.helirfid.AdvancedKeyManagerActivity { <init>(); }
 -keep class com.helirfid.ApduConsoleActivity { <init>(); }
+-keep class com.helirfid.AuthMapActivity { <init>(); }
 -keep class com.helirfid.CloneActivity { <init>(); }
 -keep class com.helirfid.DataConverterActivity { <init>(); }
 -keep class com.helirfid.DesfireActivity { <init>(); }
 -keep class com.helirfid.DiffToolActivity { <init>(); }
+-keep class com.helirfid.DumpAsciiActivity { <init>(); }
 -keep class com.helirfid.DumpEditorActivity { <init>(); }
+-keep class com.helirfid.DumpHighlightActivity { <init>(); }
+-keep class com.helirfid.EmvCardActivity { <init>(); }
 -keep class com.helirfid.FelicaActivity { <init>(); }
 -keep class com.helirfid.HceActivity { <init>(); }
 -keep class com.helirfid.HelpActivity { <init>(); }
@@ -146,18 +151,24 @@
 -keep class com.helirfid.MagicCardActivity { <init>(); }
 -keep class com.helirfid.MainActivity { <init>(); }
 -keep class com.helirfid.MemoryDumpActivity { <init>(); }
+-keep class com.helirfid.NfcMonitorActivity { <init>(); }
+-keep class com.helirfid.NfcPollerActivity { <init>(); }
 -keep class com.helirfid.NfcVActivity { <init>(); }
+-keep class com.helirfid.NtagActivity { <init>(); }
 -keep class com.helirfid.ScanLogActivity { <init>(); }
 -keep class com.helirfid.SectorSelectActivity { <init>(); }
 -keep class com.helirfid.ShareActivity { <init>(); }
 -keep class com.helirfid.SplashActivity { <init>(); }
+-keep class com.helirfid.TagFormatActivity { <init>(); }
 -keep class com.helirfid.TagInfoActivity { <init>(); }
 -keep class com.helirfid.ToolsActivity { <init>(); }
 -keep class com.helirfid.TraceViewerActivity { <init>(); }
 -keep class com.helirfid.UidGeneratorActivity { <init>(); }
 -keep class com.helirfid.ValueBlockActivity { <init>(); }
+-keep class com.helirfid.ValueCodecActivity { <init>(); }
 -keep class com.helirfid.VerifyActivity { <init>(); }
 -keep class com.helirfid.WriteActivity { <init>(); }
+-keep class com.helirfid.WriteBlock0Activity { <init>(); }
 -keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(android.content.Context, android.util.AttributeSet); }

@@ -18,3 +18,5 @@ gradle-8.0/
 heli_rfid_*.apk
 !releases/
 *.exe
+keystore.properties
+*.keystore
