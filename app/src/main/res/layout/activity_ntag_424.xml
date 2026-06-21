@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NTAG 424 DNA 工具"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+        <Button android:id="@+id/btn424Version"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="1. 讀取版本資訊" />
+        <Button android:id="@+id/btn424Auth"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="2. 預設金鑰認證" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="檔案操作 (認證後)" android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:id="@+id/edit424FileNo"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:hint="檔案編號 (0)"
+                android:inputType="number" />
+            <EditText android:id="@+id/edit424Offset"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:hint="偏移 (0)"
+                android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/btn424Read"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="讀取檔案" />
+            <Button android:id="@+id/btn424Write"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="寫入檔案" />
+        </LinearLayout>
+        <EditText android:id="@+id/edit424WriteData"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="寫入資料 (hex)" android:inputType="text" />
+        <Button android:id="@+id/btn424SdmMeta"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="SDM 配置資訊" />
+        <Button android:id="@+id/btn424SunCheck"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="SUN (安全唯一序號) 驗證" />
+        <TextView android:id="@+id/txt424Status"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="等待 NFC 卡片..."
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:minLines="4" />
+        <TextView android:id="@+id/txt424Info"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text=""
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="11sp" android:fontFamily="monospace"
+            android:minLines="8" />
+    </LinearLayout>
+</ScrollView>

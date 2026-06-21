@@ -816,7 +816,7 @@
                     android:textColor="#FFFF4444"
                     android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 <TextView android:text="本軟體僅供合法安全研究、教育學習、以及您擁有的卡片測試使用。未經授權讀取、複製、或破解他人卡片可能違反當地法律。使用者須自行承擔所有法律責任。"
-                    android:textSize="12sp" android:textColor="#FFCCCCCC"
+                    android:textSize="12sp" android:textColor="#FFFF8888"
                     android:layout_marginTop="6dp" android:lineSpacingExtra="3dp"
                     android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             </LinearLayout>

@@ -4,6 +4,7 @@
 *.dex
 *.class
 /build/
+app/build/
 /local.properties
 /.idea/
 .gradle/

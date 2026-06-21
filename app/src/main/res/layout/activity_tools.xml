@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  HeliRFID - 智慧門禁管理系統
-  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
--->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -25,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- ====== 內建工具卡：Access Conditions ====== -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,57 +29,34 @@
             app:cardElevation="4dp"
             app:cardCornerRadius="12dp"
             app:cardBackgroundColor="@color/card_bg"
-            android:clickable="true"
-            android:focusable="true"
             android:id="@+id/cardAccessConditions">
-
-            <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout android:orientation="vertical"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="🔐 Access Conditions 解碼"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+                <TextView android:text="Access Conditions 解碼"
+                    android:textSize="16sp" android:textStyle="bold"
                     android:textColor="@color/text_primary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/editAccessBytes"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/editAccessBytes"
                     android:hint="輸入 Sector Trailer 後 6 bytes 或 16 bytes (hex, 空格分隔)"
-                    android:inputType="text"
-                    android:textSize="12sp"
-                    android:textColor="@color/text_body"
-                    android:fontFamily="monospace"
+                    android:inputType="text" android:textSize="12sp"
+                    android:textColor="@color/text_body" android:fontFamily="monospace"
                     android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnDecodeAccess"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/btnDecodeAccess"
                     android:text="解碼"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:backgroundTint="@color/btn_blue"/>
+                <TextView android:id="@+id/txtAccessResult"
+                    android:text="" android:textSize="11sp"
+                    android:fontFamily="monospace" android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/btn_blue"/>
-
-                <TextView
-                    android:id="@+id/txtAccessResult"
-                    android:text=""
-                    android:textSize="11sp"
-                    android:fontFamily="monospace"
-                    android:textColor="@color/text_body"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- ====== 內建工具卡：Value Block ====== -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,108 +65,58 @@
             app:cardCornerRadius="12dp"
             app:cardBackgroundColor="@color/card_bg"
             android:id="@+id/cardValueBlock">
-
-            <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout android:orientation="vertical"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="💰 Value Block 解碼 / 編碼"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+                <TextView android:text="Value Block 解碼 / 編碼"
+                    android:textSize="16sp" android:textStyle="bold"
                     android:textColor="@color/text_primary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:text="解碼: 輸入 16 bytes hex"
-                    android:textSize="12sp"
-                    android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="解碼: 輸入 16 bytes hex"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
                     android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/editValueBlock"
-                    android:hint="16 bytes hex (32 字元)"
-                    android:inputType="text"
-                    android:textSize="12sp"
-                    android:textColor="@color/text_body"
-                    android:fontFamily="monospace"
-                    android:layout_marginTop="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnDecodeValue"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/editValueBlock"
+                    android:hint="16 bytes hex (32 字元)" android:inputType="text"
+                    android:textSize="12sp" android:textColor="@color/text_body"
+                    android:fontFamily="monospace" android:layout_marginTop="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/btnDecodeValue"
                     android:text="解碼 Value Block"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:backgroundTint="@color/btn_blue"/>
-
-                <TextView
-                    android:text="編碼: 輸入整數值和位址"
-                    android:textSize="12sp"
-                    android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:backgroundTint="@color/btn_blue"/>
+                <TextView android:text="編碼: 輸入整數值和位址"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
                     android:layout_marginTop="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:layout_marginTop="4dp">
-
-                    <EditText
-                        android:id="@+id/editEncodeValue"
-                        android:hint="整數值"
-                        android:inputType="number"
-                        android:textSize="12sp"
-                        android:textColor="@color/text_body"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:layout_height="wrap_content"/>
-
-                    <EditText
-                        android:id="@+id/editEncodeAddr"
-                        android:hint="位址 (0-255)"
-                        android:inputType="number"
-                        android:textSize="12sp"
-                        android:textColor="@color/text_body"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="4dp"
-                        android:layout_height="wrap_content"/>
-
+                    <EditText android:id="@+id/editEncodeValue"
+                        android:hint="整數值" android:inputType="number"
+                        android:textSize="12sp" android:textColor="@color/text_body"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_marginEnd="4dp" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/editEncodeAddr"
+                        android:hint="位址 (0-255)" android:inputType="number"
+                        android:textSize="12sp" android:textColor="@color/text_body"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_marginStart="4dp" android:layout_height="wrap_content"/>
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/btnEncodeValue"
+                <Button android:id="@+id/btnEncodeValue"
                     android:text="編碼 Value Block"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:backgroundTint="@color/btn_orange"/>
-
-                <TextView
-                    android:id="@+id/txtValueResult"
-                    android:text=""
-                    android:textSize="11sp"
-                    android:fontFamily="monospace"
-                    android:textColor="@color/text_body"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:backgroundTint="@color/btn_orange"/>
+                <TextView android:id="@+id/txtValueResult"
+                    android:text="" android:textSize="11sp"
+                    android:fontFamily="monospace" android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- ====== 內建工具卡：BCC ====== -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -201,54 +125,33 @@
             app:cardCornerRadius="12dp"
             app:cardBackgroundColor="@color/card_bg"
             android:id="@+id/cardBcc">
-
-            <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout android:orientation="vertical"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="🔢 BCC 計算器"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+                <TextView android:text="BCC 計算器"
+                    android:textSize="16sp" android:textStyle="bold"
                     android:textColor="@color/text_primary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/editBccUid"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/editBccUid"
                     android:hint="輸入 UID (hex, 可含 : 或空格, 如 04:12:34:56)"
-                    android:inputType="text"
-                    android:textSize="12sp"
-                    android:textColor="@color/text_body"
-                    android:fontFamily="monospace"
+                    android:inputType="text" android:textSize="12sp"
+                    android:textColor="@color/text_body" android:fontFamily="monospace"
                     android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnCalcBcc"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/btnCalcBcc"
                     android:text="計算 BCC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:backgroundTint="@color/btn_purple"/>
+                <TextView android:id="@+id/txtBccResult"
+                    android:text="" android:textSize="11sp"
+                    android:fontFamily="monospace" android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/btn_purple"/>
-
-                <TextView
-                    android:id="@+id/txtBccResult"
-                    android:text=""
-                    android:textSize="11sp"
-                    android:fontFamily="monospace"
-                    android:textColor="@color/text_body"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- ====== 內建工具卡：Hex+ASCII ====== -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -257,351 +160,448 @@
             app:cardCornerRadius="12dp"
             app:cardBackgroundColor="@color/card_bg"
             android:id="@+id/cardHexAscii">
-
-            <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout android:orientation="vertical"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="📝 Hex + ASCII 顯示"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+                <TextView android:text="Hex + ASCII 顯示"
+                    android:textSize="16sp" android:textStyle="bold"
                     android:textColor="@color/text_primary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/editHexAscii"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/editHexAscii"
                     android:hint="輸入 hex bytes (空格分隔, 如 48 65 6C 6C 6F)"
-                    android:inputType="text"
-                    android:textSize="12sp"
-                    android:textColor="@color/text_body"
-                    android:fontFamily="monospace"
-                    android:minLines="2"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnShowHexAscii"
+                    android:inputType="text" android:textSize="12sp"
+                    android:textColor="@color/text_body" android:fontFamily="monospace"
+                    android:minLines="2" android:layout_marginTop="8dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/btnShowHexAscii"
                     android:text="顯示"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:backgroundTint="@color/btn_green"/>
+                <TextView android:id="@+id/txtHexAsciiResult"
+                    android:text="" android:textSize="11sp"
+                    android:fontFamily="monospace" android:textColor="@color/text_body"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/btn_green"/>
-
-                <TextView
-                    android:id="@+id/txtHexAsciiResult"
-                    android:text=""
-                    android:textSize="11sp"
-                    android:fontFamily="monospace"
-                    android:textColor="@color/text_body"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoKeyManagement"
-            android:text="金鑰檔案管理"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 1. NDEF 與 QR 工具 ====== -->
+        <TextView android:text="●  NDEF 與 QR 工具"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#1565C0"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoDiffTool"
-            android:text="Dump 比對工具"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNdefEditor"
+            android:text="NDEF 編輯器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNdefValidator"
+            android:text="NDEF 合規性檢查" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagClone"
+            android:text="標籤複製 (Tag Clone)" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagBackup"
+            android:text="標籤備份與還原" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagArchiver"
+            android:text="跨標籤檔案封存" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoQrScanner"
+            android:text="QR Code / Barcode 掃描" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoQrCodeDisplay"
+            android:text="QR Code NDEF 顯示" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfc2Qr"
+            android:text="NFC ↔ QR 互轉" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoLogViewer"
-            android:text="應用程式日誌"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_red"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 2. 標籤讀寫 ====== -->
+        <TextView android:text="●  標籤讀寫"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#E65100"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoApduConsole"
-            android:text="APDU 命令控制台"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNtag"
+            android:text="NTAG 讀寫器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNtag424"
+            android:text="NTAG 424 DNA (AES 加密)" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNtagConfig"
+            android:text="NTAG 進階設定" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDesfire"
+            android:text="DESFire NDEF 讀取" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoFelica"
+            android:text="FeliCa 讀取" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcV"
+            android:text="ISO 15693 (NFC-V)" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoBulkWriter"
+            android:text="Bulk 大量寫入工具" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoSectorSelect"
+            android:text="分區選取寫入" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoWriteBlock0"
+            android:text="廠商區塊寫入" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagFormat"
+            android:text="格式化標籤" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagLock"
+            android:text="永久鎖定標籤" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagInventory"
+            android:text="標籤盤點" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagCycles"
+            android:text="標籤寫入週期" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoMagicCard"
-            android:text="魔術卡偵測與配置"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 3. 安全與金鑰 ====== -->
+        <TextView android:text="●  安全與金鑰"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#C62828"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoDumpEditor"
-            android:text="Dump 編輯器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_green"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoKeyManagement"
+            android:text="金鑰檔案管理" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoAdvancedKey"
+            android:text="進階金鑰檔案" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoKeyRecovery"
+            android:text="金鑰恢復工具" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoAuthMap"
+            android:text="驗證地圖" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNtagPwd"
+            android:text="NTAG 密碼保護與鎖定" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNtagSignature"
+            android:text="NTAG 簽章驗證" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoOriginalityCheck"
+            android:text="NTAG 原廠檢查" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTamperCheck"
+            android:text="標籤安全檢查" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoMagicCard"
+            android:text="魔術卡偵測與配置" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoAccessDecoder"
+            android:text="存取條件解碼器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcSafe"
+            android:text="NFC 保險庫" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcAppBlocker"
+            android:text="應用程式封鎖器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoUidGenerator"
-            android:text="UID 隨機產生器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_orange"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 4. 金融卡與識別 ====== -->
+        <TextView android:text="●  金融卡與識別"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#2E7D32"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoShare"
-            android:text="分享功能"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoEmvCard"
+            android:text="EMV 信用卡讀取" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoEpassport"
+            android:text="ePassport ICAO 9303 讀取" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoVasReader"
+            android:text="Apple VAS / Smart Tap 讀取" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagIdent"
+            android:text="MIFARE Plus / DESFire Light 識別" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagBench"
+            android:text="標籤 Benchmark 效能測試" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoVerify"
+            android:text="BCC/SAK/ATQA 驗證" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoDataConverter"
-            android:text="資料轉換器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 5. 分析與 Dump 工具 ====== -->
+        <TextView android:text="●  分析與 Dump 工具"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#6A1B9A"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoScanLog"
-            android:text="UID 掃描日誌"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_green"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoFingerprint"
+            android:text="卡片指紋辨識" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoMemoryMap"
+            android:text="記憶體地圖視覺化" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDiffTool"
+            android:text="Dump 比對工具" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDumpEditor"
+            android:text="Dump 編輯器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDumpAscii"
+            android:text="Dump ASCII 檢視器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDumpHighlight"
+            android:text="Dump 色彩高亮檢視" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDumpExport"
+            android:text="Dump 匯出 (.nfc/.txt/.bin/.hex)" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoSignalStrength"
+            android:text="訊號強度偵測" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcPoller"
+            android:text="NFC 輪詢模式" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoReaderMode"
+            android:text="Reader Mode 快速掃描" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoValueBlock"
-            android:text="數值區塊增減"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_orange"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 6. 任務自動化 ====== -->
+        <TextView android:text="●  任務自動化"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#00695C"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoAdvancedKey"
-            android:text="進階金鑰檔案"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_red"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTaskAuto"
+            android:text="NFC 任務自動化" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoSmartProfile"
+            android:text="智慧設定檔 (Smart Profile)" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoConditionalTask"
+            android:text="條件式任務區塊" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTaskVariables"
+            android:text="任務變數與函數" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoFileOperations"
+            android:text="檔案操作任務" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTapToLaunch"
+            android:text="Tap to Launch 自動啟動" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcShortcut"
+            android:text="NFC 桌面捷徑" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoPresetProfile"
+            android:text="預設設定檔管理" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoReportExport"
+            android:text="報表匯出" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoNfcV"
-            android:text="ISO 15693 (NFC-V)"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 7. 模擬與通訊 ====== -->
+        <TextView android:text="●  模擬與通訊"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#37474F"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoHce"
-            android:text="HCE 標籤模擬"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoHce"
+            android:text="HCE 標籤模擬" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoHceNdefEmulation"
+            android:text="NDEF HCE 模擬" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcRelay"
+            android:text="NFC Relay 中繼工具" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoPcCompanion"
+            android:text="PC Companion LAN 遠端控制" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoAcr122u"
+            android:text="ACR122U 外接讀卡器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoDesfire"
-            android:text="DESFire NDEF 讀取"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_green"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 8. 監控與日誌 ====== -->
+        <TextView android:text="●  監控與日誌"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#4E342E"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoFelica"
-            android:text="FeliCa 讀取"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_orange"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcMonitor"
+            android:text="NFC 流量監聽" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoApduConsole"
+            android:text="APDU 命令控制台" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTraceViewer"
+            android:text="Proxmark3 Trace 檢視器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoScanLog"
+            android:text="UID 掃描日誌" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTagHist"
+            android:text="標籤歷史記錄" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoLogViewer"
+            android:text="應用程式日誌" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcBackground"
+            android:text="背景 NFC 監控" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoSectorSelect"
-            android:text="分區選取寫入"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_red"
-            app:cornerRadius="8dp"/>
+        <!-- ====== 9. NFC 生活工具 ====== -->
+        <TextView android:text="●  NFC 生活工具"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="#455A64"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoVerify"
-            android:text="BCC/SAK/ATQA 驗證"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoAcr122u"
-            android:text="ACR122U 外接讀卡器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_green"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoTraceViewer"
-            android:text="Proxmark3 Trace 檢視器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoKeyRecovery"
-            android:text="金鑰恢復工具"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_orange"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoAccessDecoder"
-            android:text="存取條件解碼器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoDumpAscii"
-            android:text="Dump ASCII 檢視器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoDumpHighlight"
-            android:text="Dump 色彩高亮檢視"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_green"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoValueCodec"
-            android:text="數值區塊編解碼器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_orange"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoNtag"
-            android:text="NTAG 讀寫器"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoTagFormat"
-            android:text="標籤格式化"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_red"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoAuthMap"
-            android:text="驗證地圖"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoNfcPoller"
-            android:text="NFC 輪詢模式"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_green"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoEmvCard"
-            android:text="EMV 信用卡讀取"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_blue"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoWriteBlock0"
-            android:text="廠商區塊寫入"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_orange"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoNfcMonitor"
-            android:text="NFC 流量監聽"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_purple"
-            app:cornerRadius="8dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoFingerprint"
-            android:text="卡片指紋辨識"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:backgroundTint="@color/btn_red"
-            app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoTts"
+            android:text="語音朗讀 TTS" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoFlashlight"
+            android:text="手電筒控制" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoMediaControl"
+            android:text="媒體播放控制" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcWebhook"
+            android:text="Webhook HTTP 請求" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcAlarm"
+            android:text="NFC 鬧鐘設定" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_red" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoNfcTimeTracker"
+            android:text="NFC 打卡工時" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoAccessibleActions"
+            android:text="輔助功能快速開關" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoHabitTracker"
+            android:text="習慣追蹤器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoDataConverter"
+            android:text="資料轉換器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_purple" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoValueCodec"
+            android:text="數值區塊編解碼器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoValueBlock"
+            android:text="數值區塊增減" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoUidGenerator"
+            android:text="UID 隨機產生器" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoShare"
+            android:text="分享功能" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnGoIcodeSlix"
+            android:text="ICODE SLIX2 操作" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
 
     </LinearLayout>
 

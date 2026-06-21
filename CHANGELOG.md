@@ -14,21 +14,64 @@
 
 ## 📅 版本歷史
 
-### [4.3.1] - 2026-06-21 - HCE 標籤模擬版
+### [4.3.1] - 2026-06-21 - HCE 標籤模擬修復版
 
-#### ✅ 新增 1 項功能
+#### ✅ 新增
 
-- ✅ HCE 標籤模擬 (HceActivity 重構) - 掃描 NFC 卡片、儲存卡片設定檔、命名管理、透過 HostApduService 模擬 NDEF Type 4 Tag
+- HCE NDEF 模擬 (HceNdefEmulationActivity) - 支援文字/網址/電話/簡訊四種 NDEF 內容模擬
+- HCE NDEF 資料修復 - 自動還原上次儲存的 NDEF 資料，支援多種 NDEF Record 類型辨識
+- FC/CC 檔案模擬 - 完整實作 NDEF Type 4 Tag 的 CC (Capability Container) 與 FCI (File Control Information) 回應
+- 掃描 NFC 標籤儲存為模擬設定檔 - 支援儲存多筆設定檔 (上限 10 筆)，可選取刪除
+- 多筆設定檔儲存 - 索引鍵值對格式 (profile_0_id, profile_0_name 等)，完全避免逗號/分隔符衝突
+- NFC 背景監控 (NfcBackgroundMonitorActivity + NfcBackgroundService) - Foreground Service 持續監控 + CSV 日誌
+- 桌面小工具 (NfcWidgetProvider) - AppWidgetProvider NFC 快速小工具
+- TaskExecutor 擴充 200→280 - 80 個新動作常數
+- PlaceholderEngine 佔位符系統 - 支援 %TIME%/%DATE%/%UID%/%COUNT%/%RND%/%UUID%/%BATTERY%/%WEEKDAY%/%NL% 等
+- TTS 語音朗讀 (TtsActivity) - 客製文字語音朗讀，支援 NFC 觸發
+- 手電筒控制 (FlashlightActivity) - NFC 掃描觸發開關
+- 媒體控制 (MediaControlActivity) - NFC 播放/暫停/上下一首
+- NFC 保險庫 (NfcSafeActivity) - 以 NFC 感應寫入/讀取加密金鑰值
+- 標籤盤點 (TagInventoryActivity) - 掃描次數統計與重置
+- 標籤週期計數器 (TagCyclesActivity) - 每 UID 寫入次數記錄
+- NFC Webhook (NfcWebhookActivity) - 感應標籤發送 HTTP GET/POST
+- NFC 鬧鐘 (NfcAlarmActivity) - NFC 觸發設定單次/工作日鬧鐘
+- NFC 打卡工時 (NfcTimeTrackerActivity) - 上班/下班打卡 + 工時報表
+- NFC2QR (Nfc2QrActivity) - NFC 轉 QR Code / QR 掃描寫入標籤
+- 輔助使用快速切換 (AccessibleActionsActivity) - 色彩反轉/高對比/閱讀模式/減少動畫/深色模式
+- App 封鎖 (NfcAppBlockerActivity) - NFC 感應封鎖/解除封鎖/關閉 App
+- 預設設定檔管理 (PresetProfileActivity) - 儲存/載入/刪除/列出 JSON 任務設定檔
+- 報告匯出 (ReportExportActivity) - CSV 匯入/匯出/工時報告
+- ICODE SLIX 操作 (IcodeSlixActivity) - 讀取/寫入 AFI、讀取 DSFID、鎖定 AFI (ISO 15693)
+- 原廠簽章檢查 (OriginalityCheckActivity) - NTAG ECC 簽章讀取 + MIFARE 晶片辨識
+- 工具箱重新分類 - 9 大類 (NDEF/QR/標籤讀寫/安全/金融/分析/自動化/模擬/監控/生活工具)
+- 批次寫入強化 (BatchWriterActivity) - CSV 匯出 + PlaceholderEngine 佔位符解析
+
+#### 🐛 修復
+
+- **掃描真卡修復**：`BaseNfcActivity.useReaderMode` 預設改回 `false`，全面使用 Foreground Dispatch 取代 Reader Mode（Reader Mode 在全域範圍無法使用，導致部分 Activity 無法掃描實體卡片）
+- **HCE FCI 回應修復**：`HceSimulationService.buildFci()` 在 SELECT AID 指令的 P2=0x0C 時正確回傳完整 FCI (6F/84/A5/06/5F55)，符合 ISO 7816-4 標準
+- **READ BINARY 狀態碼修正**：修正三種邊界情況 — offset 大於檔案長度回傳 `6B00`、offset 等於檔案長度回傳 `6282`、讀取資料不足回傳 `6282`
+- **NDEF 訊息快取修復**：`saveNdefMessage()` 改為實際寫入 SharedPreferences，`onCreate()` 載入快取，確保重新啟動後自動還原
+- **儲存卡片修復**：`techTypes` 改用空格分隔修正，`loadProfiles()` 後呼叫 `refreshList()` 正確更新 UI
+- **跳回工具箱崩潰修復**：補上 `VIBRATE` 權限宣告，`vibrate()` 包 try-catch 處理 `SecurityException`
+- **ListView 在 ScrollView 內 Bug 修復**：ListView 移出 ScrollView 至頂層 LinearLayout，修正 ListView 永遠只顯示 1 筆的問題
+- **多筆設定檔永久儲存修復**：從逗號分隔改為索引鍵值對格式 (profile_0_id, profile_0_name 等各欄位獨立儲存)，完全避免逗號/分隔符衝突
+- **清除所有卡片改為選取刪除**：移除 btnHceClear 改為 btnHceDelete「刪除選取卡片」，單擊清單選取後啟用刪除按鈕
 
 #### 🔧 變更
 
-- 建立 HceSimulationService (HostApduService)，支援 NDEF Type 4 Tag 模擬
-- HceActivity 改為三區塊介面：掃描卡片、已儲存卡片清單（長按刪除）、模擬控制
-- 新增 HceCardProfile 資料模型，以 SharedPreferences 儲存設定檔
-- 新增 res/xml/apdu_service.xml AID 路由（NDEF D2760000850101）
-- AndroidManifest 新增 HceSimulationService 服務註冊
+- `BaseNfcActivity.useReaderMode` 預設值從 `true` 改回 `false`，Foreground Dispatch 為預設 NFC 分派模式
+- 新增 `enableNfcDispatch()` / `disableNfcDispatch()` 統一處理兩種 NFC 分派模式的啟用/停用
+- profile 儲存上限為 10 筆，超過時自動刪除最舊
+- HCE 佈局簡化：移除 ScrollView，所有元件直接在頂層 LinearLayout 排版，ListView 使用 layout_weight=1
+- `HceCardProfile` 所有欄位標為 `final`（不可變物件）
 - 版本號：versionCode 12, versionName "4.3.1"
-- 專案規模：62 Java 檔案, 41 Activities, 1 Service, 34 工具箱按鈕
+
+#### ✨ 優化
+
+- **HceActivity**：刪除未用 `currentTag`；`deleteSelectedCard()` 獨立方法；`indexOf()` 取代手動迴圈；`loadActiveSimState()` early return 減少巢狀；`saveProfileList()` 用 `String[]` suffixes 取代 7 行重複 `remove()`；移除除錯 Toast
+- **HceSimulationService**：`matchApdu()` / `getStatusWord()` / `buildNdefTextRecord()` 標為 `static`；`hexToBytes()` 委託 `Converter.hexToBytes()`；`onStartCommand()` 合併 null 檢查；移除未使用匯入與 `loadCustomNdef()` dead code
+- **BaseNfcActivity**：`vibrate()` early return 減少巢狀；三元運算子簡化 `onResume()` / `onPause()` / `enableNfcDispatch()` / `disableNfcDispatch()`
 
 ### [4.3.0] - 2026-06-21 - EMV & Advanced NTAG Edition
 

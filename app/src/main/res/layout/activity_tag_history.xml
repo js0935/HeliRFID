@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="標籤歷史記錄"
+            android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/btnHistClear"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="清除記錄" />
+            <Button android:id="@+id/btnHistExport"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="匯出" />
+        </LinearLayout>
+        <TextView android:id="@+id/txtHistStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="掃描 NFC 標籤即自動記錄"
+            android:background="#1E000000" android:padding="8dp" android:textSize="12sp" />
+        <TextView android:id="@+id/txtHistList"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text=""
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="11sp" android:fontFamily="monospace" android:minLines="12" />
+    </LinearLayout>
+</ScrollView>

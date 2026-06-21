@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="條件式任務區塊"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="設定條件式自動化任務，掃描 NFC 後依條件執行不同動作"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/txtCondResult"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="掃描 NFC 標籤或載入設定..."
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:typeface="monospace" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="條件類型:" android:layout_marginTop="8dp" />
+
+        <Spinner android:id="@+id/spinnerConditionType"
+            android:layout_width="match_parent" android:layout_height="48dp" />
+
+        <Spinner android:id="@+id/spinnerCompareOp"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:visibility="gone" />
+
+        <EditText android:id="@+id/editConditionValue"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="條件值" android:visibility="gone"
+            android:layout_marginTop="4dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Then 動作:" android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
+        <Spinner android:id="@+id/spinnerThenAction"
+            android:layout_width="match_parent" android:layout_height="48dp" />
+
+        <LinearLayout android:id="@+id/layoutThenActions" android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <EditText android:id="@+id/editThenParam1"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="參數 1" />
+
+            <EditText android:id="@+id/editThenParam2"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="參數 2" />
+
+            <LinearLayout android:id="@+id/layoutThenInt"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText android:id="@+id/editThenIntParam"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="數值" android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layoutThenBool"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkThenBoolParam"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="開啟 / 關閉" android:checked="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnAddThenAction"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="增加 Then 動作" android:layout_marginTop="4dp" />
+
+        <TextView android:id="@+id/txtThenActions"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:background="#1E000000"
+            android:padding="8dp" android:textSize="11sp" android:typeface="monospace"
+            android:text="無 Then 動作" android:minLines="3" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Else 動作 (選填):" android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
+        <Spinner android:id="@+id/spinnerElseAction"
+            android:layout_width="match_parent" android:layout_height="48dp" />
+
+        <LinearLayout android:id="@+id/layoutElseActions" android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <EditText android:id="@+id/editElseParam1"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="參數 1" />
+
+            <EditText android:id="@+id/editElseParam2"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="參數 2" />
+
+            <LinearLayout android:id="@+id/layoutElseInt"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText android:id="@+id/editElseIntParam"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="數值" android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layoutElseBool"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkElseBoolParam"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="開啟 / 關閉" android:checked="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnAddElseAction"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="增加 Else 動作" android:layout_marginTop="4dp" />
+
+        <TextView android:id="@+id/txtElseActions"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:background="#1E000000"
+            android:padding="8dp" android:textSize="11sp" android:typeface="monospace"
+            android:text="無 Else 動作" android:minLines="3" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <Button android:id="@+id/btnCondSave"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="儲存"
+                android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnCondLoad"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="載入"
+                android:layout_marginStart="2dp" android:layout_marginEnd="2dp" />
+            <Button android:id="@+id/btnCondDelete"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="刪除"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnCondTest"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="測試條件並執行" android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</ScrollView>

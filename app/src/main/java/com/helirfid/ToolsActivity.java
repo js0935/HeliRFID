@@ -1,6 +1,6 @@
 /*
  * HeliRFID - 智慧門禁管理系統
- * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.0
+ * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.1
  */
 package com.helirfid;
 
@@ -32,7 +32,14 @@ public class ToolsActivity extends AppCompatActivity {
     Button btnDecodeAccess, btnDecodeValue, btnEncodeValue, btnCalcBcc, btnShowHexAscii;
     Button btnGoKeyMgmt, btnGoDiffTool, btnGoLogViewer, btnGoApduConsole, btnGoMagicCard, btnGoDumpEditor, btnGoUidGen, btnGoShare, btnGoDataConverter, btnGoScanLog, btnGoValueBlock, btnGoAdvancedKey, btnGoNfcV, btnGoHce, btnGoDesfire, btnGoFelica, btnGoSectorSelect, btnGoVerify, btnGoAcr122u, btnGoTraceViewer, btnGoKeyRecovery;
     Button btnGoAccessDecoder, btnGoDumpAscii, btnGoDumpHighlight, btnGoValueCodec, btnGoNtag, btnGoTagFormat, btnGoAuthMap, btnGoNfcPoller;
-    Button btnGoEmvCard, btnGoWriteBlock0, btnGoNfcMonitor, btnGoFingerprint;
+    Button btnGoEmvCard, btnGoWriteBlock0, btnGoNfcMonitor, btnGoFingerprint, btnGoNdefEditor, btnGoNfcRelay, btnGoNtagPwd, btnGoTaskAuto, btnGoNtag424, btnGoVasReader, btnGoReaderMode, btnGoBulkWriter, btnGoQrScanner, btnGoTagIdent, btnGoTagBench, btnGoTagHist;
+    Button btnGoTagClone, btnGoNdefValidator, btnGoTapToLaunch, btnGoTagBackup, btnGoNtagConfig, btnGoSmartProfile, btnGoSignalStrength, btnGoMemoryMap, btnGoEpassport, btnGoPcCompanion, btnGoTagArchiver;
+    Button btnGoDumpExport, btnGoNtagSignature, btnGoTamperCheck, btnGoConditionalTask, btnGoNfcShortcut, btnGoQrCodeDisplay, btnGoFileOperations, btnGoTaskVariables;
+    Button btnGoTagLock, btnGoFormatTag, btnGoHabitTracker, btnGoNfcBackground, btnGoHceNdef;
+    Button btnGoTts, btnGoFlashlight, btnGoMediaControl, btnGoNfcSafe, btnGoTagInventory;
+    Button btnGoTagCycles, btnGoNfcWebhook, btnGoNfcAlarm, btnGoNfcTimeTracker;
+    Button btnGoAccessibleActions, btnGoNfcAppBlocker, btnGoNfc2Qr;
+    Button btnGoPresetProfile, btnGoReportExport, btnGoIcodeSlix, btnGoOriginalityCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +96,58 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoWriteBlock0 = findViewById(R.id.btnGoWriteBlock0);
         btnGoNfcMonitor = findViewById(R.id.btnGoNfcMonitor);
         btnGoFingerprint = findViewById(R.id.btnGoFingerprint);
+        btnGoNdefEditor = findViewById(R.id.btnGoNdefEditor);
+        btnGoNfcRelay = findViewById(R.id.btnGoNfcRelay);
+        btnGoNtagPwd = findViewById(R.id.btnGoNtagPwd);
+        btnGoTaskAuto = findViewById(R.id.btnGoTaskAuto);
+        btnGoNtag424 = findViewById(R.id.btnGoNtag424);
+        btnGoVasReader = findViewById(R.id.btnGoVasReader);
+        btnGoReaderMode = findViewById(R.id.btnGoReaderMode);
+        btnGoBulkWriter = findViewById(R.id.btnGoBulkWriter);
+        btnGoQrScanner = findViewById(R.id.btnGoQrScanner);
+        btnGoTagIdent = findViewById(R.id.btnGoTagIdent);
+        btnGoTagBench = findViewById(R.id.btnGoTagBench);
+        btnGoTagHist = findViewById(R.id.btnGoTagHist);
+        btnGoTagClone = findViewById(R.id.btnGoTagClone);
+        btnGoNdefValidator = findViewById(R.id.btnGoNdefValidator);
+        btnGoTapToLaunch = findViewById(R.id.btnGoTapToLaunch);
+        btnGoTagBackup = findViewById(R.id.btnGoTagBackup);
+        btnGoNtagConfig = findViewById(R.id.btnGoNtagConfig);
+        btnGoSmartProfile = findViewById(R.id.btnGoSmartProfile);
+        btnGoSignalStrength = findViewById(R.id.btnGoSignalStrength);
+        btnGoMemoryMap = findViewById(R.id.btnGoMemoryMap);
+        btnGoEpassport = findViewById(R.id.btnGoEpassport);
+        btnGoPcCompanion = findViewById(R.id.btnGoPcCompanion);
+        btnGoTagArchiver = findViewById(R.id.btnGoTagArchiver);
+        btnGoDumpExport = findViewById(R.id.btnGoDumpExport);
+        btnGoNtagSignature = findViewById(R.id.btnGoNtagSignature);
+        btnGoTamperCheck = findViewById(R.id.btnGoTamperCheck);
+        btnGoConditionalTask = findViewById(R.id.btnGoConditionalTask);
+        btnGoNfcShortcut = findViewById(R.id.btnGoNfcShortcut);
+        btnGoQrCodeDisplay = findViewById(R.id.btnGoQrCodeDisplay);
+        btnGoFileOperations = findViewById(R.id.btnGoFileOperations);
+        btnGoTaskVariables = findViewById(R.id.btnGoTaskVariables);
+        btnGoTagLock = findViewById(R.id.btnGoTagLock);
+        btnGoFormatTag = findViewById(R.id.btnGoTagFormat);
+        btnGoHabitTracker = findViewById(R.id.btnGoHabitTracker);
+        btnGoNfcBackground = findViewById(R.id.btnGoNfcBackground);
+        btnGoHceNdef = findViewById(R.id.btnGoHceNdefEmulation);
+        btnGoTts = findViewById(R.id.btnGoTts);
+        btnGoFlashlight = findViewById(R.id.btnGoFlashlight);
+        btnGoMediaControl = findViewById(R.id.btnGoMediaControl);
+        btnGoNfcSafe = findViewById(R.id.btnGoNfcSafe);
+        btnGoTagInventory = findViewById(R.id.btnGoTagInventory);
+        btnGoTagCycles = findViewById(R.id.btnGoTagCycles);
+        btnGoNfcWebhook = findViewById(R.id.btnGoNfcWebhook);
+        btnGoNfcAlarm = findViewById(R.id.btnGoNfcAlarm);
+        btnGoNfcTimeTracker = findViewById(R.id.btnGoNfcTimeTracker);
+        btnGoAccessibleActions = findViewById(R.id.btnGoAccessibleActions);
+        btnGoNfcAppBlocker = findViewById(R.id.btnGoNfcAppBlocker);
+        btnGoNfc2Qr = findViewById(R.id.btnGoNfc2Qr);
+        btnGoPresetProfile = findViewById(R.id.btnGoPresetProfile);
+        btnGoReportExport = findViewById(R.id.btnGoReportExport);
+        btnGoIcodeSlix = findViewById(R.id.btnGoIcodeSlix);
+        btnGoOriginalityCheck = findViewById(R.id.btnGoOriginalityCheck);
 
         btnDecodeAccess.setOnClickListener(v -> {
             String input = editAccessBytes.getText().toString().trim().replace(" ", "");
@@ -193,6 +252,58 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoWriteBlock0.setOnClickListener(v -> startActivity(new Intent(this, WriteBlock0Activity.class)));
         btnGoNfcMonitor.setOnClickListener(v -> startActivity(new Intent(this, NfcMonitorActivity.class)));
         btnGoFingerprint.setOnClickListener(v -> startActivity(new Intent(this, CardFingerprintActivity.class)));
+        btnGoNdefEditor.setOnClickListener(v -> startActivity(new Intent(this, NdefEditorActivity.class)));
+        btnGoNfcRelay.setOnClickListener(v -> startActivity(new Intent(this, NfcRelayActivity.class)));
+        btnGoNtagPwd.setOnClickListener(v -> startActivity(new Intent(this, NtagPasswordActivity.class)));
+        btnGoTaskAuto.setOnClickListener(v -> startActivity(new Intent(this, TaskAutomationActivity.class)));
+        btnGoNtag424.setOnClickListener(v -> startActivity(new Intent(this, Ntag424Activity.class)));
+        btnGoVasReader.setOnClickListener(v -> startActivity(new Intent(this, VasReaderActivity.class)));
+        btnGoReaderMode.setOnClickListener(v -> startActivity(new Intent(this, ReaderModeActivity.class)));
+        btnGoBulkWriter.setOnClickListener(v -> startActivity(new Intent(this, BulkWriterActivity.class)));
+        btnGoQrScanner.setOnClickListener(v -> startActivity(new Intent(this, QrScannerActivity.class)));
+        btnGoTagIdent.setOnClickListener(v -> startActivity(new Intent(this, TagIdentifierActivity.class)));
+        btnGoTagBench.setOnClickListener(v -> startActivity(new Intent(this, TagBenchmarkActivity.class)));
+        btnGoTagHist.setOnClickListener(v -> startActivity(new Intent(this, TagHistoryActivity.class)));
+        btnGoTagClone.setOnClickListener(v -> startActivity(new Intent(this, TagCloneActivity.class)));
+        btnGoNdefValidator.setOnClickListener(v -> startActivity(new Intent(this, NdefValidatorActivity.class)));
+        btnGoTapToLaunch.setOnClickListener(v -> startActivity(new Intent(this, TapToLaunchActivity.class)));
+        btnGoTagBackup.setOnClickListener(v -> startActivity(new Intent(this, TagBackupActivity.class)));
+        btnGoNtagConfig.setOnClickListener(v -> startActivity(new Intent(this, NtagConfigActivity.class)));
+        btnGoSmartProfile.setOnClickListener(v -> startActivity(new Intent(this, SmartProfileActivity.class)));
+        btnGoSignalStrength.setOnClickListener(v -> startActivity(new Intent(this, SignalStrengthActivity.class)));
+        btnGoMemoryMap.setOnClickListener(v -> startActivity(new Intent(this, MemoryMapActivity.class)));
+        btnGoEpassport.setOnClickListener(v -> startActivity(new Intent(this, EPassportActivity.class)));
+        btnGoPcCompanion.setOnClickListener(v -> startActivity(new Intent(this, PcCompanionActivity.class)));
+        btnGoTagArchiver.setOnClickListener(v -> startActivity(new Intent(this, TagArchiverActivity.class)));
+        btnGoDumpExport.setOnClickListener(v -> startActivity(new Intent(this, DumpExportActivity.class)));
+        btnGoNtagSignature.setOnClickListener(v -> startActivity(new Intent(this, NtagSignatureActivity.class)));
+        btnGoTamperCheck.setOnClickListener(v -> startActivity(new Intent(this, TamperCheckActivity.class)));
+        btnGoConditionalTask.setOnClickListener(v -> startActivity(new Intent(this, ConditionalTaskActivity.class)));
+        btnGoNfcShortcut.setOnClickListener(v -> startActivity(new Intent(this, NfcShortcutActivity.class)));
+        btnGoQrCodeDisplay.setOnClickListener(v -> startActivity(new Intent(this, QrCodeDisplayActivity.class)));
+        btnGoFileOperations.setOnClickListener(v -> startActivity(new Intent(this, FileOperationsTaskActivity.class)));
+        btnGoTaskVariables.setOnClickListener(v -> startActivity(new Intent(this, TaskVariablesActivity.class)));
+        btnGoTagLock.setOnClickListener(v -> startActivity(new Intent(this, TagLockActivity.class)));
+        btnGoFormatTag.setOnClickListener(v -> startActivity(new Intent(this, FormatTagActivity.class)));
+        btnGoHabitTracker.setOnClickListener(v -> startActivity(new Intent(this, HabitTrackerActivity.class)));
+        btnGoNfcBackground.setOnClickListener(v -> startActivity(new Intent(this, NfcBackgroundMonitorActivity.class)));
+        btnGoHceNdef.setOnClickListener(v -> startActivity(new Intent(this, HceNdefEmulationActivity.class)));
+        btnGoTts.setOnClickListener(v -> startActivity(new Intent(this, TtsActivity.class)));
+        btnGoFlashlight.setOnClickListener(v -> startActivity(new Intent(this, FlashlightActivity.class)));
+        btnGoMediaControl.setOnClickListener(v -> startActivity(new Intent(this, MediaControlActivity.class)));
+        btnGoNfcSafe.setOnClickListener(v -> startActivity(new Intent(this, NfcSafeActivity.class)));
+        btnGoTagInventory.setOnClickListener(v -> startActivity(new Intent(this, TagInventoryActivity.class)));
+        btnGoTagCycles.setOnClickListener(v -> startActivity(new Intent(this, TagCyclesActivity.class)));
+        btnGoNfcWebhook.setOnClickListener(v -> startActivity(new Intent(this, NfcWebhookActivity.class)));
+        btnGoNfcAlarm.setOnClickListener(v -> startActivity(new Intent(this, NfcAlarmActivity.class)));
+        btnGoNfcTimeTracker.setOnClickListener(v -> startActivity(new Intent(this, NfcTimeTrackerActivity.class)));
+        btnGoAccessibleActions.setOnClickListener(v -> startActivity(new Intent(this, AccessibleActionsActivity.class)));
+        btnGoNfcAppBlocker.setOnClickListener(v -> startActivity(new Intent(this, NfcAppBlockerActivity.class)));
+        btnGoNfc2Qr.setOnClickListener(v -> startActivity(new Intent(this, Nfc2QrActivity.class)));
+        btnGoPresetProfile.setOnClickListener(v -> startActivity(new Intent(this, PresetProfileActivity.class)));
+        btnGoReportExport.setOnClickListener(v -> startActivity(new Intent(this, ReportExportActivity.class)));
+        btnGoIcodeSlix.setOnClickListener(v -> startActivity(new Intent(this, IcodeSlixActivity.class)));
+        btnGoOriginalityCheck.setOnClickListener(v -> startActivity(new Intent(this, OriginalityCheckActivity.class)));
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         Intent intent = new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

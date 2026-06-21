@@ -1,152 +1,278 @@
-/*
- * HeliRFID - 智慧門禁管理系統
- * 禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
- */
 package com.helirfid;
 
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.NfcV;
-import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class NfcVActivity extends BaseNfcActivity {
 
-public class NfcVActivity extends AppCompatActivity {
+    private TextView txtInfo, txtResult, txtAfiDisplay, txtDsfidDisplay;
+    private EditText editBlock, editWriteData, editBlockCount;
+    private EditText editSetAfi, editSetDsfid;
+    private Button btnGetInfo, btnReadBlock, btnReadMulti, btnWriteBlock, btnLockBlock;
+    private Button btnSetAfi, btnSetDsfid;
 
-    private NfcAdapter nfcAdapter;
-    private PendingIntent pendingIntent;
     private Tag currentTag;
-
-    TextView txtNfcVInfo, txtNfcVResult;
-    Button btnReadAll, btnReadBlock;
+    private int currentBlockSize = 4;
+    private int currentMemSize = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfcv);
 
-        txtNfcVInfo = findViewById(R.id.txtNfcVInfo);
-        txtNfcVResult = findViewById(R.id.txtNfcVResult);
-        btnReadAll = findViewById(R.id.btnNfcVReadAll);
+        txtInfo = findViewById(R.id.txtNfcVInfo);
+        txtResult = findViewById(R.id.txtNfcVResult);
+        txtAfiDisplay = findViewById(R.id.txtNfcVAfi);
+        txtDsfidDisplay = findViewById(R.id.txtNfcVDsfid);
+        editBlock = findViewById(R.id.editNfcVBlock);
+        editWriteData = findViewById(R.id.editNfcVWriteData);
+        editBlockCount = findViewById(R.id.editNfcVBlockCount);
+        editSetAfi = findViewById(R.id.editNfcVSetAfi);
+        editSetDsfid = findViewById(R.id.editNfcVSetDsfid);
+        btnGetInfo = findViewById(R.id.btnNfcVGetInfo);
         btnReadBlock = findViewById(R.id.btnNfcVReadBlock);
+        btnReadMulti = findViewById(R.id.btnNfcVReadMulti);
+        btnWriteBlock = findViewById(R.id.btnNfcVWriteBlock);
+        btnLockBlock = findViewById(R.id.btnNfcVLockBlock);
+        btnSetAfi = findViewById(R.id.btnNfcVSetAfi);
+        btnSetDsfid = findViewById(R.id.btnNfcVSetDsfid);
 
-        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-        Intent intent = new Intent(this, getClass());
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        int flags = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                ? PendingIntent.FLAG_MUTABLE
-                : PendingIntent.FLAG_UPDATE_CURRENT;
-        pendingIntent = PendingIntent.getActivity(this, 0, intent, flags);
-
-        btnReadBlock.setOnClickListener(v -> readTag(false));
-        btnReadAll.setOnClickListener(v -> readTag(true));
-    }
-
-    private void readTag(boolean readAll) {
-        if (currentTag == null) {
-            Toast.makeText(this, "請先掃描 ISO 15693 卡片", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        new Thread(() -> {
-            try {
-                NfcV nfcV = NfcV.get(currentTag);
-                if (nfcV == null) {
-                    runOnUiThread(() -> txtNfcVResult.setText("不支援 NfcV (ISO 15693)"));
-                    return;
-                }
-                nfcV.connect();
-
-                byte[] uid = currentTag.getId();
-                StringBuilder info = new StringBuilder("UID: ");
-                for (byte b : uid) info.append(String.format("%02X", b));
-
-                byte[] response = nfcV.transceive(new byte[]{0x01, (byte)0x8B, 0x00});
-                if (response != null && response.length >= 1) {
-                    int flags = response[0] & 0xFF;
-                    info.append("\nSystem Info Flags: 0x").append(String.format("%02X", flags));
-                    if (response.length >= 9) {
-                        long uidVal = 0;
-                        for (int i = 1; i <= 8; i++)
-                            uidVal = (uidVal << 8) | (response[i] & 0xFF);
-                        info.append("\nIC Reference: 0x").append(String.format("%02X", response[9]));
-                        if (response.length >= 11)
-                            info.append("\nBlock Size: ").append(response[10] & 0xFF);
-                    }
-                }
-
-                runOnUiThread(() -> txtNfcVInfo.setText(info.toString()));
-
-                if (readAll) {
-                    StringBuilder sb = new StringBuilder();
-                    for (int block = 0; block < 64; block++) {
-                        byte[] cmd = {0x01, 0x20, (byte) block};
-                        byte[] resp = nfcV.transceive(cmd);
-                        if (resp != null && resp.length >= 5) {
-                            sb.append(String.format("[%03d] ", block));
-                            for (int i = 1; i < resp.length; i++)
-                                sb.append(String.format("%02X ", resp[i]));
-                            sb.append("\n");
-                        } else {
-                            break;
-                        }
-                    }
-                    final String result = sb.length() > 0 ? sb.toString() : "無資料";
-                    runOnUiThread(() -> txtNfcVResult.setText(result));
-                } else {
-                    byte[] cmd = {0x01, 0x20, 0x00};
-                    byte[] resp = nfcV.transceive(cmd);
-                    if (resp != null && resp.length >= 5) {
-                        StringBuilder sb = new StringBuilder("Block 0: ");
-                        for (int i = 1; i < resp.length; i++)
-                            sb.append(String.format("%02X ", resp[i]));
-                        runOnUiThread(() -> txtNfcVResult.setText(sb.toString()));
-                    } else {
-                        runOnUiThread(() -> txtNfcVResult.setText("讀取失敗"));
-                    }
-                }
-
-                nfcV.close();
-
-            } catch (Exception e) {
-                runOnUiThread(() -> txtNfcVResult.setText("錯誤: " + e.getMessage()));
-            }
-        }).start();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (nfcAdapter != null)
-            nfcAdapter.enableForegroundDispatch(this, pendingIntent, null, null);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (nfcAdapter != null)
-            nfcAdapter.disableForegroundDispatch(this);
+        btnGetInfo.setOnClickListener(v -> getSystemInfo());
+        btnReadBlock.setOnClickListener(v -> readBlock());
+        btnReadMulti.setOnClickListener(v -> readMultiple());
+        btnWriteBlock.setOnClickListener(v -> writeBlock());
+        btnLockBlock.setOnClickListener(v -> lockBlock());
+        btnSetAfi.setOnClickListener(v -> setAfi());
+        btnSetDsfid.setOnClickListener(v -> setDsfid());
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
-                || NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())
-                || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())) {
-            currentTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-            StringBuilder info = new StringBuilder("卡片已偵測\nUID: ");
-            for (byte b : currentTag.getId()) info.append(String.format("%02X", b));
-            info.append("\n技術: ");
-            for (String t : currentTag.getTechList())
-                info.append(t.substring(t.lastIndexOf('.') + 1)).append(" ");
-            txtNfcVInfo.setText(info.toString());
+        Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+        if (tag == null) return;
+        currentTag = tag;
+
+        StringBuilder sb = new StringBuilder("ISO 15693 卡片已偵測\n");
+        sb.append("UID: ").append(Converter.hex(tag.getId())).append("\n");
+        for (String t : tag.getTechList())
+            sb.append("  ").append(t.substring(t.lastIndexOf('.') + 1)).append("\n");
+        txtInfo.setText(sb.toString());
+    }
+
+    private void getSystemInfo() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        transceive(new byte[]{0x01, (byte)0x2B, 0x00}, "Get System Info", true);
+    }
+
+    private void readBlock() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        String blk = editBlock.getText().toString().trim();
+        if (TextUtils.isEmpty(blk)) { toast("請輸入區塊號碼"); return; }
+        int block = Integer.parseInt(blk);
+        transceive(new byte[]{0x01, 0x20, (byte) block}, "Read Block " + block, false);
+    }
+
+    private void readMultiple() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        String blk = editBlock.getText().toString().trim();
+        String cnt = editBlockCount.getText().toString().trim();
+        if (TextUtils.isEmpty(blk)) { toast("請輸入起始區塊"); return; }
+        int start = Integer.parseInt(blk);
+        int count;
+        try { count = Integer.parseInt(cnt); } catch (NumberFormatException e) { count = 4; }
+        if (count < 1 || count > 64) { toast("數量需在 1-64 之間"); return; }
+        transceive(new byte[]{0x01, 0x23, (byte) start, (byte) count},
+                "Read Multi (start=" + start + ", count=" + count + ")", false);
+    }
+
+    private void writeBlock() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        String blk = editBlock.getText().toString().trim();
+        String data = editWriteData.getText().toString().trim().replace(" ", "");
+        if (TextUtils.isEmpty(blk)) { toast("請輸入區塊號碼"); return; }
+        if (data.length() != 8) { toast("資料需為 4 bytes (8 hex)"); return; }
+        int block = Integer.parseInt(blk);
+        byte[] cmd = new byte[5];
+        cmd[0] = 0x01;
+        cmd[1] = 0x21;
+        cmd[2] = (byte) block;
+        byte[] dataBytes = Converter.hexToBytes(data);
+        System.arraycopy(dataBytes, 0, cmd, 3, 4);
+        transceive(cmd, "Write Block " + block, false);
+    }
+
+    private void lockBlock() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        String blk = editBlock.getText().toString().trim();
+        if (TextUtils.isEmpty(blk)) { toast("請輸入區塊號碼"); return; }
+        int block = Integer.parseInt(blk);
+        transceive(new byte[]{0x01, 0x22, (byte) block}, "Lock Block " + block, false);
+    }
+
+    private void transceive(byte[] cmd, String label, boolean isInfo) {
+        new Thread(() -> {
+            try {
+                NfcV nfcV = NfcV.get(currentTag);
+                if (nfcV == null) { runOnUiThread(() -> txtResult.setText("不支援 NfcV")); return; }
+                nfcV.connect();
+
+                if (isInfo) {
+                    byte[] resp = nfcV.transceive(cmd);
+                    decodeSystemInfo(resp);
+                } else {
+                    byte[] resp = nfcV.transceive(cmd);
+                    StringBuilder sb = new StringBuilder("=== ").append(label).append(" ===\n");
+                    sb.append("CMD: ").append(Converter.hex(cmd)).append("\n");
+                    if (resp != null && resp.length > 1) {
+                        sb.append("RESP (").append(resp.length).append("):\n");
+                        for (int i = 1; i < resp.length; i++)
+                            sb.append(String.format("%02X ", resp[i]));
+                        sb.append("\n");
+                        // ASCII
+                        sb.append("ASC: ");
+                        for (int i = 1; i < resp.length; i++) {
+                            byte b = resp[i];
+                            sb.append((b >= 0x20 && b < 0x7F) ? (char) b : '.');
+                        }
+                        sb.append("\n");
+                    } else {
+                        sb.append("(無回應或錯誤 flag=")
+                                .append(resp != null && resp.length > 0 ? String.format("%02X", resp[0]) : "?")
+                                .append(")");
+                    }
+                    final String res = sb.toString();
+                    runOnUiThread(() -> txtResult.setText(res));
+                }
+                nfcV.close();
+            } catch (Exception e) {
+                runOnUiThread(() -> txtResult.setText(label + " 錯誤: " + e.getMessage()));
+            }
+        }).start();
+    }
+
+    private void decodeSystemInfo(byte[] resp) {
+        if (resp == null || resp.length < 2) {
+            runOnUiThread(() -> txtResult.setText("Get System Info 無回應"));
+            return;
+        }
+        StringBuilder sb = new StringBuilder("=== System Info ===\n");
+        sb.append("Flag: 0x").append(String.format("%02X", resp[0])).append("\n");
+
+        final String[] afiDescriptions = {
+                "0x00: All families", "0x01: Transportation", "0x02: Financial",
+                "0x03: Identification", "0x04: Telecommunications", "0x05: Medical",
+                "0x06: Broadcasting", "0x07: Logistics", "0x08: Automotive",
+                "0x09: Tooling", "0x0A: Food", "0x0B: Animals",
+                "0x0C: Library/Media", "0x0D: Electronics", "0x0E: Chemical",
+                "0x0F: Other/Proprietary"
+        };
+
+        int idx = 1;
+        if (resp.length > idx) {
+            byte infoFlags = resp[idx++];
+            sb.append("Info Flags: 0x").append(String.format("%02X", infoFlags)).append("\n");
+
+            if ((infoFlags & 0x01) != 0 && idx + 8 <= resp.length) {
+                sb.append("UID: ");
+                for (int i = idx; i < idx + 8; i++)
+                    sb.append(String.format("%02X", resp[i]));
+                sb.append("\n");
+                idx += 8;
+            }
+
+            final int dsfidVal;
+            if ((infoFlags & 0x02) != 0 && idx < resp.length) {
+                dsfidVal = resp[idx] & 0xFF;
+                sb.append("DSFID: 0x").append(String.format("%02X", resp[idx++])).append("\n");
+            } else {
+                dsfidVal = -1;
+            }
+
+            final int afiVal;
+            if ((infoFlags & 0x04) != 0 && idx < resp.length) {
+                afiVal = resp[idx] & 0xFF;
+                sb.append("AFI: 0x").append(String.format("%02X", resp[idx++])).append("\n");
+            } else {
+                afiVal = -1;
+            }
+
+            if ((infoFlags & 0x08) != 0 && idx + 2 <= resp.length) {
+                currentMemSize = ((resp[idx] & 0xFF) << 8) | (resp[idx + 1] & 0xFF);
+                sb.append("Memory Size: ").append(currentMemSize).append(" blocks\n");
+                idx += 2;
+            }
+            if ((infoFlags & 0x10) != 0 && idx < resp.length) {
+                sb.append("IC Ref: 0x").append(String.format("%02X", resp[idx++])).append("\n");
+            }
+            if ((infoFlags & 0x20) != 0 && idx < resp.length) {
+                currentBlockSize = resp[idx++] & 0xFF;
+                sb.append("Block Size: ").append(currentBlockSize).append(" bytes\n");
+            }
+
+            // Update AFI/DSFID displays
+            String afiDesc = "";
+            String dsfidStr = "N/A";
+            if (afiVal >= 0) {
+                String hexStr = String.format("0x%02X", afiVal);
+                for (String d : afiDescriptions) {
+                    if (d.startsWith(hexStr + ":")) { afiDesc = d; break; }
+                }
+                if (afiDesc.isEmpty()) afiDesc = hexStr + ": Proprietary/Unknown";
+                txtAfiDisplay.setText(afiDesc);
+            } else {
+                txtAfiDisplay.setText("AFI: Not available");
+            }
+            if (dsfidVal >= 0) {
+                dsfidStr = String.format("0x%02X", dsfidVal);
+                txtDsfidDisplay.setText("DSFID: " + dsfidStr + " (Data Storage Family ID)");
+            } else {
+                txtDsfidDisplay.setText("DSFID: Not available");
+            }
+        }
+
+        sb.append("\nRaw: ").append(Converter.hex(resp));
+        final String res = sb.toString();
+        runOnUiThread(() -> {
+            txtResult.setText(res);
+            String curInfo = txtInfo.getText().toString();
+            txtInfo.setText(curInfo + "\n(System Info 已取得)");
+        });
+    }
+
+    private void setAfi() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        String val = editSetAfi.getText().toString().trim();
+        if (TextUtils.isEmpty(val)) { toast("請輸入 AFI 值 (hex)"); return; }
+        try {
+            int afi = Integer.parseInt(val.replace("0x", "").replace("0X", ""), 16);
+            if (afi < 0 || afi > 255) { toast("AFI 需在 0x00-0xFF 之間"); return; }
+            transceive(new byte[]{0x01, 0x27, (byte) afi}, "Set AFI = 0x" + String.format("%02X", afi), false);
+        } catch (NumberFormatException e) {
+            toast("請輸入有效的 hex 值");
         }
     }
+
+    private void setDsfid() {
+        if (currentTag == null) { toast("請先掃描卡片"); return; }
+        String val = editSetDsfid.getText().toString().trim();
+        if (TextUtils.isEmpty(val)) { toast("請輸入 DSFID 值 (hex)"); return; }
+        try {
+            int dsfid = Integer.parseInt(val.replace("0x", "").replace("0X", ""), 16);
+            if (dsfid < 0 || dsfid > 255) { toast("DSFID 需在 0x00-0xFF 之間"); return; }
+            transceive(new byte[]{0x01, 0x29, (byte) dsfid}, "Set DSFID = 0x" + String.format("%02X", dsfid), false);
+        } catch (NumberFormatException e) {
+            toast("請輸入有效的 hex 值");
+        }
+    }
+
+    private void toast(String s) { Toast.makeText(this, s, Toast.LENGTH_SHORT).show(); }
 }

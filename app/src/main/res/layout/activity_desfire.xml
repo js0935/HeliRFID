@@ -1,79 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  HeliRFID - 智慧門禁管理系統
-  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
--->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="12dp"
     android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:text="DESFire NDEF 讀取"
-        android:textSize="24sp"
+        android:text="DESFire 卡工具"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/text_primary"
         android:layout_gravity="center"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/txtDesfireInfo"
-        android:text="請掃描 DESFire 卡片"
-        android:textSize="12sp"
-        android:textColor="@color/text_body"
-        android:fontFamily="monospace"
-        android:background="@color/card_bg"
-        android:padding="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp">
-
-        <Button
-            android:id="@+id/btnDesfireRead"
-            android:text="讀取 DESFire"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/btn_blue"/>
-
-        <Button
-            android:id="@+id/btnDesfireFormat"
-            android:text="格式化"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/btn_red"/>
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/card_bg"
-        android:padding="8dp">
+        android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/txtDesfireResult"
-            android:text=""
-            android:textSize="11sp"
-            android:fontFamily="monospace"
-            android:textColor="@color/text_body"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtDesfireInfo"
+                android:text="請掃描 DESFire 卡片"
+                android:textSize="12sp"
+                android:textColor="@color/text_body"
+                android:fontFamily="monospace"
+                android:background="@color/card_bg"
+                android:padding="8dp"
+                android:layout_marginBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <Button
+                    android:id="@+id/btnDesfireGetInfo"
+                    android:text="卡資訊"
+                    android:textSize="11sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="3dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_blue"/>
+
+                <Button
+                    android:id="@+id/btnDesfireListApps"
+                    android:text="列出應用"
+                    android:textSize="11sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:text="AID (hex):"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editDesfireAid"
+                    android:hint="000000"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:inputType="text"
+                    android:textColor="@color/text_body"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"/>
+
+                <Button
+                    android:id="@+id/btnDesfireSelect"
+                    android:text="選擇應用"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_green"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDesfireAuth"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:text="金鑰:"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editDesfireKeyNo"
+                    android:hint="0"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:inputType="number"
+                    android:textColor="@color/text_body"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"/>
+
+                <Button
+                    android:id="@+id/btnDesfireKeyAuth"
+                    android:text="認證"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_green"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDesfireFile"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:text="檔案:"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editDesfireFileNo"
+                    android:hint="0"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:inputType="number"
+                    android:textColor="@color/text_body"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"/>
+
+                <Button
+                    android:id="@+id/btnDesfireReadFile"
+                    android:text="讀取檔案"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_blue"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="結果:"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtDesfireResult"
+                android:text=""
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/text_body"
+                android:background="@color/card_bg"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="6"/>
+
+        </LinearLayout>
 
     </ScrollView>
 

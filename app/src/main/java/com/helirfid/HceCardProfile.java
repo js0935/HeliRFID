@@ -1,13 +1,13 @@
 package com.helirfid;
 
 public class HceCardProfile {
-    private String id;
-    private String name;
-    private String uid;
-    private String atqa;
-    private String sak;
-    private String techTypes;
-    private long timestamp;
+    private final String id;
+    private final String name;
+    private final String uid;
+    private final String atqa;
+    private final String sak;
+    private final String techTypes;
+    private final long timestamp;
 
     public HceCardProfile(String id, String name, String uid, String atqa, String sak, String techTypes, long timestamp) {
         this.id = id;
@@ -26,8 +26,6 @@ public class HceCardProfile {
     public String getSak() { return sak; }
     public String getTechTypes() { return techTypes; }
     public long getTimestamp() { return timestamp; }
-
-    public void setName(String name) { this.name = name; }
 
     public String toStorageString() {
         return id + "|" + name + "|" + uid + "|" + atqa + "|" + sak + "|" + techTypes + "|" + timestamp;

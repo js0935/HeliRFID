@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#1a1a2e">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:padding="16dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" app:cardBackgroundColor="#16213e"
+            app:strokeWidth="1dp" app:strokeColor="#0f3460">
+            <LinearLayout android:orientation="vertical"
+                android:padding="16dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Bulk 大量寫入工具"
+                    android:textColor="#e94560" android:textSize="20sp"
+                    android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="寫入內容 (支援佔位符)"
+                    android:textColor="#a0a0a0" android:textSize="13sp"
+                    android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/txtBulkPlaceholderRef"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="可用佔位符: %TIME% %DATE% %UID% %COUNT% %RND% %BATTERY% %WEEKDAY%"
+                    android:textColor="#808080" android:textSize="11sp"
+                    android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/editBulkText"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="請輸入要寫入的文字..."
+                    android:textColor="#ffffff" android:textColorHint="#808080"
+                    android:background="#0f3460" android:padding="12dp"
+                    android:inputType="textMultiLine" android:minLines="3" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBulkCsvImport"
+            android:text="從 CSV 匯入"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="#4CAF50" app:cornerRadius="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBulkCsvExport"
+            android:text="匯出 CSV"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="#0f3460" app:cornerRadius="8dp"/>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBulkStart"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="開始大量寫入"
+                android:layout_marginEnd="4dp"
+                app:backgroundTint="#4CAF50" app:cornerRadius="8dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBulkStop"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="停止"
+                android:enabled="false" android:layout_marginStart="4dp"
+                app:backgroundTint="#e94560" app:cornerRadius="8dp"/>
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" app:cardBackgroundColor="#16213e"
+            app:strokeWidth="1dp" app:strokeColor="#0f3460">
+            <LinearLayout android:orientation="vertical"
+                android:padding="16dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/txtBulkCount"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="已寫入: 0 張"
+                    android:textColor="#ffffff" android:textSize="16sp"
+                    android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/txtBulkLog"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="等待中..."
+                    android:background="#0a000000" android:padding="8dp"
+                    android:textColor="#a0a0a0" android:textSize="11sp"
+                    android:fontFamily="monospace" android:minLines="6" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

@@ -45,6 +45,16 @@
             android:backgroundTint="@color/btn_red"/>
 
         <TextView
+            android:id="@+id/txtEmvWalletType"
+            android:text=""
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
             android:id="@+id/txtEmvResult"
             android:text=""
             android:textSize="11sp"

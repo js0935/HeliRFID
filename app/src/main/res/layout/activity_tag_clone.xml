@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="標籤複製 (Tag Clone)"
+            android:textSize="20sp" android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:text="步驟 1：掃描來源標籤並點擊「讀取來源」"
+            android:textSize="14sp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/txtCloneSource"
+            android:text="等待來源標籤..."
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:fontFamily="monospace"
+            android:minLines="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnCloneRead"
+            android:text="讀取來源"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp" />
+        <TextView android:text="步驟 2：掃描目標標籤並點擊「寫入目標」"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp" android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/txtCloneTarget"
+            android:text="等待目標標籤..."
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:fontFamily="monospace"
+            android:minLines="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnCloneWrite"
+            android:text="寫入目標"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/txtCloneStatus"
+            android:text=""
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:minLines="2"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

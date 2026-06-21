@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   HeliRFID - 智慧門禁管理系統
-  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.1
 -->
 <resources>
     <string name="app_name">HeliRFID</string>
     <string name="hce_sim_desc">HeliRFID 標籤模擬服務</string>
+    <string name="hce_relay_desc">HeliRFID NFC 中繼服務</string>
     <string-array name="ndef_types">
         <item>文字 (Text)</item>
         <item>網址 (URL)</item>
@@ -16,5 +17,13 @@
         <item>WiFi 設定</item>
         <item>聯絡人 (vCard)</item>
         <item>藍牙 (Bluetooth)</item>
+        <item>Smart Poster</item>
+        <item>AAR</item>
+        <item>ICE 急難聯絡人</item>
+        <item>自訂資料 (Custom Data)</item>
+        <item>WiFi WSC (Simple Config)</item>
+        <item>比特幣/加密貨幣 (Bitcoin)</item>
+        <item>社群網路 (Social)</item>
+        <item>即時通訊 (LINE/WhatsApp)</item>
     </string-array>
 </resources>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  HeliRFID - 智慧門禁管理系統
-  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
--->
-<resources>
-    <usb-device vendor-id="1839" product-id="8704"/>
-</resources>

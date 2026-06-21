@@ -22,12 +22,13 @@ import java.util.Map;
 
 public class EmvCardActivity extends AppCompatActivity {
 
-    TextView txtResult;
+    TextView txtResult, txtWalletType;
     Button btnRead, btnClear;
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
     IntentFilter[] nfcFilters;
     Tag currentTag;
+    private String detectedWalletType = "";
 
     private static final byte[] PPSE = {
             0x00, (byte)0xA4, 0x04, 0x00, 0x0E,
@@ -44,6 +45,7 @@ public class EmvCardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_emv_card);
 
         txtResult = findViewById(R.id.txtEmvResult);
+        txtWalletType = findViewById(R.id.txtEmvWalletType);
         btnRead = findViewById(R.id.btnEmvRead);
         btnClear = findViewById(R.id.btnEmvClear);
 
@@ -63,7 +65,11 @@ public class EmvCardActivity extends AppCompatActivity {
             else txtResult.setText("請將信用卡靠近手機");
         });
 
-        btnClear.setOnClickListener(v -> txtResult.setText(""));
+        btnClear.setOnClickListener(v -> {
+            txtResult.setText("");
+            txtWalletType.setText("");
+            detectedWalletType = "";
+        });
     }
 
     private void readCard() {
@@ -129,7 +135,11 @@ public class EmvCardActivity extends AppCompatActivity {
                 isoDep.close();
 
                 final String result = sb.toString();
-                runOnUiThread(() -> txtResult.setText(result));
+                final String wallet = detectedWalletType.isEmpty() ? "" : "偵測錢包: " + detectedWalletType;
+                runOnUiThread(() -> {
+                    txtResult.setText(result);
+                    txtWalletType.setText(wallet);
+                });
 
             } catch (Exception e) {
                 runOnUiThread(() -> txtResult.setText("錯誤: " + e.getMessage()));
@@ -252,13 +262,13 @@ public class EmvCardActivity extends AppCompatActivity {
                 sb.append("  PAN (卡號): ").append(maskPan(panStr)).append("\n");
             }
             if (tlv.containsKey(0x5F20)) {
-                sb.append("  持卡人: ").append(new String(tlv.get(0x5F20))).append("\n");
+                sb.append("  持卡人姓名: ").append(new String(tlv.get(0x5F20))).append("\n");
             }
             if (tlv.containsKey(0x5F24)) {
                 byte[] exp = tlv.get(0x5F24);
                 String expStr = bytesToHex(exp).replace(" ", "");
                 if (expStr.length() >= 4) {
-                    sb.append("  到期日: 20").append(expStr.substring(0, 2))
+                    sb.append("  卡片到期日: 20").append(expStr.substring(0, 2))
                             .append("/").append(expStr.substring(2, 4)).append("\n");
                 }
             }
@@ -266,9 +276,31 @@ public class EmvCardActivity extends AppCompatActivity {
                 byte[] issue = tlv.get(0x5F28);
                 String issStr = bytesToHex(issue).replace(" ", "");
                 if (issStr.length() >= 4) {
-                    sb.append("  生效日: 20").append(issStr.substring(0, 2))
+                    sb.append("  卡片生效日: 20").append(issStr.substring(0, 2))
                             .append("/").append(issStr.substring(2, 4)).append("\n");
                 }
+            }
+            if (tlv.containsKey(0x9F17)) {
+                sb.append("  PIN 嘗試剩餘: ").append((tlv.get(0x9F17)[0] & 0xFF)).append("\n");
+            }
+            if (tlv.containsKey(0x9F6E)) {
+                byte[] ff = tlv.get(0x9F6E);
+                String ffHex = bytesToHex(ff).replace(" ", "");
+                String walletLabel = detectWallet(ff, tlv);
+                sb.append("  錢包類型: ").append(walletLabel).append(" (9F6E: ").append(ffHex).append(")\n");
+                detectedWalletType = walletLabel;
+            }
+            if (tlv.containsKey(0x9F19)) {
+                byte[] tr = tlv.get(0x9F19);
+                sb.append("  Token Requestor ID: ").append(bytesToHex(tr).replace(" ", "")).append("\n");
+            }
+            if (tlv.containsKey(0x9F07)) {
+                byte[] auc = tlv.get(0x9F07);
+                sb.append("  應用程式使用控制 (9F07): ").append(bytesToHex(auc)).append("\n");
+            }
+            if (tlv.containsKey(0x84)) {
+                byte[] df = tlv.get(0x84);
+                sb.append("  DF Name (AID): ").append(bytesToHex(df)).append("\n");
             }
             sb.append("\n");
         } catch (Exception e) {
@@ -277,36 +309,99 @@ public class EmvCardActivity extends AppCompatActivity {
         }
     }
 
+    private String detectWallet(byte[] formFactor, Map<Integer, byte[]> allTags) {
+        if (formFactor == null || formFactor.length == 0) return "實體卡片";
+        int val = formFactor[0] & 0xFF;
+        switch (val) {
+            case 0x10: return "Google Wallet";
+            case 0x20: return "Apple Pay";
+            case 0x30:
+                if (allTags.containsKey(0x9F19)) {
+                    byte[] tr = allTags.get(0x9F19);
+                    if (tr != null && tr.length > 0) {
+                        String trHex = bytesToHex(tr).replace(" ", "");
+                        if ("000001".equals(trHex) || "00000001".equals(trHex)) return "Samsung Pay";
+                    }
+                }
+                return "Apple Pay";
+            case 0x01:
+            case 0x00: return "實體卡片";
+            default: return "未知 (" + String.format("0x%02X", val) + ")";
+        }
+    }
+
     private String describeEmvTag(int tag, byte[] val) {
         switch (tag) {
             case 0x4F: return "AID: " + bytesToHex(val) + " (" + getAidName(val) + ")";
             case 0x50: return "應用標籤: " + new String(val);
-            case 0x57: return "Track 2: " + bytesToHex(val);
+            case 0x57: return "Track 2 等效資料: " + bytesToHex(val);
             case 0x5A: return null;
             case 0x5F20: return null;
             case 0x5F24: return null;
             case 0x5F28: return null;
             case 0x9F12: return "慣用名稱: " + new String(val);
-            case 0x9F11: return "發行代碼: " + bytesToHex(val);
-            case 0x9F17: return "PIN 嘗試剩餘: " + (val.length > 0 ? (val[0] & 0xFF) : 0);
-            case 0x9F26: return "ATC: " + bytesToHex(val);
-            case 0x9F36: return "ATC: " + bytesToHex(val);
-            case 0x9F37: return "UN: " + bytesToHex(val);
-            case 0x9F6E: return "Form Factor: " + bytesToHex(val);
-            case 0x9F6C: return "Card Type: " + bytesToHex(val);
-            case 0x82: return "AIP: " + bytesToHex(val);
-            case 0x84: return "DF Name: " + bytesToHex(val);
-            case 0x8A: return "AIP: " + bytesToHex(val);
-            case 0x9F10: return "CVM: " + bytesToHex(val);
-            case 0x9F1A: return "Terminal: " + bytesToHex(val);
-            case 0x9F1E: return "IFD SN: " + bytesToHex(val);
-            case 0x9F0D: return "ISS Action: " + bytesToHex(val);
-            case 0x9F0E: return "ICC Action: " + bytesToHex(val);
-            case 0x9F0F: return "AID Opt: " + bytesToHex(val);
-            case 0x94: return "AFL: " + bytesToHex(val);
-            case 0x71: return "ISS Script: " + bytesToHex(val);
-            case 0x72: return "ICC Script: " + bytesToHex(val);
-            default: return "Tag 0x" + String.format("%04X", tag) + ": " + bytesToHex(val);
+            case 0x9F11: return "發行代碼 (Issuer Code): " + bytesToHex(val);
+            case 0x9F17: return null;
+            case 0x9F26: return "應用交易計數器 (ATC): " + bytesToHex(val);
+            case 0x9F36: return "ATC (2字節): " + bytesToHex(val);
+            case 0x9F37: return "不可預測數值 (UN): " + bytesToHex(val);
+            case 0x9F6E: return null;
+            case 0x9F6C: return "卡片類型 (Card Type): " + bytesToHex(val);
+            case 0x9F19: return null;
+            case 0x9F07: return null;
+            case 0x82: return "應用程式互動設定檔 (AIP): " + bytesToHex(val);
+            case 0x84: return null;
+            case 0x8A: return "授權回覆碼: " + bytesToHex(val);
+            case 0x9F10: return "卡片持有者驗證方法 (CVM): " + bytesToHex(val);
+            case 0x9F1A: return "終端國家代碼: " + bytesToHex(val);
+            case 0x9F1E: return "終端介面裝置序號 (IFD): " + bytesToHex(val);
+            case 0x9F0D: return "發行機構動作代碼 - 預設 (ISS Action): " + bytesToHex(val);
+            case 0x9F0E: return "發行機構動作代碼 - 拒絕 (ICC Action): " + bytesToHex(val);
+            case 0x9F0F: return "發行機構動作代碼 - 線上 (AID Opt): " + bytesToHex(val);
+            case 0x94: return "應用檔案定位器 (AFL): " + bytesToHex(val);
+            case 0x71: return "發行機構指令 (ISS Script): " + bytesToHex(val);
+            case 0x72: return "卡片指令 (ICC Script): " + bytesToHex(val);
+            case 0x9F42: return "應用貨幣代碼: " + bytesToHex(val);
+            case 0x5F34: return "應用貨幣指數: " + bytesToHex(val);
+            case 0x9F44: return "應用貨幣指數/小數點: " + bytesToHex(val);
+            case 0x5F25: return "應用生效日: " + bytesToHex(val);
+            case 0x5F30: return "服務代碼: " + bytesToHex(val);
+            case 0x9F05: return "終端應用版本號: " + bytesToHex(val);
+            case 0x9F06: return "終端 AID: " + bytesToHex(val);
+            case 0x9F09: return "應用版本號: " + bytesToHex(val);
+            case 0x9F34: return "卡片持有者驗證 (CVM) 結果: " + bytesToHex(val);
+            case 0x9F35: return "終端類型: " + bytesToHex(val);
+            case 0x9F38: return "處理選項資料物件清單 (PDOL): " + bytesToHex(val);
+            case 0x9F39: return "點子帳戶類型: " + bytesToHex(val);
+            case 0x9F40: return "其他金額: " + bytesToHex(val);
+            case 0x9F41: return "交易序號計數器: " + bytesToHex(val);
+            case 0x9F53: return "交易限額: " + bytesToHex(val);
+            case 0x9F66: return "終端交易屬性: " + bytesToHex(val);
+            case 0x9F7C: return "客戶專屬資料: " + bytesToHex(val);
+            case 0xDF01: return "EMV 診斷: " + bytesToHex(val);
+            default: return "Tag 0x" + String.format("%04X", tag) + ": " + bytesToHex(val) + " (" + getPossibleTagName(tag) + ")";
+        }
+    }
+
+    private String getPossibleTagName(int tag) {
+        switch (tag) {
+            case 0x42: return "發行機構識別碼 (IIN)";
+            case 0x4E: return "商家姓名";
+            case 0x4C: return "交易貨幣代碼";
+            case 0x5F50: return "發行機構 URL";
+            case 0x5F51: return "發行機構電話";
+            case 0x5F52: return "發行機構 Email";
+            case 0x9F19: return "Token Requestor ID";
+            case 0x9F07: return "應用程式使用控制 (AUC)";
+            case 0x9F6E: return "Form Factor Indicator";
+            case 0x61: return "FCI 範本";
+            case 0x6F: return "FCI 範本";
+            case 0x84: return "DF Name (AID)";
+            case 0x87: return "應用程式優先順序指標";
+            case 0x9F2D: return "終端 PIN 限額";
+            case 0x9F2E: return "積分帳戶限額";
+            case 0x9F2F: return "現金帳戶限額";
+            default: return "";
         }
     }
 

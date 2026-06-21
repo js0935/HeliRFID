@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HeliRFID - 智慧門禁管理系統
+  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.1
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="智慧設定檔"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="設定檔與觸發"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtSpTagInfo"
+                    android:text="等待 NFC 卡片..."
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/text_body"
+                    android:background="#1E000000"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editSpProfileName"
+                    android:hint="設定檔名稱"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_body"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chkSpEnabled"
+                    android:text="啟用此設定檔"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+
+                <Button
+                    android:id="@+id/btnSpAddTrigger"
+                    android:text="新增目前標籤為觸發 UID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/btn_blue"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="動作設定"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spinnerSpAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout android:id="@+id/layoutSpParam1"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:visibility="gone">
+                    <TextView android:text="參數 1" android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/editSpParam1"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="參數 1"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/layoutSpParam2"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:visibility="gone">
+                    <TextView android:text="參數 2" android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/editSpParam2"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="參數 2"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/layoutSpInt"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:visibility="gone">
+                    <TextView android:text="數值" android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/editSpIntParam"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="數值" android:inputType="number"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/layoutSpBool"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:visibility="gone"
+                    android:layout_marginTop="4dp">
+                    <CheckBox android:id="@+id/chkSpBoolParam"
+                        android:text="開啟 / 關閉" android:checked="true"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSpAddAction"
+                    android:text="增加動作"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/btn_green"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSpSave"
+            android:text="儲存設定檔"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_green"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSpRunNow"
+            android:text="立即執行所有動作"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSpLoad"
+            android:text="載入設定檔"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSpDelete"
+            android:text="刪除目前設定檔"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:backgroundTint="@color/btn_red"
+            app:cornerRadius="8dp"/>
+
+        <TextView
+            android:id="@+id/txtSpTriggers"
+            android:text="無觸發 UID"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_body"
+            android:lineSpacingExtra="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtSpActions"
+            android:text="無動作"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_body"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtSpProfileList"
+            android:text="無儲存的設定檔"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_body"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

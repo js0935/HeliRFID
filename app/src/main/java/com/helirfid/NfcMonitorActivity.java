@@ -28,7 +28,7 @@ import java.util.Locale;
 public class NfcMonitorActivity extends AppCompatActivity {
 
     TextView txtLog;
-    Button btnStart, btnStop, btnExport, btnClear;
+    Button btnStart, btnStop, btnExport, btnExportPcapng, btnClear;
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
     IntentFilter[] nfcFilters;
@@ -46,6 +46,7 @@ public class NfcMonitorActivity extends AppCompatActivity {
         btnStart = findViewById(R.id.btnMonitorStart);
         btnStop = findViewById(R.id.btnMonitorStop);
         btnExport = findViewById(R.id.btnMonitorExport);
+        btnExportPcapng = findViewById(R.id.btnMonitorExportPcapng);
         btnClear = findViewById(R.id.btnMonitorClear);
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -75,6 +76,34 @@ public class NfcMonitorActivity extends AppCompatActivity {
         });
 
         btnExport.setOnClickListener(v -> exportLog());
+        btnExportPcapng.setOnClickListener(v -> exportPcapng());
+    }
+
+    private void exportPcapng() {
+        String log = txtLog.getText().toString();
+        if (TextUtils.isEmpty(log)) {
+            Toast.makeText(this, "無資料可匯出", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        try {
+            PcapngWriter writer = new PcapngWriter("HeliRFID NFC Monitor");
+            // Add each tag detection as a packet
+            String[] lines = log.split("\n");
+            for (String line : lines) {
+                if (line.contains("UID:")) {
+                    byte[] data = line.getBytes(StandardCharsets.UTF_8);
+                    writer.addPacket(data, "READER_TO_TAG");
+                }
+            }
+            File dir = new File(getExternalFilesDir(null), "nfc_monitor");
+            dir.mkdirs();
+            File file = new File(dir, "nfc_capture_" + System.currentTimeMillis() + ".pcapng");
+            writer.save(file);
+            Toast.makeText(this, "已匯出 PCAPNG: " + file.getName()
+                    + " (" + writer.getPacketCount() + " packets)", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(this, "匯出失敗: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void exportLog() {

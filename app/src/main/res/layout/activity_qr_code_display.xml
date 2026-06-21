@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NDEF QR Code 顯示"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="將 NDEF 內容或自訂文字產生 QR Code 圖片"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:layout_marginBottom="12dp" />
+
+        <EditText android:id="@+id/editQrInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入文字、網址或 NDEF 內容..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginBottom="8dp" />
+
+        <Button android:id="@+id/btnQrGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="產生 QR Code" />
+
+        <ImageView android:id="@+id/imgQrCode"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:scaleType="fitCenter" />
+
+        <TextView android:id="@+id/txtQrFallback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1E000000"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center" />
+
+        <Button android:id="@+id/btnQrShare"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="分享內容"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

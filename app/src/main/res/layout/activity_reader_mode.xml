@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="12dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Reader Mode 快速掃描"
+            android:textSize="18sp" android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="使用 enableReaderMode API\n比 Foreground Dispatch 快 ~500ms\n自動跳過 NDEF 檢查\n支援 Tag Lost 偵測"
+            android:textSize="12sp" android:textColor="#666666"
+            android:layout_marginBottom="12dp" />
+        <Button android:id="@+id/btnReaderClear"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="清除記錄" />
+        <TextView android:id="@+id/txtReaderStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="等待 NFC 卡片..."
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" />
+        <TextView android:id="@+id/txtReaderResult"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text=""
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="11sp" android:fontFamily="monospace"
+            android:minLines="10" />
+    </LinearLayout>
+</ScrollView>

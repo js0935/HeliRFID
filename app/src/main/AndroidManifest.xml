@@ -3,7 +3,8 @@
   HeliRFID - 智慧門禁管理系統
   禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature
         android:name="android.hardware.nfc"
@@ -16,6 +17,14 @@
     <uses-permission android:name="android.permission.NFC"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -238,9 +247,249 @@
             android:exported="true"
             android:parentActivityName=".ToolsActivity"/>
 
+        <activity android:name=".NdefEditorActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagLockActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".FormatTagActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".HabitTrackerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".HceNdefEmulationActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NfcBackgroundMonitorActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <service
+            android:name=".NfcBackgroundService"
+            android:exported="false"
+            android:enabled="true"/>
+
+        <receiver
+            android:name=".NfcWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/nfc_widget_info"/>
+        </receiver>
+
+        <activity android:name=".TagIdentifierActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagBenchmarkActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagHistoryActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".QrScannerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".BulkWriterActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ReaderModeActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".VasReaderActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NfcRelayActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NtagPasswordActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".Ntag424Activity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TaskAutomationActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <service
+            android:name=".RelayHceService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NFC_SERVICE">
+
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/apdu_service_relay"/>
+
+        </service>
+
+        <activity android:name=".NdefValidatorActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TapToLaunchActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagBackupActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NtagConfigActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".SmartProfileActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagCloneActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
         <activity android:name=".HelpActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".SignalStrengthActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".MemoryMapActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".EPassportActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".PcCompanionActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ConditionalTaskActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NfcShortcutActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".ShortcutExecuteActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"/>
+
+        <activity android:name=".QrCodeDisplayActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".FileOperationsTaskActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TagArchiverActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".DumpExportActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TtsActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".FlashlightActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".MediaControlActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".NfcSafeActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".TagInventoryActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".TagCyclesActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".NfcWebhookActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".NfcAlarmActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".NfcTimeTrackerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".AccessibleActionsActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".NfcAppBlockerActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".Nfc2QrActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".PresetProfileActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".ReportExportActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".IcodeSlixActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+        <activity android:name=".OriginalityCheckActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".NtagSignatureActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TamperCheckActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <activity android:name=".TaskVariablesActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
+        <service
+            android:name=".NfcQuickTileService"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="false"/>
+        </service>
 
         <provider
             android:name="androidx.core.content.FileProvider"

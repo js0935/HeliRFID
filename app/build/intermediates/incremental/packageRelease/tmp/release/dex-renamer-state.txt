@@ -1,4 +1,0 @@
-#Sun Jun 21 14:47:55 CST 2026
-base.0=C\:\\Users\\JS\\Desktop\\opencode-windows-x64\\heli_rfid_nfc\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

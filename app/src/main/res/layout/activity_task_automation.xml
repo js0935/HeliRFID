@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NFC 任務自動化"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="掃描 NFC 標籤後自動執行指定動作"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/txtTaskTagInfo"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="等待 NFC 標籤..."
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:typeface="monospace" />
+
+        <EditText android:id="@+id/editTaskTagName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="標籤名稱 (選填)" android:layout_marginTop="8dp" />
+
+        <CheckBox android:id="@+id/chkTaskEnabled"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="啟用此設定" android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="選擇動作類型:" android:layout_marginTop="8dp" />
+
+        <Spinner android:id="@+id/spinnerTaskAction"
+            android:layout_width="match_parent" android:layout_height="48dp" />
+
+        <!-- Dynamic params -->
+        <LinearLayout android:id="@+id/layoutTaskParam1"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="參數 1" android:layout_marginTop="4dp" />
+            <EditText android:id="@+id/editTaskParam1"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="參數 1" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/layoutTaskParam2"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="參數 2" android:layout_marginTop="4dp" />
+            <EditText android:id="@+id/editTaskParam2"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="參數 2" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/layoutTaskInt"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="數值 (0-100)" android:layout_marginTop="4dp" />
+            <EditText android:id="@+id/editTaskIntParam"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="數值" android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/layoutTaskBool"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:visibility="gone"
+            android:layout_marginTop="4dp">
+            <CheckBox android:id="@+id/chkTaskBoolParam"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="開啟 / 關閉" android:checked="true" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnTaskAddAction"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="增加動作" android:layout_marginTop="8dp" />
+
+        <TextView android:id="@+id/txtTaskActions"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="11sp" android:typeface="monospace"
+            android:text="無動作 (請掃描標籤並增加動作)"
+            android:minLines="4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Button android:id="@+id/btnTaskSave"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="儲存設定"
+                android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnTaskLoad"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="載入設定"
+                android:layout_marginStart="2dp" android:layout_marginEnd="2dp" />
+            <Button android:id="@+id/btnTaskDelete"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="刪除"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnTaskRunNow"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="立即執行所有動作" android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</ScrollView>

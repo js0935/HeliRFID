@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ICODE SLIX2 操作"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#16213e"
+            app:strokeColor="#0f3460"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="標籤資訊"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/txtSlixStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="請感應 ISO 15693 標籤"
+                    android:textSize="14sp"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/editSlixAfi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AFI 值 (十六進制，如 00-FF)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:backgroundTint="#0f3460"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSlixReadAfi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="讀取 AFI"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSlixWriteAfi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="寫入 AFI"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_orange"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSlixReadDsfid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="讀取 DSFID"
+            android:layout_marginBottom="8dp"
+            app:backgroundTint="@color/btn_blue"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSlixLockAfi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="鎖定 AFI"
+            app:backgroundTint="@color/btn_red"
+            app:cornerRadius="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

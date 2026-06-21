@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dump 匯出工具"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HeliRFID - 智慧門禁管理系統\n禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.1"
+            android:textSize="11sp"
+            android:textColor="#888"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/txtDumpExportInfo"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="請掃描 NFC 卡片"
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:typeface="monospace" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="匯出格式" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <Spinner android:id="@+id/spinnerDumpExportFormat"
+                    android:layout_width="match_parent" android:layout_height="48dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="區塊列表 (可多選)" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <ListView android:id="@+id/lvDumpExportList"
+                    android:layout_width="match_parent" android:layout_height="200dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDumpExportSelected"
+                android:text="匯出選取"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:layout_marginEnd="4dp"
+                app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDumpExportAll"
+                android:text="匯出全部"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:layout_marginStart="2dp" android:layout_marginEnd="2dp"
+                app:backgroundTint="@color/btn_green" app:cornerRadius="8dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDumpExportRefresh"
+                android:text="重新讀取"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:layout_marginStart="4dp"
+                app:backgroundTint="@color/btn_orange" app:cornerRadius="8dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="匯出結果" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtDumpExportResult"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="等待匯出..." android:padding="8dp"
+                    android:textSize="11sp" android:typeface="monospace"
+                    android:minLines="3" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

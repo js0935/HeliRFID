@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="標籤篡改偵測"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HeliRFID - 智慧門禁管理系統\n禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.1"
+            android:textSize="11sp"
+            android:textColor="#888"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/txtTamperInfo"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="請掃描 NFC 卡片 (支援 NTAG213TT/223TT)"
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:typeface="monospace" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="偵測結果" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtTamperResult"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="等待卡片..." android:padding="8dp"
+                    android:textSize="11sp" android:typeface="monospace"
+                    android:minLines="8" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

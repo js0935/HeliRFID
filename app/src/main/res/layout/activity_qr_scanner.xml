@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="12dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="QR Code / Barcode 掃描器"
+            android:textSize="18sp" android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+        <Button android:id="@+id/btnQrScan"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="開啟掃描器" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="掃描結果" android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/txtQrResult"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:minLines="2"
+            android:text="尚未掃描" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <Button android:id="@+id/btnQrWriteUrl"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="寫入為 URL"
+                android:enabled="false" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnQrWriteText"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="48dp" android:text="寫入為文字"
+                android:enabled="false" android:layout_marginStart="4dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/txtQrStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text=""
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="11sp" android:fontFamily="monospace"
+            android:minLines="3" />
+    </LinearLayout>
+</ScrollView>

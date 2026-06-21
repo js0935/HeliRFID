@@ -174,6 +174,33 @@ public class NFCWriter {
         }
     }
 
+    public static String writeNdefMessage(Tag tag, NdefRecord[] records) {
+        try {
+            NdefMessage message = new NdefMessage(records);
+            Ndef ndef = Ndef.get(tag);
+            if (ndef != null) {
+                ndef.connect();
+                ndef.writeNdefMessage(message);
+                ndef.close();
+                return "NDEF 寫入成功 (" + records.length + " 筆記錄)";
+            }
+            NdefFormatable formatable = NdefFormatable.get(tag);
+            if (formatable != null) {
+                formatable.connect();
+                formatable.format(message);
+                formatable.close();
+                return "標籤已格式化並寫入 NDEF";
+            }
+            return "不支援 NDEF 寫入";
+        } catch (FormatException e) {
+            return "NDEF 格式錯誤: " + e.getMessage();
+        } catch (IOException e) {
+            return "I/O 錯誤: " + e.getMessage();
+        } catch (Exception e) {
+            return "寫入失敗: " + e.getMessage();
+        }
+    }
+
     public static String writeNdefMessage(Tag tag, NdefRecord record) {
         try {
             NdefMessage message = new NdefMessage(new NdefRecord[]{record});
@@ -247,6 +274,31 @@ public class NFCWriter {
             btUri += "?name=" + android.net.Uri.encode(name);
         }
         return NdefRecord.createUri(btUri);
+    }
+
+    public static String clearNdef(Tag tag) {
+        try {
+            NdefMessage empty = new NdefMessage(new NdefRecord[]{
+                    new NdefRecord(NdefRecord.TNF_EMPTY, new byte[0], new byte[0], new byte[0])
+            });
+            Ndef ndef = Ndef.get(tag);
+            if (ndef != null) {
+                ndef.connect();
+                ndef.writeNdefMessage(empty);
+                ndef.close();
+                return "NDEF 已清除 (TNF_EMPTY)";
+            }
+            NdefFormatable fmt = NdefFormatable.get(tag);
+            if (fmt != null) {
+                fmt.connect();
+                fmt.format(empty);
+                fmt.close();
+                return "標籤已格式化 (TNF_EMPTY)";
+            }
+            return "不支援 NDEF 清除";
+        } catch (Exception e) {
+            return "清除失敗: " + e.getMessage();
+        }
     }
 
     public static String writeUltralightPage(Tag tag, int page, byte[] data) {

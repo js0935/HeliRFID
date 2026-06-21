@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任務變數與函數"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HeliRFID - 智慧門禁管理系統\n禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.3.1"
+            android:textSize="11sp"
+            android:textColor="#888"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Variables Preview -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="預設變數 (Variables)" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtVarPreview"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="" android:padding="6dp"
+                    android:textSize="10sp" android:typeface="monospace"
+                    android:minLines="8" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Function Evaluator -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="函數計算器 (Functions)" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <TextView android:text="分類" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" />
+                <Spinner android:id="@+id/spinnerVarCategory"
+                    android:layout_width="match_parent" android:layout_height="48dp" />
+
+                <TextView android:text="函數" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+                <Spinner android:id="@+id/spinnerVarFunction"
+                    android:layout_width="match_parent" android:layout_height="48dp" />
+
+                <EditText android:id="@+id/editVarInput1"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="輸入 1" android:layout_marginTop="8dp" />
+
+                <EditText android:id="@+id/editVarInput2"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="輸入 2" />
+
+                <EditText android:id="@+id/editVarInput3"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="輸入 3" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVarEvaluate"
+                    android:text="計算"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    app:backgroundTint="@color/btn_blue" app:cornerRadius="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Result -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp" app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="12dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="結果" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtVarResult"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="選擇函數並點擊計算" android:padding="8dp"
+                    android:textSize="14sp" android:typeface="monospace"
+                    android:minLines="2" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

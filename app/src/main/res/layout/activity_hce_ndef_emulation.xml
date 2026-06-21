@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#16213e"
+            app:strokeWidth="1dp"
+            app:strokeColor="#0f3460">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NDEF HCE 模擬"
+                    android:textColor="#e94560"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="將手機模擬為 NDEF Type 4 標籤，其他裝置可讀取"
+                    android:textColor="#a0a0a0"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radioHceNdefType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton android:id="@+id/radioHceNdefText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="純文字"
+                        android:textColor="#ffffff"
+                        android:checked="true"/>
+
+                    <RadioButton android:id="@+id/radioHceNdefUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="網址"
+                        android:textColor="#ffffff"/>
+
+                    <RadioButton android:id="@+id/radioHceNdefPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="電話"
+                        android:textColor="#ffffff"/>
+
+                    <RadioButton android:id="@+id/radioHceNdefSms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="簡訊"
+                        android:textColor="#ffffff"/>
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#16213e"
+            app:strokeWidth="1dp"
+            app:strokeColor="#0f3460">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="內容設定"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/editHceNdefText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="輸入文字內容..."
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
+                    android:background="#0f3460"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/editHceNdefUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="網址 (https://...)"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
+                    android:background="#0f3460"
+                    android:padding="12dp"
+                    android:inputType="textUri"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/editHceNdefPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="電話號碼 (eg. +886912345678)"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
+                    android:background="#0f3460"
+                    android:padding="12dp"
+                    android:inputType="phone"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/editHceNdefSmsNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="簡訊收件人號碼"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
+                    android:background="#0f3460"
+                    android:padding="12dp"
+                    android:inputType="phone"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText android:id="@+id/editHceNdefSmsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="簡訊內容"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
+                    android:background="#0f3460"
+                    android:padding="12dp"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <CheckBox android:id="@+id/chkHceNdefEnabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="啟用 NDEF HCE 模擬"
+            android:textColor="#ffffff"
+            android:enabled="false"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHceNdefStart"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="啟動模擬"
+                android:layout_marginEnd="4dp"
+                app:backgroundTint="#4CAF50"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHceNdefStop"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="停止模擬"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                app:backgroundTint="#e94560"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHceNdefClear"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="清除"
+                android:layout_marginStart="4dp"
+                app:backgroundTint="#0f3460"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHceNdefReadTag"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="從 NFC 標籤讀取 NDEF"
+            android:layout_marginTop="8dp"
+            app:backgroundTint="#533483"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="#16213e"
+            app:strokeWidth="1dp"
+            app:strokeColor="#0f3460">
+
+            <TextView android:id="@+id/txtHceNdefStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="就緒"
+                android:textColor="#ffffff"
+                android:textSize="14sp"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

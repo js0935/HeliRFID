@@ -1,80 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  HeliRFID - 智慧門禁管理系統
-  禾秝軟體開發團隊 / 代碼：洪俊士 / 版本：4.0.1
--->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:text="ISO 15693 (NFC-V)"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_primary"
-        android:layout_gravity="center"
-        android:layout_marginBottom="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/txtNfcVInfo"
-        android:text="請掃描 ISO 15693 卡片"
-        android:textSize="12sp"
-        android:textColor="@color/text_body"
-        android:fontFamily="monospace"
-        android:background="@color/card_bg"
-        android:padding="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    android:layout_height="match_parent"
+    android:padding="12dp">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnNfcVReadAll"
-            android:text="讀取全部區塊"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/btn_blue"/>
+            android:text="ISO 15693 (ICODE) 完整工具"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-        <Button
-            android:id="@+id/btnNfcVReadBlock"
-            android:text="讀取 Block 0"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/btn_green"/>
+            android:text="支援 ICODE SLI / SLIX / SLIX2 / SLIX-L"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/txtNfcVInfo"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="請掃描 ISO 15693 卡片"
+            android:background="#1E000000" android:padding="8dp"
+            android:textSize="12sp" android:typeface="monospace" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="2dp" app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/card_bg">
+            <LinearLayout android:orientation="vertical"
+                android:padding="10dp" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="AFI / DSFID 資訊" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtNfcVAfi"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="AFI: 請先取得 System Info"
+                    android:textSize="12sp" android:typeface="monospace" />
+                <TextView android:id="@+id/txtNfcVDsfid"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="DSFID: 請先取得 System Info"
+                    android:textSize="12sp" android:typeface="monospace" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button android:id="@+id/btnNfcVGetInfo"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="取得 System Info" android:layout_marginTop="8dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="區塊號碼" android:layout_marginTop="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/editNfcVBlock"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:hint="0"
+                android:inputType="number" android:layout_marginEnd="4dp" />
+            <EditText android:id="@+id/editNfcVBlockCount"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:hint="數量 (多塊讀取)"
+                android:inputType="number" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="4dp">
+            <Button android:id="@+id/btnNfcVReadBlock"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="讀取區塊" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnNfcVReadMulti"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="多塊讀取" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="寫入資料 (8 hex = 4 bytes)" android:layout_marginTop="8dp" />
+        <EditText android:id="@+id/editNfcVWriteData"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="例如 00000000" android:inputType="text"
+            android:maxLength="8" android:fontFamily="monospace" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="4dp">
+            <Button android:id="@+id/btnNfcVWriteBlock"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="寫入區塊" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnNfcVLockBlock"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="鎖定區塊" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="--- AFI / DSFID 設定 ---" android:textSize="13sp"
+            android:textStyle="bold" android:layout_marginTop="12dp"
+            android:textColor="@color/text_highlight" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="4dp">
+            <EditText android:id="@+id/editNfcVSetAfi"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:hint="AFI (hex 如 00)"
+                android:inputType="text" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnNfcVSetAfi"
+                android:layout_width="wrap_content" android:layout_height="48dp"
+                android:text="設定 AFI" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="4dp">
+            <EditText android:id="@+id/editNfcVSetDsfid"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:hint="DSFID (hex 如 00)"
+                android:inputType="text" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnNfcVSetDsfid"
+                android:layout_width="wrap_content" android:layout_height="48dp"
+                android:text="設定 DSFID" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="注意: 鎖定區塊為不可逆操作" android:textSize="11sp"
+            android:textColor="#FF6600" android:layout_marginTop="8dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="結果:" android:layout_marginTop="8dp" />
+
+        <TextView android:id="@+id/txtNfcVResult"
+            android:layout_width="match_parent" android:layout_height="250dp"
+            android:background="#1E000000" android:padding="6dp"
+            android:textSize="10sp" android:typeface="monospace"
+            android:scrollbars="vertical" />
 
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/card_bg"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/txtNfcVResult"
-            android:text=""
-            android:textSize="11sp"
-            android:fontFamily="monospace"
-            android:textColor="@color/text_body"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </ScrollView>
-
-</LinearLayout>
+</ScrollView>

@@ -7,6 +7,8 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,7 @@ public class BaseNfcActivity extends AppCompatActivity {
     protected NfcAdapter nfcAdapter;
     protected PendingIntent pendingIntent;
     protected IntentFilter[] nfcFilters;
+    protected boolean useReaderMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +37,57 @@ public class BaseNfcActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (nfcAdapter != null)
-            nfcAdapter.enableForegroundDispatch(this, pendingIntent, nfcFilters, null);
+        if (nfcAdapter != null) {
+            if (useReaderMode) enableReaderMode();
+            else nfcAdapter.enableForegroundDispatch(this, pendingIntent, nfcFilters, null);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (nfcAdapter != null)
-            nfcAdapter.disableForegroundDispatch(this);
+        if (nfcAdapter != null) {
+            if (useReaderMode) nfcAdapter.disableReaderMode(this);
+            else nfcAdapter.disableForegroundDispatch(this);
+        }
+    }
+
+    protected void enableReaderMode() {
+        if (nfcAdapter == null) return;
+        int flags = NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_NFC_B
+                | NfcAdapter.FLAG_READER_NFC_F | NfcAdapter.FLAG_READER_NFC_V
+                | NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK;
+        nfcAdapter.enableReaderMode(this, tag -> {
+            Intent intent = new Intent(NfcAdapter.ACTION_TAG_DISCOVERED);
+            intent.putExtra(NfcAdapter.EXTRA_TAG, tag);
+            onNewIntent(intent);
+        }, flags, null);
+    }
+
+    protected void setUseReaderMode(boolean enabled) {
+        useReaderMode = enabled;
+    }
+
+    protected void enableNfcDispatch() {
+        if (nfcAdapter == null) return;
+        if (useReaderMode) enableReaderMode();
+        else nfcAdapter.enableForegroundDispatch(this, pendingIntent, nfcFilters, null);
+    }
+
+    protected void disableNfcDispatch() {
+        if (nfcAdapter == null) return;
+        if (useReaderMode) nfcAdapter.disableReaderMode(this);
+        else nfcAdapter.disableForegroundDispatch(this);
+    }
+
+    protected void vibrate() {
+        Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        if (v == null || !v.hasVibrator()) return;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            v.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+        } else {
+            v.vibrate(100);
+        }
     }
 
     @Override
