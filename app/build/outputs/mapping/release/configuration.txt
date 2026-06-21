@@ -134,6 +134,7 @@
 -keep class com.helirfid.AdvancedKeyManagerActivity { <init>(); }
 -keep class com.helirfid.ApduConsoleActivity { <init>(); }
 -keep class com.helirfid.AuthMapActivity { <init>(); }
+-keep class com.helirfid.CardFingerprintActivity { <init>(); }
 -keep class com.helirfid.CloneActivity { <init>(); }
 -keep class com.helirfid.DataConverterActivity { <init>(); }
 -keep class com.helirfid.DesfireActivity { <init>(); }

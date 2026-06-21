@@ -219,6 +219,10 @@
             android:exported="true"
             android:parentActivityName=".ToolsActivity"/>
 
+        <activity android:name=".CardFingerprintActivity"
+            android:exported="true"
+            android:parentActivityName=".ToolsActivity"/>
+
         <activity android:name=".HelpActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>

@@ -20,7 +20,7 @@ public class ToolsActivity extends AppCompatActivity {
     Button btnDecodeAccess, btnDecodeValue, btnEncodeValue, btnCalcBcc, btnShowHexAscii;
     Button btnGoKeyMgmt, btnGoDiffTool, btnGoLogViewer, btnGoApduConsole, btnGoMagicCard, btnGoDumpEditor, btnGoUidGen, btnGoShare, btnGoDataConverter, btnGoScanLog, btnGoValueBlock, btnGoAdvancedKey, btnGoNfcV, btnGoHce, btnGoDesfire, btnGoFelica, btnGoSectorSelect, btnGoVerify, btnGoAcr122u, btnGoTraceViewer, btnGoKeyRecovery;
     Button btnGoAccessDecoder, btnGoDumpAscii, btnGoDumpHighlight, btnGoValueCodec, btnGoNtag, btnGoTagFormat, btnGoAuthMap, btnGoNfcPoller;
-    Button btnGoEmvCard, btnGoWriteBlock0, btnGoNfcMonitor;
+    Button btnGoEmvCard, btnGoWriteBlock0, btnGoNfcMonitor, btnGoFingerprint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +76,7 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoEmvCard = findViewById(R.id.btnGoEmvCard);
         btnGoWriteBlock0 = findViewById(R.id.btnGoWriteBlock0);
         btnGoNfcMonitor = findViewById(R.id.btnGoNfcMonitor);
+        btnGoFingerprint = findViewById(R.id.btnGoFingerprint);
 
         btnDecodeAccess.setOnClickListener(v -> {
             String input = editAccessBytes.getText().toString().trim().replace(" ", "");
@@ -179,6 +180,7 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoEmvCard.setOnClickListener(v -> startActivity(new Intent(this, EmvCardActivity.class)));
         btnGoWriteBlock0.setOnClickListener(v -> startActivity(new Intent(this, WriteBlock0Activity.class)));
         btnGoNfcMonitor.setOnClickListener(v -> startActivity(new Intent(this, NfcMonitorActivity.class)));
+        btnGoFingerprint.setOnClickListener(v -> startActivity(new Intent(this, CardFingerprintActivity.class)));
     }
 
     private byte[] hexToBytes(String s) {

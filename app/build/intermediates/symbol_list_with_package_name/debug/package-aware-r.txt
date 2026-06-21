@@ -3142,6 +3142,7 @@ id btnGoDumpEditor
 id btnGoDumpHighlight
 id btnGoEmvCard
 id btnGoFelica
+id btnGoFingerprint
 id btnGoHce
 id btnGoKeyManagement
 id btnGoKeyRecovery
@@ -3200,6 +3201,7 @@ id btnRefreshDump
 id btnRemoveNtagPassword
 id btnSaveEditedDump
 id btnSaveRecoveredKeys
+id btnScanFingerprint
 id btnSelectAll
 id btnSendApdu
 id btnSetNtagPassword
@@ -3235,7 +3237,11 @@ id buttonPanel
 id cancel_button
 id cardAccessConditions
 id cardBcc
+id cardDetail
 id cardHexAscii
+id cardOyster
+id cardRatp
+id cardSkgt
 id cardValueBlock
 id cbSector
 id center
@@ -3664,6 +3670,7 @@ id txtBccResult
 id txtBlock
 id txtCard10
 id txtCard8
+id txtCardInfo
 id txtCloneProgress
 id txtCloneStatus
 id txtConverterOutput
@@ -3673,6 +3680,7 @@ id txtDecodedId
 id txtDesc
 id txtDesfireInfo
 id txtDesfireResult
+id txtDetail
 id txtDetectResult
 id txtDiffResult
 id txtDumpA
@@ -3706,13 +3714,17 @@ id txtNfcV
 id txtNfcVInfo
 id txtNfcVResult
 id txtNtagResult
+id txtOysterMatch
 id txtPollerResult
+id txtRatpMatch
 id txtSak
 id txtSakMeaning
 id txtScanLogContent
+id txtScanStatus
 id txtSector
 id txtSectorInfo
 id txtShareInfo
+id txtSkgtMatch
 id txtSourceInfo
 id txtTagFormatResult
 id txtTagTechList
@@ -3865,6 +3877,7 @@ layout activity_acr122u
 layout activity_advanced_key
 layout activity_apdu_console
 layout activity_auth_map
+layout activity_card_fingerprint
 layout activity_clone
 layout activity_data_converter
 layout activity_desfire
@@ -3984,6 +3997,9 @@ layout splash
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 plurals mtrl_badge_content_description
+raw fp_oyster
+raw fp_ratb
+raw fp_skgt
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

@@ -76,6 +76,7 @@ id btnGoDumpEditor
 id btnGoDumpHighlight
 id btnGoEmvCard
 id btnGoFelica
+id btnGoFingerprint
 id btnGoHce
 id btnGoKeyManagement
 id btnGoKeyRecovery
@@ -134,6 +135,7 @@ id btnRefreshDump
 id btnRemoveNtagPassword
 id btnSaveEditedDump
 id btnSaveRecoveredKeys
+id btnScanFingerprint
 id btnSelectAll
 id btnSendApdu
 id btnSetNtagPassword
@@ -167,7 +169,11 @@ id btnWriteULPage
 id btnWriteUidClone
 id cardAccessConditions
 id cardBcc
+id cardDetail
 id cardHexAscii
+id cardOyster
+id cardRatp
+id cardSkgt
 id cardValueBlock
 id cbSector
 id editAccessBytes
@@ -254,6 +260,7 @@ id txtBccResult
 id txtBlock
 id txtCard10
 id txtCard8
+id txtCardInfo
 id txtCloneProgress
 id txtCloneStatus
 id txtConverterOutput
@@ -263,6 +270,7 @@ id txtDecodedId
 id txtDesc
 id txtDesfireInfo
 id txtDesfireResult
+id txtDetail
 id txtDetectResult
 id txtDiffResult
 id txtDumpA
@@ -296,13 +304,17 @@ id txtNfcV
 id txtNfcVInfo
 id txtNfcVResult
 id txtNtagResult
+id txtOysterMatch
 id txtPollerResult
+id txtRatpMatch
 id txtSak
 id txtSakMeaning
 id txtScanLogContent
+id txtScanStatus
 id txtSector
 id txtSectorInfo
 id txtShareInfo
+id txtSkgtMatch
 id txtSourceInfo
 id txtTagFormatResult
 id txtTagTechList
@@ -324,6 +336,7 @@ layout activity_acr122u
 layout activity_advanced_key
 layout activity_apdu_console
 layout activity_auth_map
+layout activity_card_fingerprint
 layout activity_clone
 layout activity_data_converter
 layout activity_desfire
@@ -365,6 +378,9 @@ layout history_item
 layout sector_item
 layout splash
 mipmap ic_launcher
+raw fp_oyster
+raw fp_ratb
+raw fp_skgt
 style AppTheme
 xml device_filter
 xml file_paths

@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:226:9-234:20
+INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:230:9-238:20
 	android:grantUriPermissions
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:230:13-47
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:234:13-47
 	android:authorities
 		INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:228:13-64
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:232:13-64
 	android:exported
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:229:13-37
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:233:13-37
 	android:name
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:227:13-62
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:231:13-62
 manifest
-ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-238:12
-INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-238:12
-INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-238:12
-INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-238:12
+ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-242:12
+INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-242:12
+INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-242:12
+INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:6:1-242:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\JS\.gradle\caches\transforms-3\7078c37ce8cd3af2f2ed60babd87ea3b\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\JS\.gradle\caches\transforms-3\17f345d3d1e2cd2162a910482c9c4110\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\JS\.gradle\caches\transforms-3\c343692e604bdce3bc81566e07bacb0a\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -90,8 +90,8 @@ ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\A
 	android:name
 		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:18:22-77
 application
-ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-236:19
-INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-236:19
+ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-240:19
+INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:20:5-240:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\JS\.gradle\caches\transforms-3\7078c37ce8cd3af2f2ed60babd87ea3b\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\JS\.gradle\caches\transforms-3\7078c37ce8cd3af2f2ed60babd87ea3b\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\JS\.gradle\caches\transforms-3\c343692e604bdce3bc81566e07bacb0a\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -486,20 +486,28 @@ ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\A
 		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:219:13-36
 	android:name
 		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:218:19-53
-activity#com.helirfid.HelpActivity
-ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:9-224:57
+activity#com.helirfid.CardFingerprintActivity
+ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:9-224:58
 	android:parentActivityName
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:224:13-55
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:224:13-56
 	android:exported
 		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:223:13-36
 	android:name
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:19-47
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:231:13-233:53
-	android:resource
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:233:17-51
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:222:19-58
+activity#com.helirfid.HelpActivity
+ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:226:9-228:57
+	android:parentActivityName
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:228:13-55
+	android:exported
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:227:13-36
 	android:name
-		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:232:17-67
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:226:19-47
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:235:13-237:53
+	android:resource
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:237:17-51
+	android:name
+		ADDED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml:236:17-67
 uses-sdk
 INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\JS\Desktop\opencode-windows-x64\heli_rfid_nfc\app\src\main\AndroidManifest.xml

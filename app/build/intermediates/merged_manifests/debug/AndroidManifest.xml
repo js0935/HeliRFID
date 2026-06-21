@@ -230,6 +230,10 @@
             android:exported="true"
             android:parentActivityName="com.helirfid.ToolsActivity" />
         <activity
+            android:name="com.helirfid.CardFingerprintActivity"
+            android:exported="true"
+            android:parentActivityName="com.helirfid.ToolsActivity" />
+        <activity
             android:name="com.helirfid.HelpActivity"
             android:exported="true"
             android:parentActivityName="com.helirfid.MainActivity" />
