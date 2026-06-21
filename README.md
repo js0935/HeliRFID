@@ -6,7 +6,7 @@
 
 一款簡單易用的 Android NFC 門禁卡讀取應用程式
 
-[![Version](https://img.shields.io/badge/version-v4.4.0-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
+[![Version](https://img.shields.io/badge/version-v4.3.1-blue.svg)](https://github.com/js0935/HeliRFID/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/android-6.0%2B-green.svg)](https://developer.android.com/)
 
@@ -46,11 +46,11 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 
 ### 下載 APK
 
-**最新版本：v4.4.0 HCE 標籤模擬版** (2026-06-21)
+**最新版本：v4.3.1 HCE 標籤模擬版** (2026-06-21)
 
-[📥 下載 HeliRFID-v4.4.0-release.apk](https://github.com/js0935/HeliRFID/releases/download/v4.4.0/HeliRFID-v4.4.0-release.apk) (2.2 MB)
+[📥 下載 HeliRFID-v4.3.1-release.apk](https://github.com/js0935/HeliRFID/releases/download/v4.3.1/HeliRFID-v4.3.1-release.apk) (2.2 MB)
 
-**✨ v4.4.0 新增功能：**
+**✨ v4.3.1 新增功能：**
 - 🏷️ HCE 標籤模擬 — 掃描 NFC 卡片、儲存設定檔、命名管理、模擬 NDEF Type 4 Tag
 
 ### 安裝步驟
