@@ -28,6 +28,7 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 - 📝 歷史記錄管理
 - 📤 CSV 匯出 / 分享功能
                              - 🧰 34 項工具箱工具
+- 🏷️ HCE 標籤模擬（掃描 / 儲存 / 命名 / 模擬）
 - 📡 ACR122U 外接讀卡器支援
 
 ---
@@ -45,15 +46,12 @@ HeliRFID 是一款專為 Android 手機設計的 NFC 門禁卡讀取工具，可
 
 ### 下載 APK
 
-**最新版本：v4.3.0 EMV & Advanced NTAG Edition** (2026-06-21)
+**最新版本：v4.4.0 HCE 標籤模擬版** (2026-06-21)
 
-[📥 下載 HeliRFID-v4.3.0-debug.apk](https://github.com/js0935/HeliRFID/releases/download/v4.3.0/HeliRFID-v4.3.0-debug.apk) (5.7 MB)
+[📥 下載 HeliRFID-v4.4.0-release.apk](https://github.com/js0935/HeliRFID/releases/download/v4.4.0/HeliRFID-v4.4.0-release.apk) (2.2 MB)
 
-**✨ v4.3.0 新增功能：**
-- 💳 EMV 信用卡讀取 — 讀取感應式信用卡 PAN/AID/到期日/持卡人
-- 🔄 NTAG 進階工具 — 計數器讀取/遞增、PWD 驗證、ECC 簽名、頁面寫入、格式化
-- 🏭 廠商區塊寫入 — 建構並寫入 MIFARE Classic Block 0 (UID+SAK+ATQA)
-- 📊 NFC 流量監聽器 — 持續監控 NFC 卡片活動與詳細技術資訊
+**✨ v4.4.0 新增功能：**
+- 🏷️ HCE 標籤模擬 — 掃描 NFC 卡片、儲存設定檔、命名管理、模擬 NDEF Type 4 Tag
 
 ### 安裝步驟
 
