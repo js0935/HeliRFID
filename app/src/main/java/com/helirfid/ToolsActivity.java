@@ -4,16 +4,28 @@
  */
 package com.helirfid;
 
+import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.nfc.NfcAdapter;
+import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ToolsActivity extends AppCompatActivity {
+
+    private NfcAdapter nfcAdapter;
+    private PendingIntent pendingIntent;
+    private IntentFilter[] nfcFilters;
+    private Tag pendingTag;
 
     EditText editAccessBytes, editValueBlock, editEncodeValue, editEncodeAddr, editBccUid, editHexAscii;
     TextView txtAccessResult, txtValueResult, txtBccResult, txtHexAsciiResult;
@@ -181,6 +193,69 @@ public class ToolsActivity extends AppCompatActivity {
         btnGoWriteBlock0.setOnClickListener(v -> startActivity(new Intent(this, WriteBlock0Activity.class)));
         btnGoNfcMonitor.setOnClickListener(v -> startActivity(new Intent(this, NfcMonitorActivity.class)));
         btnGoFingerprint.setOnClickListener(v -> startActivity(new Intent(this, CardFingerprintActivity.class)));
+
+        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        Intent intent = new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) flags |= PendingIntent.FLAG_MUTABLE;
+        pendingIntent = PendingIntent.getActivity(this, 0, intent, flags);
+        nfcFilters = new IntentFilter[]{
+                new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED),
+                new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED),
+                new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED),
+        };
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (nfcAdapter != null)
+            nfcAdapter.enableForegroundDispatch(this, pendingIntent, nfcFilters, null);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (nfcAdapter != null)
+            nfcAdapter.disableForegroundDispatch(this);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
+                || NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())
+                || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())) {
+            Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            if (tag != null) {
+                pendingTag = tag;
+                showNfcToolDialog();
+            }
+        }
+    }
+
+    private void showNfcToolDialog() {
+        String[] items = {"標籤資訊 (TagInfoActivity)", "記憶體 Dump", "NTAG 進階工具",
+                "EMV 信用卡讀取", "卡片指紋辨識", "NFC 流量監聽", "廠商區塊寫入",
+                "金鑰測試", "寫入 (WriteActivity)", "格式化 (TagFormat)"};
+        String[] activities = {"TagInfoActivity", "MemoryDumpActivity", "NtagActivity",
+                "EmvCardActivity", "CardFingerprintActivity", "NfcMonitorActivity", "WriteBlock0Activity",
+                "KeyManagementActivity", "WriteActivity", "TagFormatActivity"};
+
+        new AlertDialog.Builder(this)
+                .setTitle("偵測到 NFC 卡片 — 選擇工具")
+                .setItems(items, (dialog, which) -> {
+                    try {
+                        Class<?> cls = Class.forName("com.helirfid." + activities[which]);
+                        Intent i = new Intent(this, cls);
+                        i.putExtra(NfcAdapter.EXTRA_TAG, pendingTag);
+                        startActivity(i);
+                    } catch (ClassNotFoundException e) {
+                        Toast.makeText(this, "啟動失敗", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("取消", null)
+                .show();
     }
 
     private byte[] hexToBytes(String s) {

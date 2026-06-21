@@ -32989,6 +32989,7 @@ com.helirfid.TagFormatActivity$$InternalSyntheticLambda$1$6a6ff05fa97c2ebece92ce
 com.helirfid.TagFormatActivity:
     public android.widget.Button btnClear
     public static void formatTag$1()
+com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$5e5c8e4449c13a180886daf98b1f17497d46811ffd5d2c6f106289116783c940$0
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$10
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$11
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$12
@@ -33025,6 +33026,8 @@ com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$7
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$8
 com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$9
+com.helirfid.ToolsActivity:
+    public static void showNfcToolDialog()
 com.helirfid.TraceViewerActivity$$InternalSyntheticLambda$1$e758db376b6c6bbc4f298940a1959fdbec75b56ce287b0be009625646672a4aa$0
 com.helirfid.TraceViewerActivity:
     public static void loadTraceFile()
