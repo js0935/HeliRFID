@@ -17,7 +17,7 @@ import androidx.core.content.FileProvider;
 import java.io.File;
 import java.io.FileOutputStream;
 
-public class ShareActivity extends AppCompatActivity {
+public class ShareActivity extends BaseNfcActivity {
 
     Button btnShareDump, btnShareKeys, btnShareLog;
     TextView txtShareInfo;

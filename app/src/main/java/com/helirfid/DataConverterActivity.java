@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DataConverterActivity extends AppCompatActivity {
+public class DataConverterActivity extends BaseNfcActivity {
 
     EditText editInput;
     RadioGroup rgInputType, rgOutputType;

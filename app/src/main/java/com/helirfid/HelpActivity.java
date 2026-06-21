@@ -3,7 +3,7 @@ package com.helirfid;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HelpActivity extends AppCompatActivity {
+public class HelpActivity extends BaseNfcActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -26,7 +26,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-public class DumpEditorActivity extends AppCompatActivity {
+public class DumpEditorActivity extends BaseNfcActivity {
 
     private static final int REQUEST_IMPORT_DUMP = 300;
 

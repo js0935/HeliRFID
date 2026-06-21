@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ValueCodecActivity extends AppCompatActivity {
+public class ValueCodecActivity extends BaseNfcActivity {
 
     EditText editDecodeInput, editEncodeValue, editEncodeAddr;
     TextView txtDecodeResult, txtEncodeResult;

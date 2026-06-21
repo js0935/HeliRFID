@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 
-public class DumpAsciiActivity extends AppCompatActivity {
+public class DumpAsciiActivity extends BaseNfcActivity {
 
     TextView txtResult;
     Button btnLoad, btnClear;

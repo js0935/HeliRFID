@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.security.SecureRandom;
 
-public class UidGeneratorActivity extends AppCompatActivity {
+public class UidGeneratorActivity extends BaseNfcActivity {
 
     EditText editPrefix, editCount;
     RadioGroup rgUidLength;

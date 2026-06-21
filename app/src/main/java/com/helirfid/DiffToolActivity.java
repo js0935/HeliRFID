@@ -19,7 +19,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DiffToolActivity extends AppCompatActivity {
+public class DiffToolActivity extends BaseNfcActivity {
 
     Button btnLoadA, btnLoadB, btnCompare;
     TextView txtDumpA, txtDumpB, txtResult;

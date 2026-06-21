@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LogViewerActivity extends AppCompatActivity {
+public class LogViewerActivity extends BaseNfcActivity {
 
     TextView txtLog;
     Button btnClear;

@@ -19,7 +19,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvancedKeyManagerActivity extends AppCompatActivity {
+public class AdvancedKeyManagerActivity extends BaseNfcActivity {
 
     EditText editFileName;
     RadioGroup rgKeyType;

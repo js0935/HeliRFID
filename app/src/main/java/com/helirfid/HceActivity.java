@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HceActivity extends AppCompatActivity {
+public class HceActivity extends BaseNfcActivity {
 
     EditText editHceUid, editHceData;
     Button btnStart, btnStop;

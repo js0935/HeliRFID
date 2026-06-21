@@ -25,7 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KeyManagementActivity extends AppCompatActivity {
+public class KeyManagementActivity extends BaseNfcActivity {
 
     private static final int REQUEST_IMPORT_KEYS = 200;
 

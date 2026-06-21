@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 
-public class DumpHighlightActivity extends AppCompatActivity {
+public class DumpHighlightActivity extends BaseNfcActivity {
 
     TextView txtResult;
     Button btnLoad, btnClear;

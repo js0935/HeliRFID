@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 
-public class AccessDecoderActivity extends AppCompatActivity {
+public class AccessDecoderActivity extends BaseNfcActivity {
 
     TextView txtResult;
     Button btnLoadDump, btnClear;

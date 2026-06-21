@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class ScanLogActivity extends AppCompatActivity {
+public class ScanLogActivity extends BaseNfcActivity {
 
     TextView txtScanLog;
     Button btnClear, btnExport;

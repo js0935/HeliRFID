@@ -3,8 +3,8 @@
 # min_api: 23
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: f99b0ba
-# pg_map_hash: SHA-256 f99b0ba79093538da9da0f05ce3bc529bdbe9182f89966d783a33fd3679d83ec
+# pg_map_id: fc88714
+# pg_map_hash: SHA-256 fc88714e3361e7349dcb367a21c797d2e78d5127d26b5237bc6fa364e37994ad
 android.app.AppComponentFactory -> android.app.AppComponentFactory:
 # {"id":"com.android.tools.r8.synthesized"}
 android.support.v4.app.RemoteActionCompatParcelizer -> android.support.v4.app.RemoteActionCompatParcelizer:
@@ -346,7 +346,7 @@ androidx.activity.ComponentActivity$1 -> androidx.activity.i:
     1:11:androidx.activity.result.ActivityResultLauncher androidx.activity.result.ActivityResultRegistry.register(java.lang.String,androidx.activity.result.contract.ActivityResultContract,androidx.activity.result.ActivityResultCallback):0 -> b
     1:11:androidx.activity.result.ActivityResultRegistry$3 register(java.lang.String,androidx.activity.result.contract.ActivityResultContract,androidx.activity.result.ActivityResultCallback):0 -> b
       # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Lc2/n;Landroidx/fragment/app/d0;)Landroidx/activity/result/d;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Lc2/o;Landroidx/fragment/app/d0;)Landroidx/activity/result/d;"}
     12:33:int androidx.activity.result.ActivityResultRegistry.generateRandomNumber():0:0 -> b
     12:33:void androidx.activity.result.ActivityResultRegistry.registerKey(java.lang.String):0 -> b
     12:33:androidx.activity.result.ActivityResultLauncher androidx.activity.result.ActivityResultRegistry.register(java.lang.String,androidx.activity.result.contract.ActivityResultContract,androidx.activity.result.ActivityResultCallback):0 -> b
@@ -368,50 +368,50 @@ androidx.activity.ComponentActivity$1$$ExternalSyntheticThrowCCEIfNotNull0 -> an
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)I"}
     1:1:long androidx.profileinstaller.FileSectionType$EnumUnboxingLocalUtility.getMValue(int):0:0 -> d
       # {"id":"com.android.tools.r8.synthesized"}
-    1:4:int androidx.appcompat.view.ActionBarPolicy$$InternalSyntheticOutline$183$ad739087b6e700826d01475859f9cb88d51bc1342d627c8c877e36e6faa9d2da$0.m(java.lang.String,java.lang.Object[],java.lang.StringBuilder,int,int):0:0 -> e
+    1:4:int androidx.appcompat.view.ActionBarPolicy$$InternalSyntheticOutline$184$ad739087b6e700826d01475859f9cb88d51bc1342d627c8c877e36e6faa9d2da$0.m(java.lang.String,java.lang.Object[],java.lang.StringBuilder,int,int):0:0 -> e
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    5:9:int androidx.appcompat.view.ActionBarPolicy$$InternalSyntheticOutline$183$ad739087b6e700826d01475859f9cb88d51bc1342d627c8c877e36e6faa9d2da$0.m(java.lang.String,java.lang.Object[],java.lang.StringBuilder,int,int):1:1 -> e
-    1:4:java.lang.String androidx.recyclerview.widget.ChildHelper$$InternalSyntheticOutline$183$ff52168942c9b8dca160b1a68f6c2e65cf4da3df0f902c08409f6904fb9e7112$0.m(androidx.recyclerview.widget.RecyclerView,java.lang.StringBuilder):0:0 -> f
+    5:9:int androidx.appcompat.view.ActionBarPolicy$$InternalSyntheticOutline$184$ad739087b6e700826d01475859f9cb88d51bc1342d627c8c877e36e6faa9d2da$0.m(java.lang.String,java.lang.Object[],java.lang.StringBuilder,int,int):1:1 -> e
+    1:4:java.lang.String androidx.recyclerview.widget.ChildHelper$$InternalSyntheticOutline$184$ff52168942c9b8dca160b1a68f6c2e65cf4da3df0f902c08409f6904fb9e7112$0.m(androidx.recyclerview.widget.RecyclerView,java.lang.StringBuilder):0:0 -> f
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    5:7:java.lang.String androidx.recyclerview.widget.ChildHelper$$InternalSyntheticOutline$183$ff52168942c9b8dca160b1a68f6c2e65cf4da3df0f902c08409f6904fb9e7112$0.m(androidx.recyclerview.widget.RecyclerView,java.lang.StringBuilder):1:1 -> f
-    8:12:java.lang.String androidx.recyclerview.widget.ChildHelper$$InternalSyntheticOutline$183$ff52168942c9b8dca160b1a68f6c2e65cf4da3df0f902c08409f6904fb9e7112$0.m(androidx.recyclerview.widget.RecyclerView,java.lang.StringBuilder):2:2 -> f
-    1:4:java.lang.String com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException$$InternalSyntheticOutline$183$7b70fe91bafc617f9b3d0622e2f83af76e5f9bd9dd29fdc7081f72617ad43214$0.m(java.lang.Exception,java.lang.StringBuilder):0:0 -> g
+    5:7:java.lang.String androidx.recyclerview.widget.ChildHelper$$InternalSyntheticOutline$184$ff52168942c9b8dca160b1a68f6c2e65cf4da3df0f902c08409f6904fb9e7112$0.m(androidx.recyclerview.widget.RecyclerView,java.lang.StringBuilder):1:1 -> f
+    8:12:java.lang.String androidx.recyclerview.widget.ChildHelper$$InternalSyntheticOutline$184$ff52168942c9b8dca160b1a68f6c2e65cf4da3df0f902c08409f6904fb9e7112$0.m(androidx.recyclerview.widget.RecyclerView,java.lang.StringBuilder):2:2 -> f
+    1:4:java.lang.String com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException$$InternalSyntheticOutline$184$7b70fe91bafc617f9b3d0622e2f83af76e5f9bd9dd29fdc7081f72617ad43214$0.m(java.lang.Exception,java.lang.StringBuilder):0:0 -> g
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    5:7:java.lang.String com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException$$InternalSyntheticOutline$183$7b70fe91bafc617f9b3d0622e2f83af76e5f9bd9dd29fdc7081f72617ad43214$0.m(java.lang.Exception,java.lang.StringBuilder):1:1 -> g
-    8:12:java.lang.String com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException$$InternalSyntheticOutline$183$7b70fe91bafc617f9b3d0622e2f83af76e5f9bd9dd29fdc7081f72617ad43214$0.m(java.lang.Exception,java.lang.StringBuilder):2:2 -> g
-    1:2:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$183$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):0:0 -> h
+    5:7:java.lang.String com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException$$InternalSyntheticOutline$184$7b70fe91bafc617f9b3d0622e2f83af76e5f9bd9dd29fdc7081f72617ad43214$0.m(java.lang.Exception,java.lang.StringBuilder):1:1 -> g
+    8:12:java.lang.String com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException$$InternalSyntheticOutline$184$7b70fe91bafc617f9b3d0622e2f83af76e5f9bd9dd29fdc7081f72617ad43214$0.m(java.lang.Exception,java.lang.StringBuilder):2:2 -> g
+    1:2:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$184$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):0:0 -> h
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    3:5:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$183$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):1:1 -> h
-    6:8:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$183$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):2:2 -> h
-    9:11:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$183$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):3:3 -> h
-    12:16:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$183$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):4:4 -> h
+    3:5:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$184$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):1:1 -> h
+    6:8:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$184$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):2:2 -> h
+    9:11:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$184$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):3:3 -> h
+    12:16:java.lang.String androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticOutline$184$37d921efc1edcaf3a8afad6218d392ef034a963ebf3b63f13551660159904ee0$0.m(java.lang.String,java.lang.String):4:4 -> h
     1:1:void com.helirfid.HistoryManager$$InternalSyntheticThrowCCEIfNotNull$14$ba763345e8ad815733d2a43ca8a550aa28f0e46ee110ca2ee8694917f47f9cda$0.m(java.lang.Object):0:0 -> i
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/SharedPreferences;)V"}
     1:1:void com.google.android.material.datepicker.MaterialCalendar$$InternalSyntheticThrowCCEIfNotNull$70$e95c19be951ade8f9b1e777c8e0b94646facbddb383b5b290bfe1e7003b5f94c$0.m(java.lang.Object):0:0 -> j
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/os/Parcelable;)V"}
-    1:2:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.m(com.helirfid.ToolsActivity,int,android.widget.Button):0:0 -> k
+    1:2:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.m(com.helirfid.ToolsActivity,int,android.widget.Button):0:0 -> k
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    3:5:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.m(com.helirfid.ToolsActivity,int,android.widget.Button):1:1 -> k
-    6:9:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.m(com.helirfid.ToolsActivity,int,android.widget.Button):2:2 -> k
-    1:3:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):0:0 -> l
+    3:5:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.m(com.helirfid.ToolsActivity,int,android.widget.Button):1:1 -> k
+    6:9:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.m(com.helirfid.ToolsActivity,int,android.widget.Button):2:2 -> k
+    1:3:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):0:0 -> l
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    4:5:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):1:1 -> l
-    6:8:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):2:2 -> l
-    9:12:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$183$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):3:3 -> l
-    1:4:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$183$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):0:0 -> m
+    4:5:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):1:1 -> l
+    6:8:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):2:2 -> l
+    9:12:void com.helirfid.ToolsActivity$$InternalSyntheticOutline$184$7306358ea0a8930390981f0416d43481f03dd6c142b0e051d3c79802386e6889$0.m(com.helirfid.ToolsActivity,com.helirfid.ToolsActivity,java.lang.Class):3:3 -> l
+    1:4:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$184$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):0:0 -> m
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    5:7:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$183$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):1:1 -> m
-    8:11:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$183$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):2:2 -> m
-    12:15:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$183$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):3:3 -> m
+    5:7:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$184$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):1:1 -> m
+    8:11:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$184$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):2:2 -> m
+    12:15:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticOutline$184$710eaf6e99118095daca7af887e36d09207ed858b0877e983459c719d3f9596a$0.m(java.lang.Exception,java.lang.StringBuilder,android.widget.TextView):3:3 -> m
     1:1:void androidx.activity.ComponentActivity$1$$InternalSyntheticThrowCCEIfNotNull$8$84a5df72bd35c0f9fdd291718f109e100c5b7c6e9faa5fe053623f38af5ab9b0$0.m(java.lang.Object):0:0 -> n
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:void androidx.lifecycle.Lifecycling$$InternalSyntheticThrowCCEIfNotNull$10$9f5d826c7cb3654602020ecf8a22286878ec845e76a62dd23dd66ab85161c0f5$0.m(java.lang.Object):0:0 -> o
@@ -1135,7 +1135,7 @@ androidx.activity.result.ActivityResultRegistry$3 -> androidx.activity.result.d:
     1:1:void androidx.appcompat.app.TwilightManager.<init>(android.content.Context,android.location.LocationManager):0:0 -> <init>
     2:2:void androidx.activity.result.ActivityResultLauncher.<init>():0:0 -> <init>
     2:2:void <init>(androidx.activity.result.ActivityResultRegistry,java.lang.String,androidx.activity.result.contract.ActivityResultContract):0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/activity/i;Ljava/lang/String;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/activity/i;Ljava/lang/String;Lc2/o;)V"}
     3:3:void androidx.lifecycle.ViewModelProvider.<init>(androidx.lifecycle.ViewModelStore,androidx.lifecycle.ViewModelProvider$Factory,androidx.lifecycle.viewmodel.CreationExtras):0:0 -> <init>
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/lifecycle/o0;Landroidx/lifecycle/n0;Lt0/b;)V"}
     4:4:void androidx.lifecycle.ViewModelProvider.<init>(androidx.lifecycle.ViewModelStore,androidx.lifecycle.ViewModelProvider$Factory,androidx.lifecycle.viewmodel.CreationExtras,int,kotlin.jvm.internal.DefaultConstructorMarker):0:0 -> <init>
@@ -1199,7 +1199,7 @@ androidx.activity.result.ActivityResultRegistry$CallbackAndContract -> androidx.
     androidx.activity.result.ActivityResultCallback mCallback -> a
     androidx.activity.result.contract.ActivityResultContract mContract -> b
     1:1:void <init>(androidx.activity.result.ActivityResultCallback,androidx.activity.result.contract.ActivityResultContract):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/fragment/app/d0;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/fragment/app/d0;Lc2/o;)V"}
 androidx.activity.result.ActivityResultRegistryOwner -> androidx.activity.result.f:
 androidx.activity.result.contract.ActivityResultContracts$RequestMultiplePermissions -> b.a:
     1:56:java.util.Map androidx.activity.result.contract.ActivityResultContracts$RequestMultiplePermissions.parseResult(int,android.content.Intent):0:0 -> t1
@@ -4444,7 +4444,7 @@ androidx.appcompat.app.LayoutIncludeDetector -> d.p0:
     14:14:void androidx.core.graphics.TypefaceCompat$ResourcesCallbackAdapter.<init>(androidx.core.content.res.ResourcesCompat$FontCallback):0 -> <init>
     14:14:void $r8$init$synthetic(androidx.core.content.res.ResourcesCompat$FontCallback):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
     15:15:void androidx.core.graphics.TypefaceCompat$ResourcesCallbackAdapter.<init>(androidx.core.content.res.ResourcesCompat$FontCallback):0:0 -> <init>
     15:15:void $r8$init$synthetic(androidx.core.content.res.ResourcesCompat$FontCallback):0 -> <init>
     16:16:void com.google.android.material.button.MaterialButtonToggleGroup$PressedStateTracker.<init>(com.google.android.material.button.MaterialButtonToggleGroup,com.google.android.material.button.MaterialButtonToggleGroup$1):0:0 -> <init>
@@ -5527,7 +5527,7 @@ androidx.appcompat.view.ActionBarPolicy -> g.a:
     10:19:void $r8$init$synthetic(android.content.Context,int):0 -> <init>
     1:28:java.util.concurrent.ThreadPoolExecutor androidx.emoji2.text.ConcurrencyHelpers.createBackgroundPriorityExecutor(java.lang.String):0:0 -> a
     1:28:void androidx.emoji2.text.EmojiCompatInitializer$BackgroundDefaultLoader.load(androidx.emoji2.text.EmojiCompat$MetadataRepoLoaderCallback):0 -> a
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
     29:38:void androidx.emoji2.text.EmojiCompatInitializer$BackgroundDefaultLoader.load(androidx.emoji2.text.EmojiCompat$MetadataRepoLoaderCallback):0:0 -> a
 androidx.appcompat.view.ActionMode -> g.c:
     java.lang.Object mTag -> a
@@ -19511,7 +19511,7 @@ androidx.core.content.res.ResourcesCompat -> y.p:
     1:1:android.graphics.Typeface getFont(android.content.Context,int):0:0 -> b
     1:1:android.graphics.Typeface androidx.core.content.res.ResourcesCompat.loadFont(android.content.Context,android.content.res.Resources,android.util.TypedValue,int,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean,boolean):0:0 -> c
     1:1:android.graphics.Typeface loadFont(android.content.Context,int,android.util.TypedValue,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean,boolean):0 -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;ILandroid/util/TypedValue;ILc2/n;ZZ)Landroid/graphics/Typeface;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;ILandroid/util/TypedValue;ILc2/o;ZZ)Landroid/graphics/Typeface;"}
     2:2:android.graphics.Typeface androidx.core.graphics.TypefaceCompat.findFromCache(android.content.res.Resources,int,java.lang.String,int,int):0:0 -> c
     2:2:android.graphics.Typeface androidx.core.content.res.ResourcesCompat.loadFont(android.content.Context,android.content.res.Resources,android.util.TypedValue,int,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean,boolean):0 -> c
     2:2:android.graphics.Typeface loadFont(android.content.Context,int,android.util.TypedValue,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean,boolean):0 -> c
@@ -19654,7 +19654,7 @@ androidx.core.graphics.TypefaceCompat -> z.g:
     1:1:java.lang.String androidx.core.content.res.FontResourcesParserCompat$ProviderResourceEntry.getSystemFontFamilyName():0:0 -> a
     1:1:android.graphics.Typeface createFromResourcesFamilyXml(android.content.Context,androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry,android.content.res.Resources,int,java.lang.String,int,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean):0 -> a
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Ly/e;Landroid/content/res/Resources;ILjava/lang/String;IILc2/n;Z)Landroid/graphics/Typeface;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Ly/e;Landroid/content/res/Resources;ILjava/lang/String;IILc2/o;Z)Landroid/graphics/Typeface;"}
     2:2:android.graphics.Typeface androidx.core.graphics.TypefaceCompat.getSystemFontFamily(java.lang.String):0:0 -> a
     2:2:android.graphics.Typeface createFromResourcesFamilyXml(android.content.Context,androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry,android.content.res.Resources,int,java.lang.String,int,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean):0 -> a
     3:3:android.graphics.Typeface createFromResourcesFamilyXml(android.content.Context,androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry,android.content.res.Resources,int,java.lang.String,int,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean):0:0 -> a
@@ -23020,7 +23020,7 @@ androidx.customview.widget.ViewDragHelper -> o0.d:
     android.view.animation.Interpolator sInterpolator -> v
     1:1:void <clinit>():0:0 -> <clinit>
     1:1:void <init>(android.content.Context,android.view.ViewGroup,androidx.customview.widget.ViewDragHelper$Callback):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Landroid/view/ViewGroup;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Landroid/view/ViewGroup;Lc2/o;)V"}
     4:45:void androidx.customview.widget.ViewDragHelper.clearMotionHistory():0:0 -> a
     4:45:void cancel():0 -> a
     46:56:void cancel():0:0 -> a
@@ -23343,7 +23343,7 @@ androidx.emoji2.text.EmojiCompat$InitCallback -> androidx.emoji2.text.k:
     void onInitialized() -> a
 androidx.emoji2.text.EmojiCompat$MetadataRepoLoader -> androidx.emoji2.text.l:
     void load(androidx.emoji2.text.EmojiCompat$MetadataRepoLoaderCallback) -> a
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
 androidx.emoji2.text.EmojiCompatInitializer -> androidx.emoji2.text.EmojiCompatInitializer:
     1:1:java.util.List dependencies():0:0 -> a
     1:1:java.lang.Object create(android.content.Context):0:0 -> b
@@ -23480,7 +23480,7 @@ androidx.emoji2.text.EmojiCompatInitializer$BackgroundDefaultLoader$1 -> android
     androidx.emoji2.text.EmojiCompat$MetadataRepoLoaderCallback val$loaderCallback -> T
     java.util.concurrent.ThreadPoolExecutor val$executor -> U
     1:1:void <init>(androidx.emoji2.text.EmojiCompatInitializer$BackgroundDefaultLoader,androidx.emoji2.text.EmojiCompat$MetadataRepoLoaderCallback,java.util.concurrent.ThreadPoolExecutor):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;Ljava/util/concurrent/ThreadPoolExecutor;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;Ljava/util/concurrent/ThreadPoolExecutor;)V"}
     1:1:void onFailed(java.lang.Throwable):0:0 -> g1
     1:1:void onLoaded(androidx.emoji2.text.MetadataRepo):0:0 -> m1
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lg/h;)V"}
@@ -23623,7 +23623,7 @@ androidx.emoji2.text.FontRequestEmojiCompatConfig$FontRequestMetadataLoader -> a
     26:33:java.lang.Object androidx.core.util.Preconditions.checkNotNull(java.lang.Object,java.lang.Object):0:0 -> <init>
     26:33:void <init>(android.content.Context,androidx.core.provider.FontRequest,androidx.emoji2.text.FontRequestEmojiCompatConfig$FontProviderHelper):0 -> <init>
     1:1:void load(androidx.emoji2.text.EmojiCompat$MetadataRepoLoaderCallback):0:0 -> a
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
     18:24:void androidx.emoji2.text.FontRequestEmojiCompatConfig$FontProviderHelper.unregisterObserver(android.content.Context,android.database.ContentObserver):0:0 -> b
     18:24:void cleanUp():0 -> b
     25:52:void cleanUp():0:0 -> b
@@ -24588,7 +24588,7 @@ androidx.fragment.app.DialogFragment -> androidx.fragment.app.n:
     6:30:android.app.Dialog requireDialog():0:0 -> I
     1:5:androidx.fragment.app.FragmentContainer androidx.fragment.app.Fragment.createFragmentContainer():0:0 -> d
     1:5:androidx.fragment.app.FragmentContainer createFragmentContainer():0 -> d
-      # {"id":"com.android.tools.r8.residualsignature","signature":"()Lc2/n;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"()Lc2/o;"}
     6:11:androidx.fragment.app.FragmentContainer createFragmentContainer():0:0 -> d
     1:1:void onAttach(android.content.Context):0:0 -> q
     1:1:void onCreate(android.os.Bundle):0:0 -> r
@@ -24927,7 +24927,7 @@ androidx.fragment.app.Fragment -> androidx.fragment.app.r:
     18:38:androidx.lifecycle.ViewModelStore getViewModelStore():0 -> c
     39:54:androidx.lifecycle.ViewModelStore getViewModelStore():0:0 -> c
     1:1:androidx.fragment.app.FragmentContainer createFragmentContainer():0:0 -> d
-      # {"id":"com.android.tools.r8.residualsignature","signature":"()Lc2/n;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"()Lc2/o;"}
     302:323:androidx.fragment.app.Fragment getTargetFragment():0:0 -> e
     302:323:void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]):0 -> e
     324:352:void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]):0:0 -> e
@@ -26515,7 +26515,7 @@ androidx.fragment.app.FragmentManagerImpl -> androidx.fragment.app.l0:
     65:66:void updateOnBackPressedCallbackEnabled():0 -> a0
     20:23:void androidx.fragment.app.FragmentManager.addFragmentOnAttachListener(androidx.fragment.app.FragmentOnAttachListener):0:0 -> b
     20:23:void androidx.fragment.app.FragmentManager.attachController(androidx.fragment.app.FragmentHostCallback,androidx.fragment.app.FragmentContainer,androidx.fragment.app.Fragment):0 -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/fragment/app/u;Lc2/n;Landroidx/fragment/app/r;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/fragment/app/u;Lc2/o;Landroidx/fragment/app/r;)V"}
     24:27:void androidx.fragment.app.FragmentManager.attachController(androidx.fragment.app.FragmentHostCallback,androidx.fragment.app.FragmentContainer,androidx.fragment.app.Fragment):0:0 -> b
     28:30:void androidx.fragment.app.FragmentManager.addFragmentOnAttachListener(androidx.fragment.app.FragmentOnAttachListener):0:0 -> b
     28:30:void androidx.fragment.app.FragmentManager.attachController(androidx.fragment.app.FragmentHostCallback,androidx.fragment.app.FragmentContainer,androidx.fragment.app.Fragment):0 -> b
@@ -37084,7 +37084,7 @@ androidx.transition.Transition -> b1.q:
     1:1:void <clinit>():0:0 -> <clinit>
     1:1:void <init>():0:0 -> <init>
     1:1:void setEpicenterCallback(androidx.transition.Transition$EpicenterCallback):0:0 -> A
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
     1:1:androidx.transition.Transition setInterpolator(android.animation.TimeInterpolator):0:0 -> B
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/animation/TimeInterpolator;)V"}
     1:1:void setPathMotion(androidx.transition.PathMotion):0:0 -> C
@@ -38181,7 +38181,7 @@ androidx.transition.TransitionSet -> b1.v:
     1:1:void <init>():0:0 -> <init>
     1:2:void androidx.transition.Transition.setEpicenterCallback(androidx.transition.Transition$EpicenterCallback):0:0 -> A
     1:2:void setEpicenterCallback(androidx.transition.Transition$EpicenterCallback):0 -> A
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
     3:32:void setEpicenterCallback(androidx.transition.Transition$EpicenterCallback):0:0 -> A
     1:31:androidx.transition.TransitionSet androidx.transition.TransitionSet.setInterpolator(android.animation.TimeInterpolator):0:0 -> B
     1:31:androidx.transition.Transition setInterpolator(android.animation.TimeInterpolator):0 -> B
@@ -41578,7 +41578,7 @@ com.google.android.material.card.MaterialCardViewHelper -> k1.d:
     73:80:float calculateActualCornerPadding():0 -> a
     81:93:float calculateActualCornerPadding():0:0 -> a
     1:1:float calculateCornerPaddingForCornerTreatment(com.google.android.material.shape.CornerTreatment,float):0:0 -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;F)F"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;F)F"}
     5:6:android.graphics.drawable.Drawable com.google.android.material.card.MaterialCardViewHelper.createForegroundRippleDrawable():0:0 -> c
     5:6:android.graphics.drawable.Drawable getClickableForeground():0 -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"()Landroid/graphics/drawable/LayerDrawable;"}
@@ -46271,16 +46271,16 @@ com.google.android.material.resources.TextAppearance -> t1.d:
     1:1:android.graphics.Typeface getFont(android.content.Context):0:0 -> b
     38:62:void androidx.core.content.res.ResourcesCompat.getFont(android.content.Context,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler):0:0 -> c
     38:62:void getFontAsync(android.content.Context,com.google.android.material.resources.TextAppearanceFontCallback):0 -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Lc2/o;)V"}
     63:96:void getFontAsync(android.content.Context,com.google.android.material.resources.TextAppearanceFontCallback):0:0 -> c
     7:35:android.graphics.Typeface androidx.core.content.res.ResourcesCompat.getCachedFont(android.content.Context,int):0:0 -> d
     7:35:boolean shouldLoadFontSynchronously(android.content.Context):0 -> d
     1:1:void updateDrawState(android.content.Context,android.text.TextPaint,com.google.android.material.resources.TextAppearanceFontCallback):0:0 -> e
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Landroid/text/TextPaint;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Landroid/text/TextPaint;Lc2/o;)V"}
     15:19:android.graphics.Typeface com.google.android.material.resources.TextAppearance.getFallbackFont():0:0 -> f
     15:19:void com.google.android.material.resources.TextAppearance.getFontAsync(android.content.Context,android.text.TextPaint,com.google.android.material.resources.TextAppearanceFontCallback):0 -> f
     15:19:void updateMeasureState(android.content.Context,android.text.TextPaint,com.google.android.material.resources.TextAppearanceFontCallback):0 -> f
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Landroid/text/TextPaint;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/content/Context;Landroid/text/TextPaint;Lc2/o;)V"}
     20:31:void com.google.android.material.resources.TextAppearance.getFontAsync(android.content.Context,android.text.TextPaint,com.google.android.material.resources.TextAppearanceFontCallback):0:0 -> f
     20:31:void updateMeasureState(android.content.Context,android.text.TextPaint,com.google.android.material.resources.TextAppearanceFontCallback):0 -> f
     1:15:android.graphics.Typeface com.google.android.material.resources.TypefaceUtils.maybeCopyWithFontWeightAdjustment(android.content.Context,android.graphics.Typeface):0:0 -> g
@@ -46290,7 +46290,7 @@ com.google.android.material.resources.TextAppearance$1 -> t1.b:
     com.google.android.material.resources.TextAppearanceFontCallback val$callback -> T
     com.google.android.material.resources.TextAppearance this$0 -> U
     1:1:void <init>(com.google.android.material.resources.TextAppearance,com.google.android.material.resources.TextAppearanceFontCallback):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lt1/d;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lt1/d;Lc2/o;)V"}
     1:5:boolean com.google.android.material.resources.TextAppearance.access$102(com.google.android.material.resources.TextAppearance,boolean):0:0 -> i1
     1:5:void onFontRetrievalFailed(int):0 -> i1
     6:11:void onFontRetrievalFailed(int):0:0 -> i1
@@ -46307,7 +46307,7 @@ com.google.android.material.resources.TextAppearance$2 -> t1.c:
     com.google.android.material.resources.TextAppearanceFontCallback val$callback -> V
     com.google.android.material.resources.TextAppearance this$0 -> W
     1:1:void <init>(com.google.android.material.resources.TextAppearance,android.content.Context,android.text.TextPaint,com.google.android.material.resources.TextAppearanceFontCallback):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lt1/d;Landroid/content/Context;Landroid/text/TextPaint;Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lt1/d;Landroid/content/Context;Landroid/text/TextPaint;Lc2/o;)V"}
     1:1:void onFontRetrievalFailed(int):0:0 -> i1
     1:1:void onFontRetrieved(android.graphics.Typeface,boolean):0:0 -> k1
 com.google.android.material.ripple.RippleUtils -> u1.a:
@@ -46928,7 +46928,7 @@ com.google.android.material.shape.ShapeAppearanceModel$Builder -> w1.j:
     1:1:com.google.android.material.shape.ShapeAppearanceModel build():0:0 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"()Lw1/k;"}
     1:1:float compatCornerTreatmentSize(com.google.android.material.shape.CornerTreatment):0:0 -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/n;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/o;)V"}
 com.google.android.material.shape.ShapeAppearancePathProvider -> w1.m:
     com.google.android.material.shape.ShapePath[] cornerPaths -> a
     android.graphics.Matrix[] cornerTransforms -> b
@@ -51090,10 +51090,10 @@ com.google.android.material.transformation.FabTransformationScrimBehavior -> com
 com.google.android.material.transformation.FabTransformationSheetBehavior -> com.google.android.material.transformation.FabTransformationSheetBehavior:
     1:1:void <init>(android.content.Context,android.util.AttributeSet):0:0 -> <init>
 com.helirfid.AccessDecoderActivity -> com.helirfid.AccessDecoderActivity:
-    android.widget.TextView txtResult -> v
-    android.widget.Button btnLoadDump -> w
-    android.widget.Button btnClear -> x
-    int $r8$clinit -> y
+    android.widget.Button btnClear -> A
+    int $r8$clinit -> B
+    android.widget.TextView txtResult -> y
+    android.widget.Button btnLoadDump -> z
     19:143:void loadAndDecode(android.net.Uri):0:0 -> onActivityResult
     19:143:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     144:144:void onActivityResult(int,int,android.content.Intent):0:0 -> onActivityResult
@@ -51324,20 +51324,20 @@ com.helirfid.AccessDecoderActivity$$ExternalSyntheticLambda0 -> c2.a:
     37:44:void com.helirfid.AccessDecoderActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     37:44:void com.helirfid.AccessDecoderActivity$$InternalSyntheticLambda$1$81b5eefd5676a42e88012ffe83adf17bcf6d6a33806a847465e242e2273c1394$0.onClick$bridge(android.view.View):0 -> onClick
 com.helirfid.Acr122uActivity -> com.helirfid.Acr122uActivity:
-    android.widget.EditText editAcrKeyA -> A
-    android.widget.EditText editAcrSector -> B
-    android.widget.Button btnConnect -> C
-    android.widget.Button btnGetUid -> D
-    android.widget.Button btnReadSector -> E
-    android.widget.Button btnFullDump -> F
-    android.widget.Button btnDisconnect -> G
-    android.content.BroadcastReceiver usbReceiver -> H
-    int $r8$clinit -> I
-    android.hardware.usb.UsbManager usbManager -> v
-    com.helirfid.Acr122uManager reader -> w
-    android.app.PendingIntent permissionIntent -> x
-    android.widget.TextView txtAcrInfo -> y
-    android.widget.TextView txtAcrResult -> z
+    android.app.PendingIntent permissionIntent -> A
+    android.widget.TextView txtAcrInfo -> B
+    android.widget.TextView txtAcrResult -> C
+    android.widget.EditText editAcrKeyA -> D
+    android.widget.EditText editAcrSector -> E
+    android.widget.Button btnConnect -> F
+    android.widget.Button btnGetUid -> G
+    android.widget.Button btnReadSector -> H
+    android.widget.Button btnFullDump -> I
+    android.widget.Button btnDisconnect -> J
+    android.content.BroadcastReceiver usbReceiver -> K
+    int $r8$clinit -> L
+    android.hardware.usb.UsbManager usbManager -> y
+    com.helirfid.Acr122uManager reader -> z
     1:1:void appendResult(java.lang.String):0:0 -> q
     84:143:java.lang.String getFirmwareString():0:0 -> r
     84:143:void connectReader():0 -> r
@@ -51494,12 +51494,12 @@ com.helirfid.Acr122uActivity$$ExternalSyntheticLambda2 -> c2.d:
     47:50:void com.helirfid.Acr122uActivity.lambda$readSector$9(java.lang.String):0:0 -> run
     47:50:void com.helirfid.Acr122uActivity$$InternalSyntheticLambda$3$0131f943ba10acc6113ba106aed1687268bdd136bee82f13b0d3eb1a266e5400$0.run$bridge():0 -> run
 com.helirfid.AdvancedKeyManagerActivity -> com.helirfid.AdvancedKeyManagerActivity:
-    int $r8$clinit -> A
-    android.widget.EditText editFileName -> v
-    android.widget.RadioGroup rgKeyType -> w
-    android.widget.Button btnCreate -> x
-    android.widget.Button btnLoad -> y
-    android.widget.TextView txtPreview -> z
+    android.widget.Button btnCreate -> A
+    android.widget.Button btnLoad -> B
+    android.widget.TextView txtPreview -> C
+    int $r8$clinit -> D
+    android.widget.EditText editFileName -> y
+    android.widget.RadioGroup rgKeyType -> z
 com.helirfid.AdvancedKeyManagerActivity$$ExternalSyntheticLambda0 -> c2.e:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -52027,6 +52027,14 @@ com.helirfid.AuthMapActivity$$ExternalSyntheticLambda0 -> c2.i:
       # {"id":"com.android.tools.r8.synthesized"}
     17:24:void com.helirfid.AuthMapActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     17:24:void com.helirfid.AuthMapActivity$$InternalSyntheticLambda$1$0c04cb71ff6fabe70776746cad79569cf2d31a8d7ea70cb546ff612d94997059$0.onClick$bridge(android.view.View):0 -> onClick
+com.helirfid.BaseNfcActivity -> c2.j:
+    android.nfc.NfcAdapter nfcAdapter -> v
+    android.app.PendingIntent pendingIntent -> w
+    android.content.IntentFilter[] nfcFilters -> x
+    1:1:void onCreate(android.os.Bundle):0:0 -> onCreate
+    1:1:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
+    1:1:void onPause():0:0 -> onPause
+    1:1:void onResume():0:0 -> onResume
 com.helirfid.CardFingerprintActivity -> com.helirfid.CardFingerprintActivity:
     android.widget.TextView txtScanStatus -> A
     android.widget.TextView txtOysterMatch -> B
@@ -52978,13 +52986,13 @@ com.helirfid.CardFingerprintActivity -> com.helirfid.CardFingerprintActivity:
     236:236:void loadFingerprintTemplates():0:0 -> onCreate
     236:236:void onCreate(android.os.Bundle):0 -> onCreate
     1:1:java.lang.String formatResult(com.helirfid.CardFingerprintActivity$FpResult):0:0 -> q
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/k;)Ljava/lang/String;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/l;)Ljava/lang/String;"}
     1:1:com.helirfid.CardFingerprintActivity$FpResult matchFingerprint(byte[],int,java.lang.String):0:0 -> r
-      # {"id":"com.android.tools.r8.residualsignature","signature":"([BI)Lc2/k;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"([BI)Lc2/l;"}
     1:1:byte[] readRawResource(int):0:0 -> s
     1:1:void scanCard():0:0 -> t
     1:1:void setCardBackground(android.view.View,double):0:0 -> u
-com.helirfid.CardFingerprintActivity$$ExternalSyntheticLambda0 -> c2.j:
+com.helirfid.CardFingerprintActivity$$ExternalSyntheticLambda0 -> c2.k:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.CardFingerprintActivity$$InternalSyntheticLambda$2$f8e0f353a168d5f5f6e9f52d803a6083a35c16f8ea96766ec5391a99d21447f0$0.$r8$classId -> a
@@ -52997,7 +53005,7 @@ com.helirfid.CardFingerprintActivity$$ExternalSyntheticLambda0 -> c2.j:
       # {"id":"com.android.tools.r8.synthesized"}
     216:224:void com.helirfid.CardFingerprintActivity.lambda$readDump$1():0:0 -> run
     216:224:void com.helirfid.CardFingerprintActivity$$InternalSyntheticLambda$2$f8e0f353a168d5f5f6e9f52d803a6083a35c16f8ea96766ec5391a99d21447f0$0.run$bridge():0 -> run
-com.helirfid.CardFingerprintActivity$FpResult -> c2.k:
+com.helirfid.CardFingerprintActivity$FpResult -> c2.l:
     int matchedBytes -> a
     int totalBytes -> b
     double confidence -> c
@@ -53020,7 +53028,7 @@ com.helirfid.CloneActivity -> com.helirfid.CloneActivity:
     93:94:java.util.List com.helirfid.DumpStore.getDump():0:0 -> onCreate
     93:94:void onCreate(android.os.Bundle):0 -> onCreate
     95:161:void onCreate(android.os.Bundle):0:0 -> onCreate
-com.helirfid.CloneActivity$$ExternalSyntheticLambda0 -> c2.l:
+com.helirfid.CloneActivity$$ExternalSyntheticLambda0 -> c2.m:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.CloneActivity$$InternalSyntheticLambda$2$b03aad0d22166b1cb1422a3b448745113d4963078c5f362195497e96203176fd$0.$r8$classId -> a
@@ -53058,7 +53066,7 @@ com.helirfid.CloneActivity$$ExternalSyntheticLambda0 -> c2.l:
     133:199:void com.helirfid.CloneActivity$$InternalSyntheticLambda$2$b03aad0d22166b1cb1422a3b448745113d4963078c5f362195497e96203176fd$0.run$bridge():0 -> run
     200:214:void com.helirfid.CloneActivity.lambda$startClone$1():0:0 -> run
     200:214:void com.helirfid.CloneActivity$$InternalSyntheticLambda$2$b03aad0d22166b1cb1422a3b448745113d4963078c5f362195497e96203176fd$0.run$bridge():0 -> run
-com.helirfid.CloneActivity$$ExternalSyntheticLambda1 -> c2.m:
+com.helirfid.CloneActivity$$ExternalSyntheticLambda1 -> c2.n:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.CloneActivity$$InternalSyntheticLambda$3$b8727bd58ee0cd4cbc4c8e36ba0f1bbeea2f9f5d3ee1c33cde42ff8f47bf889b$1.$r8$classId -> a
@@ -53073,7 +53081,7 @@ com.helirfid.CloneActivity$$ExternalSyntheticLambda1 -> c2.m:
       # {"id":"com.android.tools.r8.synthesized"}
     41:94:void com.helirfid.CloneActivity.lambda$startClone$3(int,int):0:0 -> run
     41:94:void com.helirfid.CloneActivity$$InternalSyntheticLambda$3$b8727bd58ee0cd4cbc4c8e36ba0f1bbeea2f9f5d3ee1c33cde42ff8f47bf889b$1.run$bridge():0 -> run
-com.helirfid.CloneAnalyzer -> c2.n:
+com.helirfid.CloneAnalyzer -> c2.o:
     java.lang.String com.helirfid.DumpStore.sourceInfo -> A
     byte[] com.helirfid.DumpStore.rawDumpData -> B
     byte[][] com.helirfid.KeyTester.TEST_KEYS -> C
@@ -53703,7 +53711,7 @@ com.helirfid.CloneAnalyzer -> c2.n:
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Ljava/util/ArrayList;)Z"}
     6:11:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createDefaultCornerTreatment():0:0 -> Q
     6:11:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createCornerTreatment(int):0 -> Q
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(I)Lc2/n;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(I)Lc2/o;"}
     12:23:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createCornerTreatment(int):0:0 -> Q
     3:18:double[] androidx.core.graphics.ColorUtils.getTempDouble3Array():0:0 -> Q0
     3:18:double androidx.core.graphics.ColorUtils.calculateLuminance(int):0 -> Q0
@@ -54581,13 +54589,13 @@ com.helirfid.CloneAnalyzer -> c2.n:
     156:167:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0:0 -> z1
     156:167:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> z1
 com.helirfid.DataConverterActivity -> com.helirfid.DataConverterActivity:
-    android.widget.Button btnSwap -> A
-    int $r8$clinit -> B
-    android.widget.EditText editInput -> v
-    android.widget.RadioGroup rgInputType -> w
-    android.widget.RadioGroup rgOutputType -> x
-    android.widget.TextView txtOutput -> y
-    android.widget.Button btnConvert -> z
+    android.widget.RadioGroup rgOutputType -> A
+    android.widget.TextView txtOutput -> B
+    android.widget.Button btnConvert -> C
+    android.widget.Button btnSwap -> D
+    int $r8$clinit -> E
+    android.widget.EditText editInput -> y
+    android.widget.RadioGroup rgInputType -> z
     107:107:void convert():0:0 -> q
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":111,"5":112,"8":113,"12":114},"outline":"Landroidx/activity/h;m(Ljava/lang/Exception;Ljava/lang/StringBuilder;Landroid/widget/TextView;)V"}
     111:111:void convert():0:0 -> q
@@ -54706,7 +54714,7 @@ com.helirfid.DataConverterActivity -> com.helirfid.DataConverterActivity:
     111:111:java.lang.String formatOutput(byte[],int):0:0 -> r
     112:112:java.lang.String formatOutput(byte[],int):0:0 -> r
     1:1:byte[] parseInput(java.lang.String,int):0:0 -> s
-com.helirfid.DataConverterActivity$$ExternalSyntheticLambda0 -> c2.o:
+com.helirfid.DataConverterActivity$$ExternalSyntheticLambda0 -> c2.p:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DataConverterActivity$$InternalSyntheticLambda$1$4bcd21090c51c064c534820f49481b5104c3707d4a0f13512d73b4516503c3b9$0.$r8$classId -> a
@@ -54996,7 +55004,7 @@ com.helirfid.DesfireActivity -> com.helirfid.DesfireActivity:
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":39,"5":40},"outline":"Landroidx/activity/h;e(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;II)I"}
     39:39:java.lang.String bytesToHex(byte[]):0:0 -> q
     40:40:java.lang.String bytesToHex(byte[]):0:0 -> q
-com.helirfid.DesfireActivity$$ExternalSyntheticLambda0 -> c2.p:
+com.helirfid.DesfireActivity$$ExternalSyntheticLambda0 -> c2.q:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DesfireActivity$$InternalSyntheticLambda$1$4dccb8fc8d853ab946e9c56b1e9b51943144e82623f9397e5cc6f69e4e4d8f54$0.$r8$classId -> a
@@ -55012,7 +55020,7 @@ com.helirfid.DesfireActivity$$ExternalSyntheticLambda0 -> c2.p:
     45:52:void com.helirfid.DesfireActivity.formatDesfire():0:0 -> onClick
     45:52:void com.helirfid.DesfireActivity.lambda$onCreate$1(android.view.View):0 -> onClick
     45:52:void com.helirfid.DesfireActivity$$InternalSyntheticLambda$1$4dccb8fc8d853ab946e9c56b1e9b51943144e82623f9397e5cc6f69e4e4d8f54$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.DesfireActivity$$ExternalSyntheticLambda1 -> c2.q:
+com.helirfid.DesfireActivity$$ExternalSyntheticLambda1 -> c2.r:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DesfireActivity$$InternalSyntheticLambda$2$3bb860e0fdb218a7e5ca6fbea8e901800ff93658784553beb17d90f882b700d7$0.$r8$classId -> a
@@ -55026,19 +55034,19 @@ com.helirfid.DesfireActivity$$ExternalSyntheticLambda1 -> c2.q:
     219:256:void com.helirfid.DesfireActivity.lambda$readDesfire$2():0:0 -> run
     219:256:void com.helirfid.DesfireActivity$$InternalSyntheticLambda$2$3bb860e0fdb218a7e5ca6fbea8e901800ff93658784553beb17d90f882b700d7$0.run$bridge():0 -> run
 com.helirfid.DiffToolActivity -> com.helirfid.DiffToolActivity:
-    android.widget.TextView txtResult -> A
-    java.lang.String[] dumpA -> B
-    java.lang.String[] dumpB -> C
-    java.lang.String nameA -> D
-    java.lang.String nameB -> E
-    int $r8$clinit -> F
-    android.widget.Button btnLoadA -> v
-    android.widget.Button btnLoadB -> w
-    android.widget.Button btnCompare -> x
-    android.widget.TextView txtDumpA -> y
-    android.widget.TextView txtDumpB -> z
+    android.widget.Button btnCompare -> A
+    android.widget.TextView txtDumpA -> B
+    android.widget.TextView txtDumpB -> C
+    android.widget.TextView txtResult -> D
+    java.lang.String[] dumpA -> E
+    java.lang.String[] dumpB -> F
+    java.lang.String nameA -> G
+    java.lang.String nameB -> H
+    int $r8$clinit -> I
+    android.widget.Button btnLoadA -> y
+    android.widget.Button btnLoadB -> z
     1:1:void showFilePicker(int):0:0 -> q
-com.helirfid.DiffToolActivity$$ExternalSyntheticLambda0 -> c2.r:
+com.helirfid.DiffToolActivity$$ExternalSyntheticLambda0 -> c2.s:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DiffToolActivity$$InternalSyntheticLambda$1$ddeeb4e8209fe9e95864d2468b6ae46c7bd490ed7569faef5cf5b662c2d68e22$0.$r8$classId -> a
@@ -55142,7 +55150,7 @@ com.helirfid.DiffToolActivity$$ExternalSyntheticLambda0 -> c2.r:
     140:176:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$1$ddeeb4e8209fe9e95864d2468b6ae46c7bd490ed7569faef5cf5b662c2d68e22$0.onClick$bridge(android.view.View):0 -> onClick
     177:184:void com.helirfid.DiffToolActivity.lambda$onCreate$2(android.view.View):0:0 -> onClick
     177:184:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$1$ddeeb4e8209fe9e95864d2468b6ae46c7bd490ed7569faef5cf5b662c2d68e22$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.DiffToolActivity$$ExternalSyntheticLambda1 -> c2.s:
+com.helirfid.DiffToolActivity$$ExternalSyntheticLambda1 -> c2.t:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$0.$r8$classId -> a
@@ -55154,7 +55162,7 @@ com.helirfid.DiffToolActivity$$ExternalSyntheticLambda1 -> c2.s:
       # {"id":"com.android.tools.r8.synthesized"}
     48:52:boolean com.helirfid.KeyManager.lambda$getKeyFileNames$0(java.io.File,java.lang.String):0:0 -> accept
     48:52:boolean com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$0.accept$bridge(java.io.File,java.lang.String):0 -> accept
-com.helirfid.DiffToolActivity$$ExternalSyntheticLambda2 -> c2.t:
+com.helirfid.DiffToolActivity$$ExternalSyntheticLambda2 -> c2.u:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.$r8$classId -> a
@@ -55162,9 +55170,9 @@ com.helirfid.DiffToolActivity$$ExternalSyntheticLambda2 -> c2.t:
     com.helirfid.DiffToolActivity com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.f$0 -> c
     java.io.File[] com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.f$1 -> d
     1:12:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.<init>(com.helirfid.DiffToolActivity,java.io.File[],int):0:0 -> <init>
-    1:12:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.$r8$init$synthetic(androidx.appcompat.app.AppCompatActivity,java.lang.Object,int,int):0 -> <init>
+    1:12:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.$r8$init$synthetic(com.helirfid.BaseNfcActivity,java.lang.Object,int,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ld/k;Ljava/lang/Object;II)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/j;Ljava/lang/Object;II)V"}
     28:29:void com.helirfid.DiffToolActivity.lambda$showFilePicker$4(java.io.File[],int,android.content.DialogInterface,int):0:0 -> onClick
     28:29:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
@@ -55174,7 +55182,7 @@ com.helirfid.DiffToolActivity$$ExternalSyntheticLambda2 -> c2.t:
     295:303:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.onClick$bridge(android.content.DialogInterface,int):0:0 -> onClick
     304:384:void com.helirfid.DumpEditorActivity.lambda$showEditDialog$3(android.widget.EditText,int,android.content.DialogInterface,int):0:0 -> onClick
     304:384:void com.helirfid.DiffToolActivity$$InternalSyntheticLambda$2$f207e34a9e2ac5c87d8f67a7166f6d78399219cbe2cc5f3ca3dedbd90ba21a3a$1.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
-com.helirfid.DumpAdapter -> c2.v:
+com.helirfid.DumpAdapter -> c2.w:
     java.util.List dumpList -> d
     1:1:void <init>(java.util.List):0:0 -> <init>
     1:1:int getItemCount():0:0 -> a
@@ -55195,7 +55203,7 @@ com.helirfid.DumpAdapter -> c2.v:
     1:22:com.helirfid.DumpAdapter$DumpViewHolder com.helirfid.DumpAdapter.onCreateViewHolder(android.view.ViewGroup,int):0:0 -> d
     1:22:androidx.recyclerview.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int):0 -> d
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/recyclerview/widget/RecyclerView;)Lx0/f1;"}
-com.helirfid.DumpAdapter$DumpViewHolder -> c2.u:
+com.helirfid.DumpAdapter$DumpViewHolder -> c2.v:
     android.widget.TextView txtSector -> u
     android.widget.TextView txtBlock -> v
     android.widget.TextView txtData -> w
@@ -55203,10 +55211,10 @@ com.helirfid.DumpAdapter$DumpViewHolder -> c2.u:
     android.widget.TextView txtAscii -> y
     1:1:void <init>(android.view.View):0:0 -> <init>
 com.helirfid.DumpAsciiActivity -> com.helirfid.DumpAsciiActivity:
-    android.widget.TextView txtResult -> v
-    android.widget.Button btnLoad -> w
-    android.widget.Button btnClear -> x
-    int $r8$clinit -> y
+    android.widget.Button btnClear -> A
+    int $r8$clinit -> B
+    android.widget.TextView txtResult -> y
+    android.widget.Button btnLoad -> z
     25:216:void loadAndShow(android.net.Uri):0:0 -> onActivityResult
     25:216:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     217:217:void onActivityResult(int,int,android.content.Intent):0:0 -> onActivityResult
@@ -55249,7 +55257,7 @@ com.helirfid.DumpAsciiActivity -> com.helirfid.DumpAsciiActivity:
     223:223:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     224:224:void loadAndShow(android.net.Uri):0:0 -> onActivityResult
     224:224:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
-com.helirfid.DumpAsciiActivity$$ExternalSyntheticLambda0 -> c2.w:
+com.helirfid.DumpAsciiActivity$$ExternalSyntheticLambda0 -> c2.x:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DumpAsciiActivity$$InternalSyntheticLambda$1$71080d0f3f07ed3f2212201526b91781a403450b72fbe9005d957711b7b9606d$0.$r8$classId -> a
@@ -55263,14 +55271,14 @@ com.helirfid.DumpAsciiActivity$$ExternalSyntheticLambda0 -> c2.w:
     37:44:void com.helirfid.DumpAsciiActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     37:44:void com.helirfid.DumpAsciiActivity$$InternalSyntheticLambda$1$71080d0f3f07ed3f2212201526b91781a403450b72fbe9005d957711b7b9606d$0.onClick$bridge(android.view.View):0 -> onClick
 com.helirfid.DumpEditorActivity -> com.helirfid.DumpEditorActivity:
-    com.helirfid.DumpEditorActivity$BlockAdapter adapter -> A
-    java.util.ArrayList blocks -> B
-    int $r8$clinit -> C
-    android.widget.ListView listBlocks -> v
-    android.widget.Button btnSave -> w
-    android.widget.Button btnImport -> x
-    android.widget.Button btnClear -> y
-    android.widget.TextView txtDumpInfo -> z
+    android.widget.Button btnImport -> A
+    android.widget.Button btnClear -> B
+    android.widget.TextView txtDumpInfo -> C
+    com.helirfid.DumpEditorActivity$BlockAdapter adapter -> D
+    java.util.ArrayList blocks -> E
+    int $r8$clinit -> F
+    android.widget.ListView listBlocks -> y
+    android.widget.Button btnSave -> z
     18:297:void importDumpFile(android.net.Uri):0:0 -> onActivityResult
     18:297:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     77:93:byte[] com.helirfid.DumpStore.getDumpData():0:0 -> onCreate
@@ -55278,7 +55286,7 @@ com.helirfid.DumpEditorActivity -> com.helirfid.DumpEditorActivity:
     94:130:void onCreate(android.os.Bundle):0:0 -> onCreate
     65:67:void com.helirfid.DumpStore.setDumpData(byte[]):0:0 -> q
     65:67:void loadDump(byte[]):0 -> q
-com.helirfid.DumpEditorActivity$$ExternalSyntheticLambda0 -> c2.x:
+com.helirfid.DumpEditorActivity$$ExternalSyntheticLambda0 -> c2.y:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DumpEditorActivity$$InternalSyntheticLambda$1$3d5f1985b84b9b4cc57c6c4ff474c02c5d6b0fd90b73c41a15d7286cff9f18c8$0.$r8$classId -> a
@@ -55331,7 +55339,7 @@ com.helirfid.DumpEditorActivity$$ExternalSyntheticLambda0 -> c2.x:
     230:238:void com.helirfid.DumpStore.clearDump():0:0 -> onClick
     230:238:void com.helirfid.DumpEditorActivity.lambda$onCreate$2(android.view.View):0 -> onClick
     230:238:void com.helirfid.DumpEditorActivity$$InternalSyntheticLambda$1$3d5f1985b84b9b4cc57c6c4ff474c02c5d6b0fd90b73c41a15d7286cff9f18c8$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.DumpEditorActivity$BlockAdapter -> c2.z:
+com.helirfid.DumpEditorActivity$BlockAdapter -> c2.a0:
     com.helirfid.DumpEditorActivity this$0 -> a
     1:6:void com.helirfid.DumpEditorActivity$BlockAdapter.<init>(com.helirfid.DumpEditorActivity):0:0 -> <init>
     1:6:void <init>(com.helirfid.DumpEditorActivity,com.helirfid.DumpEditorActivity$1):0 -> <init>
@@ -55340,14 +55348,14 @@ com.helirfid.DumpEditorActivity$BlockAdapter -> c2.z:
     1:1:java.lang.Object getItem(int):0:0 -> getItem
     1:1:long getItemId(int):0:0 -> getItemId
     1:1:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
-com.helirfid.DumpEditorActivity$BlockAdapter$$ExternalSyntheticLambda0 -> c2.y:
+com.helirfid.DumpEditorActivity$BlockAdapter$$ExternalSyntheticLambda0 -> c2.z:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.helirfid.DumpEditorActivity$BlockAdapter com.helirfid.DumpEditorActivity$BlockAdapter$$InternalSyntheticLambda$2$e8dc601eb9f704918f8dba31041fc065e62f1673203976b014f049045c94b60c$0.f$0 -> a
     int com.helirfid.DumpEditorActivity$BlockAdapter$$InternalSyntheticLambda$2$e8dc601eb9f704918f8dba31041fc065e62f1673203976b014f049045c94b60c$0.f$1 -> b
     1:1:void com.helirfid.DumpEditorActivity$BlockAdapter$$InternalSyntheticLambda$2$e8dc601eb9f704918f8dba31041fc065e62f1673203976b014f049045c94b60c$0.<init>(com.helirfid.DumpEditorActivity$BlockAdapter,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/z;I)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lc2/a0;I)V"}
     1:6:void com.helirfid.DumpEditorActivity.showEditDialog(int):0:0 -> onClick
     1:6:void com.helirfid.DumpEditorActivity.access$100(com.helirfid.DumpEditorActivity,int):0 -> onClick
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
@@ -55413,14 +55421,14 @@ com.helirfid.DumpEditorActivity$BlockAdapter$$ExternalSyntheticLambda0 -> c2.y:
     44:150:void com.helirfid.DumpEditorActivity$BlockAdapter.lambda$getView$0(int,android.view.View):0 -> onClick
     44:150:void com.helirfid.DumpEditorActivity$BlockAdapter$$InternalSyntheticLambda$2$e8dc601eb9f704918f8dba31041fc065e62f1673203976b014f049045c94b60c$0.onClick(android.view.View):0 -> onClick
 com.helirfid.DumpHighlightActivity -> com.helirfid.DumpHighlightActivity:
-    int COLOR_TRAILER -> A
-    int COLOR_VALUE -> B
-    int COLOR_ADDR -> C
-    android.widget.TextView txtResult -> v
-    android.widget.Button btnLoad -> w
-    android.widget.Button btnClear -> x
-    int COLOR_MFR -> y
-    int COLOR_DATA -> z
+    android.widget.Button btnClear -> A
+    int COLOR_MFR -> B
+    int COLOR_DATA -> C
+    int COLOR_TRAILER -> D
+    int COLOR_VALUE -> E
+    int COLOR_ADDR -> F
+    android.widget.TextView txtResult -> y
+    android.widget.Button btnLoad -> z
     25:232:void loadAndShow(android.net.Uri):0:0 -> onActivityResult
     25:232:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     233:255:java.lang.String getBlockLabel(int,int,int):0:0 -> onActivityResult
@@ -55469,7 +55477,7 @@ com.helirfid.DumpHighlightActivity -> com.helirfid.DumpHighlightActivity:
     450:450:void loadAndShow(android.net.Uri):0:0 -> onActivityResult
     450:450:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     1:1:void appendColorLegend(android.text.SpannableStringBuilder,java.lang.String,java.lang.String,int):0:0 -> q
-com.helirfid.DumpHighlightActivity$$ExternalSyntheticLambda0 -> c2.a0:
+com.helirfid.DumpHighlightActivity$$ExternalSyntheticLambda0 -> c2.b0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.DumpHighlightActivity$$InternalSyntheticLambda$1$1daec70cb480cecfece5f7bc3c18044941c9305754b37b934a0bd18c0677ed4f$0.$r8$classId -> a
@@ -55482,7 +55490,7 @@ com.helirfid.DumpHighlightActivity$$ExternalSyntheticLambda0 -> c2.a0:
       # {"id":"com.android.tools.r8.synthesized"}
     37:44:void com.helirfid.DumpHighlightActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     37:44:void com.helirfid.DumpHighlightActivity$$InternalSyntheticLambda$1$1daec70cb480cecfece5f7bc3c18044941c9305754b37b934a0bd18c0677ed4f$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.DumpItem -> c2.b0:
+com.helirfid.DumpItem -> c2.c0:
     int sector -> a
     int block -> b
     java.lang.String data -> c
@@ -55567,7 +55575,7 @@ com.helirfid.EmvCardActivity -> com.helirfid.EmvCardActivity:
     74:98:byte[] buildSelectAid(byte[]):0:0 -> y
     74:98:byte[] tryDirectSelect(android.nfc.tech.IsoDep):0 -> y
     99:138:byte[] tryDirectSelect(android.nfc.tech.IsoDep):0:0 -> y
-com.helirfid.EmvCardActivity$$ExternalSyntheticLambda0 -> c2.c0:
+com.helirfid.EmvCardActivity$$ExternalSyntheticLambda0 -> c2.d0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.EmvCardActivity$$InternalSyntheticLambda$1$f22bc57408b253941b1f8364331b305caf9669220de446fdecfc7fa646f7ad8e$0.$r8$classId -> a
@@ -55585,7 +55593,7 @@ com.helirfid.EmvCardActivity$$ExternalSyntheticLambda0 -> c2.c0:
     35:42:void com.helirfid.EmvCardActivity$$InternalSyntheticLambda$1$f22bc57408b253941b1f8364331b305caf9669220de446fdecfc7fa646f7ad8e$0.onClick$bridge(android.view.View):0 -> onClick
     43:50:void com.helirfid.EmvCardActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     43:50:void com.helirfid.EmvCardActivity$$InternalSyntheticLambda$1$f22bc57408b253941b1f8364331b305caf9669220de446fdecfc7fa646f7ad8e$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.EmvCardActivity$$ExternalSyntheticLambda1 -> c2.d0:
+com.helirfid.EmvCardActivity$$ExternalSyntheticLambda1 -> c2.e0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.EmvCardActivity$$InternalSyntheticLambda$2$1a28653b6eeb4de60c5ed42d73b49210e201d83fa667673a15dd017d80f0f8cd$0.$r8$classId -> a
@@ -55685,7 +55693,7 @@ com.helirfid.FelicaActivity -> com.helirfid.FelicaActivity:
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":97,"5":98},"outline":"Landroidx/activity/h;e(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;II)I"}
     97:97:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
     98:98:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
-com.helirfid.FelicaActivity$$ExternalSyntheticLambda0 -> c2.e0:
+com.helirfid.FelicaActivity$$ExternalSyntheticLambda0 -> c2.f0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.FelicaActivity$$InternalSyntheticLambda$2$e3f4474cd0c24b0e49924e71138fd449357e02b539ae770302e858949bf87210$0.$r8$classId -> a
@@ -55699,12 +55707,12 @@ com.helirfid.FelicaActivity$$ExternalSyntheticLambda0 -> c2.e0:
     225:246:void com.helirfid.FelicaActivity.lambda$readFelica$1():0:0 -> run
     225:246:void com.helirfid.FelicaActivity$$InternalSyntheticLambda$2$e3f4474cd0c24b0e49924e71138fd449357e02b539ae770302e858949bf87210$0.run$bridge():0 -> run
 com.helirfid.HceActivity -> com.helirfid.HceActivity:
-    android.widget.EditText editHceUid -> v
-    android.widget.EditText editHceData -> w
-    android.widget.Button btnStart -> x
-    android.widget.Button btnStop -> y
-    android.widget.TextView txtHceStatus -> z
-com.helirfid.HceActivity$$ExternalSyntheticLambda0 -> c2.f0:
+    android.widget.Button btnStart -> A
+    android.widget.Button btnStop -> B
+    android.widget.TextView txtHceStatus -> C
+    android.widget.EditText editHceUid -> y
+    android.widget.EditText editHceData -> z
+com.helirfid.HceActivity$$ExternalSyntheticLambda0 -> c2.g0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.HceActivity$$InternalSyntheticLambda$1$ac8db832970647a5ffeffaa8fc04f6b5313c54ffbc32503b2f711dfa66271347$0.$r8$classId -> a
@@ -55744,7 +55752,7 @@ com.helirfid.HelpActivity -> com.helirfid.HelpActivity:
     51:75:void androidx.appcompat.app.WindowDecorActionBar.setTitle(java.lang.CharSequence):0 -> onCreate
     51:75:void onCreate(android.os.Bundle):0 -> onCreate
     1:1:boolean onSupportNavigateUp():0:0 -> p
-com.helirfid.HistoryAdapter -> c2.g0:
+com.helirfid.HistoryAdapter -> c2.h0:
     java.util.List entries -> a
     android.view.LayoutInflater inflater -> b
     1:1:void <init>(android.view.LayoutInflater,java.util.List):0:0 -> <init>
@@ -55759,14 +55767,14 @@ com.helirfid.HistoryAdapter -> c2.g0:
     103:124:java.lang.String com.helirfid.HistoryEntry.getFormattedTime():0:0 -> getView
     103:124:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
     125:128:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
-com.helirfid.HistoryEntry -> c2.h0:
+com.helirfid.HistoryEntry -> c2.i0:
     java.lang.String card10 -> a
     java.lang.String card8 -> b
     java.lang.String uid -> c
     long timestamp -> d
     1:1:void <init>(java.lang.String,java.lang.String,java.lang.String,long):0:0 -> <init>
     1:1:java.lang.String toStorageString():0:0 -> a
-com.helirfid.HistoryManager -> c2.i0:
+com.helirfid.HistoryManager -> c2.j0:
     android.content.SharedPreferences prefs -> a
     1:1:void <init>(android.content.Context):0:0 -> <init>
     2:2:float com.google.android.material.behavior.SwipeDismissBehavior.clamp(float,float,float):0:0 -> <init>
@@ -55792,16 +55800,16 @@ com.helirfid.HistoryManager -> c2.i0:
       # {"id":"com.android.tools.r8.residualsignature","signature":"()Ljava/util/ArrayList;"}
     78:115:java.util.List getEntries():0:0 -> b
 com.helirfid.KeyManagementActivity -> com.helirfid.KeyManagementActivity:
-    int $r8$clinit -> A
-    android.widget.EditText editFileName -> v
-    android.widget.Button btnCreate -> w
-    android.widget.Button btnImport -> x
-    android.widget.ListView listView -> y
-    java.util.List fileNames -> z
+    android.widget.Button btnImport -> A
+    android.widget.ListView listView -> B
+    java.util.List fileNames -> C
+    int $r8$clinit -> D
+    android.widget.EditText editFileName -> y
+    android.widget.Button btnCreate -> z
     20:225:void importKeyFile(android.net.Uri):0:0 -> onActivityResult
     20:225:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     1:1:void refreshList():0:0 -> q
-com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda0 -> c2.j0:
+com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda0 -> c2.k0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$1$225140289b758dc40dbfed38258afeece4b90f62949cbbb6920a5b15e2f5766d$0.$r8$classId -> a
@@ -55814,7 +55822,7 @@ com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda0 -> c2.j0:
       # {"id":"com.android.tools.r8.synthesized"}
     37:120:void com.helirfid.KeyManagementActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     37:120:void com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$1$225140289b758dc40dbfed38258afeece4b90f62949cbbb6920a5b15e2f5766d$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda1 -> c2.k0:
+com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda1 -> c2.l0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.helirfid.KeyManagementActivity com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$1$225140289b758dc40dbfed38258afeece4b90f62949cbbb6920a5b15e2f5766d$2.f$0 -> a
@@ -55885,7 +55893,7 @@ com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda1 -> c2.k0:
     72:149:void com.helirfid.KeyManagementActivity.showKeyFileDialog(java.lang.String):0:0 -> onItemClick
     72:149:void com.helirfid.KeyManagementActivity.lambda$onCreate$2(android.widget.AdapterView,android.view.View,int,long):0 -> onItemClick
     72:149:void com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$1$225140289b758dc40dbfed38258afeece4b90f62949cbbb6920a5b15e2f5766d$2.onItemClick(android.widget.AdapterView,android.view.View,int,long):0 -> onItemClick
-com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda2 -> c2.l0:
+com.helirfid.KeyManagementActivity$$ExternalSyntheticLambda2 -> c2.m0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.KeyManagementActivity$$InternalSyntheticLambda$2$0707899d4ebe7b16e60ccc8afaa29352a19a025553cf3188fdce078f16827d04$0.$r8$classId -> a
@@ -55976,7 +55984,7 @@ com.helirfid.KeyRecoveryActivity -> com.helirfid.KeyRecoveryActivity:
     36:36:java.lang.String bytesToHex(byte[]):0:0 -> r
     1:1:java.util.List generateBruteForceKeys(java.lang.String):0:0 -> s
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;)Ljava/util/ArrayList;"}
-com.helirfid.KeyRecoveryActivity$$ExternalSyntheticLambda0 -> c2.m0:
+com.helirfid.KeyRecoveryActivity$$ExternalSyntheticLambda0 -> c2.n0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$1$c36a842720b9cce318a799d8a6934d2c709a8ae5446f497fade4843abfbb4710$0.$r8$classId -> a
@@ -55992,7 +56000,7 @@ com.helirfid.KeyRecoveryActivity$$ExternalSyntheticLambda0 -> c2.m0:
     27:506:void com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$1$c36a842720b9cce318a799d8a6934d2c709a8ae5446f497fade4843abfbb4710$0.run$bridge():0 -> run
     507:514:void com.helirfid.KeyRecoveryActivity.lambda$recoverKeys$3():0:0 -> run
     507:514:void com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$1$c36a842720b9cce318a799d8a6934d2c709a8ae5446f497fade4843abfbb4710$0.run$bridge():0 -> run
-com.helirfid.KeyRecoveryActivity$$ExternalSyntheticLambda1 -> c2.n0:
+com.helirfid.KeyRecoveryActivity$$ExternalSyntheticLambda1 -> c2.o0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$3.$r8$classId -> a
@@ -56014,16 +56022,16 @@ com.helirfid.KeyRecoveryActivity$$ExternalSyntheticLambda1 -> c2.n0:
     132:135:void com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$3.run$bridge():0:0 -> run
     136:176:void com.helirfid.NtagActivity.lambda$readCounter$19(int,byte[],int):0:0 -> run
     136:176:void com.helirfid.KeyRecoveryActivity$$InternalSyntheticLambda$2$bd4c188c7b7c8536824af6973f5486f3a6f959779787398bbcb8d493bdcab1c2$3.run$bridge():0 -> run
-com.helirfid.LogUtil -> c2.o0:
+com.helirfid.LogUtil -> c2.p0:
     java.util.List logs -> a
     1:1:void <clinit>():0:0 -> <clinit>
     1:76:void com.helirfid.LogUtil.add(java.lang.String,java.lang.String,java.lang.String):0:0 -> a
     1:76:void e(java.lang.String,java.lang.String):0 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;)V"}
 com.helirfid.LogViewerActivity -> com.helirfid.LogViewerActivity:
-    android.widget.TextView txtLog -> v
-    android.widget.Button btnClear -> w
-    int $r8$clinit -> x
+    int $r8$clinit -> A
+    android.widget.TextView txtLog -> y
+    android.widget.Button btnClear -> z
     6:14:java.util.List com.helirfid.LogUtil.getLogs():0:0 -> q
     6:14:void refreshLog():0 -> q
     15:59:void refreshLog():0:0 -> q
@@ -56351,7 +56359,7 @@ com.helirfid.MagicCardActivity -> com.helirfid.MagicCardActivity:
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":39,"5":40},"outline":"Landroidx/activity/h;e(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;II)I"}
     39:39:java.lang.String bytesToHex(byte[]):0:0 -> s
     40:40:java.lang.String bytesToHex(byte[]):0:0 -> s
-com.helirfid.MagicCardActivity$$ExternalSyntheticLambda0 -> c2.p0:
+com.helirfid.MagicCardActivity$$ExternalSyntheticLambda0 -> c2.q0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.MagicCardActivity$$InternalSyntheticLambda$1$d970c1ef6879ed530d7048a3cdb94d43b8ef1306af4c896468f7fa561408021e$0.$r8$classId -> a
@@ -56372,7 +56380,7 @@ com.helirfid.MagicCardActivity$$ExternalSyntheticLambda0 -> c2.p0:
     91:108:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$1$d970c1ef6879ed530d7048a3cdb94d43b8ef1306af4c896468f7fa561408021e$0.onClick$bridge(android.view.View):0 -> onClick
     109:116:void com.helirfid.MagicCardActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     109:116:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$1$d970c1ef6879ed530d7048a3cdb94d43b8ef1306af4c896468f7fa561408021e$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.MagicCardActivity$$ExternalSyntheticLambda1 -> c2.q0:
+com.helirfid.MagicCardActivity$$ExternalSyntheticLambda1 -> c2.r0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.MagicCardActivity$$InternalSyntheticLambda$2$4a78593dec3154856deffabbb1cb47b7b179599c7f0767ec24a80d2ce7ef27e9$0.$r8$classId -> a
@@ -56403,7 +56411,7 @@ com.helirfid.MagicCardActivity$$ExternalSyntheticLambda1 -> c2.q0:
     386:392:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$2$4a78593dec3154856deffabbb1cb47b7b179599c7f0767ec24a80d2ce7ef27e9$0.run$bridge():0:0 -> run
     393:400:void com.helirfid.MagicCardActivity.lambda$writeNewUid$11():0:0 -> run
     393:400:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$2$4a78593dec3154856deffabbb1cb47b7b179599c7f0767ec24a80d2ce7ef27e9$0.run$bridge():0 -> run
-com.helirfid.MagicCardActivity$$ExternalSyntheticLambda2 -> c2.r0:
+com.helirfid.MagicCardActivity$$ExternalSyntheticLambda2 -> c2.s0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$0d7ca5f77cc51725d61d727eb7d086b9dd82ed1089b704f07283f826f27af991$3.$r8$classId -> a
@@ -56418,7 +56426,7 @@ com.helirfid.MagicCardActivity$$ExternalSyntheticLambda2 -> c2.r0:
     60:61:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$0d7ca5f77cc51725d61d727eb7d086b9dd82ed1089b704f07283f826f27af991$3.run$bridge():0:0 -> run
     62:94:void com.helirfid.MagicCardActivity.lambda$detectMagicCard$6(byte[]):0:0 -> run
     62:94:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$0d7ca5f77cc51725d61d727eb7d086b9dd82ed1089b704f07283f826f27af991$3.run$bridge():0 -> run
-com.helirfid.MagicCardActivity$$ExternalSyntheticLambda3 -> c2.s0:
+com.helirfid.MagicCardActivity$$ExternalSyntheticLambda3 -> c2.t0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$0d7ca5f77cc51725d61d727eb7d086b9dd82ed1089b704f07283f826f27af991$7.$r8$classId -> a
@@ -56433,7 +56441,7 @@ com.helirfid.MagicCardActivity$$ExternalSyntheticLambda3 -> c2.s0:
     38:42:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$0d7ca5f77cc51725d61d727eb7d086b9dd82ed1089b704f07283f826f27af991$7.run$bridge():0:0 -> run
     43:74:void com.helirfid.MagicCardActivity.lambda$writeNewUid$13(java.lang.Exception):0:0 -> run
     43:74:void com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$0d7ca5f77cc51725d61d727eb7d086b9dd82ed1089b704f07283f826f27af991$7.run$bridge():0 -> run
-com.helirfid.MagicCardActivity$$ExternalSyntheticLambda4 -> c2.t0:
+com.helirfid.MagicCardActivity$$ExternalSyntheticLambda4 -> c2.u0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.helirfid.MagicCardActivity com.helirfid.MagicCardActivity$$InternalSyntheticLambda$3$cab39e9b1ea2a02a32ed353e098bbd6f3b625f4ed5224c4e466189d9a0d98ec8$1.f$0 -> a
@@ -56485,7 +56493,7 @@ com.helirfid.MainActivity -> com.helirfid.MainActivity:
     11:13:void com.helirfid.HistoryAdapter.update(java.util.List):0:0 -> r
     11:13:void updateHistory():0 -> r
     14:21:void updateHistory():0:0 -> r
-com.helirfid.MainActivity$$ExternalSyntheticLambda0 -> c2.u0:
+com.helirfid.MainActivity$$ExternalSyntheticLambda0 -> c2.v0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.MainActivity$$InternalSyntheticLambda$1$cd498c2478b719cf45162bbc96b2b11a63fa26bf78e8b5b6380364d8af503ed6$0.$r8$classId -> a
@@ -56687,7 +56695,7 @@ com.helirfid.MemoryDumpActivity -> com.helirfid.MemoryDumpActivity:
     227:227:void readDump(android.nfc.Tag):0:0 -> r
     228:228:void readDump(android.nfc.Tag):0:0 -> r
     229:229:void readDump(android.nfc.Tag):0:0 -> r
-com.helirfid.MemoryDumpActivity$$ExternalSyntheticLambda0 -> c2.v0:
+com.helirfid.MemoryDumpActivity$$ExternalSyntheticLambda0 -> c2.w0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.MemoryDumpActivity$$InternalSyntheticLambda$1$ba3d5cd44a13f7ca674727a7475ce3c1f92cc568b9894b337012ce60fce7f607$0.$r8$classId -> a
@@ -56791,7 +56799,7 @@ com.helirfid.NfcMonitorActivity -> com.helirfid.NfcMonitorActivity:
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":44,"5":45},"outline":"Landroidx/activity/h;e(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;II)I"}
     44:44:java.lang.String bytesToHex(byte[]):0:0 -> r
     45:45:java.lang.String bytesToHex(byte[]):0:0 -> r
-com.helirfid.NfcMonitorActivity$$ExternalSyntheticLambda0 -> c2.w0:
+com.helirfid.NfcMonitorActivity$$ExternalSyntheticLambda0 -> c2.x0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NfcMonitorActivity$$InternalSyntheticLambda$1$46728aed1b0e68c6effc682c1b6aff78e35fed43cf3f172713ae096184336cd2$0.$r8$classId -> a
@@ -57322,7 +57330,7 @@ com.helirfid.NfcPollerActivity -> com.helirfid.NfcPollerActivity:
     190:190:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
     191:191:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
     1:1:void updateDisplay():0:0 -> q
-com.helirfid.NfcPollerActivity$$ExternalSyntheticLambda0 -> c2.x0:
+com.helirfid.NfcPollerActivity$$ExternalSyntheticLambda0 -> c2.y0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NfcPollerActivity$$InternalSyntheticLambda$1$62e381620ca8f7b13b98a5fe8f6143f79fbe03bb04e44e7903240ecf221f7a5d$0.$r8$classId -> a
@@ -57559,7 +57567,7 @@ com.helirfid.NfcVActivity -> com.helirfid.NfcVActivity:
     135:135:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
     136:136:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
     1:1:void readTag(boolean):0:0 -> q
-com.helirfid.NfcVActivity$$ExternalSyntheticLambda0 -> c2.y0:
+com.helirfid.NfcVActivity$$ExternalSyntheticLambda0 -> c2.z0:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NfcVActivity$$InternalSyntheticLambda$1$41683ae8ceb1f998bf37daea3c0776e47ad5b9240b76b8c51333f1759d37a6b0$0.$r8$classId -> a
@@ -57573,7 +57581,7 @@ com.helirfid.NfcVActivity$$ExternalSyntheticLambda0 -> c2.y0:
     16:18:void com.helirfid.NfcVActivity$$InternalSyntheticLambda$1$41683ae8ceb1f998bf37daea3c0776e47ad5b9240b76b8c51333f1759d37a6b0$0.onClick$bridge(android.view.View):0:0 -> onClick
     19:22:void com.helirfid.NfcVActivity.lambda$onCreate$1(android.view.View):0:0 -> onClick
     19:22:void com.helirfid.NfcVActivity$$InternalSyntheticLambda$1$41683ae8ceb1f998bf37daea3c0776e47ad5b9240b76b8c51333f1759d37a6b0$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.NfcVActivity$$ExternalSyntheticLambda1 -> c2.z0:
+com.helirfid.NfcVActivity$$ExternalSyntheticLambda1 -> c2.a1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf4837dbc271d8c69cf9008f4b81a29bdd08eea8c6$0.$r8$classId -> a
@@ -57586,7 +57594,7 @@ com.helirfid.NfcVActivity$$ExternalSyntheticLambda1 -> c2.z0:
       # {"id":"com.android.tools.r8.synthesized"}
     17:24:void com.helirfid.NfcVActivity.lambda$readTag$6():0:0 -> run
     17:24:void com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf4837dbc271d8c69cf9008f4b81a29bdd08eea8c6$0.run$bridge():0 -> run
-com.helirfid.NfcVActivity$$ExternalSyntheticLambda2 -> c2.a1:
+com.helirfid.NfcVActivity$$ExternalSyntheticLambda2 -> c2.b1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NfcVActivity$$InternalSyntheticLambda$3$7649677b8523573ddfe49ecf4837dbc271d8c69cf9008f4b81a29bdd08eea8c6$1.$r8$classId -> a
@@ -57679,7 +57687,7 @@ com.helirfid.NtagActivity -> com.helirfid.NtagActivity:
     1:1:int detectMaxPage(android.nfc.tech.MifareUltralight):0:0 -> r
     1:1:java.lang.String guessProduct(int,int):0:0 -> s
     1:1:byte[] hexStringToBytes(java.lang.String):0:0 -> t
-com.helirfid.NtagActivity$$ExternalSyntheticLambda0 -> c2.b1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda0 -> c2.c1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$0.$r8$classId -> a
@@ -57746,7 +57754,7 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda0 -> c2.b1:
     465:479:void com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$0.onClick$bridge(android.view.View):0 -> onClick
     480:486:void com.helirfid.NtagActivity.lambda$onCreate$8(android.view.View):0:0 -> onClick
     480:486:void com.helirfid.NtagActivity$$InternalSyntheticLambda$1$e9b2f540ef23a81786205e57b24ef5dac18f2ac78c4e996c29f1f4d5d42035c2$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.NtagActivity$$ExternalSyntheticLambda1 -> c2.c1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda1 -> c2.d1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$2$1b80199c01b26dc6b7ff306fb64fef665a5c3c0573fd1bf3cd2a0eee95d8f26f$0.$r8$classId -> a
@@ -57767,7 +57775,7 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda1 -> c2.c1:
     127:171:void com.helirfid.NtagActivity$$InternalSyntheticLambda$2$1b80199c01b26dc6b7ff306fb64fef665a5c3c0573fd1bf3cd2a0eee95d8f26f$0.run$bridge():0 -> run
     172:218:void com.helirfid.NtagActivity.lambda$writePage$33(int,byte[]):0:0 -> run
     172:218:void com.helirfid.NtagActivity$$InternalSyntheticLambda$2$1b80199c01b26dc6b7ff306fb64fef665a5c3c0573fd1bf3cd2a0eee95d8f26f$0.run$bridge():0 -> run
-com.helirfid.NtagActivity$$ExternalSyntheticLambda2 -> c2.d1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda2 -> c2.e1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$2$1e2375aa8f349ca53346b8a40262c1ae1315f07e3f5310c9bd92788db7323b35$0.$r8$classId -> a
@@ -57812,7 +57820,7 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda2 -> c2.d1:
     775:917:void com.helirfid.NtagActivity$$InternalSyntheticLambda$2$1e2375aa8f349ca53346b8a40262c1ae1315f07e3f5310c9bd92788db7323b35$0.run$bridge():0 -> run
     918:926:void com.helirfid.NtagActivity.lambda$readTag$10():0:0 -> run
     918:926:void com.helirfid.NtagActivity$$InternalSyntheticLambda$2$1e2375aa8f349ca53346b8a40262c1ae1315f07e3f5310c9bd92788db7323b35$0.run$bridge():0 -> run
-com.helirfid.NtagActivity$$ExternalSyntheticLambda3 -> c2.e1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda3 -> c2.f1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$2$25c45c33635269eb32b2d3f80687611f1ff48f330b0d4e814010669cdec5ea25$0.$r8$classId -> a
@@ -57827,7 +57835,7 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda3 -> c2.e1:
       # {"id":"com.android.tools.r8.synthesized"}
     95:124:void com.helirfid.NtagActivity.lambda$pwdAuth$28(byte[]):0:0 -> run
     95:124:void com.helirfid.NtagActivity$$InternalSyntheticLambda$2$25c45c33635269eb32b2d3f80687611f1ff48f330b0d4e814010669cdec5ea25$0.run$bridge():0 -> run
-com.helirfid.NtagActivity$$ExternalSyntheticLambda4 -> c2.f1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda4 -> c2.g1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$2$efbfe75d47c58dcbc0761f2af7b1b4ca60c3a5a3ed9166e96109c9844ca3c4aa$0.$r8$classId -> a
@@ -57841,7 +57849,7 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda4 -> c2.f1:
       # {"id":"com.android.tools.r8.synthesized"}
     108:148:void com.helirfid.NtagActivity.lambda$formatTag$42(int):0:0 -> run
     108:148:void com.helirfid.NtagActivity$$InternalSyntheticLambda$2$efbfe75d47c58dcbc0761f2af7b1b4ca60c3a5a3ed9166e96109c9844ca3c4aa$0.run$bridge():0 -> run
-com.helirfid.NtagActivity$$ExternalSyntheticLambda5 -> c2.g1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda5 -> c2.h1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$3$29d0e38b8ea49a5ac0cc0830e30d07d2626f9477be278728fc934e99248589ca$3.$r8$classId -> a
@@ -58187,7 +58195,7 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda5 -> c2.g1:
     113:113:void com.helirfid.NtagActivity$$InternalSyntheticLambda$3$29d0e38b8ea49a5ac0cc0830e30d07d2626f9477be278728fc934e99248589ca$3.run$bridge():0 -> run
     114:114:void com.helirfid.NtagActivity.lambda$readTag$12(java.lang.Exception):0:0 -> run
     114:114:void com.helirfid.NtagActivity$$InternalSyntheticLambda$3$29d0e38b8ea49a5ac0cc0830e30d07d2626f9477be278728fc934e99248589ca$3.run$bridge():0 -> run
-com.helirfid.NtagActivity$$ExternalSyntheticLambda6 -> c2.h1:
+com.helirfid.NtagActivity$$ExternalSyntheticLambda6 -> c2.i1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.NtagActivity$$InternalSyntheticLambda$3$9097ebe29fbf963ee7133a2b87f902c44e7a24d0b1836df13e27b0205b799691$1.$r8$classId -> a
@@ -58202,14 +58210,14 @@ com.helirfid.NtagActivity$$ExternalSyntheticLambda6 -> c2.h1:
     21:30:void com.helirfid.NtagActivity.lambda$readTag$11(java.lang.StringBuilder):0:0 -> run
     21:30:void com.helirfid.NtagActivity$$InternalSyntheticLambda$3$9097ebe29fbf963ee7133a2b87f902c44e7a24d0b1836df13e27b0205b799691$1.run$bridge():0 -> run
 com.helirfid.ScanLogActivity -> com.helirfid.ScanLogActivity:
-    android.widget.TextView txtScanLog -> v
-    android.widget.Button btnClear -> w
-    android.widget.Button btnExport -> x
-    android.content.SharedPreferences prefs -> y
+    android.widget.Button btnExport -> A
+    android.content.SharedPreferences prefs -> B
+    android.widget.TextView txtScanLog -> y
+    android.widget.Button btnClear -> z
     56:78:void loadLog():0:0 -> onCreate
     56:78:void onCreate(android.os.Bundle):0 -> onCreate
     79:100:void onCreate(android.os.Bundle):0:0 -> onCreate
-com.helirfid.ScanLogActivity$$ExternalSyntheticLambda0 -> c2.i1:
+com.helirfid.ScanLogActivity$$ExternalSyntheticLambda0 -> c2.j1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ScanLogActivity$$InternalSyntheticLambda$1$1767d3874fbc6e3079d7a34003eb80dad9a9dd4bc379db87a95bdddb3061d2f1$0.$r8$classId -> a
@@ -58294,7 +58302,7 @@ com.helirfid.SectorSelectActivity -> com.helirfid.SectorSelectActivity:
     52:89:void initSectors():0:0 -> onNewIntent
     52:89:void onNewIntent(android.content.Intent):0 -> onNewIntent
     1:1:void operateSectors(boolean):0:0 -> q
-com.helirfid.SectorSelectActivity$$ExternalSyntheticLambda0 -> c2.j1:
+com.helirfid.SectorSelectActivity$$ExternalSyntheticLambda0 -> c2.k1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.SectorSelectActivity$$InternalSyntheticLambda$1$8f0b2c4ca15e51b2d617fc8593f34b2a7d2975dd2d60a3efced19a57e81ceede$0.$r8$classId -> a
@@ -58312,17 +58320,17 @@ com.helirfid.SectorSelectActivity$$ExternalSyntheticLambda0 -> c2.j1:
     62:63:void com.helirfid.SectorSelectActivity$$InternalSyntheticLambda$1$8f0b2c4ca15e51b2d617fc8593f34b2a7d2975dd2d60a3efced19a57e81ceede$0.onClick$bridge(android.view.View):0:0 -> onClick
     64:68:void com.helirfid.SectorSelectActivity.lambda$onCreate$3(android.view.View):0:0 -> onClick
     64:68:void com.helirfid.SectorSelectActivity$$InternalSyntheticLambda$1$8f0b2c4ca15e51b2d617fc8593f34b2a7d2975dd2d60a3efced19a57e81ceede$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.SectorSelectActivity$SectorItem -> c2.k1:
+com.helirfid.SectorSelectActivity$SectorItem -> c2.l1:
     int sector -> a
     boolean checked -> b
     1:1:void <init>(com.helirfid.SectorSelectActivity,int,boolean):0:0 -> <init>
       # {"id":"com.android.tools.r8.residualsignature","signature":"(I)V"}
 com.helirfid.ShareActivity -> com.helirfid.ShareActivity:
-    android.widget.Button btnShareDump -> v
-    android.widget.Button btnShareKeys -> w
-    android.widget.Button btnShareLog -> x
-    android.widget.TextView txtShareInfo -> y
-    int $r8$clinit -> z
+    android.widget.Button btnShareLog -> A
+    android.widget.TextView txtShareInfo -> B
+    int $r8$clinit -> C
+    android.widget.Button btnShareDump -> y
+    android.widget.Button btnShareKeys -> z
     22:25:android.net.Uri androidx.core.content.FileProvider.getUriForFile(android.content.Context,java.lang.String,java.io.File):0:0 -> q
     22:25:void shareFile(java.io.File,java.lang.String):0 -> q
     26:182:android.net.Uri androidx.core.content.FileProvider$SimplePathStrategy.getUriForFile(java.io.File):0:0 -> q
@@ -58332,7 +58340,7 @@ com.helirfid.ShareActivity -> com.helirfid.ShareActivity:
     212:251:android.net.Uri androidx.core.content.FileProvider$SimplePathStrategy.getUriForFile(java.io.File):0:0 -> q
     212:251:android.net.Uri androidx.core.content.FileProvider.getUriForFile(android.content.Context,java.lang.String,java.io.File):0 -> q
     212:251:void shareFile(java.io.File,java.lang.String):0 -> q
-com.helirfid.ShareActivity$$ExternalSyntheticLambda0 -> c2.l1:
+com.helirfid.ShareActivity$$ExternalSyntheticLambda0 -> c2.m1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ShareActivity$$InternalSyntheticLambda$1$3ab8ebc4c65ffab4fd6cb6919196dd16bb2f0fdc6b667e3e99044cbc2512803d$0.$r8$classId -> a
@@ -58427,7 +58435,7 @@ com.helirfid.ShareActivity$$ExternalSyntheticLambda0 -> c2.l1:
     339:340:void com.helirfid.ShareActivity.lambda$onCreate$2(android.view.View):0 -> onClick
     339:340:void com.helirfid.ShareActivity$$InternalSyntheticLambda$1$3ab8ebc4c65ffab4fd6cb6919196dd16bb2f0fdc6b667e3e99044cbc2512803d$0.onClick$bridge(android.view.View):0 -> onClick
 com.helirfid.SplashActivity -> com.helirfid.SplashActivity:
-    int $r8$clinit -> v
+    int $r8$clinit -> y
 com.helirfid.TagFormatActivity -> com.helirfid.TagFormatActivity:
     android.widget.TextView txtResult -> v
     android.widget.Button btnFormat -> w
@@ -58553,7 +58561,7 @@ com.helirfid.TagFormatActivity -> com.helirfid.TagFormatActivity:
     229:229:void onNewIntent(android.content.Intent):0 -> onNewIntent
     230:230:void formatTag(android.nfc.Tag):0:0 -> onNewIntent
     230:230:void onNewIntent(android.content.Intent):0 -> onNewIntent
-com.helirfid.TagFormatActivity$$ExternalSyntheticLambda0 -> c2.m1:
+com.helirfid.TagFormatActivity$$ExternalSyntheticLambda0 -> c2.n1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.TagFormatActivity$$InternalSyntheticLambda$1$6a6ff05fa97c2ebece92ce2c938c88d6016ad512f7084c5591fc1e123eb318ed$0.$r8$classId -> a
@@ -60396,7 +60404,7 @@ com.helirfid.ToolsActivity -> com.helirfid.ToolsActivity:
     72:131:void showNfcToolDialog():0:0 -> onNewIntent
     72:131:void onNewIntent(android.content.Intent):0 -> onNewIntent
     1:1:byte[] hexToBytes(java.lang.String):0:0 -> q
-com.helirfid.ToolsActivity$$ExternalSyntheticLambda2 -> c2.n1:
+com.helirfid.ToolsActivity$$ExternalSyntheticLambda2 -> c2.o1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.$r8$classId -> a
@@ -61980,7 +61988,7 @@ com.helirfid.ToolsActivity$$ExternalSyntheticLambda2 -> c2.n1:
     487:487:void com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.onClick$bridge(android.view.View):0 -> onClick
     488:488:void com.helirfid.ToolsActivity.lambda$onCreate$36(android.view.View):0:0 -> onClick
     488:488:void com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.ToolsActivity$$ExternalSyntheticLambda3 -> c2.o1:
+com.helirfid.ToolsActivity$$ExternalSyntheticLambda3 -> c2.p1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$37.$r8$classId -> a
@@ -62383,22 +62391,22 @@ com.helirfid.ToolsActivity$$ExternalSyntheticLambda3 -> c2.o1:
     476:476:void com.helirfid.ToolsActivity.lambda$onCreate$9(android.view.View):0:0 -> onClick
     476:476:void com.helirfid.ToolsActivity$$InternalSyntheticLambda$1$a9d1c0ba61940a93f4a3ce70be21e2a909e2823f0a9ffe65f602e5e6af501b39$37.onClick$bridge(android.view.View):0 -> onClick
 com.helirfid.TraceViewerActivity -> com.helirfid.TraceViewerActivity:
-    android.widget.Button btnLoad -> v
-    android.widget.TextView txtInfo -> w
-    android.widget.TextView txtContent -> x
-    int $r8$clinit -> y
+    android.widget.TextView txtContent -> A
+    int $r8$clinit -> B
+    android.widget.Button btnLoad -> y
+    android.widget.TextView txtInfo -> z
     17:162:void loadTraceFile(android.net.Uri):0:0 -> onActivityResult
     17:162:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
     1:1:void parseTraceToSpannable(java.lang.String,android.text.SpannableStringBuilder):0:0 -> q
 com.helirfid.UidGeneratorActivity -> com.helirfid.UidGeneratorActivity:
-    android.widget.Button btnCopy -> A
-    java.security.SecureRandom random -> B
-    android.widget.EditText editPrefix -> v
-    android.widget.EditText editCount -> w
-    android.widget.RadioGroup rgUidLength -> x
-    android.widget.TextView txtResult -> y
-    android.widget.Button btnGenerate -> z
-com.helirfid.UidGeneratorActivity$$ExternalSyntheticLambda0 -> c2.p1:
+    android.widget.RadioGroup rgUidLength -> A
+    android.widget.TextView txtResult -> B
+    android.widget.Button btnGenerate -> C
+    android.widget.Button btnCopy -> D
+    java.security.SecureRandom random -> E
+    android.widget.EditText editPrefix -> y
+    android.widget.EditText editCount -> z
+com.helirfid.UidGeneratorActivity$$ExternalSyntheticLambda0 -> c2.q1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.UidGeneratorActivity$$InternalSyntheticLambda$1$64908f4a9de93ab2134a0a8f2e38ac50ca06007c9fa013f2f598e51b15c40892$0.$r8$classId -> a
@@ -62596,7 +62604,7 @@ com.helirfid.ValueBlockActivity -> com.helirfid.ValueBlockActivity:
     102:142:byte[] hexToBytes(java.lang.String):0:0 -> r
     102:142:void operateValueBlock(int):0 -> r
     143:167:void operateValueBlock(int):0:0 -> r
-com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda0 -> c2.q1:
+com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda0 -> c2.r1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$1$34c059ce1da76c0f8975400d60d188b086c6faacd46f6faac00a71b257cc608d$0.$r8$classId -> a
@@ -62616,7 +62624,7 @@ com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda0 -> c2.q1:
     30:32:void com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$1$34c059ce1da76c0f8975400d60d188b086c6faacd46f6faac00a71b257cc608d$0.onClick$bridge(android.view.View):0:0 -> onClick
     33:36:void com.helirfid.ValueBlockActivity.lambda$onCreate$3(android.view.View):0:0 -> onClick
     33:36:void com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$1$34c059ce1da76c0f8975400d60d188b086c6faacd46f6faac00a71b257cc608d$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda1 -> c2.r1:
+com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda1 -> c2.s1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.helirfid.ValueBlockActivity com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$2$d173f5294e6407874b2edf85827812e44f2dac087f61bc97fbba48a4bca386c2$0.f$0 -> a
@@ -62630,7 +62638,7 @@ com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda1 -> c2.r1:
     22:272:void com.helirfid.ValueBlockActivity.lambda$operateValueBlock$8(int,byte[],int,int,int):0:0 -> run
     22:272:void com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$2$d173f5294e6407874b2edf85827812e44f2dac087f61bc97fbba48a4bca386c2$0.run():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
-com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda2 -> c2.s1:
+com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda2 -> c2.t1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$3$8152e6e35fa526a8a17f0c6031bd175bd7eece891db9c082e73d6802485da5ad$0.$r8$classId -> a
@@ -62644,17 +62652,17 @@ com.helirfid.ValueBlockActivity$$ExternalSyntheticLambda2 -> c2.s1:
     17:24:void com.helirfid.ValueBlockActivity.lambda$operateValueBlock$5():0:0 -> run
     17:24:void com.helirfid.ValueBlockActivity$$InternalSyntheticLambda$3$8152e6e35fa526a8a17f0c6031bd175bd7eece891db9c082e73d6802485da5ad$0.run$bridge():0 -> run
 com.helirfid.ValueCodecActivity -> com.helirfid.ValueCodecActivity:
-    android.widget.Button btnDecode -> A
-    android.widget.Button btnEncode -> B
-    android.widget.Button btnPreset5 -> C
-    android.widget.Button btnPresetM1 -> D
-    android.widget.Button btnPresetNeg -> E
-    android.widget.EditText editDecodeInput -> v
-    android.widget.EditText editEncodeValue -> w
-    android.widget.EditText editEncodeAddr -> x
-    android.widget.TextView txtDecodeResult -> y
-    android.widget.TextView txtEncodeResult -> z
-com.helirfid.ValueCodecActivity$$ExternalSyntheticLambda0 -> c2.t1:
+    android.widget.EditText editEncodeAddr -> A
+    android.widget.TextView txtDecodeResult -> B
+    android.widget.TextView txtEncodeResult -> C
+    android.widget.Button btnDecode -> D
+    android.widget.Button btnEncode -> E
+    android.widget.Button btnPreset5 -> F
+    android.widget.Button btnPresetM1 -> G
+    android.widget.Button btnPresetNeg -> H
+    android.widget.EditText editDecodeInput -> y
+    android.widget.EditText editEncodeValue -> z
+com.helirfid.ValueCodecActivity$$ExternalSyntheticLambda0 -> c2.u1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.ValueCodecActivity$$InternalSyntheticLambda$1$2252d04ead02e5eef1e0f20a493a190d549fe8c3c2ef075106e748025393adcc$0.$r8$classId -> a
@@ -62892,7 +62900,7 @@ com.helirfid.VerifyActivity -> com.helirfid.VerifyActivity:
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":97,"5":98},"outline":"Landroidx/activity/h;e(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;II)I"}
     97:97:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
     98:98:void onNewIntent(android.content.Intent):0:0 -> onNewIntent
-com.helirfid.VerifyActivity$$ExternalSyntheticLambda0 -> c2.u1:
+com.helirfid.VerifyActivity$$ExternalSyntheticLambda0 -> c2.v1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.VerifyActivity$$InternalSyntheticLambda$1$687b11ac603a07610425b81e769769a436bb1ca9185569e9d37034b6baa0f7cc$0.$r8$classId -> a
@@ -62909,7 +62917,7 @@ com.helirfid.VerifyActivity$$ExternalSyntheticLambda0 -> c2.u1:
     372:386:void com.helirfid.VerifyActivity.quickVerify():0:0 -> onClick
     372:386:void com.helirfid.VerifyActivity.lambda$onCreate$1(android.view.View):0 -> onClick
     372:386:void com.helirfid.VerifyActivity$$InternalSyntheticLambda$1$687b11ac603a07610425b81e769769a436bb1ca9185569e9d37034b6baa0f7cc$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.VerifyActivity$$ExternalSyntheticLambda1 -> c2.v1:
+com.helirfid.VerifyActivity$$ExternalSyntheticLambda1 -> c2.w1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.VerifyActivity$$InternalSyntheticLambda$2$c7dd07fe36a6c3314de83ed888619db458cfef86aaa7b455917a4feb2c468e23$0.$r8$classId -> a
@@ -62950,7 +62958,7 @@ com.helirfid.WriteActivity -> com.helirfid.WriteActivity:
     android.widget.EditText editNdefText -> y
     android.widget.EditText editNdefExtra -> z
     1:1:byte[] hexStringToByteArray(java.lang.String):0:0 -> q
-com.helirfid.WriteActivity$$ExternalSyntheticLambda0 -> c2.w1:
+com.helirfid.WriteActivity$$ExternalSyntheticLambda0 -> c2.x1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.WriteActivity$$InternalSyntheticLambda$1$a874b61671c9a08f8225404b36fc6f6c1a08620ddd01e5182cc59f56bd8e1282$0.$r8$classId -> a
@@ -63368,7 +63376,7 @@ com.helirfid.WriteBlock0Activity -> com.helirfid.WriteBlock0Activity:
     44:44:java.lang.String bytesToHex(byte[]):0:0 -> q
     45:45:java.lang.String bytesToHex(byte[]):0:0 -> q
     1:1:byte[] hexStringToBytes(java.lang.String):0:0 -> r
-com.helirfid.WriteBlock0Activity$$ExternalSyntheticLambda0 -> c2.x1:
+com.helirfid.WriteBlock0Activity$$ExternalSyntheticLambda0 -> c2.y1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$1$a47b9ba88da1fcdbe63e2a468c634da6647a2832243d504e2ec5ab97aafa864e$0.$r8$classId -> a
@@ -63448,7 +63456,7 @@ com.helirfid.WriteBlock0Activity$$ExternalSyntheticLambda0 -> c2.x1:
     409:434:void com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$1$a47b9ba88da1fcdbe63e2a468c634da6647a2832243d504e2ec5ab97aafa864e$0.onClick$bridge(android.view.View):0 -> onClick
     435:442:void com.helirfid.WriteBlock0Activity.lambda$onCreate$2(android.view.View):0:0 -> onClick
     435:442:void com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$1$a47b9ba88da1fcdbe63e2a468c634da6647a2832243d504e2ec5ab97aafa864e$0.onClick$bridge(android.view.View):0 -> onClick
-com.helirfid.WriteBlock0Activity$$ExternalSyntheticLambda1 -> c2.y1:
+com.helirfid.WriteBlock0Activity$$ExternalSyntheticLambda1 -> c2.z1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.helirfid.WriteBlock0Activity$$InternalSyntheticLambda$2$c9a4e7a7d21ae25c69152536b519ecd8e91954fd56f6b818dfc0a04861125e32$0.$r8$classId -> a

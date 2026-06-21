@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Acr122uActivity extends AppCompatActivity {
+public class Acr122uActivity extends BaseNfcActivity {
 
     private UsbManager usbManager;
     private Acr122uManager reader;

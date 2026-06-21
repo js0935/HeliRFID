@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TraceViewerActivity extends AppCompatActivity {
+public class TraceViewerActivity extends BaseNfcActivity {
 
     private static final int REQUEST_LOAD_TRACE = 400;
 
