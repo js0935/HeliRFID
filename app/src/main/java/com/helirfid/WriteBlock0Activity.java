@@ -2,6 +2,7 @@ package com.helirfid;
 
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.MifareClassic;
@@ -23,6 +24,7 @@ public class WriteBlock0Activity extends AppCompatActivity {
     Button btnBuild, btnWrite, btnClear;
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
+    IntentFilter[] nfcFilters;
     Tag currentTag;
     byte[] builtBlock0;
 
@@ -41,9 +43,14 @@ public class WriteBlock0Activity extends AppCompatActivity {
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         Intent intent = new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        int flags = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                ? PendingIntent.FLAG_MUTABLE : PendingIntent.FLAG_UPDATE_CURRENT;
+        int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) flags |= PendingIntent.FLAG_MUTABLE;
         pendingIntent = PendingIntent.getActivity(this, 0, intent, flags);
+        nfcFilters = new IntentFilter[]{
+                new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED),
+                new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED),
+                new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED),
+        };
 
         btnClear.setOnClickListener(v -> {
             txtResult.setText("");
@@ -169,7 +176,7 @@ public class WriteBlock0Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (nfcAdapter != null)
-            nfcAdapter.enableForegroundDispatch(this, pendingIntent, null, null);
+            nfcAdapter.enableForegroundDispatch(this, pendingIntent, nfcFilters, null);
     }
 
     @Override
